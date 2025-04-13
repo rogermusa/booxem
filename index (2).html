@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think and Grow Rich - Napoleon Hill</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-text {
+            color: #d4af37;
+        }
+        .deep-blue-bg {
+            background-color: #1a365d;
+        }
+        .gold-bg {
+            background-color: #d4af37;
+        }
+        .gold-border {
+            border-color: #d4af37;
+        }
+        .principle-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .quote-box {
+            background-color: #1a365d;
+            color: white;
+            border-left: 5px solid #d4af37;
+        }
+        .box-shadow {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .emotion-pill {
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .positive {
+            background-color: #d4af37;
+            color: #1a365d;
+        }
+        .negative {
+            background-color: #d32f2f;
+            color: white;
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+        }
+        .step-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #d4af37;
+            color: #1a365d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .takeaway-card {
+            border-left: 4px solid #d4af37;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-10">
+        <!-- Header Section -->
+        <header class="header-gradient rounded-lg p-8 mb-10 text-white text-center box-shadow">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 text-left mb-6 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Think and <span class="gold-text">Grow Rich</span></h1>
+                    <h2 class="text-2xl md:text-3xl mb-4">By Napoleon Hill</h2>
+                    <p class="text-lg opacity-90">The landmark bestseller on achieving wealth through the power of thought</p>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg blur opacity-75"></div>
+                        <div class="relative bg-white p-2 rounded-lg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" alt="Book Cover" class="w-48 h-64 object-cover rounded opacity-0">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center p-4 bg-gray-900 bg-opacity-80 rounded">
+                                    <i class="fas fa-book-open text-5xl text-yellow-500 mb-2"></i>
+                                    <div class="text-xl font-bold text-white">Think and Grow Rich</div>
+                                    <div class="text-sm text-yellow-400">First published in 1937</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="bg-white rounded-lg p-8 mb-10 box-shadow">
+            <h2 class="text-3xl font-bold mb-6 text-center">The <span class="gold-text">Origin Story</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                    <div class="rounded-full overflow-hidden border-4 gold-border w-56 h-56 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-user-tie text-6xl text-gray-500"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-8">
+                    <p class="text-lg mb-4">
+                        In 1908, <strong>Napoleon Hill</strong> was tasked by steel magnate <strong>Andrew Carnegie</strong> to interview the most successful people of their time to uncover a formula for success.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Over the next <strong>20+ years</strong>, Hill interviewed more than <strong>500 wealthy individuals</strong>, including Thomas Edison, Alexander Graham Bell, Henry Ford, and Charles M. Schwab, to distill the principles of success.
+                    </p>
+                    <p class="text-lg mb-4">
+                        The result was his 1937 masterpiece <strong>"Think and Grow Rich"</strong> — one of the best-selling self-help books of all time with over <strong>100 million copies</strong> sold worldwide.
+                    </p>
+                    <p class="text-lg italic">
+                        "Whatever the mind can conceive and believe, it can achieve."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13 Principles Section -->
+        <section class="mb-10">
+            <div class="bg-white rounded-lg p-8 box-shadow">
+                <h2 class="text-3xl font-bold mb-8 text-center">The <span class="gold-text">13 Principles</span> for Success</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Principle 1 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-fire text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">1. Desire</h3>
+                        </div>
+                        <p class="flex-grow">The starting point of all achievement. Not mere wishing, but a burning obsession coupled with a plan and persistence.</p>
+                    </div>
+
+                    <!-- Principle 2 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-pray text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">2. Faith</h3>
+                        </div>
+                        <p class="flex-grow">Belief and visualization of your desires as already fulfilled. Faith removes limitations and creates self-confidence.</p>
+                    </div>
+
+                    <!-- Principle 3 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-brain text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">3. Auto-suggestion</h3>
+                        </div>
+                        <p class="flex-grow">The method of influencing your subconscious mind through self-administered suggestions and affirmations.</p>
+                    </div>
+
+                    <!-- Principle 4 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">4. Specialized Knowledge</h3>
+                        </div>
+                        <p class="flex-grow">General knowledge has little value. Organized and specialized knowledge, when applied, is the key to transforming desires into reality.</p>
+                    </div>
+
+                    <!-- Principle 5 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">5. Imagination</h3>
+                        </div>
+                        <p class="flex-grow">The workshop of the mind where plans are created and desires are shaped into reality through synthetic and creative imagination.</p>
+                    </div>
+
+                    <!-- Principle 6 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-tasks text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">6. Organized Planning</h3>
+                        </div>
+                        <p class="flex-grow">Turning desires into concrete plans. Knowledge without action is useless. Create detailed plans and execute them with persistence.</p>
+                    </div>
+
+                    <!-- Principle 7 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-check-double text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">7. Decision</h3>
+                        </div>
+                        <p class="flex-grow">Successful people make decisions quickly and change them slowly. Procrastination and indecision are the major causes of failure.</p>
+                    </div>
+
+                    <!-- Principle 8 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-mountain text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">8. Persistence</h3>
+                        </div>
+                        <p class="flex-grow">The sustained effort necessary to overcome failure. Persistence is to success what carbon is to steel — an essential ingredient.</p>
+                    </div>
+
+                    <!-- Principle 9 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">9. Master Mind</h3>
+                        </div>
+                        <p class="flex-grow">The coordinated knowledge and effort of two or more people working towards a definite purpose. No one succeeds alone.</p>
+                    </div>
+
+                    <!-- Principle 10 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-bolt text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">10. Sex Transmutation</h3>
+                        </div>
+                        <p class="flex-grow">The conversion of sexual energy into creative outlets. Harnessing this powerful drive to fuel achievement in other areas.</p>
+                    </div>
+
+                    <!-- Principle 11 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-cloud text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">11. The Subconscious Mind</h3>
+                        </div>
+                        <p class="flex-grow">The connecting link between the finite mind and Infinite Intelligence. Programming it with positive thoughts is essential.</p>
+                    </div>
+
+                    <!-- Principle 12 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-broadcast-tower text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">12. The Brain</h3>
+                        </div>
+                        <p class="flex-grow">A broadcasting and receiving station for thought. The brain can pick up vibrations of thought being released by other brains.</p>
+                    </div>
+
+                    <!-- Principle 13 -->
+                    <div class="principle-card bg-white rounded-lg p-6 border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full deep-blue-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-eye text-xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">13. The Sixth Sense</h3>
+                        </div>
+                        <p class="flex-grow">The "door" to the temple of wisdom. This is the creative imagination through which hunches and inspirations come.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Quotes Section -->
+        <section class="mb-10">
+            <div class="bg-white rounded-lg p-8 box-shadow">
+                <h2 class="text-3xl font-bold mb-8 text-center"><span class="gold-text">Powerful Quotes</span> from the Book</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "Whatever the mind can conceive and believe, it can achieve."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "The starting point of all achievement is desire. Keep this constantly in mind. Weak desire brings weak results."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "When defeat comes, accept it as a signal that your plans are not sound, rebuild those plans, and set sail once more toward your coveted goal."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "A quitter never wins and a winner never quits."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "If you do not see great riches in your imagination, you will never see them in your bank balance."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-6 rounded-lg">
+                        <i class="fas fa-quote-left text-2xl text-yellow-400 mb-4"></i>
+                        <p class="text-lg mb-4">
+                            "Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit."
+                        </p>
+                        <div class="text-right">
+                            <i class="fas fa-quote-right text-2xl text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Six Steps for Transmuting Desire into Gold -->
+        <section class="mb-10">
+            <div class="bg-white rounded-lg p-8 box-shadow">
+                <h2 class="text-3xl font-bold mb-8 text-center">Six Steps for <span class="gold-text">Transmuting Desire into Gold</span></h2>
+                
+                <div class="space-y-6">
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">1</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Fix in your mind the exact amount of money you desire</h3>
+                            <p class="text-lg">Be definite about the amount. Don't say "I want plenty of money." Instead, state a precise sum.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">2</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Determine exactly what you intend to give in return</h3>
+                            <p class="text-lg">There is no such reality as "something for nothing." Decide what service or good you will provide in exchange.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">3</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Establish a definite date for possession</h3>
+                            <p class="text-lg">Set a clear deadline for when you intend to have accumulated your desired amount of wealth.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">4</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Create a definite plan and begin at once</h3>
+                            <p class="text-lg">Whether you are ready or not, put your plan into action immediately. Don't wait for the "perfect time."</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">5</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Write a clear, concise statement</h3>
+                            <p class="text-lg">Write down the amount, the deadline, what you'll give in return, and your plan for accumulation.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="step-circle flex-shrink-0">6</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Read your statement aloud twice daily</h3>
+                            <p class="text-lg">Read once after waking up and once before bed. As you read, visualize yourself already in possession of the money.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotions Section -->
+        <section class="mb-10">
+            <div class="bg-white rounded-lg p-8 box-shadow">
+                <h2 class="text-3xl font-bold mb-8 text-center">The <span class="gold-text">Emotional Framework</span> for Success</h2>
+                
+                <div class="flex flex-col md:flex-row mb-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-4">
+                        <h3 class="text-2xl font-bold mb-4 text-center gold-text">Seven Positive Emotions</h3>
+                        <p class="text-center mb-4">Cultivate these emotions to support your success</p>
+                        <div class="bg-gray-100 p-6 rounded-lg text-center h-full">
+                            <div class="emotion-pill positive">Desire</div>
+                            <div class="emotion-pill positive">Faith</div>
+                            <div class="emotion-pill positive">Love</div>
+                            <div class="emotion-pill positive">Sex</div>
+                            <div class="emotion-pill positive">Enthusiasm</div>
+                            <div class="emotion-pill positive">Romance</div>
+                            <div class="emotion-pill positive">Hope</div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 md:pl-4">
+                        <h3 class="text-2xl font-bold mb-4 text-center text-red-600">Seven Negative Emotions</h3>
+                        <p class="text-center mb-4">Eliminate these emotions that hinder your progress</p>
+                        <div class="bg-gray-100 p-6 rounded-lg text-center h-full">
+                            <div class="emotion-pill negative">Fear</div>
+                            <div class="emotion-pill negative">Jealousy</div>
+                            <div class="emotion-pill negative">Hatred</div>
+                            <div class="emotion-pill negative">Revenge</div>
+                            <div class="emotion-pill negative">Greed</div>
+                            <div class="emotion-pill negative">Superstition</div>
+                            <div class="emotion-pill negative">Anger</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deep-blue-bg p-6 rounded-lg text-white">
+                    <p class="text-lg text-center">
+                        <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                        "Positive and negative emotions cannot occupy the mind at the same time. One or the other must dominate."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Takeaways -->
+        <section class="mb-10">
+            <div class="bg-white rounded-lg p-8 box-shadow">
+                <h2 class="text-3xl font-bold mb-8 text-center"><span class="gold-text">Practical Takeaways</span> for Implementation</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Daily Affirmation Practice</h3>
+                        <p>Write your desires as affirmations and repeat them aloud each morning and evening. Visualize your success as you speak.</p>
+                    </div>
+
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Form a Master Mind Alliance</h3>
+                        <p>Assemble a group of like-minded individuals who will support your goals and provide diverse perspectives and knowledge.</p>
+                    </div>
+
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Create Detailed Written Plans</h3>
+                        <p>Don't rely on mental plans. Write down your goals, strategies, and action steps in detail. Review and revise them regularly.</p>
+                    </div>
+
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Practice Decisive Action</h3>
+                        <p>Train yourself to make decisions quickly but change them slowly. Overcome analysis paralysis by taking prompt action.</p>
+                    </div>
+
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Develop Specialized Knowledge</h3>
+                        <p>Identify the specific knowledge you need to achieve your goals and create a plan to acquire it through study or experience.</p>
+                    </div>
+
+                    <div class="takeaway-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Build Persistence Habits</h3>
+                        <p>Set small, achievable goals to build your persistence muscle. Create a daily discipline that reinforces your commitment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section>
+            <div class="deep-blue-bg rounded-lg p-8 text-white text-center">
+                <h2 class="text-3xl font-bold mb-4">Begin Your Journey to <span class="gold-text">Wealth and Success</span></h2>
+                <p class="text-xl mb-6">
+                    "Remember, whatever the mind can conceive and believe, it can achieve."
+                </p>
+                <div class="inline-block gold-bg text-gray-900 font-bold py-3 px-8 rounded-full text-lg">
+                    Start Applying These Principles Today
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-10 text-center text-gray-600">
+            <p>Infographic based on "Think and Grow Rich" by Napoleon Hill, first published in 1937.</p>
+            <p class="mt-2">Created for educational purposes.</p>
+        </footer>
+    </div>
+</body>
+</html>
