@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power of Now Summary - Eckhart Tolle</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Power of Now Cover Color Scheme */
+      --pon-bg: #F8F8F4; /* Very light, warm off-white */
+      --pon-text-dark: #4A4A4A; /* Softer dark grey */
+      --pon-text-title: #6A8B82; /* Muted teal/grey-green from "NOW" */
+      --pon-text-light: #FFFFFF;
+      --pon-accent-gold: #E0D8B0; /* Pale gold/yellow from top gradient */
+      --pon-accent-teal: #8FB5AF; /* Lighter teal from bottom gradient */
+      --pon-border-light: #EAE8E0; /* Subtle border derived from bg */
+      --pon-border-medium: #D8D4C8;
+      --pon-hover-bg: var(--pon-accent-teal);
+      --pon-hover-text: var(--pon-text-light);
+    }
+
+    body {
+      font-family: 'Lato', sans-serif; /* Sans-serif body */
+      color: var(--pon-text-dark);
+      line-height: 1.75;
+      background-color: var(--pon-bg); /* Light page background */
+      font-size: 16px;
+      font-weight: 400;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif; /* Serif headings */
+      color: var(--pon-text-dark);
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-pon {
+      background: linear-gradient(to bottom, var(--pon-accent-gold), var(--pon-accent-teal)); /* Subtle gradient */
+      color: var(--pon-text-dark);
+      padding: 2.5rem 2rem; /* Increased padding */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      position: relative;
+      overflow: hidden; /* Contain pseudo-elements */
+    }
+     .main-header-pon::before { /* Subtle texture overlay */
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        /* background: url('data:image/svg+xml,...'); subtle pattern */
+        opacity: 0.05;
+        pointer-events: none;
+     }
+
+    .main-header-pon h3 { /* Author */
+        font-family: 'Merriweather', serif;
+        font-size: 1.5rem; /* Larger author name */
+        font-weight: 400; /* Regular weight */
+        color: var(--pon-text-light); /* White author */
+        margin-bottom: 1.5rem; /* Space below author */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .main-header-pon .title-line1 { /* "THE POWER OF" */
+        font-family: 'Merriweather', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--pon-text-dark);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.25rem;
+    }
+    .main-header-pon .title-line2 { /* "NOW" */
+        font-family: 'Lato', sans-serif; /* Sans-serif for NOW */
+        font-size: 4.5rem; /* Large NOW */
+        font-weight: 700; /* Bold */
+        color: var(--pon-text-title); /* Teal color */
+        line-height: 1;
+        margin-bottom: 0.75rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .main-header-pon .subtitle { /* Subtitle */
+        font-family: 'Lato', sans-serif;
+        color: var(--pon-text-dark);
+        font-size: 1rem;
+        font-weight: 700;
+        opacity: 0.8;
+        margin-bottom: 2rem; /* Space below subtitle */
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .book-cover-pon {
+      max-width: 150px; /* Slightly smaller */
+      height: auto;
+      border-radius: 3px;
+      border: 2px solid var(--pon-text-light); /* White border */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-pon {
+      background-color: var(--pon-text-light); /* White card background */
+      color: var(--pon-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px; /* Slightly less rounded */
+      border: 1px solid var(--pon-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-pon:hover {
+        border-color: var(--pon-accent-teal); /* Teal border on hover */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-pon {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--pon-border-medium); /* Subtle border */
+      display: flex;
+      align-items: center;
+    }
+    .section-header-pon h2 {
+      font-size: 1.6rem; /* Slightly smaller heading */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-pon i {
+      font-size: 1.2rem;
+      margin-right: 0.85rem;
+      color: var(--pon-text-title); /* Teal icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-pon:hover .section-header-pon i {
+        transform: scale(1.1);
+     }
+
+
+    /* --- Quote Style --- */
+    .quote-pon {
+      background-color: #F0F4F3; /* Very light teal background */
+      border: none;
+      border-left: 4px solid var(--pon-accent-teal); /* Lighter teal border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      color: var(--pon-text-dark);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400; /* Regular weight */
+      transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    }
+     .quote-pon:hover {
+        background-color: #E8EDEC;
+        border-left-color: var(--pon-text-title); /* Darker teal border on hover */
+    }
+    .quote-pon p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-pon footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      color: var(--pon-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .concept-card-pon {
+      background-color: var(--pon-text-light);
+      border: 1px solid var(--pon-border-light);
+      border-left: 4px solid var(--pon-text-title); /* Teal left border */
+      border-radius: 4px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-left-color 0.25s ease-in-out;
+    }
+    .concept-card-pon:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+      border-left-color: var(--pon-accent-gold); /* Gold border on hover */
+    }
+    .concept-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--pon-text-title);
+        height: 25px; /* Fixed height */
+    }
+    .concept-title {
+      font-family: 'Merriweather', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--pon-text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .concept-summary {
+      font-size: 0.95rem;
+      color: var(--pon-text-dark);
+      line-height: 1.7;
+       opacity: 0.9;
+    }
+     .concept-summary strong {
+        font-weight: 700;
+        color: var(--pon-text-title);
+    }
+
+    .practices-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .practices-list li {
+        background-color: #F9F9F7; /* Slightly different bg */
+        border: 1px solid var(--pon-border-light);
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.75rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .practices-list li:hover {
+         background-color: var(--pon-text-light);
+         border-color: var(--pon-border-medium);
+     }
+     .practices-list li i {
+         color: var(--pon-accent-teal);
+         margin-right: 1rem;
+         font-size: 1.1rem;
+         width: 20px;
+         text-align: center;
+     }
+      .practices-list li span {
+          font-weight: 500;
+          font-size: 0.95rem;
+      }
+
+    .conclusion-highlight-pon {
+        background-color: #FEFDF9; /* Very light gold tint */
+        color: var(--pon-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--pon-accent-gold);
+    }
+    .conclusion-highlight-pon p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+    .conclusion-highlight-pon strong {
+        font-weight: 700;
+        color: var(--pon-text-title); /* Teal emphasis */
+    }
+
+    .footer-pon {
+        text-align: center;
+        color: #888;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-pon">
+        <h3 class="author-name">Eckhart Tolle</h3>
+        <div class="title-line1">The Power Of</div>
+        <div class="title-line2">NOW</div>
+        <div class="subtitle">A Guide to Spiritual Enlightenment</div>
+        <img src="https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg" alt="The Power of Now Book Cover" class="book-cover-pon">
+    </div>
+
+    <!-- Core Philosophy Section -->
+    <div class="section-pon">
+      <div class="section-header-pon">
+        <i class="fas fa-lightbulb"></i>
+        <h2>Accessing the Power of Presence</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Power of Now" teaches that the root of human suffering lies in our identification with the thinking mind, which is constantly dwelling on the past or projecting into the future. Tolle argues that true peace, joy, and enlightenment can only be found by fully embracing the <strong>Present Moment</strong> – the Now – as it is the only reality we ever truly have.</p>
+      <p class="mb-4 text-base leading-relaxed">Our minds create psychological time (past regrets, future anxieties), which obscures the simple power and stillness of the present. By learning to disidentify from the incessant stream of thought and the egoic sense of self it creates, we can access a deeper state of <strong>Being</strong> or <strong>Presence</strong>.</p>
+      <p class="text-base leading-relaxed">This involves becoming aware of the "pain-body" – the accumulation of past emotional pain – and learning not to energize it through identification. The key is to become the silent <strong>watcher</strong> of your thoughts and emotions without judgment.</p>
+
+      <div class="quote-pon">
+          <p>"Realize deeply that the present moment is all you ever have. Make the Now the primary focus of your life."</p>
+          <footer>— Eckhart Tolle</footer>
+      </div>
+       <div class="quote-pon">
+          <p>"Time isn’t precious at all, because it is an illusion. What you perceive as precious is not time but the one point that is out of time: the Now. That is precious indeed."</p>
+          <footer>— Eckhart Tolle</footer>
+      </div>
+    </div>
+
+    <!-- Key Concepts Section -->
+    <div class="section-pon">
+      <div class="section-header-pon">
+         <i class="fas fa-key"></i>
+         <h2>Key Concepts for Transformation</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Tolle introduces several crucial concepts to understand the path to presence:</p>
+      <div class="concepts-grid">
+         <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-brain"></i></div>
+            <div class="concept-title">The Thinking Mind & Ego</div>
+            <p class="concept-summary">The compulsive, unconscious thinking mind generates the ego – a false sense of self based on past experiences and future projections. Identification with the ego is the source of suffering.</p>
+        </div>
+        <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-history"></i></div>
+            <div class="concept-title">Psychological vs. Clock Time</div>
+            <p class="concept-summary"><strong>Clock time</strong> is practical for daily life. <strong>Psychological time</strong> is the mind's addiction to past and future, preventing presence. We must learn to use clock time without getting lost in psychological time.</p>
+        </div>
+        <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-theater-masks"></i></div>
+            <div class="concept-title">The Pain-Body</div>
+            <p class="concept-summary">An accumulation of unresolved emotional pain from the past, living as an energy field within us. It seeks more pain to feed itself. Presence dissolves the pain-body by cutting off its identification.</p>
+        </div>
+        <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-eye"></i></div>
+            <div class="concept-title">Watching the Thinker</div>
+            <p class="concept-summary">The practice of observing your thoughts and emotions without judgment. This creates separation between the observer (your true Self/Presence) and the observed (the mind/ego).</p>
+        </div>
+         <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-spa"></i></div>
+            <div class="concept-title">Inner Body Awareness</div>
+            <p class="concept-summary">Feeling the aliveness and energy within your physical body. This anchors you firmly in the Now and helps to transcend overthinking. It connects you to Being.</p>
+        </div>
+         <div class="concept-card-pon">
+            <div class="concept-icon"><i class="fas fa-praying-hands"></i></div> <!-- Changed icon -->
+            <div class="concept-title">Acceptance & Surrender</div>
+            <p class="concept-summary">Not resignation, but yielding to the "isness" of the present moment without mental labeling or resistance. Surrender is accepting *what is*, freeing you to act wisely from a place of presence.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Practices for Presence Section -->
+    <div class="section-pon">
+      <div class="section-header-pon">
+         <i class="fas fa-leaf"></i>
+         <h2>Practices for Cultivating Presence</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Tolle offers practical ways to step out of psychological time and into the Now:</p>
+      <ul class="practices-list">
+          <li><i class="fas fa-binoculars"></i> <span><strong>Observe Your Thoughts:</strong> Become aware of the voice in your head without believing or judging it. Notice repetitive thought patterns.</span></li>
+          <li><i class="fas fa-hand-paper"></i> <span><strong>Accept the Present Moment:</strong> Whatever arises, allow it to be without resistance. Say "yes" to what is. Focus on what you *can* do now.</span></li>
+          <li><i class="fas fa-child"></i> <span><strong>Feel Your Inner Body:</strong> Bring attention inward to the subtle energy field within your hands, feet, or entire body. This stops the mind.</span></li>
+          <li><i class="fas fa-assistive-listening-systems"></i> <span><strong>Use Your Senses Fully:</strong> Pay deep attention to sight, sound, smell, taste, touch without mental commentary. Notice the gaps between thoughts.</span></li>
+          <li><i class="fas fa-hourglass-start"></i> <span><strong>Dissolve Psychological Time:</strong> Ask yourself, "What problem do I have *right now*?" Often, problems exist only in the past or future projections.</span></li>
+          <li><i class="fas fa-male"></i> <span><strong>Watch for the Pain-Body:</strong> Recognize when old emotional pain is triggered and consciously choose not to identify with it. Feel the emotion directly without creating a story around it.</span></li>
+          <li><i class="fas fa-door-open"></i> <span><strong>Create Gaps in the Mind Stream:</strong> Focus intently on simple activities like breathing, washing hands, or looking at nature to interrupt constant thinking.</span></li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-pon">
+      <div class="section-header-pon">
+         <i class="fas fa-quote-left"></i>
+         <h2>Insights on Presence - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-pon"><p>"The primary cause of unhappiness is never the situation but your thoughts about it."</p><footer>— Eckhart Tolle</footer></blockquote>
+          <blockquote class="quote-pon"><p>"Whatever the present moment contains, accept it as if you had chosen it. Always work with it, not against it."</p><footer>— Eckhart Tolle</footer></blockquote>
+          <blockquote class="quote-pon"><p>"To be identified with your mind is to be trapped in time: the compulsion to live almost exclusively through memory and anticipation."</p><footer>— Eckhart Tolle</footer></blockquote>
+           <blockquote class="quote-pon"><p>"Awareness is the greatest agent for change."</p><footer>— Eckhart Tolle</footer></blockquote>
+           <blockquote class="quote-pon"><p>"As soon as you honor the present moment, all unhappiness and struggle dissolve, and life begins to flow with joy and ease."</p><footer>— Eckhart Tolle</footer></blockquote>
+           <blockquote class="quote-pon"><p>"The past has no power over the present moment."</p><footer>— Eckhart Tolle</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-pon">
+       <div class="section-header-pon">
+          <i class="fas fa-dove"></i>
+          <h2>Finding Peace in the Eternal Now</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Power of Now" is a profound guide to transcending the limitations of the egoic mind and discovering the peace and stillness that are always available in the present moment. It reveals how our attachment to past and future creates suffering and obscures our true nature.</p>
+      <p class="text-base leading-relaxed">By practicing presence, observing the mind, accepting what is, and connecting with the inner body, we can dissolve patterns of negativity and resistance. This allows us to access a deeper intelligence and live with greater ease, creativity, and joy. The journey isn't about becoming someone new, but about realizing who you already are beneath the layers of thought.</p>
+       <div class="conclusion-highlight-pon">
+           <p>The Now is not just a moment in time; it is the doorway to <strong>timeless Being</strong>, the source of true power and lasting peace. Embrace it fully.</p>
+       </div>
+    </div>
+
+    <div class="footer-pon">
+       <p>© 2024 Summary of "The Power of Now" by Eckhart Tolle.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
