@@ -1,395 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Win Friends & Influence People - Dale Carnegie | Summary</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Fonts: Merriweather (Serif) & Poppins (Sans-serif) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            /* Colors from Cover */
-            --color-primary-red: #D82C1E; /* Bright Red */
-            --color-primary-red-dark: #B71C1C; /* Darker Red */
-            --color-bg-white: #FFFFFF;
-            --color-text-dark: #111111; /* Near Black */
-            --color-text-medium: #333333;
-            --color-text-light: #ffffff;
-            --color-border-light: #ECECEC;
-            --bg-offwhite: #FAFAFA;
-             --color-accent-blue: #00AEEF; /* Blue from sticker */
-        }
-        body {
-            font-family: 'Poppins', sans-serif; /* Sans-serif for body */
-            background-color: var(--bg-offwhite);
-            color: var(--color-text-medium);
-            line-height: 1.7;
-        }
-        /* Serif font for titles and specific elements */
-        h1, h2, h3, h4, .title-serif {
-            font-family: 'Merriweather', serif;
-            color: var(--color-primary-red); /* Red headings */
-            font-weight: 700;
-        }
-        .container { max-width: 1100px; }
-        .book-cover-frame {
-            padding: 0.5rem;
-            background-color: var(--color-bg-white);
-            border: 1px solid var(--color-border-light);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 220px; /* Adjust size */
-            border-radius: 2px;
-        }
-        .section { padding: 3rem 1.5rem; }
-        .section-alt { background-color: var(--color-bg-white); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Win Friends & Influence People Summary - Dale Carnegie</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Color Scheme from Cover */
+      --theme-red: #C8102E; /* Classic Carnegie Red */
+      --theme-white: #FFFFFF;
+      --theme-blue-accent: #00AEEF; /* blue from "Updated" sticker */
+      --theme-text-dark: #1A202C; /* Dark Gray for text */
+      --theme-text-medium: #4A5568; /* Medium Gray */
+      --theme-border-light: #E2E8F0; /* Light Gray border */
+      --theme-bg-subtle: #F7FAFC; /* Very light gray background */
+    }
 
-        .card {
-            background-color: var(--color-bg-white);
-            border: 1px solid var(--color-border-light);
-            padding: 1.5rem;
-            border-radius: 6px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            position: relative;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        .principle-card { /* Cards within the parts */
-             border-left-width: 4px;
-             border-left-color: var(--color-primary-red);
-        }
-         .principle-card h3 {
-            font-size: 1.1rem; /* Slightly smaller principle titles */
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            color: var(--color-text-dark); /* Dark text for title */
-         }
-         .principle-card p {
-            font-size: 0.9rem; /* Smaller description */
-            color: var(--color-text-medium);
-         }
+    body {
+      font-family: 'Lato', sans-serif; /* Clean sans-serif for body */
+      color: var(--theme-text-medium);
+      line-height: 1.7;
+      background-color: var(--theme-white);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', serif; /* Classic serif for headings */
+      color: var(--theme-text-dark);
+      font-weight: 700; /* Georgia often looks better bold */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
 
-        .quote-block-fancy {
-            background-color: var(--bg-offwhite);
-            border: 1px solid var(--color-border-light);
-            padding: 1.75rem 2.5rem 1.5rem 3rem; /* Adjusted padding */
-            margin: 2rem 0;
-            color: var(--color-text-medium);
-            border-radius: 4px;
-            position: relative;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.07);
-            border-left: 5px solid var(--color-primary-red); /* Red left border */
-        }
-        .quote-block-fancy p {
-            font-style: italic;
-            font-family: 'Merriweather', serif; /* Serif for quote text */
-            line-height: 1.7;
-            color: var(--color-text-dark); /* Darker quote text */
-        }
-        .quote-block-fancy::before { /* Opening quote mark */
-            content: "\201C";
-            font-family: 'Merriweather', serif;
-            font-size: 5rem; /* Large quote mark */
-            font-weight: 700;
-            color: var(--color-primary-red); /* Red quote mark */
-            opacity: 0.5; /* Slightly transparent */
-            position: absolute;
-            left: 0.5rem;
-            top: -0.5rem; /* Position slightly above */
-            line-height: 1;
-            z-index: 0;
-        }
-        .quote-block-fancy footer {
-             margin-top: 1rem;
-             font-style: normal;
-             text-align: right;
-             font-weight: 600;
-             color: var(--color-text-dark);
-             font-size: 0.9rem;
-        }
+    /* Header */
+    .main-header {
+      background-color: var(--theme-red); /* Red background */
+      color: var(--theme-white); /* White text */
+      border-radius: 8px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .main-header h1 { color: var(--theme-white); font-size: 2.75rem; letter-spacing: 0.5px; }
+    .main-header h3 { color: var(--theme-white); font-family: 'Lato', sans-serif; font-size: 1.1rem; font-weight: 400; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+    .main-header p { color: var(--theme-white); font-size: 1rem; opacity: 0.95; }
+    .book-cover {
+      max-width: 160px;
+      height: auto;
+      border-radius: 4px;
+      border: 3px solid var(--theme-white);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .subtitle {
+        color: var(--theme-white);
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+        opacity: 0.9;
+        border-top: 1px dotted rgba(255,255,255,0.5);
+        border-bottom: 1px dotted rgba(255,255,255,0.5);
+        padding: 0.5rem 0;
+        display: inline-block;
+    }
 
-        .section-header-red {
-             background-color: var(--color-primary-red);
-             color: var(--color-text-light);
-             padding: 1rem 1.5rem;
-             border-radius: 6px 6px 0 0; /* Rounded top */
-             box-shadow: 0 2px 4px rgba(216, 44, 30, 0.2);
-        }
-         .section-header-red h2 { color: inherit; font-size: 1.75rem; }
-         .section-header-red i {
-             margin-right: 0.75rem;
-             opacity: 0.9;
-         }
-         .section-content-box { /* Content below red header */
-             background-color: white;
-             padding: 2rem;
-             border: 1px solid var(--color-border-light);
-             border-top: none; /* Remove top border */
-             border-radius: 0 0 6px 6px; /* Rounded bottom */
-             box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-         }
-         .icon-circle-red {
-            background-color: #FEE2E2; /* Light Red */
-            color: var(--color-primary-red-dark);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            border: 1px solid #FECACA; /* Slightly darker red border */
-        }
-        .divider-red {
-            height: 2px;
-            background-color: var(--color-primary-red);
-            width: 60px;
-            margin: 1.5rem auto;
-            border-radius: 1px;
-        }
-        .list-item-red::before { /* Custom bullet */
-            content: '\2713'; /* Check mark */
-            color: var(--color-primary-red);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em
-        }
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: var(--theme-white);
+      border-radius: 8px;
+      border: 1px solid var(--theme-border-light);
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .section-header {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--theme-border-light);
+      display: flex;
+      align-items: center;
+      background-color: var(--theme-bg-subtle); /* Subtle bg for header */
+    }
+    .section-header h2 {
+      color: var(--theme-red); /* Red section titles */
+      font-size: 1.6rem;
+      margin: 0;
+      }
+    .section-header i {
+      margin-right: 0.85rem;
+      color: var(--theme-red); /* Red icons */
+      font-size: 1.2em;
+      opacity: 0.85;
+    }
+    .section-content {
+      padding: 1.75rem 2rem;
+    }
 
-    </style>
+    /* Interactive Principle Cards */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .principle-card-interactive {
+      background-color: var(--theme-white);
+      border: 1px solid var(--theme-border-light);
+      border-left: 5px solid var(--theme-red); /* Red left border */
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-left-color 0.25s ease-out;
+    }
+    .principle-card-interactive:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      border-left-color: var(--theme-blue-accent); /* blue border on hover */
+    }
+    .principle-number {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--theme-red);
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .principle-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem; /* Slightly larger title */
+      font-weight: 700;
+      color: var(--theme-text-dark);
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+     .principle-card-interactive:hover .principle-title {
+        color: var(--theme-blue-accent); /* blue title text on hover */
+    }
+    .principle-summary {
+      font-size: 0.9rem;
+      color: var(--theme-text-medium);
+      line-height: 1.6;
+      margin-top: auto;
+    }
+    .principle-summary strong {
+        color: var(--theme-text-dark);
+        font-weight: 700;
+    }
+
+    /* Quote Style */
+    .quote-block-red {
+      background-color: var(--theme-bg-subtle);
+      border-left: 4px solid var(--theme-red);
+      padding: 1.5rem 1.75rem;
+      margin: 1.75rem 0;
+      border-radius: 0 6px 6px 0;
+      position: relative;
+    }
+    .quote-block-red p {
+      font-family: 'Georgia', serif; /* Serif for quotes */
+      font-style: italic;
+      color: var(--theme-text-dark);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+    .quote-block-red footer {
+      text-align: right;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--theme-red); /* Red attribution */
+      font-size: 0.9rem;
+      font-family: 'Lato', sans-serif;
+    }
+    .quote-block-red::before { /* Optional subtle quote icon */
+        content: "\f10d"; /* FontAwesome quote-left icon */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: -12px;
+        top: -10px;
+        font-size: 1.5rem;
+        color: var(--theme-red);
+        opacity: 0.2;
+    }
+
+    /* Themes List */
+    .themes-list-interactive {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .themes-list-interactive li {
+      background-color: var(--theme-white);
+      border: 1px solid var(--theme-border-light);
+      border-left: 3px solid var(--theme-red);
+      padding: 0.8rem 1.25rem;
+      margin-bottom: 0.75rem;
+      border-radius: 4px;
+      color: var(--theme-text-medium);
+      font-weight: 400; /* Regular weight */
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, border-left-color 0.2s ease, color 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .themes-list-interactive li:hover {
+        background-color: var(--theme-bg-subtle);
+        border-left-color: var(--theme-blue-accent);
+        color: var(--theme-text-dark);
+    }
+     .themes-list-interactive li i {
+         color: var(--theme-red);
+         margin-right: 0.85rem;
+         width: 20px;
+         text-align: center;
+         transition: color 0.2s ease, transform 0.2s ease;
+         opacity: 0.8;
+     }
+      .themes-list-interactive li:hover i {
+          color: var(--theme-blue-accent);
+          transform: scale(1.1);
+      }
+
+     /* Conclusion Highlight */
+     .conclusion-highlight-red {
+        background-color: var(--theme-bg-subtle);
+        color: var(--theme-text-dark);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        text-align: center;
+        border: 1px solid var(--theme-border-light);
+        border-top: 4px solid var(--theme-red);
+     }
+     .conclusion-highlight-red p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+     }
+     .conclusion-highlight-red strong {
+         font-weight: 700;
+         color: var(--theme-red);
+     }
+
+  </style>
 </head>
-<body class="antialiased">
-
-    <!-- Header Section -->
-    <header class="section bg-white border-b-4 border-[var(--color-primary-red)]">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <!-- Text Content -->
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-4xl lg:text-6xl title-serif font-black text-primary-red mb-3 leading-tight tracking-tight">HOW TO<br>WIN FRIENDS<br>& INFLUENCE<br>PEOPLE</h1>
-                <div class="w-20 h-px bg-gray-300 my-4 mx-auto md:mx-0"></div> 
-                <p class="text-lg lg:text-xl italic text-gray-700 mb-4">The Only Book You Need to Lead You to Success</p>
-                <p class="text-2xl lg:text-3xl title-serif font-bold text-text-dark">Dale Carnegie</p>
-                 <!-- Optional: Sticker element -->
-            </div>
-            <!-- Book Cover Image -->
-            <div class="flex-shrink-0 mt-8 md:mt-0">
-                 <div class="book-cover-frame mx-auto">
-                     <img
-                        src="https://m.media-amazon.com/images/I/71vK0WVQ4rL._SL1500_.jpg"
-                        alt="Book cover of How to Win Friends and Influence People"
-                        class="w-full h-auto object-contain"
-                    />
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Introduction Section -->
-    <section class="section section-alt">
-        <div class="container mx-auto max-w-4xl">
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                 <div class="md:col-span-1 flex justify-center">
-                     <div class="icon-circle-red">
-                        <i class="fas fa-book-reader text-2xl"></i>
-                    </div>
-                 </div>
-                <div class="md:col-span-2">
-                    <h2 class="text-3xl title-serif mb-4">Timeless Wisdom for Human Relations</h2>
-                    <p class="text-gray-700 mb-4 text-base leading-relaxed">Published in 1936 amidst the Great Depression, Dale Carnegie's <span class="font-semibold text-primary-red">How to Win Friends and Influence People</span> became an instant phenomenon, offering practical and profoundly effective advice on interpersonal skills. It remains one of the most influential self-help books ever written, selling over 30 million copies.</p>
-                    <p class="text-gray-700 text-base leading-relaxed">Carnegie, a pioneer in public speaking and self-improvement courses, distilled years of observation and teaching into actionable principles focused on understanding human nature, showing genuine interest, and fostering positive interactions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<body>
+  <div class="container">
+    <!-- Header/Title Section -->
+    <div class="main-header flex flex-col md:flex-row items-center text-center md:text-left">
+      <div class="md:w-3/4 md:pr-10 mb-6 md:mb-0">
+        <h3 class="mb-1">DALE CARNEGIE</h3>
+        <h1 class="mb-3">HOW TO WIN FRIENDS & INFLUENCE PEOPLE</h1>
+        <p class="subtitle mb-4">The Only Book You Need to Lead You to Success</p>
+        <p class="text-sm leading-relaxed">A foundational guide to improving your interactions, building genuine connections, and achieving success by understanding and applying timeless principles of human relations.</p>
+      </div>
+      <div class="md:w-1/4 flex justify-center md:justify-end">
+        <!-- Using the cover URL that matches the red/white/blue theme -->
+        <img src="https://m.media-amazon.com/images/I/81PQGGNul3L._SL1500_.jpg" alt="How to Win Friends & Influence People Book Cover (Red and White)" class="book-cover">
+      </div>
+    </div>
 
     <!-- Core Philosophy Section -->
-    <section class="section bg-red-50 border-y border-red-200">
-        <div class="container mx-auto max-w-3xl text-center">
-             <i class="fas fa-heart text-4xl text-primary-red mb-4"></i>
-             <h2 class="text-3xl title-serif mb-4">Carnegie's Core Philosophy</h2>
-             <p class="text-xl text-text-medium leading-relaxed mb-4">
-                 "Success in dealing with people depends on a sympathetic grasp of the other person’s viewpoint." Carnegie emphasized that understanding and appealing to others' desires, perspectives, and need to feel important is paramount.
-             </p>
-             <p class="text-lg text-text-medium">His approach is rooted in <strong class="text-primary-red-dark">genuine appreciation, sincere interest, and empathetic understanding</strong>, rather than manipulation.</p>
-        </div>
-    </section>
+    <div class="section">
+      <div class="section-header">
+          <i class="fas fa-heart"></i>
+        <h2>Core Philosophy: Empathy & Genuine Interest</h2>
+      </div>
+      <div class="section-content">
+        <p class="mb-4">Dale Carnegie's masterpiece rests on the belief that success stems from our ability to interact effectively with others. It's not about manipulation, but about fostering <strong>authentic relationships</strong> through empathy, understanding others' perspectives, and showing genuine appreciation.</p>
+        <p class="mb-4">The core idea is to shift focus from *your* wants to understanding and appealing to the wants and needs of *others*. By making people feel valued, understood, and important, you naturally build influence and strong, positive connections.</p>
+        <blockquote class="quote-block-red">
+            <p>"When dealing with people, remember you are not dealing with creatures of logic, but creatures of emotion."</p>
+            <footer>— Dale Carnegie</footer>
+        </blockquote>
+      </div>
+    </div>
 
-    <!-- Section for the Four Parts Overview -->
-    <section class="section section-alt text-center">
-         <h2 class="text-3xl title-serif mb-4">Structure of the Book</h2>
-         <p class="max-w-2xl mx-auto mb-8 text-gray-600">Carnegie organizes his timeless advice into four distinct parts:</p>
-         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card p-5 text-center border-t-4 border-primary-red">
-                 <h3 class="font-semibold text-lg mb-1 text-text-dark">Part 1</h3>
-                 <p class="text-sm text-gray-600">Fundamental Techniques in Handling People</p>
-            </div>
-             <div class="card p-5 text-center border-t-4 border-primary-red">
-                 <h3 class="font-semibold text-lg mb-1 text-text-dark">Part 2</h3>
-                 <p class="text-sm text-gray-600">Six Ways to Make People Like You</p>
-            </div>
-             <div class="card p-5 text-center border-t-4 border-primary-red">
-                 <h3 class="font-semibold text-lg mb-1 text-text-dark">Part 3</h3>
-                 <p class="text-sm text-gray-600">How to Win People to Your Way of Thinking</p>
-            </div>
-             <div class="card p-5 text-center border-t-4 border-primary-red">
-                 <h3 class="font-semibold text-lg mb-1 text-text-dark">Part 4</h3>
-                 <p class="text-sm text-gray-600">Be a Leader: Change People Without Offense</p>
-            </div>
+    <!-- Section 1: Fundamental Techniques -->
+    <div class="section">
+      <div class="section-header">
+          <i class="fas fa-handshake-angle-left"></i>
+        <h2>Fundamental Techniques in Handling People</h2>
+      </div>
+      <div class="section-content">
+         <p class="mb-6">Carnegie's foundational principles for interaction:</p>
+        <div class="principles-grid">
+           <div class="principle-card-interactive">
+            <div class="principle-number">Technique 1</div>
+            <div class="principle-title">Don't criticize, condemn or complain.</div>
+            <p class="principle-summary">Criticism wounds pride and breeds resentment. Seek understanding instead.</p>
+          </div>
+          <div class="principle-card-interactive">
+            <div class="principle-number">Technique 2</div>
+            <div class="principle-title">Give honest and sincere appreciation.</div>
+            <p class="principle-summary">People crave appreciation. Offer genuine praise to motivate and build goodwill.</p>
+          </div>
+          <div class="principle-card-interactive">
+            <div class="principle-number">Technique 3</div>
+            <div class="principle-title">Arouse in the other person an eager want.</div>
+             <p class="principle-summary">Focus on the other person's desires to gain cooperation and influence.</p>
          </div>
-    </section>
-
-    <!-- Part 1: Fundamental Techniques -->
-    <section class="mb-10">
-        <div class="section-header-red">
-            <h2 class="title-serif flex items-center"><i class="fas fa-handshake"></i> Part 1: Fundamental Techniques</h2>
         </div>
-        <div class="section-content-box">
-             <p class="mb-6 text-base text-gray-700">The bedrock principles for interacting effectively with anyone:</p>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">1. Don't criticize, condemn, or complain.</h3>
-                    <p>Criticism damages pride and breeds resentment. Understand that people act based on their own logic and desires. Seek to understand, not to condemn.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">2. Give honest and sincere appreciation.</h3>
-                    <p>Recognize and praise others' strengths and efforts genuinely. Appreciation fulfills the deep human craving for importance; flattery is insincere and ineffective.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">3. Arouse in the other person an eager want.</h3>
-                    <p>Focus on the other person's needs and desires. Show them how taking a specific action aligns with their own interests and motivations.</p>
-                </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Making People Like You -->
+    <div class="section">
+      <div class="section-header">
+          <i class="fas fa-users-rays"></i>
+        <h2>Six Ways to Make People Like You</h2>
+      </div>
+      <div class="section-content">
+        <p class="mb-6">Building rapport through positive actions:</p>
+        <div class="principles-grid">
+            <div class="principle-card-interactive">
+                <div class="principle-number">Way 1</div>
+                <div class="principle-title">Become genuinely interested in other people.</div>
+            </div>
+            <div class="principle-card-interactive">
+                <div class="principle-number">Way 2</div>
+                <div class="principle-title">Smile.</div>
+            </div>
+            <div class="principle-card-interactive">
+                <div class="principle-number">Way 3</div>
+                <div class="principle-title">Remember names.</div>
+                 <p class="principle-summary">A person's name is the sweetest sound.</p>
+            </div>
+            <div class="principle-card-interactive">
+                <div class="principle-number">Way 4</div>
+                <div class="principle-title">Be a good listener. Encourage others to talk about themselves.</div>
+            </div>
+             <div class="principle-card-interactive">
+                <div class="principle-number">Way 5</div>
+                <div class="principle-title">Talk in terms of the other person's interests.</div>
+            </div>
+            <div class="principle-card-interactive">
+                <div class="principle-number">Way 6</div>
+                <div class="principle-title">Make the other person feel important – sincerely.</div>
             </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Part 2: Six Ways to Make People Like You -->
-    <section class="mb-10">
-         <div class="section-header-red">
-            <h2 class="title-serif flex items-center"><i class="fas fa-heart"></i> Part 2: Making People Like You</h2>
+    <!-- Section 3: Winning People to Your Way of Thinking -->
+     <div class="section">
+      <div class="section-header">
+          <i class="fas fa-brain"></i>
+        <h2>Win People to Your Way of Thinking</h2>
+      </div>
+      <div class="section-content">
+        <p class="mb-6">Persuasion through respect and understanding:</p>
+        <div class="principles-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="principle-card-interactive"><div class="principle-number">Principle 1</div><div class="principle-title">Avoid arguments.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 2</div><div class="principle-title">Show respect for others' opinions. Never say "You're wrong."</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 3</div><div class="principle-title">If wrong, admit it quickly and emphatically.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 4</div><div class="principle-title">Begin friendly.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 5</div><div class="principle-title">Get "yes, yes" responses.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 6</div><div class="principle-title">Let others talk more.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 7</div><div class="principle-title">Let others feel the idea is theirs.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 8</div><div class="principle-title">See things from their point of view.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 9</div><div class="principle-title">Be sympathetic.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 10</div><div class="principle-title">Appeal to nobler motives.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 11</div><div class="principle-title">Dramatize your ideas.</div></div>
+            <div class="principle-card-interactive"><div class="principle-number">Principle 12</div><div class="principle-title">Throw down a challenge.</div></div>
         </div>
-         <div class="section-content-box">
-              <p class="mb-6 text-base text-gray-700">Simple, powerful ways to build rapport and positive connections:</p>
-             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">1. Become genuinely interested.</h3>
-                    <p>Show authentic interest in others' lives, work, and passions. Ask questions, listen attentively.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">2. Smile.</h3>
-                    <p>A warm, genuine smile conveys goodwill immediately and makes you more approachable.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">3. Remember names.</h3>
-                    <p>Using someone's name is a subtle but powerful compliment, showing you value them as an individual.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">4. Be a good listener.</h3>
-                    <p>Encourage others to talk about themselves. Listen actively and patiently to understand their world.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">5. Talk their interests.</h3>
-                    <p>Find common ground by discussing topics that genuinely interest the other person.</p>
-                </div>
-                <div class="principle-card p-4">
-                    <h3 class="title-serif">6. Make them feel important (sincerely).</h3>
-                    <p>Acknowledge others' value and contributions authentically. Avoid insincere flattery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Quote Section -->
-    <section class="mb-10">
-        <div class="container mx-auto max-w-4xl">
-            <div class="quote-block-fancy">
-                <p>You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you.</p>
-                <footer class="mt-2">- Dale Carnegie</footer>
-            </div>
+    <!-- Section 4: Leadership -->
+     <div class="section">
+      <div class="section-header">
+          <i class="fas fa-user-tie"></i>
+        <h2>Be a Leader: How to Change People</h2>
+      </div>
+      <div class="section-content">
+         <p class="mb-6">Guiding others respectfully and effectively:</p>
+        <div class="principles-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+             <div class="principle-card-interactive"><div class="principle-number">Principle 1</div><div class="principle-title">Begin with praise and honest appreciation.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 2</div><div class="principle-title">Call attention to mistakes indirectly.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 3</div><div class="principle-title">Talk about your own mistakes first.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 4</div><div class="principle-title">Ask questions, don't give orders.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 5</div><div class="principle-title">Let the other person save face.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 6</div><div class="principle-title">Praise every improvement.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 7</div><div class="principle-title">Give a fine reputation to live up to.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 8</div><div class="principle-title">Use encouragement. Make faults seem easy to correct.</div></div>
+             <div class="principle-card-interactive"><div class="principle-number">Principle 9</div><div class="principle-title">Make others happy to do what you suggest.</div></div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Part 3: Win People to Your Way of Thinking -->
-    <section class="mb-10">
-         <div class="section-header-red">
-            <h2 class="title-serif flex items-center"><i class="fas fa-brain"></i> Part 3: Winning People to Your Thinking</h2>
-        </div>
-         <div class="section-content-box">
-            <p class="mb-6 text-base text-gray-700">Strategies for persuasion and influencing opinions without causing resentment:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="principle-card p-4"><h3 class="title-serif">1. Avoid arguments.</h3><p>The only way to win is to avoid them. Focus on understanding, not debating.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">2. Respect opinions.</h3><p>Never say "You're wrong." Find common ground first.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">3. Admit your wrongs quickly.</h3><p>Takes the fight out of the other person and builds trust.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">4. Begin friendly.</h3><p>Start with warmth and common ground. "A drop of honey..."</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">5. Get "Yes, yes" immediately.</h3><p>Start with points of agreement to create positive momentum.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">6. Let others talk more.</h3><p>People prefer listeners. Let them express themselves fully.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">7. Let them feel it's their idea.</h3><p>People support ideas they feel ownership of. Guide, don't dictate.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">8. See their viewpoint.</h3><p>Honestly try to understand their perspective and motivations.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">9. Be sympathetic.</h3><p>Acknowledge their feelings and desires, even if you disagree.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">10. Appeal to noble motives.</h3><p>Frame requests based on higher values like fairness, honesty, service.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">11. Dramatize your ideas.</h3><p>Present information vividly and engagingly to capture attention.</p></div>
-                <div class="principle-card p-4"><h3 class="title-serif">12. Throw down a challenge.</h3><p>Appeal to the desire for competition and achievement to spur action.</p></div>
-            </div>
-        </div>
-    </section>
+    <!-- Central Themes -->
+     <div class="section">
+      <div class="section-header">
+          <i class="fas fa-star"></i>
+        <h2>Central Themes</h2>
+      </div>
+      <div class="section-content">
+        <p class="mb-4">Carnegie's work weaves together these essential human relations themes:</p>
+        <ul class="themes-list-interactive">
+            <li><i class="fas fa-hand-holding-heart"></i> Empathy & Perspective-Taking</li>
+            <li><i class="fas fa-thumbs-up"></i> Sincere Appreciation & Positive Feedback</li>
+            <li><i class="fas fa-user-group"></i> Building Genuine Rapport & Trust</li>
+            <li><i class="fas fa-ear-listen"></i> The Power of Active Listening</li>
+            <li><i class="fas fa-comments"></i> Respectful Communication & Avoiding Conflict</li>
+            <li><i class="fas fa-lightbulb"></i> Understanding Human Motivation</li>
+            <li><i class="fas fa-flag"></i> Effective & Humane Leadership</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- Part 4: Be a Leader -->
-    <section class="mb-10">
-        <div class="section-header-red">
-            <h2 class="title-serif flex items-center"><i class="fas fa-crown"></i> Part 4: Be a Leader: Influencing Behavior</h2>
+    <!-- Memorable Quotes -->
+    <div class="section">
+      <div class="section-header">
+          <i class="fas fa-quote-right"></i>
+        <h2>Memorable Quotes</h2>
+      </div>
+      <div class="section-content">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+          <blockquote class="quote-block-red"><p>"You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you."</p><footer>— Dale Carnegie</footer></blockquote>
+          <blockquote class="quote-block-red"><p>"Any fool can criticize, condemn and complain - and most fools do. But it takes character and self-control to be understanding and forgiving."</p><footer>— Dale Carnegie</footer></blockquote>
+          <blockquote class="quote-block-red"><p>"Talk to someone about themselves and they'll listen for hours."</p><footer>— Dale Carnegie</footer></blockquote>
+          <blockquote class="quote-block-red"><p>"Actions speak louder than words, and a smile says, 'I like you. You make me happy. I am glad to see you.'"</p><footer>— Dale Carnegie</footer></blockquote>
         </div>
-         <div class="section-content-box">
-             <p class="mb-6 text-base text-gray-700">Techniques for changing attitudes or behavior constructively:</p>
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                 <div class="principle-card p-4"><h3 class="title-serif">1. Begin with praise.</h3><p>Start with sincere appreciation before offering corrective feedback.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">2. Call attention indirectly.</h3><p>Use subtle hints or questions rather than direct criticism.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">3. Talk about your mistakes first.</h3><p>Sharing your own faults makes others more receptive.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">4. Ask questions, don't order.</h3><p>Empowers others and makes them more cooperative.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">5. Let the other person save face.</h3><p>Protect their dignity, even when correcting them.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">6. Praise every improvement.</h3><p>Be specific and sincere in acknowledging progress.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">7. Give a fine reputation to live up to.</h3><p>Express belief in their potential and positive traits.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">8. Use encouragement.</h3><p>Make faults seem easy to correct and express confidence.</p></div>
-                 <div class="principle-card p-4"><h3 class="title-serif">9. Make them happy to do your suggestion.</h3><p>Frame requests by highlighting the benefits for them.</p></div>
-            </div>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="section">
+      <div class="section-header">
+          <i class="fas fa-book-open-reader"></i>
+        <h2>Conclusion: Timeless Skills for Life</h2>
+      </div>
+      <div class="section-content">
+        <p class="mb-4">"How to Win Friends and Influence People" isn't just a book; it's a practical manual for improving human connection. Its principles are straightforward, actionable, and profoundly effective because they tap into fundamental aspects of human nature.</p>
+        <p class="mb-4">By internalizing and practicing Carnegie's advice—showing genuine interest, offering sincere appreciation, listening more than you speak, and treating everyone with respect—you equip yourself with skills essential for success and happiness in every facet of life.</p>
+
+        <div class="conclusion-highlight-red">
+          <p>Mastering these timeless principles unlocks the ability to build <strong>stronger relationships, gain willing cooperation, lead effectively, and navigate the social world with confidence and grace</strong>.</p>
         </div>
-    </section>
-
-    <!-- Final Quote & Conclusion -->
-    <section class="section section-alt">
-        <div class="container mx-auto max-w-3xl">
-            <div class="quote-block-fancy">
-                <p>When dealing with people, remember you are not dealing with creatures of logic, but creatures bristling with prejudice and motivated by pride and vanity.</p>
-                 <footer class="mt-2">- Dale Carnegie</footer>
-            </div>
-
-             <div class="divider-red"></div>
-
-            <div class="text-center">
-                 <h2 class="text-3xl title-serif mb-4">Lasting Impact</h2>
-                 <p class="text-lg text-gray-700 leading-relaxed">
-                    The principles in "How to Win Friends and Influence People" are enduring because they focus on fundamental human psychology. By consistently applying these techniques with sincerity, you can dramatically improve your personal and professional relationships, increase your influence, and lead a more successful and fulfilling life.
-                 </p>
-                 <button class="mt-8 bg-primary-red text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-primary-red-dark transition duration-300 text-lg">
-                    Start Applying These Principles!
-                </button>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
 
     <!-- Footer -->
-     <footer class="py-6 px-6 bg-gray-100 text-gray-600 text-center border-t border-border-light mt-10">
-        <div class="container mx-auto">
-            <p class="text-sm">Summary of "How to Win Friends and Influence People" by Dale Carnegie (1936).</p>
-            <p class="text-xs opacity-80 mt-1">One of the most influential self-help books of all time.</p>
-        </div>
-    </footer>
-
+    <div class="mt-10 mb-6 text-center text-gray-500 text-xs">
+      <p>© 2024 Summary of "How to Win Friends & Influence People" by Dale Carnegie. Created with a unique style based on cover art.</p>
+    </div>
+  </div>
 </body>
 </html>
