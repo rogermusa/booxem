@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Courage to Be Disliked Summary - Kishimi & Koga</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Courage to Be Disliked Cover Color Scheme */
+      --ctbd-bg: #F9F9F9; /* Very Light Grey */
+      --ctbd-card-bg: #FFFFFF;
+      --ctbd-text-dark: #1F1F1F; /* Near Black */
+      --ctbd-text-title-red: #B91C1C; /* Strong Red */
+      --ctbd-accent-black: #000000;
+      --ctbd-text-light: #FFFFFF;
+      --ctbd-border-light: #EAEAEA;
+      --ctbd-border-medium: #D1D1D1;
+      --ctbd-secondary-text: #555555;
+      --ctbd-hover-red: #991B1B; /* Darker Red */
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif; /* Modern Sans-serif */
+      color: var(--ctbd-text-dark);
+      line-height: 1.75;
+      background-color: var(--ctbd-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif; /* Consistent Sans-serif */
+      color: var(--ctbd-text-title-red); /* Red Headings */
+      font-weight: 700; /* Bold */
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-ctbd {
+      background-color: var(--ctbd-card-bg); /* White header */
+      color: var(--ctbd-text-dark);
+      padding: 2.5rem 2rem; /* Generous padding */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 4px;
+      border: 1px solid var(--ctbd-border-medium);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      position: relative;
+    }
+      /* Subtle nod to enso - border effect */
+     .main-header-ctbd::after {
+        content: '';
+        position: absolute;
+        top: -2px; left: -2px; right: -2px; bottom: -2px;
+        border: 3px solid transparent;
+        border-radius: 6px;
+        pointer-events: none;
+        transition: border-color 0.3s ease;
+     }
+      .main-header-ctbd:hover::after {
+          border-color: var(--ctbd-text-title-red);
+      }
+
+    .main-header-ctbd h3 { /* Authors */
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem; /* Slightly smaller */
+        font-weight: 600; /* Semi-bold */
+        color: var(--ctbd-secondary-text); /* Secondary text color */
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .main-header-ctbd h1 { /* Title */
+        font-size: 2.75rem;
+        font-weight: 800; /* Extra Bold */
+        color: var(--ctbd-text-title-red); /* Red title */
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+    }
+    .main-header-ctbd .subtitle { /* Subtitle */
+        font-family: 'Montserrat', sans-serif;
+        color: var(--ctbd-text-dark);
+        font-size: 1rem;
+        font-weight: 600; /* Semi-bold */
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+        font-style: italic; /* Italic subtitle */
+        text-transform: none; /* Normal case */
+    }
+    .book-cover-ctbd {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--ctbd-border-light);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-ctbd {
+      background-color: var(--ctbd-card-bg);
+      color: var(--ctbd-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--ctbd-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-ctbd:hover {
+        border-color: var(--ctbd-border-medium);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    }
+
+    .section-header-ctbd {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--ctbd-text-title-red); /* Red border */
+      display: flex;
+      align-items: center;
+    }
+    .section-header-ctbd h2 {
+      font-size: 1.6rem; /* Adjusted size */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-ctbd i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--ctbd-text-title-red); /* Red icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-ctbd:hover .section-header-ctbd i {
+        transform: rotate(-5deg) scale(1.1);
+     }
+
+    /* --- Quote Style --- */
+    .quote-ctbd {
+      background-color: var(--ctbd-card-bg);
+      border: 1px solid var(--ctbd-border-light);
+      border-left: 4px solid var(--ctbd-text-title-red); /* Red left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--ctbd-secondary-text); /* Softer text */
+      border-radius: 0 3px 3px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease, border-left-color 0.3s ease;
+    }
+     .quote-ctbd:hover {
+        background-color: #FAFAFA;
+        border-color: var(--ctbd-border-medium);
+        border-left-color: var(--ctbd-accent-black); /* Black border on hover */
+        color: var(--ctbd-text-dark);
+    }
+    .quote-ctbd p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-ctbd footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600; /* Semi-bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--ctbd-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-grid-ctbd {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Slightly wider cards */
+      gap: 1.75rem;
+    }
+    .principle-card-ctbd {
+      background-color: var(--ctbd-card-bg);
+      border: 1px solid var(--ctbd-border-light);
+      border-radius: 4px;
+      padding: 1.75rem; /* More padding */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      position: relative;
+      overflow: hidden; /* Contain pseudo-element */
+    }
+     /* Red accent line on hover */
+     .principle-card-ctbd::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 0%;
+         height: 4px;
+         background-color: var(--ctbd-text-title-red);
+         transition: width 0.3s ease;
+     }
+     .principle-card-ctbd:hover::before {
+         width: 100%;
+     }
+    .principle-card-ctbd:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      border-color: var(--ctbd-border-medium);
+    }
+    .principle-icon-ctbd {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--ctbd-text-title-red);
+        height: 30px;
+    }
+    .principle-title-ctbd {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ctbd-text-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase; /* Title uppercase */
+      letter-spacing: 0.3px;
+    }
+    .principle-summary-ctbd {
+      font-size: 0.95rem;
+      color: var(--ctbd-secondary-text); /* Softer text */
+      line-height: 1.7;
+    }
+     .principle-summary-ctbd strong {
+        font-weight: 700;
+        color: var(--ctbd-text-title-red); /* Red emphasis */
+     }
+
+    .implications-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .implications-list li {
+        background-color: var(--ctbd-bg);
+        border: 1px solid var(--ctbd-border-light);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .implications-list li:hover {
+         background-color: var(--ctbd-card-bg);
+         border-color: var(--ctbd-border-medium);
+     }
+     .implications-list li i {
+         color: var(--ctbd-text-title-red);
+         margin-right: 1.25rem;
+         font-size: 1.4rem;
+         width: 30px;
+         text-align: center;
+         flex-shrink: 0;
+     }
+      .implications-list li span {
+          font-weight: 600;
+          font-size: 1.05rem;
+          color: var(--ctbd-text-dark);
+      }
+       .implications-list li span.description {
+           font-weight: 400;
+           font-size: 0.95rem;
+           margin-left: 0.5rem;
+           opacity: 0.85;
+           color: var(--ctbd-secondary-text);
+       }
+
+    .conclusion-highlight-ctbd {
+        background-color: var(--ctbd-text-dark); /* Black background */
+        color: var(--ctbd-text-light); /* White text */
+        padding: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 3px solid var(--ctbd-text-title-red); /* Red border */
+    }
+    .conclusion-highlight-ctbd p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-ctbd strong {
+        font-weight: 700;
+        color: var(--ctbd-text-title-red); /* Red emphasis on black */
+        text-transform: uppercase;
+    }
+
+    .footer-ctbd {
+        text-align: center;
+        color: var(--ctbd-secondary-text);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-ctbd">
+        <h3>Ichiro Kishimi and Fumitake Koga</h3>
+        <h1>The Courage to Be Disliked</h1>
+        <div class="subtitle">How to Free Yourself, Change Your Life, and Achieve Real Happiness</div>
+        <img src="https://m.media-amazon.com/images/I/710cYy40DUL.jpg" alt="The Courage to Be Disliked Book Cover" class="book-cover-ctbd">
+    </div>
+
+    <!-- Core Philosophy Section: Adlerian Psychology -->
+    <div class="section-ctbd">
+      <div class="section-header-ctbd">
+        <i class="fas fa-key"></i> <!-- Key for unlocking freedom -->
+        <h2>Adlerian Psychology: Freedom from the Past</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Courage to Be Disliked" presents the psychological and philosophical ideas of Alfred Adler, a contemporary of Freud and Jung, through an engaging dialogue between a philosopher and a youth. It fundamentally challenges conventional thinking about happiness, freedom, and interpersonal relationships.</p>
+      <p class="mb-4 text-base leading-relaxed">A core tenet is the **rejection of etiology (the study of causation)**, particularly Freudian trauma theory. Adlerian psychology argues that past experiences, while influential, do not *determine* our present. We are not defined by trauma, but by the **meaning we assign** to past events. Instead, it embraces **teleology (the study of purpose)** – the idea that our behavior is driven by the goals we set for ourselves, consciously or unconsciously.</p>
+      <p class="text-base leading-relaxed">Unhappiness, anxiety, and other negative states are often unconsciously *chosen* by the individual to achieve certain goals (like avoiding responsibility, seeking attention, or justifying inaction). The power to change lies entirely in the present moment.</p>
+
+      <div class="quote-ctbd">
+          <p>"No experience is in itself a cause of our success or failure. We do not suffer from the shock of our experiences—the so-called trauma—but instead we make out of them whatever suits our purposes."</p>
+          <footer>— Alfred Adler (via the book)</footer>
+      </div>
+    </div>
+
+    <!-- Key Principles Section -->
+    <div class="section-ctbd">
+      <div class="section-header-ctbd">
+         <i class="fas fa-tasks"></i> <!-- Icon for tasks/principles -->
+         <h2>Key Principles for Living Freely</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Several interconnected principles form the foundation of Adlerian psychology as presented in the book:</p>
+      <div class="principles-grid-ctbd">
+         <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-users-slash"></i></div>
+            <div class="principle-title-ctbd">Separation of Tasks</div>
+            <p class="principle-summary-ctbd">All interpersonal problems arise from confusing one's own tasks with those of others. Your task is what you directly control (your effort, choices, attitude). Others' tasks are their reactions, feelings, and judgments. **Do not intervene in others' tasks, and do not allow others to intervene in yours.** This creates true freedom from seeking approval.</p>
+        </div>
+        <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-people-carry"></i></div> <!-- Icon for community -->
+            <div class="principle-title-ctbd">Community Feeling (Kōkenkan)</div>
+            <p class="principle-summary-ctbd">True happiness is found in **"Community Feeling"** – the sense of belonging and contribution to a larger whole (family, society, humanity). This involves seeing others as comrades, not competitors, and feeling "I am useful to someone." It requires self-acceptance and trust in others.</p>
+        </div>
+        <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-check-circle"></i></div>
+            <div class="principle-title-ctbd">Self-Acceptance</div>
+            <p class="principle-summary-ctbd">Focus on what you *can* change and accept what you *cannot*. **Self-acceptance** means acknowledging your "unable-to-do" aspects without judgment, and focusing your energy on developing what you can. It's about accepting your irreplaceable "60 percent" self and moving forward, distinct from positive thinking that ignores reality.</p>
+        </div>
+        <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-hand-holding-heart"></i></div>
+            <div class="principle-title-ctbd">Confidence in Others (Trust)</div>
+            <p class="principle-summary-ctbd">Unconditionally trusting others, seeing them as comrades rather than enemies, is essential for community feeling. This doesn't mean being naive about potential betrayal, but choosing to trust as *your* task, regardless of how *they* behave (their task). This builds deeper relationships.</p>
+        </div>
+         <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-walking"></i></div>
+            <div class="principle-title-ctbd">Contribution to Others</div>
+            <p class="principle-summary-ctbd">Feeling useful and making tangible contributions to the community (your comrades) is the practical path to realizing community feeling and achieving happiness. This feeling of contribution gives you a sense of worth.</p>
+        </div>
+         <div class="principle-card-ctbd">
+            <div class="principle-icon-ctbd"><i class="fas fa-star"></i></div>
+            <div class="principle-title-ctbd">Focus on the Here and Now</div>
+            <p class="principle-summary-ctbd">Life is a series of moments. Focus intensely on the **"here and now,"** like dancing, without being bound by past interpretations or future anxieties. Life is not a line towards a destination, but a continuous series of present moments to be lived fully.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Implications for Life Section -->
+    <div class="section-ctbd">
+      <div class="section-header-ctbd">
+         <i class="fas fa-leaf"></i> <!-- Icon representing growth/change -->
+         <h2>Implications for Freedom and Happiness</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Applying these principles leads to profound shifts in perspective:</p>
+      <ul class="implications-list">
+          <li>
+              <i class="fas fa-lock-open"></i>
+              <div>
+                  <span class="implication-title">Freedom from Interpersonal Problems:</span>
+                  <span class="description">By separating tasks, you stop seeking external recognition and stop worrying about others' opinions. Your worth is self-determined.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-heart-broken"></i> <!-- Changed icon -->
+              <div>
+                  <span class="implication-title">Rejection of Recognition Seeking:</span>
+                  <span class="description">Living to satisfy others' expectations is enslavement. True freedom means living according to your own principles, even if it invites dislike.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-thumbs-up"></i>
+              <div>
+                  <span class="implication-title">Horizontal Relationships:</span>
+                  <span class="description">Viewing relationships as equal partnerships (horizontal) rather than hierarchical (vertical), avoiding praise and rebuke, fostering mutual respect and encouragement.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-road"></i>
+              <div>
+                  <span class="implication-title">Focus on the Process, Not the Goal:</span>
+                  <span class="description">Seeing life as a journey of moments rather than a race to a destination. Enjoying the process ("dancing") in the here and now leads to fulfillment.</span>
+              </div>
+          </li>
+      </ul>
+       <div class="quote-ctbd">
+          <p>"Freedom is being disliked by other people. [...] It is proof that you are exercising your freedom and living in freedom, and a sign that you are living in accordance with your own principles."</p>
+          <footer>— Ichiro Kishimi and Fumitake Koga</footer>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-ctbd">
+      <div class="section-header-ctbd">
+         <i class="fas fa-quote-left"></i>
+         <h2>Defining Insights from Adlerian Psychology</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-ctbd"><p>"All problems are interpersonal relationship problems."</p><footer>— Alfred Adler (via the book)</footer></blockquote>
+          <blockquote class="quote-ctbd"><p>"Your unhappiness cannot be blamed on your past or your environment. And it isn’t that you lack competence. You just lack courage."</p><footer>— Ichiro Kishimi and Fumitake Koga</footer></blockquote>
+          <blockquote class="quote-ctbd"><p>"The courage to be happy also includes the courage to be disliked."</p><footer>— Ichiro Kishimi and Fumitake Koga</footer></blockquote>
+           <blockquote class="quote-ctbd"><p>"To get rid of one's problems, all one can do is live in the universe all alone. But one can't do such a thing."</p><footer>— Ichiro Kishimi and Fumitake Koga</footer></blockquote>
+           <blockquote class="quote-ctbd"><p>"What is important is not what one is born with, but what use one makes of that equipment."</p><footer>— Alfred Adler (via the book)</footer></blockquote>
+           <blockquote class="quote-ctbd"><p>"We are not determined by our experiences, but the meaning we give them is self-determining."</p><footer>— Ichiro Kishimi and Fumitake Koga (interpreting Adler)</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-ctbd">
+       <div class="section-header-ctbd">
+          <i class="fas fa-award"></i> <!-- Icon for courage/achievement -->
+          <h2>The Courage to Choose Freedom</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Courage to Be Disliked" offers a liberating and actionable philosophy for achieving happiness and freedom. It argues that our lives are not predetermined by past events or external circumstances, but are shaped by the goals we choose and the meaning we create.</p>
+      <p class="text-base leading-relaxed">By embracing the separation of tasks, cultivating community feeling, accepting ourselves, and focusing on contribution in the present moment, we can break free from the chains of interpersonal conflict and the quest for external validation. This requires courage – specifically, the courage to live authentically and be disliked by those who disapprove of our choices.</p>
+       <div class="conclusion-highlight-ctbd">
+           <p>Happiness is not something to be attained in the future; it is a state of being, accessible right now through **contribution, connection, and the courage to live freely.**</p>
+       </div>
+    </div>
+
+    <div class="footer-ctbd">
+       <p>© 2024 Summary of "The Courage to Be Disliked" by Ichiro Kishimi and Fumitake Koga.</p>
+       <p class="mt-1">Content for informational purposes only. Based on Adlerian Psychology as presented by the authors.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
