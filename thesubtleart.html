@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       /* Subtle Art Cover Color Scheme */
@@ -16,8 +16,9 @@
       --subtle-text-dark: #111111; /* Near Black */
       --subtle-text-light: #FFFFFF;
       --subtle-accent-dark: #000000;
-      --subtle-accent-light: #F0F0F0; /* Off-white */
+      --subtle-accent-light: #F8F8F8; /* Light Grey Background */
       --subtle-border: #D15C2A; /* Darker orange */
+      --subtle-border-light: #EAEAEA;
       --subtle-hover-bg: var(--subtle-accent-dark);
       --subtle-hover-text: var(--subtle-text-light);
     }
@@ -25,8 +26,8 @@
     body {
       font-family: 'Montserrat', sans-serif;
       color: var(--subtle-text-dark);
-      line-height: 1.7;
-      background-color: var(--subtle-text-light); /* White base */
+      line-height: 1.75; /* Slightly increased line height */
+      background-color: var(--subtle-accent-light); /* Light Grey Page Background */
       font-size: 16px;
     }
     h1, h2, h3, h4 {
@@ -37,16 +38,18 @@
       letter-spacing: 0.5px;
     }
     .container {
-      max-width: 960px; /* Slightly narrower */
+      max-width: 1000px; /* Consistent width */
       margin: 0 auto;
-      padding: 0 1rem; /* No top/bottom padding on container */
+      padding: 2.5rem 1.5rem; /* Standard padding */
     }
     .main-header-subtle {
       background-color: var(--subtle-bg-orange); /* Orange Header BG */
       color: var(--subtle-text-dark); /* Black text on orange */
-      padding: 3rem 1.5rem;
-      margin-bottom: 0; /* No margin */
+      padding: 2rem;
+      margin-bottom: 2.5rem; /* Spacing like others */
       text-align: center;
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .main-header-subtle h3 { /* Author */
         color: var(--subtle-text-dark);
@@ -57,193 +60,221 @@
     }
     .main-header-subtle h1 { /* Title */
         color: var(--subtle-text-dark);
-        font-size: 3rem; /* Large title */
+        font-size: 2.5rem; /* Adjusted size */
         font-weight: 900; /* Black weight */
         line-height: 1.1;
         margin-bottom: 0.5rem;
     }
     .main-header-subtle h2 { /* Subtitle */
         color: var(--subtle-text-light); /* White subtitle */
-        font-size: 1.1rem;
+        font-size: 1rem; /* Adjusted size */
         font-weight: 700;
         opacity: 0.9;
         max-width: 600px;
-        margin: 0.5rem auto 0 auto;
+        margin: 0.5rem auto 1.5rem auto; /* Spacing below subtitle */
     }
      .main-header-subtle .cover-wrapper {
-        margin-top: 2rem;
-        margin-bottom: -50px; /* Overlap next section */
+        margin-top: 0; /* Reset margin */
+        margin-bottom: 0;
         position: relative;
-        z-index: 10;
+        z-index: auto; /* Reset z-index */
      }
     .book-cover-subtle {
-      max-width: 180px; /* Larger cover */
+      max-width: 160px; /* Adjusted size */
       height: auto;
       border-radius: 4px;
-      border: 4px solid var(--subtle-text-light); /* White border */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      border: 3px solid var(--subtle-text-light); /* White border */
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
       display: inline-block; /* Center it */
     }
 
-    /* Section styling using alternating backgrounds */
+    /* Section styling as cards */
     .section-subtle {
-      padding: 4rem 1.5rem; /* Generous padding */
-      margin-bottom: 0; /* Stack sections tightly */
+      background-color: var(--subtle-text-light); /* White card background */
+      color: var(--subtle-text-dark);
+      padding: 1.75rem 2rem; /* Standard card padding */
+      margin-bottom: 2.5rem; /* Standard margin */
+      border-radius: 8px; /* Rounded corners */
+      border: 1px solid var(--subtle-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .section-subtle.bg-light {
-        background-color: var(--subtle-text-light);
-        color: var(--subtle-text-dark);
-        padding-top: 70px; /* Adjust for overlapping cover */
+    .section-subtle:hover {
+        border-color: var(--subtle-bg-orange);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    .section-subtle.bg-dark {
-        background-color: var(--subtle-text-dark);
-        color: var(--subtle-text-light);
-    }
-     .section-subtle.bg-dark h2, .section-subtle.bg-dark h3 {
-        color: var(--subtle-text-light); /* Light headings on dark bg */
-     }
 
     .section-header-subtle {
-      text-align: center;
-      margin-bottom: 2.5rem;
+      text-align: left; /* Align header left */
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--subtle-bg-orange); /* Orange bottom border */
+      display: flex;
+      align-items: center;
     }
     .section-header-subtle h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-      position: relative;
+      font-size: 1.75rem; /* Adjusted size */
+      margin-bottom: 0;
+      line-height: 1.2;
     }
-    .section-header-subtle h2::after { /* Underline effect */
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 10%;
-        width: 80%;
-        height: 4px;
-        background-color: var(--subtle-bg-orange); /* Orange underline */
-    }
-    .section-subtle.bg-dark .section-header-subtle h2::after {
-        background-color: var(--subtle-bg-orange); /* Still orange on dark */
+    /* Remove underline effect */
+    .section-header-subtle h2::after {
+        content: none;
     }
     .section-header-subtle i {
-      display: block;
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+      display: inline-block; /* Keep icon inline */
+      font-size: 1.3rem; /* Adjusted size */
+      margin-bottom: 0;
+      margin-right: 0.85rem; /* Space between icon and text */
       color: var(--subtle-bg-orange); /* Orange icon */
       opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+    .section-subtle:hover .section-header-subtle i {
+        transform: rotate(-5deg) scale(1.05);
     }
 
 
     /* --- Quote Style --- */
     .quote-subtle {
-      background-color: transparent;
-      border: 3px solid var(--subtle-bg-orange); /* Orange border */
-      padding: 1.5rem;
-      margin: 2rem auto; /* Centered quote */
-      color: inherit; /* Inherit color from section */
-      border-radius: 4px;
-      font-size: 1.1rem; /* Larger quote font */
-      font-weight: 700; /* Bold quote */
-      text-align: center;
-      max-width: 700px;
-      position: relative;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      background-color: var(--subtle-accent-light); /* Light grey bg */
+      border: none; /* Remove border */
+      border-left: 4px solid var(--subtle-bg-orange); /* Orange left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0; /* Standard quote margin */
+      color: var(--subtle-text-dark); /* Dark text */
+      border-radius: 0 4px 4px 0; /* Rounded corners */
+      font-size: 1rem; /* Adjusted size */
+      font-weight: 500; /* Medium weight */
+      text-align: left; /* Left align */
+      max-width: 100%; /* Full width within section */
+      transition: background-color 0.3s ease, border-left-color 0.3s ease;
     }
      .quote-subtle:hover {
-        background-color: var(--subtle-bg-orange);
-        color: var(--subtle-text-dark); /* Dark text on orange hover */
+        background-color: #EFEFEF; /* Slightly darker grey on hover */
+        border-left-color: var(--subtle-accent-dark); /* Black border on hover */
+        color: var(--subtle-text-dark);
     }
     .quote-subtle p {
-         margin-bottom: 0.75rem;
+         margin-bottom: 0.5rem;
          font-style: italic;
      }
     .quote-subtle footer {
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       font-style: normal;
-      text-align: center;
-      font-weight: 400; /* Regular weight for attribution */
-      font-size: 0.9rem;
+      text-align: right;
+      font-weight: 700; /* Bold attribution */
+      font-size: 0.85rem;
       opacity: 0.8;
+      color: var(--subtle-text-dark);
     }
     /* --- End Quote Style --- */
 
     .themes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
+      gap: 1.75rem; /* Adjusted gap */
+      margin-top: 0; /* No extra margin needed */
     }
     .theme-card {
-      background-color: var(--subtle-accent-dark); /* Black card */
+      background-color: var(--subtle-text-dark); /* Black card */
       color: var(--subtle-text-light); /* White text */
-      border: 2px solid var(--subtle-accent-dark);
+      border: 1px solid var(--subtle-accent-dark);
+      border-top: 4px solid var(--subtle-bg-orange); /* Orange top border */
       border-radius: 6px;
-      padding: 1.75rem 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
+      padding: 1.75rem 1.5rem; /* Increased padding */
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-top-color 0.25s ease-in-out;
+      display: flex; /* Added flex for structure */
+      flex-direction: column; /* Stack elements vertically */
     }
     .theme-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      background-color: var(--subtle-bg-orange); /* Orange bg on hover */
-      border-color: var(--subtle-bg-orange);
-      color: var(--subtle-text-dark); /* Black text on hover */
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      border-top-color: var(--subtle-text-light); /* White top border on hover */
+      background-color: var(--subtle-text-dark); /* Keep background dark */
+      color: var(--subtle-text-light); /* Keep text light */
     }
      .theme-card:hover .theme-icon i {
-        color: var(--subtle-text-dark); /* Change icon color on hover */
+        color: var(--subtle-text-light); /* White icon on hover */
+     }
+     .theme-card:hover .theme-title {
+         color: var(--subtle-bg-orange); /* Orange title on hover */
      }
     .theme-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.75rem; /* Adjusted size */
+        margin-bottom: 0.75rem;
         color: var(--subtle-bg-orange); /* Orange icon */
-        text-align: center;
+        text-align: left; /* Align left */
         transition: color 0.25s ease-in-out;
+        height: 30px; /* Give icon fixed height */
     }
     .theme-title {
-      font-size: 1.25rem;
+      font-size: 1.1rem; /* Adjusted size */
       font-weight: 800;
-      color: inherit; /* Inherit from card (changes on hover) */
-      margin-bottom: 0.75rem;
-      text-align: center;
+      color: var(--subtle-text-light); /* White title */
+      margin-bottom: 0.75rem; /* Increased margin */
+      text-align: left; /* Align left */
       text-transform: uppercase;
        transition: color 0.25s ease-in-out;
+       min-height: 40px; /* Allow space for multi-line titles */
     }
     .theme-summary {
-      font-size: 0.95rem;
-      color: inherit; /* Inherit from card */
-      line-height: 1.65;
-       opacity: 0.9;
-       text-align: center;
-        transition: color 0.25s ease-in-out;
+      font-size: 0.95rem; /* Slightly larger summary text */
+      color: var(--subtle-text-light); /* White text */
+      line-height: 1.65; /* Adjusted line height */
+       opacity: 0.85;
+       text-align: left; /* Align left */
+       flex-grow: 1; /* Allow summary to fill space */
     }
      .theme-summary strong {
         font-weight: 700;
         opacity: 1;
     }
 
-    .conclusion-highlight-subtle {
+    /* Conclusion Section as a dark card */
+    .conclusion-section-subtle {
         background-color: var(--subtle-text-dark);
         color: var(--subtle-text-light);
-        padding: 2.5rem;
-        margin-top: 0; /* No margin */
-        text-align: center;
+        padding: 1.75rem 2rem;
+        margin-bottom: 2.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--subtle-accent-dark);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .conclusion-highlight-subtle p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-    .conclusion-highlight-subtle strong {
-        font-weight: 800;
-        color: var(--subtle-bg-orange); /* Orange emphasis */
-        text-transform: uppercase;
-    }
+     .conclusion-section-subtle .section-header-subtle h2,
+     .conclusion-section-subtle .section-header-subtle i {
+        color: var(--subtle-text-light); /* Light text/icon */
+     }
+     .conclusion-section-subtle .section-header-subtle {
+        border-bottom-color: var(--subtle-bg-orange); /* Orange border */
+     }
 
-    .centered-text p {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
+     .conclusion-highlight-subtle {
+        background-color: var(--subtle-bg-orange); /* Orange highlight box */
+        color: var(--subtle-text-dark); /* Dark text */
+        padding: 1.5rem;
+        margin-top: 1.5rem;
         text-align: center;
+        border-radius: 4px;
+     }
+     .conclusion-highlight-subtle p {
+        font-size: 1.05rem; /* Adjusted size */
+        line-height: 1.7;
+        font-weight: 500;
+     }
+     .conclusion-highlight-subtle strong {
+        font-weight: 800;
+        color: var(--subtle-text-dark); /* Dark emphasis */
+        text-transform: uppercase;
+     }
+
+    .footer-subtle {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem; /* Space above footer */
+        padding-bottom: 1rem;
     }
 
 
@@ -251,109 +282,114 @@
 </head>
 <body class="antialiased">
 
+  <div class="container">
+
     <!-- Header Section -->
     <div class="main-header-subtle">
-      <div class="container">
         <h3>MARK MANSON</h3>
         <h1>THE SUBTLE ART OF<br>NOT GIVING A F*CK</h1>
         <h2>A Counterintuitive Approach to Living a Good Life</h2>
         <div class="cover-wrapper">
           <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg" alt="Subtle Art Book Cover" class="book-cover-subtle">
         </div>
+    </div>
+
+    <!-- Core Philosophy Section -->
+    <div class="section-subtle">
+      <div class="section-header-subtle">
+        <i class="fas fa-bomb"></i>
+        <h2>Stop Trying to Be "Positive" All the Time</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">This book challenges the modern obsession with relentless positivity and self-help culture's promise of a life without problems. Manson argues that true happiness and fulfillment don't come from avoiding negativity, but from confronting it head-on. Life inherently involves suffering and struggle; the key is not to eliminate problems, but to choose <strong>better problems</strong> – problems you genuinely care about solving.</p>
+      <p class="mb-4 text-base leading-relaxed">Constantly pursuing positive experiences can lead to the "Feedback Loop from Hell" – feeling bad about feeling bad. Instead, the "subtle art" involves accepting negative emotions as normal and useful signals. It's about strategically choosing what is worth giving a f*ck about, focusing your limited attention on your core <strong>values</strong> and letting go of everything else.</p>
+      <p class="text-base leading-relaxed">This requires taking <strong>radical responsibility</strong> for your interpretations and responses, understanding that while you may not be at fault for everything that happens to you, you are always responsible for how you choose to deal with it. It's about shifting focus from external validation to internal metrics based on your chosen values.</p>
+
+      <div class="quote-subtle">
+          <p>"The desire for more positive experience is itself a negative experience. And, paradoxically, the acceptance of one’s negative experience is itself a positive experience."</p>
+          <footer>— Mark Manson</footer>
+      </div>
+       <div class="quote-subtle">
+          <p>"Life is essentially an endless series of problems... The solution to one problem is merely the creation of the next."</p>
+          <footer>— Mark Manson</footer>
       </div>
     </div>
 
-    <!-- Core Philosophy Section (White Background) -->
-    <div class="section-subtle bg-light">
-      <div class="container centered-text">
-        <div class="section-header-subtle">
-          <i class="fas fa-bomb"></i>
-          <h2>Stop Trying to Be "Positive" All the Time</h2>
-        </div>
-        <p class="mb-4 text-lg leading-relaxed">This book argues against the culture of mindless positivity. Instead, it suggests that a good life comes not from avoiding problems or pain, but from choosing the <strong>right problems and pain</strong> to engage with. True happiness is found in the struggle and solving problems you actually care about.</p>
-        <p class="mb-4 text-lg leading-relaxed">The "subtle art" isn't about being indifferent; it's about being comfortable with being different, caring less about trivial things, and focusing your finite attention and energy on what truly matters – your chosen <strong>values</strong>.</p>
-        <p class="text-lg leading-relaxed">It advocates for embracing negative experiences, taking <strong>radical responsibility</strong> for your own life and interpretations, and understanding that suffering is an inherent part of the human condition.</p>
-
-        <div class="quote-subtle">
-            <p>"The desire for more positive experience is itself a negative experience. And, paradoxically, the acceptance of one’s negative experience is itself a positive experience."</p>
-            <footer>— Mark Manson</footer>
-        </div>
+    <!-- Key Themes Section -->
+    <div class="section-subtle">
+      <div class="section-header-subtle">
+         <i class="fas fa-filter"></i>
+         <h2>Choosing What to Give a F*ck About</h2>
       </div>
-    </div>
-
-    <!-- Key Themes Section (Dark Background) -->
-    <div class="section-subtle bg-dark">
-      <div class="container">
-        <div class="section-header-subtle">
-           <i class="fas fa-filter"></i>
-           <h2>Choosing What to Give a F*ck About</h2>
+      <p class="mb-6 text-base leading-relaxed">Manson explores several key themes that help clarify how to find meaning by focusing on what's important and accepting life's inherent difficulties:</p>
+      <div class="themes-grid">
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-crosshairs"></i></div>
+            <div class="theme-title">Values Determine Metrics</div>
+            <p class="theme-summary">What you value dictates how you measure success and failure. Choose good, process-oriented values (e.g., honesty, learning, compassion) that are within your control, rather than superficial, uncontrollable metrics (e.g., popularity, wealth, being liked by everyone).</p>
         </div>
-        <p class="mb-10 text-lg leading-relaxed text-center max-w-3xl mx-auto">Manson explores several key themes that help clarify how to find meaning by focusing on what's important:</p>
-        <div class="themes-grid">
-           <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-crosshairs"></i></div>
-              <div class="theme-title">Values Determine Metrics</div>
-              <p class="theme-summary">The values you adopt determine the standards (metrics) by which you measure yourself and others. Choose good, controllable, reality-based values (like honesty, creativity) over poor ones (like popularity, being right).</p>
-          </div>
-          <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-user-check"></i></div>
-              <div class="theme-title">You Are Responsible</div>
-              <p class="theme-summary">You are always responsible for your own experiences and reactions, regardless of external circumstances. You can't always control what happens, but you *can* control how you interpret and respond to it.</p>
-          </div>
-          <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-question-circle"></i></div>
-              <div class="theme-title">Embrace Uncertainty</div>
-              <p class="theme-summary">The more you admit you don't know, the more opportunities you have to learn. Being certain often closes you off to growth. Accept that you might be wrong about everything.</p>
-          </div>
-          <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-thumbs-down"></i></div>
-              <div class="theme-title">The Value of Failure</div>
-              <p class="theme-summary">Pain and failure are essential for growth. Avoiding them prevents you from learning crucial life lessons. Improvement at anything is based on thousands of tiny failures.</p>
-          </div>
-           <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-ban"></i></div>
-              <div class="theme-title">The Importance of Rejection</div>
-              <p class="theme-summary">To truly value something, you must reject alternatives. Saying "no" to distractions, trivialities, and relationships that don't align with your values clarifies what you truly stand for.</p>
-          </div>
-           <div class="theme-card">
-              <div class="theme-icon"><i class="fas fa-skull-crossbones"></i></div>
-              <div class="theme-title">Confront Mortality</div>
-              <p class="theme-summary">Accepting the reality of your own death helps put life's problems into perspective and clarifies what is truly important. It's the scarcity of time that makes our choices meaningful.</p>
-          </div>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-user-check"></i></div>
+            <div class="theme-title">You Are Always Choosing (Responsibility)</div>
+            <p class="theme-summary">You are constantly choosing how to respond to events. Distinguish between <strong>fault</strong> (who caused something) and <strong>responsibility</strong> (how you deal with it). You are responsible for your own emotional reactions and actions, regardless of fault.</p>
         </div>
-      </div>
-    </div>
-
-     <!-- Memorable Quotes Section (Light Background) -->
-    <div class="section-subtle bg-light">
-      <div class="container">
-        <div class="section-header-subtle">
-           <i class="fas fa-quote-left"></i>
-           <h2>Straight Talk</h2>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-question-circle"></i></div>
+            <div class="theme-title">Embrace Uncertainty & Doubt</div>
+            <p class="theme-summary">Certainty is the enemy of growth. The more you question your own beliefs and assumptions, the more you learn. Accept that you might be wrong, and be comfortable with not knowing everything. This humility fosters learning and adaptation.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <blockquote class="quote-subtle"><p>"Who you are is defined by what you’re willing to struggle for."</p><footer>— Mark Manson</footer></blockquote>
-            <blockquote class="quote-subtle"><p>"Don’t hope for a life without problems. There’s no such thing. Instead, hope for a life full of good problems."</p><footer>— Mark Manson</footer></blockquote>
-            <blockquote class="quote-subtle"><p>"Maturity is what happens when one learns to only give a f*ck about what’s truly f*ckworthy."</p><footer>— Mark Manson</footer></blockquote>
-            <blockquote class="quote-subtle"><p>"If you’re stuck on a problem, don’t sit there and think about it; just start working on it. Even if you don’t know what you’re doing, the simple act of working on it will eventually cause the right ideas to show up in your head."</p><footer>— Mark Manson</footer></blockquote>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-thumbs-down"></i></div>
+            <div class="theme-title">The Value of Failure & Pain</div>
+            <p class="theme-summary">Pain is an unavoidable part of life and a crucial feedback mechanism for learning. Avoiding failure means avoiding growth. True improvement comes from experiencing setbacks, analyzing them, and adjusting your approach. Adopt the "Do Something" principle: action leads to motivation, not the other way around.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-ban"></i></div>
+            <div class="theme-title">The Importance of Rejection & Boundaries</div>
+            <p class="theme-summary">Saying "no" is essential for defining what you say "yes" to. Establishing boundaries and rejecting things that don't align with your values (including relationships, commitments, beliefs) creates space for what truly matters. Honesty, even when difficult, builds trust.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-skull-crossbones"></i></div>
+            <div class="theme-title">Confront Mortality (The Final Boundary)</div>
+            <p class="theme-summary">Reflecting on your own death puts life's trivial concerns into perspective. Understanding the finite nature of time encourages you to focus on creating meaning and a positive legacy, rather than chasing fleeting pleasures or avoiding discomfort. What will you leave behind?</p>
         </div>
       </div>
     </div>
 
-
-    <!-- Conclusion Section (Dark Background) -->
-    <div class="conclusion-highlight-subtle">
-      <div class="container">
-         <h2 class="text-2xl mb-6 uppercase tracking-wider text-white">The Art is in the <strong class="text-orange-500">Choice</strong></h2>
-        <p class="mb-4">"The Subtle Art of Not Giving a F*ck" is a refreshing slap in the face for a generation conditioned to believe that positivity and avoidance are keys to happiness. It argues that true fulfillment comes from engaging with life's inevitable struggles.</p>
-        <p>The real skill lies in choosing your struggles wisely – dedicating your limited fucks to things that align with your deepest values. It's about embracing reality, taking ownership, and finding meaning in the process, not just the outcome. <strong>Choose your pain. Choose your values. That's the art.</strong></p>
+     <!-- Memorable Quotes Section -->
+    <div class="section-subtle">
+      <div class="section-header-subtle">
+         <i class="fas fa-quote-left"></i>
+         <h2>Straight Talk - Memorable Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> <!-- Reduced gap for quotes -->
+          <blockquote class="quote-subtle"><p>"Who you are is defined by what you’re willing to struggle for."</p><footer>— Mark Manson</footer></blockquote>
+          <blockquote class="quote-subtle"><p>"Don’t hope for a life without problems... hope for a life full of good problems."</p><footer>— Mark Manson</footer></blockquote>
+          <blockquote class="quote-subtle"><p>"Maturity is what happens when one learns to only give a f*ck about what’s truly f*ckworthy."</p><footer>— Mark Manson</footer></blockquote>
+          <blockquote class="quote-subtle"><p>"Action isn’t just the effect of motivation; it’s also the cause of it."</p><footer>— Mark Manson</footer></blockquote>
+           <blockquote class="quote-subtle"><p>"We suffer for the simple reason that suffering is biologically useful. It is nature’s preferred agent for inspiring change."</p><footer>— Mark Manson</footer></blockquote>
+           <blockquote class="quote-subtle"><p>"If you want to change how you see your problems, you have to change what you value and/or how you measure failure/success."</p><footer>— Mark Manson</footer></blockquote>
       </div>
     </div>
 
-    <div class="py-4 bg-black text-center text-gray-400 text-xs">
+    <!-- Conclusion Section (Dark Card Style) -->
+    <div class="conclusion-section-subtle">
+       <div class="section-header-subtle">
+          <i class="fas fa-check-circle"></i>
+          <h2 class="text-white">The Art is in the <strong class="text-orange-500">Choice</strong> of Struggle</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed opacity-90">"The Subtle Art..." delivers a much-needed dose of reality in a world obsessed with unrealistic positivity. Manson powerfully argues that a meaningful life isn't about avoiding pain, but about choosing which pain is worth enduring. It's about finding struggles that align with your core values and engaging with them fully.</p>
+      <p class="text-base leading-relaxed opacity-90">By letting go of the need to feel good all the time, taking responsibility for your choices and reactions, embracing uncertainty, and confronting hard truths (like failure and mortality), you free yourself to focus your energy where it counts. The skill isn't indifference, but selective, value-driven caring.</p>
+       <div class="conclusion-highlight-subtle">
+           <p><strong>Choose your values. Choose your struggles. Give fewer, better f*cks. That's the art.</strong></p>
+       </div>
+    </div>
+
+    <div class="footer-subtle">
        <p>© 2024 Summary of "The Subtle Art of Not Giving a F*ck" by Mark Manson.</p>
        <p class="mt-1">Content for informational purposes only. Contains adult language reflective of the source material.</p>
     </div>
+
+  </div> <!-- End Container -->
 
 </body>
 </html>
