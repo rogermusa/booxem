@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Four Agreements Summary - Don Miguel Ruiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Four Agreements Inspired Color Scheme */
+      --4a-bg: #FDFBF5; /* Creamy White page background */
+      --4a-card-bg: #FFFFFF; /* White cards */
+      --4a-text-dark: #3B3131; /* Dark Grey/Brown */
+      --4a-text-title: #8C1D18; /* Deep Red */
+      --4a-accent-gold: #D4AF37; /* Gold */
+      --4a-border-light: #EFEAE5;
+      --4a-border-medium: #DED8CD;
+      --4a-hover-gold: #C09A2E; /* Slightly darker gold */
+      --4a-secondary-text: #6B5B5B; /* Softer grey-brown */
+      --4a-text-light: #FFFFFF; /* White text */
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--4a-text-dark);
+      line-height: 1.75;
+      background-color: var(--4a-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif; /* Serif headings */
+      color: var(--4a-text-title); /* Deep Red headings */
+      font-weight: 600; /* Semi-bold Lora */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-4a {
+      background-color: var(--4a-text-title); /* Deep Red Header BG */
+      color: var(--4a-text-light);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
+      border: 3px solid var(--4a-accent-gold); /* Gold border */
+    }
+     /* Optional: Subtle sunburst or pattern */
+     .main-header-4a::before {
+        content: '';
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        /* background-image: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 60%); */
+        opacity: 0.5;
+        pointer-events: none;
+     }
+
+    .main-header-4a h3 { /* Author */
+        font-family: 'Lora', serif;
+        font-size: 1.5rem;
+        font-weight: 500; /* Medium weight */
+        color: #FFE8A8; /* Lighter gold for better contrast */
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        letter-spacing: 0.5px;
+    }
+    .main-header-4a h1 { /* Title */
+        font-family: 'Lora', serif;
+        font-size: 2.5rem; /* Adjusted size */
+        font-weight: 700; /* Bold */
+        color: #FFFFFF; /* Bright white for maximum contrast */
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        letter-spacing: 0.5px;
+    }
+    .main-header-4a h2 { /* Subtitle */
+        font-family: 'Open Sans', sans-serif;
+        color: #FFF8E6; /* Light cream color for contrast */
+        font-size: 1rem;
+        font-weight: 400; /* Regular weight */
+        opacity: 1; /* Full opacity */
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        letter-spacing: 0.5px;
+    }
+    .book-cover-4a {
+      max-width: 160px;
+      height: auto;
+      border-radius: 4px;
+      border: 2px solid var(--4a-accent-gold);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-4a {
+      background-color: var(--4a-card-bg);
+      color: var(--4a-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--4a-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-4a:hover {
+        border-color: var(--4a-accent-gold); /* Gold border on hover */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .section-header-4a {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--4a-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-4a h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .section-header-4a i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--4a-text-title); /* Red icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+     .section-4a:hover .section-header-4a i {
+        transform: rotate(-3deg) scale(1.05);
+        color: var(--4a-accent-gold); /* Gold icon on hover */
+     }
+
+    /* --- Quote Style --- */
+    .quote-4a {
+      background-color: #FFF9EF; /* Very light cream/gold */
+      border: 1px solid var(--4a-border-light);
+      border-left: 4px solid var(--4a-accent-gold); /* Gold left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0; /* Increased margin */
+      color: var(--4a-text-dark);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-4a:hover {
+        background-color: var(--4a-card-bg);
+        border-color: var(--4a-border-medium);
+        border-left-color: var(--4a-text-title); /* Red border on hover */
+    }
+    .quote-4a p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-4a footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600; /* Semi-bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--4a-secondary-text); /* Softer text color */
+    }
+    /* --- End Quote Style --- */
+
+    .agreements-list {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column */
+      gap: 2rem; /* Larger gap */
+      margin-top: 1rem;
+    }
+    .agreement-card {
+      background-color: var(--4a-card-bg);
+      border: 1px solid var(--4a-border-light);
+      border-left: 5px solid var(--4a-text-title); /* Red left border */
+      border-radius: 4px;
+      padding: 1.75rem; /* Increased padding */
+      box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-left-color 0.25s ease-in-out;
+    }
+    .agreement-card:hover {
+      transform: translateY(-4px) scale(1.01); /* Subtle scale */
+      box-shadow: 0 6px 12px rgba(0,0,0,0.09);
+      border-left-color: var(--4a-accent-gold); /* Gold border on hover */
+    }
+    .agreement-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+     .agreement-icon {
+        font-size: 2rem;
+        color: var(--4a-text-title);
+        margin-right: 1rem;
+        width: 40px; /* Fixed width */
+        text-align: center;
+        transition: color 0.25s ease;
+     }
+      .agreement-card:hover .agreement-icon {
+          color: var(--4a-accent-gold);
+      }
+     .agreement-title {
+        font-family: 'Lora', serif;
+        font-size: 1.6rem; /* Larger title */
+        font-weight: 700; /* Bold */
+        color: var(--4a-text-dark);
+        line-height: 1.2;
+     }
+    .agreement-summary {
+      font-size: 1rem; /* Larger summary text */
+      color: var(--4a-secondary-text); /* Softer text */
+      line-height: 1.8; /* More line spacing */
+    }
+     .agreement-summary strong {
+        font-weight: 700;
+        color: var(--4a-text-title); /* Red emphasis */
+     }
+     .agreement-summary p + p {
+         margin-top: 1rem; /* Space between paragraphs */
+     }
+
+    .concepts-list-4a {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .concepts-list-4a li {
+        background-color: var(--4a-bg);
+        border: 1px solid var(--4a-border-light);
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.75rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .concepts-list-4a li:hover {
+         background-color: var(--4a-card-bg);
+         border-color: var(--4a-border-medium);
+     }
+     .concepts-list-4a li i {
+         color: var(--4a-text-title);
+         margin-right: 1rem;
+         font-size: 1.1rem;
+         width: 20px;
+         text-align: center;
+     }
+      .concepts-list-4a li span {
+          font-weight: 600;
+          font-size: 1rem;
+      }
+       .concepts-list-4a li span.description {
+           font-weight: 400;
+           font-size: 0.9rem;
+           margin-left: 0.5rem;
+           opacity: 0.8;
+           color: var(--4a-secondary-text);
+       }
+
+
+    .conclusion-highlight-4a {
+        background-color: var(--4a-bg); /* Cream background */
+        color: var(--4a-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid var(--4a-accent-gold); /* Gold border */
+    }
+    .conclusion-highlight-4a p {
+        font-size: 1.15rem; /* Larger conclusion text */
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-4a strong {
+        font-weight: 700;
+        color: var(--4a-text-title); /* Red emphasis */
+    }
+
+    .footer-4a {
+        text-align: center;
+        color: var(--4a-secondary-text);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-4a">
+        <h3>Don Miguel Ruiz</h3>
+        <h1>The Four Agreements</h1>
+        <h2>A Practical Guide to Personal Freedom</h2>
+        <img src="https://m.media-amazon.com/images/I/91rR9gMuOVL.jpg" alt="The Four Agreements Book Cover" class="book-cover-4a">
+    </div>
+
+    <!-- Core Philosophy Section: Domestication and the Dream -->
+    <div class="section-4a">
+      <div class="section-header-4a">
+        <i class="fas fa-theater-masks"></i> <!-- Icon representing dream/illusion -->
+        <h2>The Dream of the Planet & Domestication</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Ruiz explains that humans live in a collective "Dream of the Planet," a reality constructed from societal rules, beliefs, laws, and judgments. From birth, we are "domesticated" like animals, taught how to behave, what to believe, and what is acceptable through a system of reward and punishment. This process installs a personal belief system – our "Book of Law". </p>
+      <p class="mb-4 text-base leading-relaxed">This Book of Law dictates our self-judgment and judgment of others. It creates an inner "Judge" that constantly criticizes and finds fault, and a "Victim" persona that feels unworthy and accepts punishment. Most of our suffering stems from believing the lies embedded within this personal dream and the agreements we've unconsciously made with ourselves and society.</p>
+      <p class="text-base leading-relaxed">Personal freedom, according to Ruiz, comes from becoming aware of these limiting beliefs and agreements, and consciously choosing to replace them with new agreements based on truth and self-love. The Four Agreements are powerful tools to achieve this transformation.</p>
+
+      <div class="quote-4a">
+          <p>"Ninety-five percent of the beliefs we have stored in our minds are nothing but lies, and we suffer because we believe all these lies."</p>
+          <footer>— Don Miguel Ruiz</footer>
+      </div>
+    </div>
+
+    <!-- The Four Agreements Section -->
+    <div class="section-4a">
+      <div class="section-header-4a">
+         <i class="fas fa-scroll"></i> <!-- Icon representing agreements/scroll -->
+         <h2>The Four Agreements for Freedom</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">These four simple yet profound agreements offer a code of conduct to transform your life by breaking self-limiting beliefs:</p>
+      <div class="agreements-list">
+         <!-- Agreement 1 -->
+         <div class="agreement-card">
+             <div class="agreement-header">
+                 <div class="agreement-icon"><i class="fas fa-feather-alt"></i></div>
+                 <h3 class="agreement-title">1. Be Impeccable with Your Word</h3>
+             </div>
+             <div class="agreement-summary">
+                <p>Recognize the immense power of your words. "Impeccable" means "without sin," and a sin is anything you do against yourself. Speak with integrity, say only what you mean, and avoid using words to speak against yourself or gossip about others. Use the power of your word in the direction of <strong>truth and love</strong>.</p>
+                <p>Impeccable speech stops the spread of emotional poison and creates space for positive communication. It is the foundation for changing your personal dream.</p>
+            </div>
+         </div>
+         <!-- Agreement 2 -->
+         <div class="agreement-card">
+             <div class="agreement-header">
+                 <div class="agreement-icon"><i class="fas fa-user-shield"></i></div> <!-- Changed icon -->
+                 <h3 class="agreement-title">2. Don't Take Anything Personally</h3>
+             </div>
+             <div class="agreement-summary">
+                <p>Understand that nothing others do is because of you. What others say and do is a projection of their own reality, their own dream, their own agreements. When you take things personally, you make yourself a victim of their emotional garbage.</p>
+                <p>Immunity to the opinions and actions of others is true freedom. It prevents unnecessary suffering caused by perceived slights or criticisms. You are not responsible for their actions; you are responsible for your reactions.</p>
+            </div>
+         </div>
+         <!-- Agreement 3 -->
+         <div class="agreement-card">
+             <div class="agreement-header">
+                 <div class="agreement-icon"><i class="fas fa-comments-dollar"></i></div> <!-- Changed icon to represent cost/misunderstanding -->
+                 <h3 class="agreement-title">3. Don't Make Assumptions</h3>
+             </div>
+             <div class="agreement-summary">
+                <p>Find the courage to ask questions and express what you really want. Communicate with others as clearly as you can to avoid misunderstandings, sadness, and drama. Making assumptions leads us to believe lies and creates conflict.</p>
+                <p>With clear communication, relationships transform. Stop assuming you know what others think or mean. Ask for clarification. This agreement alone can completely change your interactions.</p>
+            </div>
+         </div>
+          <!-- Agreement 4 -->
+         <div class="agreement-card">
+             <div class="agreement-header">
+                 <div class="agreement-icon"><i class="fas fa-star"></i></div>
+                 <h3 class="agreement-title">4. Always Do Your Best</h3>
+             </div>
+             <div class="agreement-summary">
+                <p>Recognize that your "best" will change from moment to moment; it will be different when you are healthy as opposed to sick. Under any circumstance, simply do your best, and you will avoid self-judgment, self-abuse, and regret.</p>
+                <p>Doing your best means acting because you love to act, not because you expect a reward. It integrates the other three agreements and helps them become habits. It's about effort and action, not perfection.</p>
+            </div>
+         </div>
+      </div>
+    </div>
+
+     <!-- Breaking Old Agreements / Path to Freedom Section -->
+    <div class="section-4a">
+      <div class="section-header-4a">
+         <i class="fas fa-key"></i>
+         <h2>Breaking Old Agreements: The Path to Freedom</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Living these four agreements requires practice and awareness. They act as tools to dismantle the limiting beliefs ingrained during domestication:</p>
+      <ul class="concepts-list-4a">
+          <li><i class="fas fa-awareness"></i> <span>Awareness:</span> <span class="description">Recognizing the old agreements and how they cause suffering is the first step.</span></li>
+          <li><i class="fas fa-forgiveness"></i> <span>Forgiveness:</span> <span class="description">Forgiving others and, crucially, yourself for past judgments and mistakes based on old agreements.</span></li>
+          <li><i class="fas fa-action"></i> <span>Action & Repetition:</span> <span class="description">Consistently applying the Four Agreements helps build new habits and weaken the old ones.</span></li>
+          <li><i class="fas fa-initiation"></i> <span>The Toltec Path:</span> <span class="description">Ruiz frames this as a spiritual path of the "warrior" – battling the limiting beliefs within oneself to achieve personal freedom and unconditional love.</span></li>
+      </ul>
+       <div class="quote-4a">
+          <p>"Death is not the biggest fear we have; our biggest fear is taking the risk to be alive - the risk to be alive and express what we really are."</p>
+          <footer>— Don Miguel Ruiz</footer>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-4a">
+      <div class="section-header-4a">
+         <i class="fas fa-quote-left"></i>
+         <h2>Wisdom from the Toltec Path - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-4a"><p>"Be impeccable with your word. Speak with integrity. Say only what you mean."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+          <blockquote class="quote-4a"><p>"Don't take anything personally. Nothing others do is because of you."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+          <blockquote class="quote-4a"><p>"Don't make assumptions. Find the courage to ask questions and to express what you really want."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+           <blockquote class="quote-4a"><p>"Always do your best. Your best is going to change from moment to moment."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+           <blockquote class="quote-4a"><p>"Every human is an artist. The dream of your life is to make beautiful art."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+           <blockquote class="quote-4a"><p>"You don't need to justify your love, you don't need to explain your love, you just need to practice your love."</p><footer>— Don Miguel Ruiz</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-4a">
+       <div class="section-header-4a">
+          <i class="fas fa-sun"></i> <!-- Icon for enlightenment/freedom -->
+          <h2>Living in Personal Freedom</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Four Agreements" offers a deceptively simple yet powerfully transformative framework based on ancient Toltec wisdom. By consciously adopting these four agreements as a code of conduct, we can break free from the self-limiting beliefs and societal conditioning that cause suffering.</p>
+      <p class="text-base leading-relaxed">Practicing impeccability with our word, refusing to take things personally, avoiding assumptions, and always doing our best allows us to reclaim our personal power, heal emotional wounds, and create a new personal dream based on truth, self-love, and freedom.</p>
+       <div class="conclusion-highlight-4a">
+           <p>Embrace these agreements, practice them daily, and transform your life from a dream of fear and judgment to a personal heaven – a dream of <strong>joy, peace, and unconditional love</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-4a">
+       <p>© 2024 Summary of "The Four Agreements" by Don Miguel Ruiz.</p>
+       <p class="mt-1">Content for informational purposes only. Based on Toltec wisdom as presented by the author.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
