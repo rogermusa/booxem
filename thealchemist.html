@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alchemist Summary - Paulo Coelho</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Cinzel:wght@400;700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* The Alchemist Inspired Color Scheme */
+      --alch-bg: #FDF8F0; /* Light cream/beige */
+      --alch-card-bg: #FFFFFF;
+      --alch-text-dark: #4A2C2A; /* Dark reddish-brown */
+      --alch-text-title: #B84A39; /* Burnt Orange/Red from cover border */
+      --alch-accent-yellow: #F4C430; /* Saffron/Marigold Yellow */
+      --alch-accent-orange: #E87A5B; /* Softer Orange */
+      --alch-text-light: #FFFFFF;
+      --alch-border-light: #F0E8D8;
+      --alch-border-medium: #E0D8C8;
+      --alch-hover-yellow: #EAA200; /* Darker Yellow/Gold */
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--alch-text-dark);
+      line-height: 1.75;
+      background-color: var(--alch-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Gentium Book Plus', serif; /* Elegant Serif */
+      color: var(--alch-text-title); /* Burnt Orange/Red */
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-alch {
+      background-color: var(--alch-accent-orange); /* Softer Orange Header */
+      color: var(--alch-text-dark);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      border: 3px solid var(--alch-text-title); /* Red border */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      /* Add subtle pattern inspired by cover */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='%23B84A39' fill-opacity='0.1'%3E%3Cpolygon points='0 10 10 0 20 10 10 20'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .main-header-alch h3 { /* Author */
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--alch-text-dark);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .main-header-alch h1 { /* Title */
+        font-family: 'Cinzel', serif; /* Decorative font for title */
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--alch-text-title); /* Red title */
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+    }
+    .main-header-alch .edition-mention {
+        font-family: 'Lato', sans-serif;
+        color: var(--alch-text-dark);
+        font-size: 0.85rem;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-bottom: 1.5rem;
+    }
+    .book-cover-alch {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 2px solid var(--alch-border-medium);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-alch {
+      background-color: var(--alch-card-bg);
+      color: var(--alch-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--alch-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.4s ease, transform 0.3s ease;
+    }
+    .section-alch:hover {
+        border-color: var(--alch-accent-yellow); /* Yellow border */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transform: translateY(-3px);
+    }
+
+    .section-header-alch {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--alch-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-alch h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700; /* Bold headings */
+    }
+    .section-header-alch i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--alch-text-title); /* Red icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+     .section-alch:hover .section-header-alch i {
+        transform: scale(1.15) rotate(5deg);
+        color: var(--alch-accent-yellow); /* Yellow icon on hover */
+     }
+
+    /* --- Quote Style --- */
+    .quote-alch {
+      background-color: #FFFDF5; /* Light yellow-cream */
+      border: 1px solid var(--alch-border-light);
+      border-left: 4px solid var(--alch-accent-yellow); /* Yellow border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--alch-text-dark);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      transition: background-color 0.3s ease, border-left-color 0.4s ease, transform 0.3s ease;
+    }
+     .quote-alch:hover {
+        background-color: var(--alch-card-bg);
+        border-left-color: var(--alch-text-title); /* Red border */
+        transform: translateX(4px);
+    }
+    .quote-alch p { margin-bottom: 0.5rem; }
+    .quote-alch footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600;
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--alch-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .theme-card {
+      background-color: var(--alch-card-bg);
+      border: 1px solid var(--alch-border-light);
+      border-radius: 4px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      position: relative;
+      overflow: hidden; /* For pseudo-elements */
+    }
+    /* Add a top border color that matches the header */
+     .theme-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: var(--alch-accent-orange); /* Softer orange */
+        transition: background-color 0.3s ease;
+     }
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-color: var(--alch-border-medium);
+    }
+     .theme-card:hover::before {
+         background-color: var(--alch-accent-yellow); /* Yellow top border on hover */
+     }
+    .theme-icon {
+        font-size: 1.6rem; /* Larger icon */
+        margin-bottom: 0.75rem;
+        color: var(--alch-text-title); /* Red icon */
+        height: 30px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+     .theme-card:hover .theme-icon {
+         color: var(--alch-accent-yellow); /* Yellow icon */
+         transform: scale(1.1);
+     }
+    .theme-title {
+      font-family: 'Gentium Book Plus', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--alch-text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .theme-summary {
+      font-size: 0.95rem;
+      color: var(--alch-text-dark);
+      line-height: 1.7;
+       opacity: 0.85;
+    }
+     .theme-summary strong {
+        font-weight: 700;
+        color: var(--alch-text-title); /* Red emphasis */
+    }
+
+    .conclusion-highlight-alch {
+        background: linear-gradient(to bottom right, var(--alch-accent-yellow), var(--alch-accent-orange));
+        color: var(--alch-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--alch-hover-yellow);
+        box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+    }
+    .conclusion-highlight-alch p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-alch strong {
+        font-weight: 700;
+        color: var(--alch-text-title);
+    }
+
+    .footer-alch {
+        text-align: center;
+        color: #888;
+        font-size: 0.8rem;
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-alch">
+        <h3>PAULO COELHO</h3>
+        <h1>The Alchemist</h1>
+        <div class="edition-mention">(25th Anniversary Edition Summary)</div>
+        <img src="https://m.media-amazon.com/images/I/71zHDXu1TaL._AC_UF1000,1000_QL80_.jpg" alt="The Alchemist Book Cover" class="book-cover-alch">
+    </div>
+
+    <!-- Core Philosophy/Plot Section -->
+    <div class="section-alch">
+      <div class="section-header-alch">
+        <i class="fas fa-compass"></i> <!-- Icon for journey/direction -->
+        <h2>The Shepherd's Journey and the Personal Legend</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Alchemist" tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found. He is guided by recurring dreams, omens, and encounters with wise figures, including Melchizedek (the King of Salem) and the Alchemist himself.</p>
+      <p class="mb-4 text-base leading-relaxed">The core philosophy revolves around the concept of the **Personal Legend** – one's unique destiny or calling in life. It's what you have always wanted to accomplish. Everyone, when they are young, knows what their Personal Legend is. However, as time passes, a mysterious force tries to convince them it's impossible to realize it.</p>
+      <p class="text-base leading-relaxed">The novel posits that when you truly want something, **"all the universe conspires in helping you to achieve it."** This requires listening to your heart, understanding the Language of the World (through omens and intuition), overcoming fear, and persevering through trials. The journey itself transforms the seeker.</p>
+
+      <div class="quote-alch">
+          <p>"It's the possibility of having a dream come true that makes life interesting."</p>
+          <footer>— Paulo Coelho, The Alchemist</footer>
+      </div>
+    </div>
+
+    <!-- Key Themes Section -->
+    <div class="section-alch">
+      <div class="section-header-alch">
+         <i class="fas fa-wind"></i> <!-- Icon for omens/universe -->
+         <h2>Key Themes of the Journey</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Coelho weaves several profound themes into Santiago's quest:</p>
+      <div class="themes-grid">
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-feather-alt"></i></div>
+            <div class="theme-title">The Personal Legend</div>
+            <p class="theme-summary">Discovering and pursuing your unique destiny is the primary purpose of life. Ignoring it leads to unhappiness and regret.</p>
+        </div>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-globe-americas"></i></div>
+            <div class="theme-title">The Soul of the World</div>
+            <p class="theme-summary">A spiritual force that connects all things and speaks the Language of the World. Following your Personal Legend helps nourish it. It operates through love.</p>
+        </div>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-sign"></i></div>
+            <div class="theme-title">Omens & Signs</div>
+            <p class="theme-summary">The universe communicates and guides those pursuing their Personal Legend through omens. Learning to read them is crucial for navigating the journey.</p>
+        </div>
+        <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="theme-title">Listening to Your Heart</div>
+            <p class="theme-summary">The heart knows your Personal Legend and speaks the Language of the World. Learning to listen to it, even when it speaks of fear or betrayal, is essential for staying true to your path.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="theme-title">Overcoming Fear</div>
+            <p class="theme-summary">Fear, particularly the fear of suffering or failure, is the greatest obstacle to achieving one's Personal Legend. Courage is required to move forward despite fear.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-gem"></i></div>
+            <div class="theme-title">Alchemy as Metaphor</div>
+            <p class="theme-summary">True alchemy is not just turning lead into gold, but achieving spiritual transformation and self-realization by purifying oneself through pursuing the Personal Legend.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-hourglass-half"></i></div>
+            <div class="theme-title">The Present Moment</div>
+            <p class="theme-summary">Focusing on the present and the next step is key. Worrying excessively about the past or future distracts from reading omens and living fully.</p>
+        </div>
+         <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-universal-access"></i></div>
+            <div class="theme-title">Connectedness</div>
+            <p class="theme-summary">Everything in the universe is interconnected. Actions taken towards one's Personal Legend impact the Soul of the World.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-alch">
+      <div class="section-header-alch">
+         <i class="fas fa-comment-dots"></i>
+         <h2>Whispers from the Soul of the World - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-alch"><p>"And, when you want something, all the universe conspires in helping you to achieve it."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+          <blockquote class="quote-alch"><p>"It's the simple things in life that are the most extraordinary; only wise men are able to understand them."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+          <blockquote class="quote-alch"><p>"The secret of life, though, is to fall seven times and to get up eight times."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+           <blockquote class="quote-alch"><p>"When we love, we always strive to become better than we are. When we strive to become better than we are, everything around us becomes better too."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+           <blockquote class="quote-alch"><p>"Tell your heart that the fear of suffering is worse than the suffering itself. And that no heart has ever suffered when it goes in search of its dreams..."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+           <blockquote class="quote-alch"><p>"Remember that wherever your heart is, there you will find your treasure."</p><footer>— Paulo Coelho, The Alchemist</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-alch">
+       <div class="section-header-alch">
+          <i class="fas fa-map-marked-alt"></i> <!-- Icon for map/treasure -->
+          <h2>The Treasure Found Within the Journey</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Alchemist" is an inspiring fable about the importance of following our dreams and the transformative power of the journey itself. It suggests that the universe supports those who bravely pursue their Personal Legend, guiding them through omens and intuition.</p>
+      <p class="text-base leading-relaxed">While Santiago seeks a material treasure, he discovers that the true treasure lies in the wisdom gained, the connections made, the fears overcome, and the self-discovery experienced along the way. It encourages readers to listen to their hearts, pay attention to the world around them, and have the courage to pursue their own unique destiny.</p>
+       <div class="conclusion-highlight-alch">
+           <p>Embrace your Personal Legend, trust the journey, learn the Language of the World, and discover that the greatest treasure is often found not at the destination, but <strong>within the pursuit itself</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-alch">
+       <p>© 2024 Summary of "The Alchemist" by Paulo Coelho.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the allegorical novel.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
