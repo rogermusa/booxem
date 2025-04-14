@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Are a Badass Summary - Jen Sincero</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* You Are a Badass Inspired Color Scheme */
+      --yab-bg: #FFFFFF; /* White page background */
+      --yab-card-bg: #FFFFFF;
+      --yab-accent-yellow: #FDEE00; /* Bright Yellow */
+      --yab-text-dark: #1A1A1A; /* Near Black */
+      --yab-text-light: #FFFFFF;
+      --yab-secondary-text: #444444; /* Dark Grey */
+      --yab-border-light: #F0F0F0;
+      --yab-border-medium: #E0E0E0;
+      --yab-hover-yellow: #EACD00; /* Darker Yellow */
+      --yab-accent-secondary: #FF8C00; /* Orange accent for variety */
+    }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif; /* Rounded, modern sans-serif */
+      color: var(--yab-secondary-text); /* Use dark grey for body text */
+      line-height: 1.7;
+      background-color: var(--yab-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Nunito Sans', sans-serif;
+      color: var(--yab-text-dark); /* Black headings */
+      font-weight: 800; /* Extra Bold */
+      text-transform: uppercase; /* Uppercase headings */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-yab {
+      background-color: var(--yab-accent-yellow); /* Yellow Header BG */
+      color: var(--yab-text-dark); /* Black text on yellow */
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(253, 238, 0, 0.4); /* Yellow glow */
+      border: 2px solid var(--yab-text-dark); /* Black border */
+    }
+    .main-header-yab h3 { /* Author */
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--yab-text-dark);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+    .main-header-yab h1 { /* Title */
+        font-size: 3rem; /* Large title */
+        font-weight: 900; /* Black weight */
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+    }
+     .main-header-yab .title-small { /* "are a" */
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: lowercase;
+        display: block;
+        margin: 0.25rem 0;
+        opacity: 0.9;
+     }
+    .main-header-yab h2 { /* Subtitle */
+        color: var(--yab-text-dark);
+        font-size: 1rem;
+        font-weight: 700;
+        opacity: 0.85;
+        margin: 1rem auto 1.5rem auto;
+        max-width: 500px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .book-cover-yab {
+      max-width: 150px;
+      height: auto;
+      border-radius: 4px;
+      border: 2px solid var(--yab-text-dark);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    /* Section styling */
+    .section-yab {
+      background-color: var(--yab-card-bg);
+      color: var(--yab-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--yab-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-yab:hover {
+        border-color: var(--yab-accent-yellow); /* Yellow border on hover */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .section-header-yab {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--yab-accent-yellow); /* Thick Yellow border */
+      display: flex;
+      align-items: center;
+    }
+    .section-header-yab h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 800; /* Extra Bold */
+    }
+    .section-header-yab i {
+      font-size: 1.5rem; /* Larger icon */
+      margin-right: 0.85rem;
+      color: var(--yab-text-dark); /* Black icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-yab:hover .section-header-yab i {
+        transform: rotate(-10deg) scale(1.1); /* More energetic rotate */
+     }
+
+    /* --- Quote Style --- */
+    .quote-yab {
+      background-color: var(--yab-accent-yellow); /* Yellow background */
+      border: 2px solid var(--yab-text-dark); /* Black border */
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--yab-text-dark); /* Black text */
+      border-radius: 4px;
+      font-size: 1.1rem; /* Larger quote text */
+      font-weight: 700; /* Bold */
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+     .quote-yab:hover {
+        background-color: var(--yab-hover-yellow);
+        transform: scale(1.02); /* Slight grow on hover */
+    }
+    .quote-yab p {
+         margin-bottom: 0.5rem;
+         font-style: normal; /* No italics needed for this style */
+     }
+    .quote-yab footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: center;
+      font-weight: 800; /* Extra bold footer */
+      font-size: 0.9rem;
+      opacity: 0.9;
+      color: var(--yab-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-grid-yab {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+    .principle-card-yab {
+      background-color: var(--yab-card-bg);
+      border: 1px solid var(--yab-border-light);
+      border-top: 5px solid var(--yab-accent-yellow); /* Thick Yellow top border */
+      border-radius: 4px;
+      padding: 1.75rem 1.5rem; /* Increased padding */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-top-color 0.25s ease-in-out;
+    }
+    .principle-card-yab:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.09);
+      border-top-color: var(--yab-text-dark); /* Black border on hover */
+    }
+    .principle-icon-yab {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--yab-text-dark); /* Black icon */
+        height: 30px;
+        transition: color 0.25s ease;
+    }
+    .principle-card-yab:hover .principle-icon-yab {
+        color: var(--yab-accent-yellow); /* Yellow icon on hover */
+    }
+    .principle-title-yab {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--yab-text-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase; /* Ensure uppercase title */
+    }
+    .principle-summary-yab {
+      font-size: 0.95rem;
+      color: var(--yab-secondary-text);
+      line-height: 1.7;
+    }
+     .principle-summary-yab strong {
+        font-weight: 800;
+        color: var(--yab-text-dark); /* Black emphasis */
+     }
+
+    .action-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .action-list li {
+        background-color: #FFFBEB; /* Very light yellow */
+        border: 1px solid var(--yab-border-light);
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.75rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+     .action-list li:hover {
+         background-color: var(--yab-card-bg);
+         border-color: var(--yab-border-medium);
+         transform: translateX(3px);
+     }
+     .action-list li i {
+         color: var(--yab-text-dark);
+         margin-right: 1rem;
+         font-size: 1.2rem;
+         width: 25px;
+         text-align: center;
+     }
+      .action-list li span {
+          font-weight: 700; /* Bold action items */
+          font-size: 1rem;
+      }
+
+    .conclusion-highlight-yab {
+        background-color: var(--yab-accent-yellow);
+        color: var(--yab-text-dark);
+        padding: 2rem; /* More padding */
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid var(--yab-text-dark);
+    }
+    .conclusion-highlight-yab p {
+        font-size: 1.2rem; /* Larger text */
+        line-height: 1.8;
+        font-weight: 700; /* Bold */
+    }
+    .conclusion-highlight-yab strong {
+        font-weight: 900; /* Black weight */
+        text-transform: uppercase;
+    }
+
+    .footer-yab {
+        text-align: center;
+        color: #888;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-yab">
+        <h3>Jen Sincero</h3>
+        <h1>YOU <span class="title-small">are a</span> BADASS®</h1>
+        <h2>How to Stop Doubting Your Greatness and Start Living an Awesome Life</h2>
+        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1351539051i/15843166.jpg" alt="You Are a Badass Book Cover" class="book-cover-yab">
+    </div>
+
+    <!-- Core Philosophy Section: Your Awesome Potential -->
+    <div class="section-yab">
+      <div class="section-header-yab">
+        <i class="fas fa-rocket"></i>
+        <h2>Unlock Your Inner Badass</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"You Are a Badass" is a refreshing, hilarious, and straightforward guide to help you identify and change the self-sabotaging beliefs and behaviors that stop you from getting what you want. Jen Sincero blends inspirational stories, sage advice, and practical exercises with a dose of humor and attitude.</p>
+      <p class="mb-4 text-base leading-relaxed">The core message is that **you already possess the greatness** needed to create a life you totally love. Your main obstacles are the limiting beliefs and fears you've internalized, often subconsciously, which Sincero calls the **"Big Snooze" (BS)**. The book aims to wake you up from this BS.</p>
+      <p class="text-base leading-relaxed">It encourages you to connect with the **"Source Energy"** (Universe, God, Higher Power – whatever term resonates) and understand that you are a powerful creator capable of shaping your reality through your thoughts, beliefs, and actions.</p>
+
+      <div class="quote-yab">
+          <p>"You are a victim of the rules you live by."</p>
+          <footer>— Jen Sincero</footer>
+      </div>
+    </div>
+
+    <!-- Key Principles Section -->
+    <div class="section-yab">
+      <div class="section-header-yab">
+         <i class="fas fa-star"></i>
+         <h2>Core Badass Principles</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Sincero lays out several key principles to help you shift your mindset and start living awesomely:</p>
+      <div class="principles-grid-yab">
+         <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-brain"></i></div>
+            <div class="principle-title-yab">Your Thoughts Create Your Reality</div>
+            <p class="principle-summary-yab">Understand that your subconscious beliefs shape your experiences. Identify limiting beliefs (often formed in childhood) and consciously choose new, empowering thoughts. What you focus on expands.</p>
+        </div>
+        <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-bolt"></i></div>
+            <div class="principle-title-yab">Tap into Source Energy</div>
+            <p class="principle-summary-yab">Recognize that there's a universal energy available to you. Connect with it through gratitude, meditation, being present, and aligning your desires with this higher frequency. Faith is key.</p>
+        </div>
+        <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-heart"></i></div>
+            <div class="principle-title-yab">Love Yourself Like Crazy</div>
+            <p class="principle-summary-yab">Self-love is not selfish; it's fundamental. Appreciate your uniqueness, forgive yourself for past mistakes, and treat yourself with kindness and respect. Stop apologizing for who you are.</p>
+        </div>
+        <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-crosshairs"></i></div>
+            <div class="principle-title-yab">Get Clear on What You Want</div>
+            <p class="principle-summary-yab">Define your desires clearly and specifically. Vague wishes get vague results. Understand *why* you want it – connect emotion to your goals. Make a **decision** to go after it.</p>
+        </div>
+         <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-shoe-prints"></i></div>
+            <div class="principle-title-yab">Take Action (Even Messy Action)</div>
+            <p class="principle-summary-yab">Don't wait for perfect conditions. Overcome fear and procrastination by taking **imperfect, decisive action** towards your goals. Learn and adjust as you go. Step outside your comfort zone.</p>
+        </div>
+         <div class="principle-card-yab">
+            <div class="principle-icon-yab"><i class="fas fa-dollar-sign"></i></div>
+            <div class="principle-title-yab">Fix Your Money Mindset</div>
+            <p class="principle-summary-yab">Address limiting beliefs about money. See wealth as energy and a tool for good. Respect money, be grateful for what you have, and believe in your ability to earn more by providing value.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Actionable Steps Section -->
+    <div class="section-yab">
+      <div class="section-header-yab">
+         <i class="fas fa-tools"></i>
+         <h2>Badass Moves: Taking Action</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">The book is packed with exercises. Key actions encouraged include:</p>
+      <ul class="action-list">
+          <li><i class="fas fa-bullhorn"></i> <span><strong>Use Affirmations:</strong> Create and repeat positive statements about yourself and your goals as if they are already true.</span></li>
+          <li><i class="fas fa-eye"></i> <span><strong>Practice Visualization:</strong> Regularly imagine yourself having already achieved your desires, feeling the emotions associated with success.</span></li>
+          <li><i class="fas fa-hand-holding-heart"></i> <span><strong>Cultivate Gratitude:</strong> Make a habit of noticing and appreciating the good things in your life right now. Gratitude raises your frequency.</span></li>
+          <li><i class="fas fa-om"></i> <span><strong>Meditate:</strong> Quiet the mental chatter and connect with your inner self and Source Energy. Even short sessions help.</span></li>
+          <li><i class="fas fa-dove"></i> <span><strong>Practice Forgiveness:</strong> Release resentment towards others and yourself. Holding onto anger drains your energy and blocks abundance.</span></li>
+          <li><i class="fas fa-calendar-check"></i> <span><strong>Make a Decision:</strong> Commit fully to your goals. Indecision keeps you stuck. Decide you're going for it, no matter what.</span></li>
+          <li><i class="fas fa-users"></i> <span><strong>Surround Yourself with Support:</strong> Find mentors, coaches, or friends who believe in you and lift you higher. Ditch the Debbie Downers.</span></li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-yab">
+      <div class="section-header-yab">
+         <i class="fas fa-quote-left"></i>
+         <h2>Badass Bites - Memorable Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-4"> <!-- Single column for high-impact quotes -->
+          <blockquote class="quote-yab"><p>"What other people think about you has nothing to do with you and everything to do with them."</p><footer>— Jen Sincero</footer></blockquote>
+          <blockquote class="quote-yab"><p>"If you're serious about changing your life, you'll find a way. If you're not, you'll find an excuse."</p><footer>— Jen Sincero</footer></blockquote>
+           <blockquote class="quote-yab"><p>"You are responsible for what you say and do. You are not responsible for whether or not people freak out about it."</p><footer>— Jen Sincero</footer></blockquote>
+           <blockquote class="quote-yab"><p>"It's not your fault that you're fucked up. It's your fault if you stay fucked up."</p><footer>— Jen Sincero</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-yab">
+       <div class="section-header-yab">
+          <i class="fas fa-crown"></i> <!-- Crown for badass royalty -->
+          <h2>Own Your Awesomeness</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"You Are a Badass" is a high-energy kick-in-the-pants to stop playing small and start creating the life you desire. It combines spiritual principles with practical advice and a no-nonsense attitude.</p>
+      <p class="text-base leading-relaxed">Sincero reminds you that your potential is limitless, but accessing it requires identifying your BS, shifting your mindset, connecting to Source, loving yourself fiercely, and taking consistent, bold action. Stop waiting for permission or the "right time."</p>
+       <div class="conclusion-highlight-yab">
+           <p>The world is waiting for your unique brand of badassery. <strong>Decide. Commit. Act.</strong> Your awesome life starts now!</p>
+       </div>
+    </div>
+
+    <div class="footer-yab">
+       <p>© 2024 Summary of "You Are a Badass" by Jen Sincero.</p>
+       <p class="mt-1">Content for informational purposes only. Embrace your inner badass!</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
