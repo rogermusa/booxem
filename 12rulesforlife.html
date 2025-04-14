@@ -3,65 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>12 Rules for Life Summary - Cover Scheme</title>
+  <title>12 Rules for Life Summary - Cover Scheme & Fancy Quotes</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Using EB Garamond (serif like cover) and Inter (clean sans-serif) -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       /* Cover Color Scheme */
-      --theme-bg: #F7F4EF; /* Light Beige/Off-white */
-      --theme-text-dark: #1F1F1F; /* Near Black */
-      --theme-text-title-brown: #8A6E5F; /* Muted Earthy Brown from Title */
-      --theme-text-medium: #4A4A4A; /* Medium Gray */
-      --theme-border-light: #EAEAEA; /* Light Gray Border */
-      --theme-border-dark: #BFBFBF; /* Darker Gray Border */
-      --theme-accent-hover: var(--theme-text-title-brown); /* Use Title Brown for Hover */
+      --theme-bg: #F7F4EF;
+      --theme-text-dark: #1F1F1F;
+      --theme-text-title-brown: #8A6E5F;
+      --theme-text-medium: #4A4A4A;
+      --theme-border-light: #EAEAEA;
+      --theme-border-dark: #BFBFBF;
+      --theme-accent-hover: var(--theme-text-title-brown);
     }
 
     body {
-      font-family: 'Inter', sans-serif; /* Clean Sans-serif for body */
+      font-family: 'Inter', sans-serif;
       color: var(--theme-text-medium);
       line-height: 1.7;
       background-color: var(--theme-bg);
-      font-size: 16px; /* Reset base size */
+      font-size: 16px;
     }
     h1, h2, h3, h4 {
-      font-family: 'EB Garamond', serif; /* Serif for headings */
+      font-family: 'EB Garamond', serif;
       color: var(--theme-text-dark);
-      font-weight: 600; /* Slightly bolder Garamond */
+      font-weight: 600;
     }
     .container {
-      max-width: 1000px; /* Slightly narrower */
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem; /* Adjusted padding */
+      padding: 2.5rem 1.5rem;
     }
     .main-header {
-      background-color: var(--theme-bg); /* Match body background */
+      background-color: var(--theme-bg);
       color: var(--theme-text-dark);
-      border: 1px solid var(--theme-border-dark); /* Thinner dark border */
+      border: 1px solid var(--theme-border-dark);
       border-radius: 6px;
       padding: 2rem;
       margin-bottom: 2.5rem;
     }
-    .main-header h1 { color: var(--theme-text-title-brown); font-size: 2.75rem; font-weight: 700; } /* Title Brown */
-    .main-header h2 { color: var(--theme-text-dark); font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; opacity: 0.9; } /* Dark Subtitle */
-    .main-header h3 { color: var(--theme-text-dark); font-size: 1.5rem; font-weight: 600; } /* Dark Author */
+    .main-header h1 { color: var(--theme-text-title-brown); font-size: 2.75rem; font-weight: 700; }
+    .main-header h2 { color: var(--theme-text-dark); font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; opacity: 0.9; }
+    .main-header h3 { color: var(--theme-text-dark); font-size: 1.5rem; font-weight: 600; }
     .main-header p { color: var(--theme-text-medium); font-size: 1rem; }
     .book-cover {
-      max-width: 150px; /* Adjusted size */
+      max-width: 150px;
       height: auto;
       border-radius: 2px;
-      border: 1px solid var(--theme-border-dark); /* Dark border */
+      border: 1px solid var(--theme-border-dark);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .section {
       margin-bottom: 2.5rem;
-      background-color: #FFFFFF; /* White background for sections */
+      background-color: #FFFFFF;
       border-radius: 6px;
       border: 1px solid var(--theme-border-light);
       overflow: hidden;
@@ -69,12 +68,11 @@
       transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
     .section:hover {
-      border-color: var(--theme-accent-hover); /* Brown border on hover */
+      border-color: var(--theme-accent-hover);
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     }
 
     .section-header {
-      /* Minimalist header: just text, maybe subtle border */
       padding: 1.5rem 1.75rem;
       border-bottom: 1px solid var(--theme-border-light);
       display: flex;
@@ -83,7 +81,7 @@
     .section-header h2 { color: var(--theme-text-dark); font-size: 1.75rem; }
     .section-header i {
       margin-right: 0.85rem;
-      color: var(--theme-text-title-brown); /* Brown icon */
+      color: var(--theme-text-title-brown);
       font-size: 1.1em;
       opacity: 0.8;
       transition: transform 0.3s ease;
@@ -93,18 +91,20 @@
     }
 
     .section-content {
-      padding: 1.75rem 2rem; /* Adjusted padding */
+      padding: 1.75rem 2rem;
     }
+
+    /* --- Standard Quote Style (used in Intro) --- */
     .quote {
-      background-color: var(--theme-bg); /* Match main background */
-      border-left: 4px solid var(--theme-text-title-brown); /* Brown border */
+      background-color: var(--theme-bg);
+      border-left: 4px solid var(--theme-text-title-brown);
       padding: 1.25rem;
       margin: 1.5rem 0;
       font-style: italic;
       color: var(--theme-text-medium);
       border-radius: 0 4px 4px 0;
-      font-size: 1rem; /* Adjusted size */
-      border-top: 1px solid var(--theme-border-light); /* Subtle top/bottom borders */
+      font-size: 1rem;
+      border-top: 1px solid var(--theme-border-light);
       border-bottom: 1px solid var(--theme-border-light);
       border-right: 1px solid var(--theme-border-light);
     }
@@ -113,21 +113,63 @@
       font-style: normal;
       text-align: right;
       font-weight: 600;
-      color: var(--theme-text-dark); /* Darker attribution */
+      color: var(--theme-text-dark);
       font-size: 0.85rem;
     }
+    /* --- End Standard Quote Style --- */
+
+    /* --- Fancy Quote Style (used in Memorable Quotes) --- */
+    .quote-fancy-beige {
+      background-color: var(--theme-bg);
+      border: 1px solid var(--theme-border-light);
+      padding: 1.5rem 2rem 1.5rem 3.5rem; /* More left padding */
+      margin: 1.5rem 0;
+      color: var(--theme-text-medium);
+      border-radius: 4px;
+      position: relative; /* Needed for pseudo-elements */
+      font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+    }
+    .quote-fancy-beige p {
+         font-style: italic;
+         line-height: 1.7;
+    }
+    .quote-fancy-beige::before { /* Opening quote mark */
+        content: "\201C"; /* Unicode for left double quotation mark */
+        font-family: 'EB Garamond', serif; /* Serif font for quote mark */
+        font-size: 5rem; /* Significantly larger */
+        font-weight: 600;
+        color: var(--theme-text-title-brown); /* Title Brown color */
+        opacity: 0.4; /* Make it slightly subtle */
+        position: absolute;
+        left: 0.75rem;
+        top: 0.25rem; /* Adjust vertical position */
+        line-height: 1;
+        z-index: 0; /* Position behind text if needed, adjust padding if so */
+    }
+    .quote-fancy-beige footer { /* Style footer inside fancy quote */
+       margin-top: 0.75rem;
+       font-style: normal;
+       text-align: right;
+       font-weight: 600;
+       color: var(--theme-text-dark);
+       font-size: 0.85rem;
+       padding-right: 0.5rem;
+    }
+    /* --- End Fancy Quote Style --- */
+
 
     .rules-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min size */
-      gap: 1.5rem; /* Adjusted gap */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
     .rule-card {
       background-color: #FFFFFF;
       border: 1px solid var(--theme-border-light);
-      border-top: 4px solid var(--theme-text-title-brown); /* Brown top border */
+      border-top: 4px solid var(--theme-text-title-brown);
       border-radius: 6px;
-      padding: 1.5rem; /* Adjusted padding */
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       box-shadow: 0 2px 4px rgba(0,0,0,0.06);
@@ -136,36 +178,35 @@
     .rule-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.09);
-      border-top-color: var(--theme-text-dark); /* Dark border on hover */
+      border-top-color: var(--theme-text-dark);
     }
     .rule-number {
       font-family: 'EB Garamond', serif;
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--theme-text-title-brown); /* Brown number */
+      color: var(--theme-text-title-brown);
       margin-bottom: 0.5rem;
       line-height: 1;
       transition: color 0.25s ease-in-out;
     }
      .rule-card:hover .rule-number {
-        color: var(--theme-text-dark); /* Dark number on hover */
+        color: var(--theme-text-dark);
     }
-
     .rule-title {
       font-family: 'EB Garamond', serif;
-      font-size: 1.2rem; /* Adjusted size */
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--theme-text-dark);
       margin-bottom: 0.75rem;
       flex-grow: 1;
     }
     .rule-summary {
-      font-size: 0.95rem; /* Adjusted size */
+      font-size: 0.95rem;
       color: var(--theme-text-medium);
       line-height: 1.65;
     }
     .rule-summary strong {
-        color: var(--theme-text-dark); /* Darker emphasis */
+        color: var(--theme-text-dark);
         font-weight: 600;
     }
      .rule-summary p + p {
@@ -180,12 +221,12 @@
     .themes-list li {
       background-color: #FFFFFF;
       border: 1px solid var(--theme-border-light);
-      border-left: 3px solid var(--theme-text-title-brown); /* Brown border */
-      padding: 0.85rem 1.25rem; /* Adjusted padding */
+      border-left: 3px solid var(--theme-text-title-brown);
+      padding: 0.85rem 1.25rem;
       margin-bottom: 0.75rem;
       border-radius: 4px;
-      color: var(--theme-text-medium); /* Medium text */
-      font-weight: 500; /* Medium weight */
+      color: var(--theme-text-medium);
+      font-weight: 500;
       display: flex;
       align-items: center;
       font-size: 1rem;
@@ -193,11 +234,11 @@
       box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
     .themes-list li:hover {
-        background-color: var(--theme-bg); /* Light beige background */
-        border-left-color: var(--theme-text-dark); /* Dark border */
+        background-color: var(--theme-bg);
+        border-left-color: var(--theme-text-dark);
     }
      .themes-list li i {
-         color: var(--theme-text-title-brown); /* Brown icon */
+         color: var(--theme-text-title-brown);
          margin-right: 0.85rem;
          width: 20px;
          text-align: center;
@@ -210,13 +251,13 @@
       }
 
      .conclusion-highlight {
-        background-color: var(--theme-bg); /* Light beige background */
-        color: var(--theme-text-dark); /* Dark text */
+        background-color: var(--theme-bg);
+        color: var(--theme-text-dark);
         padding: 1.75rem;
         border-radius: 4px;
         margin-top: 2rem;
         text-align: center;
-        border: 1px solid var(--theme-border-dark); /* Dark border */
+        border: 1px solid var(--theme-border-dark);
      }
      .conclusion-highlight p {
         font-size: 1.15rem;
@@ -224,7 +265,7 @@
      }
      .conclusion-highlight strong {
          font-weight: 600;
-         color: var(--theme-text-title-brown); /* Brown highlight */
+         color: var(--theme-text-title-brown);
      }
 
   </style>
@@ -234,11 +275,9 @@
     <!-- Header/Title Section with Cover -->
     <div class="main-header flex flex-col md:flex-row items-center">
       <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-        <!-- Using the uploaded image -->
-        <img src="https://m.media-amazon.com/images/I/71OVB8HknWL._SY466_.jpg" alt="12 Rules for Life Book Cover" class="book-cover">
+        <img src="https://m.media-amazon.com/images/I/619G6HHEWyL._SL1500_.jpg" alt="12 Rules for Life Book Cover" class="book-cover">
       </div>
       <div class="md:w-3/4 md:pl-10 text-center md:text-left">
-        <!-- Updated Heading Styles -->
         <h3 class="text-xl mb-1">JORDAN B. PETERSON</h3>
         <h1 class="mb-2">12 RULES FOR LIFE</h1>
         <h2 class="text-base font-medium opacity-90 uppercase tracking-wide">An Antidote to Chaos</h2>
@@ -260,6 +299,7 @@
             <p class="text-base">Drawing from diverse sources—neuroscience, clinical psychology, religious texts (especially Genesis), mythology, literature, and personal experience—Peterson constructs a rationale for why these specific rules serve as vital "antidotes" to the inevitable chaos of life.</p>
           </div>
           <div class="lg:w-1/3 flex flex-col justify-start">
+             <!-- Using standard quote style here -->
              <div class="quote w-full mb-4">
                 <p>"Order is not enough... Chaos can overwhelm you... You need to mediate between the two."</p>
                 <footer>— Jordan B. Peterson</footer>
@@ -282,7 +322,7 @@
       <div class="section-content">
         <p class="mb-6 text-base leading-relaxed">These rules are actionable principles designed to orient individuals towards a more courageous, truthful, and meaningful engagement with themselves, others, and the world:</p>
         <div class="rules-grid">
-          <div class="rule-card">
+           <div class="rule-card">
             <div class="rule-number">Rule 1</div>
             <div class="rule-title">Stand up straight with your shoulders back.</div>
             <p class="rule-summary">Consciously adopt a physical posture reflecting readiness and competence. This influences your neurochemistry (like the serotonin levels in <strong>lobsters</strong> establishing dominance) and signals to yourself and others that you are prepared to face life's challenges voluntarily and bear responsibility.</p>
@@ -371,12 +411,13 @@
       </div>
       <div class="section-content">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="quote">"<p>Perhaps you are overvaluing what you don't have and undervaluing what you do.</p>"<footer>— Jordan B. Peterson, Rule 4</footer></div>
-          <div class="quote">"<p>To stand up straight with your shoulders back is to accept the terrible responsibility of life, with eyes wide open.</p>"<footer>— Jordan B. Peterson, Rule 1</footer></div>
-          <div class="quote">"<p>It is better to encounter the terrifying uncertainty of freedom than the eternal slavery of the known.</p>"<footer>— Jordan B. Peterson</footer></div>
-          <div class="quote">"<p>The better ambitions have to do with the development of character and ability, rather than status and power.</p>"<footer>— Jordan B. Peterson</footer></div>
-           <div class="quote">"<p>What you aim at determines what you see.</p>"<footer>— Jordan B. Peterson</footer></div>
-          <div class="quote">"<p>Ask yourself what you would require from yourself if you were caring for yourself as if you were someone you valued.</p>"<footer>— Jordan B. Peterson, Rule 2</footer></div>
+           <!-- Added quote-fancy-beige class -->
+          <blockquote class="quote-fancy-beige"><p>Perhaps you are overvaluing what you don't have and undervaluing what you do.</p><footer>— Jordan B. Peterson, Rule 4</footer></blockquote>
+          <blockquote class="quote-fancy-beige"><p>To stand up straight with your shoulders back is to accept the terrible responsibility of life, with eyes wide open.</p><footer>— Jordan B. Peterson, Rule 1</footer></blockquote>
+          <blockquote class="quote-fancy-beige"><p>It is better to encounter the terrifying uncertainty of freedom than the eternal slavery of the known.</p><footer>— Jordan B. Peterson</footer></blockquote>
+          <blockquote class="quote-fancy-beige"><p>The better ambitions have to do with the development of character and ability, rather than status and power.</p><footer>— Jordan B. Peterson</footer></blockquote>
+          <blockquote class="quote-fancy-beige"><p>What you aim at determines what you see.</p><footer>— Jordan B. Peterson</footer></blockquote>
+          <blockquote class="quote-fancy-beige"><p>Ask yourself what you would require from yourself if you were caring for yourself as if you were someone you valued.</p><footer>— Jordan B. Peterson, Rule 2</footer></blockquote>
         </div>
       </div>
     </div>
