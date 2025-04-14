@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 7 Habits of Highly Effective People Summary - Stephen Covey</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* 7 Habits Cover Color Scheme */
+      --7h-bg: #FFFFFF;
+      --7h-text-dark: #222222;
+      --7h-text-title-blue: #003A6B; /* Deep Blue from title */
+      --7h-accent-red: #E05A47; /* Red/Terracotta from '7' */
+      --7h-accent-gold: #B5934A; /* Gold/Mustard from author bg */
+      --7h-text-medium: #555555;
+      --7h-border-light: #EEEEEE;
+      --7h-border-medium: #D8D8D8;
+      --7h-accent-hover: var(--7h-accent-red);
+      --7h-secondary-hover: var(--7h-text-title-blue);
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--7h-text-medium);
+      line-height: 1.7;
+      background-color: var(--7h-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Libre Baskerville', serif; /* Serif for headings */
+      color: var(--7h-text-title-blue); /* Title Blue for headings */
+      font-weight: 700; /* Bold serif */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-7h {
+      background-color: var(--7h-bg);
+      color: var(--7h-text-dark);
+      border: 1px solid var(--7h-border-medium);
+      border-top: 5px solid var(--7h-accent-gold); /* Gold top border */
+      border-bottom: 5px solid var(--7h-accent-gold); /* Gold bottom border */
+      border-radius: 0px; /* Sharp corners like cover */
+      padding: 2rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+     .main-header-7h .title-block {
+        border-bottom: 1px solid var(--7h-border-light);
+        padding-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .main-header-7h h3 { color: var(--7h-text-medium); font-family: 'Lato', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; } /* Author name */
+    .main-header-7h h1 { color: var(--7h-text-title-blue); font-size: 2.75rem; font-weight: 700; line-height: 1.2; } /* Main Title Blue */
+    .main-header-7h p { color: var(--7h-text-medium); font-size: 1rem; margin-top: 1rem; }
+    .book-cover-7h {
+      max-width: 150px;
+      height: auto;
+      border-radius: 2px;
+      border: 1px solid var(--7h-border-medium);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    .title-accent {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--7h-accent-red);
+        line-height: 0.8;
+        margin-right: 0.5rem;
+         font-family: 'Libre Baskerville', serif;
+    }
+
+    .section-7h {
+      margin-bottom: 2.5rem;
+      background-color: #FDFDFD; /* Slightly off-white */
+      border-radius: 4px;
+      border: 1px solid var(--7h-border-light);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.3s ease-in-out;
+    }
+    .section-7h:hover {
+      border-color: var(--7h-accent-gold); /* Gold border on hover */
+    }
+
+    .section-header-7h {
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid var(--7h-border-light);
+      display: flex;
+      align-items: center;
+      background-color: #FFF;
+    }
+    .section-header-7h h2 { font-size: 1.75rem; color: var(--7h-text-title-blue); }
+    .section-header-7h i {
+      margin-right: 0.85rem;
+      color: var(--7h-accent-red); /* Red for icons */
+      font-size: 1.1em;
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-7h:hover .section-header-7h i {
+        transform: rotate(3deg);
+     }
+
+    .section-content-7h {
+      padding: 1.75rem 2rem;
+    }
+
+    /* --- Quote Style --- */
+    .quote-7h {
+      background-color: #f7f7f7; /* Light gray background */
+      border-left: 5px solid var(--7h-accent-gold); /* Gold border */
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--7h-text-medium);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      position: relative;
+       border-top: 1px solid var(--7h-border-light);
+       border-right: 1px solid var(--7h-border-light);
+       border-bottom: 1px solid var(--7h-border-light);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    .quote-7h::before { /* Optional subtle quote mark */
+        content: "\201C";
+        font-family: 'Libre Baskerville', serif;
+        font-size: 3rem;
+        color: var(--7h-accent-gold);
+        opacity: 0.2;
+        position: absolute;
+        left: 0.75rem;
+        top: 0.25rem;
+        line-height: 1;
+    }
+    .quote-7h p {
+         margin-bottom: 0.5rem;
+         margin-left: 1.5rem; /* Indent text slightly due to quote mark */
+         position: relative; /* Ensure text is above pseudo-element */
+         z-index: 1;
+     }
+    .quote-7h footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700;
+      color: var(--7h-text-dark);
+      font-size: 0.85rem;
+      font-family: 'Lato', sans-serif;
+    }
+    /* --- End Quote Style --- */
+
+
+    .habit-section-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.5rem;
+        color: var(--7h-text-title-blue);
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--7h-accent-gold);
+        display: inline-block; /* Keep border tight */
+    }
+    .habit-section-title i {
+        margin-right: 0.75rem;
+        color: var(--7h-accent-red);
+    }
+
+
+    .habits-list {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column for list items */
+      gap: 1.5rem;
+    }
+    .habit-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--7h-border-light);
+      border-left: 5px solid var(--7h-accent-red); /* Red left border */
+      border-radius: 4px;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-left-color 0.25s ease-in-out;
+    }
+    .habit-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      border-left-color: var(--7h-text-title-blue); /* Blue border on hover */
+    }
+    .habit-number {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--7h-accent-red);
+      margin-bottom: 0.25rem;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+     .habit-card:hover .habit-number {
+        color: var(--7h-text-title-blue);
+    }
+    .habit-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.4rem; /* Larger habit title */
+      font-weight: 700;
+      color: var(--7h-text-title-blue);
+      margin-bottom: 0.75rem;
+    }
+     .habit-title i { /* Icon within title */
+        font-size: 0.8em;
+        margin-right: 0.5rem;
+        opacity: 0.7;
+     }
+    .habit-summary {
+      font-size: 0.95rem;
+      color: var(--7h-text-medium);
+      line-height: 1.65;
+    }
+    .habit-summary strong {
+        color: var(--7h-text-dark);
+        font-weight: 700; /* Bolder strong tag */
+    }
+     .habit-summary p + p {
+        margin-top: 0.75rem;
+    }
+
+    .concepts-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .concepts-list li {
+      background-color: var(--7h-bg);
+      border: 1px solid var(--7h-border-light);
+      border-top: 3px solid var(--7h-accent-gold);
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      color: var(--7h-text-medium);
+      font-weight: 700; /* Bolder concept list items */
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem; /* Slightly smaller font */
+      transition: background-color 0.2s ease, border-top-color 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .concepts-list li:hover {
+        background-color: #fcfcfc;
+        border-top-color: var(--7h-accent-red); /* Red top border on hover */
+    }
+     .concepts-list li i {
+         color: var(--7h-accent-gold);
+         margin-right: 0.85rem;
+         width: 20px;
+         text-align: center;
+         transition: color 0.2s ease;
+         opacity: 0.8;
+         font-size: 1.1em;
+     }
+      .concepts-list li:hover i {
+          color: var(--7h-accent-red);
+      }
+
+     .conclusion-highlight-7h {
+        background-color: #f9f6ef; /* Gold-tinted background */
+        color: var(--7h-text-dark);
+        padding: 1.75rem;
+        border-radius: 4px;
+        margin-top: 2rem;
+        text-align: center;
+        border: 1px solid var(--7h-accent-gold);
+        border-left: 5px solid var(--7h-accent-red);
+     }
+     .conclusion-highlight-7h p {
+        font-size: 1.1rem; /* Slightly smaller than others */
+        line-height: 1.7;
+     }
+     .conclusion-highlight-7h strong {
+         font-weight: 700;
+         color: var(--7h-text-title-blue); /* Blue emphasis */
+         font-family: 'Libre Baskerville', serif; /* Serif emphasis */
+     }
+
+  </style>
+</head>
+<body class="antialiased">
+  <div class="container">
+    <!-- Header/Title Section -->
+    <div class="main-header-7h flex flex-col md:flex-row items-center">
+      <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center md:justify-start">
+         <img src="https://m.media-amazon.com/images/I/71RNHgnCHFL._SL1500_.jpg" alt="7 Habits Book Cover" class="book-cover-7h">
+      </div>
+      <div class="md:w-3/4 md:pl-10 text-center md:text-left">
+        <div class="title-block">
+            <h3 class="uppercase tracking-wider">Stephen R. Covey</h3>
+            <div class="flex items-end justify-center md:justify-start">
+                 <span class="title-accent">7</span>
+                 <h1 class="mb-0 leading-none">Habits Of Highly Effective People</h1>
+            </div>
+        </div>
+        <p class="text-sm mt-2 leading-relaxed">A principle-centered approach for solving personal and professional problems by changing from the inside out, focusing on character development and the continuum from dependence to interdependence.</p>
+      </div>
+    </div>
+
+    <!-- Introduction / Core Philosophy Section -->
+    <div class="section-7h mb-8">
+      <div class="section-header-7h">
+          <i class="fas fa-gem"></i>
+        <h2>From Personality to Character Ethic</h2>
+      </div>
+      <div class="section-content-7h">
+        <div class="flex flex-col lg:flex-row gap-6 items-start">
+          <div class="lg:w-2/3">
+            <p class="mb-4 text-base">Covey contrasts the prevalent <strong>Personality Ethic</strong> (focusing on image, techniques, quick fixes) with the foundational <strong>Character Ethic</strong> (based on enduring principles like integrity, humility, justice, service). True effectiveness and lasting success stem from aligning our lives with these timeless principles.</p>
+            <p class="mb-4 text-base">Effectiveness lies in balancing <strong>Production (P)</strong> – the desired results – and <strong>Production Capability (PC)</strong> – maintaining the resources that produce those results. This applies to physical, financial, and human assets (relationships, skills).</p>
+            <p class="text-base">Growth follows a <strong>Maturity Continuum</strong>: from <strong>Dependence</strong> ("you take care of me") to <strong>Independence</strong> ("I can do it myself") to <strong>Interdependence</strong> ("we can cooperate to achieve something greater"). The 7 Habits guide this journey.</p>
+          </div>
+          <div class="lg:w-1/3 flex flex-col justify-start">
+             <div class="quote-7h w-full">
+                <p>"Sow a thought, reap an action; sow an action, reap a habit; sow a habit, reap a character; sow a character, reap a destiny."</p>
+                <footer>— Stephen R. Covey (adapted)</footer>
+            </div>
+            <div class="quote-7h w-full mt-4">
+                <p>"The key is not to prioritize what's on your schedule, but to schedule your priorities."</p>
+                <footer>— Stephen R. Covey</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The 7 Habits Section -->
+    <div class="section-7h mb-8">
+      <div class="section-header-7h">
+          <i class="fas fa-list-ol"></i>
+        <h2>The 7 Habits Framework</h2>
+      </div>
+      <div class="section-content-7h">
+        <p class="mb-6 text-base leading-relaxed">The habits build upon each other, leading from self-mastery to effective teamwork and continuous improvement:</p>
+
+        <div>
+            <h3 class="habit-section-title"><i class="fas fa-user-lock"></i> Private Victory: Independence</h3>
+            <p class="mb-4 text-base">Moving from dependence to independence by mastering oneself.</p>
+            <div class="habits-list">
+               <div class="habit-card">
+                <div class="habit-number">Habit 1</div>
+                <div class="habit-title"><i class="fas fa-bullseye"></i> Be Proactive</div>
+                <p class="habit-summary">Take responsibility for your life. Recognize that your behavior is a product of your decisions, based on values, rather than your conditions, based on feelings. Focus your efforts on your <strong>Circle of Influence</strong> (what you can control) rather than your Circle of Concern (what you can't).</p>
+              </div>
+              <div class="habit-card">
+                <div class="habit-number">Habit 2</div>
+                <div class="habit-title"><i class="fas fa-map-signs"></i> Begin with the End in Mind</div>
+                <p class="habit-summary">Define your mission and goals in life. Base your actions on a clear understanding of your desired destination and core principles. Develop a personal <strong>mission statement</strong> to guide your decisions.</p>
+              </div>
+              <div class="habit-card">
+                <div class="habit-number">Habit 3</div>
+                <div class="habit-title"><i class="fas fa-calendar-check"></i> Put First Things First</div>
+                 <p class="habit-summary">Prioritize and execute your week's tasks based on importance rather than urgency. Focus on activities in <strong>Quadrant II</strong> of the Time Management Matrix (Important, Not Urgent), such as prevention, relationship building, and planning.</p>
+             </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="habit-section-title"><i class="fas fa-users"></i> Public Victory: Interdependence</h3>
+            <p class="mb-4 text-base">Achieving effective relationships and cooperation with others.</p>
+            <div class="habits-list">
+               <div class="habit-card">
+                <div class="habit-number">Habit 4</div>
+                <div class="habit-title"><i class="fas fa-handshake"></i> Think Win-Win</div>
+                <p class="habit-summary">Strive for mutually beneficial solutions or agreements in your relationships and interactions. Believe that there is plenty for everyone and that success doesn't require someone else's failure. Build strong <strong>Emotional Bank Accounts</strong> with others.</p>
+              </div>
+              <div class="habit-card">
+                <div class="habit-number">Habit 5</div>
+                <div class="habit-title"><i class="fas fa-ear-listen"></i> Seek First to Understand, Then to Be Understood</div>
+                <p class="habit-summary">Listen with the intent to truly understand the other person's perspective (<strong>empathic listening</strong>) before seeking to communicate your own viewpoint. Diagnosis must precede prescription.</p>
+              </div>
+              <div class="habit-card">
+                <div class="habit-number">Habit 6</div>
+                <div class="habit-title"><i class="fas fa-brain"></i> Synergize</div>
+                 <p class="habit-summary">Combine the strengths of people through positive teamwork to achieve results no one could have achieved alone. Value differences and seek third alternatives that are better than what either party initially proposed. <strong>The whole is greater than the sum of its parts.</strong></p>
+             </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="habit-section-title"><i class="fas fa-tree"></i> Renewal</h3>
+             <p class="mb-4 text-base">Maintaining and increasing effectiveness through continuous self-renewal.</p>
+           <div class="habits-list">
+               <div class="habit-card">
+                <div class="habit-number">Habit 7</div>
+                <div class="habit-title"><i class="fas fa-recycle"></i> Sharpen the Saw</div>
+                <p class="habit-summary">Renew yourself regularly in the four key dimensions of life: <strong>Physical</strong> (exercise, nutrition, stress management), <strong>Social/Emotional</strong> (service, empathy, synergy, intrinsic security), <strong>Mental</strong> (reading, visualizing, planning, writing), and <strong>Spiritual</strong> (value clarification & commitment, study & meditation). This is the habit that makes all others possible.</p>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+     <div class="section-7h mb-8">
+      <div class="section-header-7h">
+          <i class="fas fa-project-diagram"></i>
+        <h2>Key Models & Concepts</h2>
+      </div>
+      <div class="section-content-7h">
+        <p class="mb-6 text-base">Covey uses several powerful models to illustrate his principles:</p>
+        <ul class="concepts-list">
+            <li><i class="far fa-dot-circle"></i> Circle of Influence / Concern</li>
+            <li><i class="fas fa-balance-scale-left"></i> P / PC Balance (Production / Production Capability)</li>
+            <li><i class="fas fa-chart-line"></i> Maturity Continuum (Dependence -> Independence -> Interdependence)</li>
+            <li><i class="fas fa-th-large"></i> Time Management Matrix (Urgency / Importance)</li>
+            <li><i class="fas fa-piggy-bank"></i> Emotional Bank Account</li>
+            <li><i class="fas fa-search"></i> Paradigms & Paradigm Shifts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-7h mb-8">
+      <div class="section-header-7h">
+          <i class="fas fa-quote-left"></i>
+        <h2>Memorable Quotes</h2>
+      </div>
+      <div class="section-content-7h">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+           <!-- Using quote-7h style -->
+          <blockquote class="quote-7h"><p>Most people do not listen with the intent to understand; they listen with the intent to reply.</p><footer>— Stephen R. Covey, Habit 5</footer></blockquote>
+          <blockquote class="quote-7h"><p>Start with the end in mind. </p><footer>— Stephen R. Covey, Habit 2</footer></blockquote>
+          <blockquote class="quote-7h"><p>The main thing is to keep the main thing the main thing.</p><footer>— Stephen R. Covey, Habit 3</footer></blockquote>
+          <blockquote class="quote-7h"><p>Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.</p><footer>— Stephen R. Covey, Habit 1</footer></blockquote>
+          <blockquote class="quote-7h"><p>Synergy is better than my way or your way. It's our way.</p><footer>— Stephen R. Covey, Habit 6</footer></blockquote>
+          <blockquote class="quote-7h"><p>Win-win is a frame of mind and heart that constantly seeks mutual benefit in all human interactions.</p><footer>— Stephen R. Covey, Habit 4</footer></blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-7h">
+      <div class="section-header-7h">
+          <i class="fas fa-anchor"></i>
+        <h2>Conclusion: Living a Principle-Centered Life</h2>
+      </div>
+      <div class="section-content-7h">
+        <p class="mb-4 text-base">"The 7 Habits of Highly Effective People" provides a holistic, integrated, principle-centered framework for building personal and interpersonal effectiveness.</p>
+        <p class="mb-4 text-base">It's not about quick tips or tricks, but about fundamentally shifting one's character and paradigms to align with timeless principles. By internalizing and practicing these habits, individuals can move from dependence to independence and ultimately achieve interdependence, leading to greater effectiveness, deeper relationships, and a more fulfilling life.</p>
+
+        <div class="conclusion-highlight-7h">
+          <p>The power lies not just in knowing the habits, but in <strong>consistently living them</strong>. It's a journey of continuous improvement, grounded in principles, aimed at becoming truly effective in all aspects of life.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 mb-6 text-center text-gray-500 text-xs">
+       <p>© 2024 Summary of "The 7 Habits of Highly Effective People" by Stephen R. Covey. Content for informational purposes only.</p>
+       <p class="mt-1">Updated edition includes insights by Sean Covey and Foreword by Jim Collins.</p>
+    </div>
+  </div>
+</body>
+</html>
