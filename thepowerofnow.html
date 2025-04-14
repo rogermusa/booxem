@@ -287,14 +287,118 @@
 
   <div class="container">
 
-    <!-- Header Section -->
-    <div class="main-header-pon">
-        <h3 class="author-name">Eckhart Tolle</h3>
-        <div class="title-line1">The Power Of</div>
-        <div class="title-line2">NOW</div>
-        <div class="subtitle">A Guide to Spiritual Enlightenment</div>
-        <img src="https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg" alt="The Power of Now Book Cover" class="book-cover-pon">
-    </div>
+<style>
+  /* Updates to the header styles */
+  .main-header-pon {
+    background: linear-gradient(to bottom, var(--pon-accent-gold), var(--pon-accent-teal));
+    color: var(--pon-text-dark);
+    padding: 2rem 1.5rem; /* Reduced vertical padding */
+    margin-bottom: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Enhanced shadow */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improved title styling */
+  .main-header-pon h3 { /* Author */
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--pon-text-dark); /* Darker color for better contrast */
+    margin-bottom: 0.75rem; /* Reduced space */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .main-header-pon .title-line1 { /* "THE POWER OF" */
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem; /* Slightly larger */
+    font-weight: 700;
+    color: var(--pon-text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    margin-bottom: 0; /* Reduced space */
+    line-height: 1.2;
+  }
+  
+  .main-header-pon .title-line2 { /* "NOW" */
+    font-family: 'Lato', sans-serif;
+    font-size: 5.5rem; /* Much larger NOW */
+    font-weight: 700;
+    color: var(--pon-text-title);
+    line-height: 1;
+    margin-bottom: 0.5rem; /* Reduced space */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15); /* Enhanced shadow */
+    letter-spacing: 2px; /* Add letter spacing */
+  }
+  
+  .main-header-pon .subtitle { /* Subtitle */
+    font-family: 'Lato', sans-serif;
+    color: var(--pon-text-dark);
+    font-size: 1.1rem; /* Slightly larger */
+    font-weight: 700;
+    opacity: 0.9; /* More visible */
+    margin-bottom: 1.5rem; /* Reduced space */
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+  
+  .book-cover-pon {
+    max-width: 175px; /* Larger book cover */
+    height: auto;
+    border-radius: 3px;
+    border: 3px solid var(--pon-text-light); /* Thicker border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-cover-pon:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Additional decorative element */
+  .title-container {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  
+  .title-container::before,
+  .title-container::after {
+    content: "•";
+    font-size: 1.5rem;
+    color: var(--pon-text-dark);
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .title-container::before {
+    left: -1rem;
+  }
+  
+  .title-container::after {
+    right: -1rem;
+  }
+</style>
+
+<!-- Updated Header Section HTML -->
+<div class="main-header-pon">
+  <h3 class="author-name">Eckhart Tolle</h3>
+  <div class="title-container">
+    <div class="title-line1">The Power Of</div>
+  </div>
+  <div class="title-line2">NOW</div>
+  <div class="subtitle">A Guide to Spiritual Enlightenment</div>
+  <img src="https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg" alt="The Power of Now Book Cover" class="book-cover-pon">
+</div>
 
     <!-- Core Philosophy Section -->
     <div class="section-pon">
