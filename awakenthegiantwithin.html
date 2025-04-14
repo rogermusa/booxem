@@ -11,34 +11,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      / Awaken the Giant Within Cover Color Scheme /
-      --tr-bg: #F5F5F5; / Light Grey page background /
+      /* Awaken the Giant Within Cover Color Scheme */
+      --tr-bg: #F5F5F5; /* Light Grey page background */
       --tr-card-bg: #FFFFFF;
-      --tr-text-dark: #1A1A1A; / Near Black /
-      --tr-accent-red: #E62B1E; / Primary Red /
-      --tr-accent-yellow: #F39C12; / Bold Yellow /
+      --tr-text-dark: #1A1A1A; /* Near Black */
+      --tr-accent-red: #E62B1E; /* Primary Red */
+      --tr-accent-yellow: #F39C12; /* Bold Yellow */
       --tr-accent-black: #000000;
       --tr-text-light: #FFFFFF;
       --tr-border-light: #EFEFEF;
       --tr-border-medium: #DDDDDD;
-      --tr-hover-yellow: #E08E0B; / Darker yellow /
-      --tr-hover-red: #C02115; / Darker red /
+      --tr-hover-yellow: #E08E0B; /* Darker yellow */
+      --tr-hover-red: #C02115; /* Darker red */
     }
 
     body {
-      font-family: 'Roboto', sans-serif; / Clean sans-serif /
+      font-family: 'Roboto', sans-serif; /* Clean sans-serif */
       color: var(--tr-text-dark);
-      line-height: 1.75; / Slightly increased line height /
+      line-height: 1.75; /* Slightly increased line height */
       background-color: var(--tr-bg);
       font-size: 16px;
     }
     h1, h2, h3, h4 {
-      font-family: 'Anton', sans-serif; / Bold, condensed font like cover /
-      color: var(--tr-accent-red); / Red Headings /
-      font-weight: 400; / Anton is naturally bold /
+      font-family: 'Anton', sans-serif; /* Bold, condensed font like cover */
+      color: var(--tr-accent-red); /* Red Headings */
+      font-weight: 400; /* Anton is naturally bold */
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 0.75rem; / Increased default margin /
+      margin-bottom: 0.75rem; /* Increased default margin */
     }
     .container {
       max-width: 1000px;
@@ -46,14 +46,14 @@
       padding: 2.5rem 1.5rem;
     }
     .main-header-tr {
-      background-color: var(--tr-accent-red); / Red Header BG /
+      background-color: var(--tr-accent-red); /* Red Header BG */
       color: var(--tr-text-light);
-      padding: 0; / No padding on container /
+      padding: 0; /* No padding on container */
       margin-bottom: 2.5rem;
       text-align: center;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      overflow: hidden; / Contain banner /
+      overflow: hidden; /* Contain banner */
     }
     .header-top-banner-tr {
         background-color: var(--tr-accent-black);
@@ -68,21 +68,21 @@
     .header-content-tr {
         padding: 2rem 1.5rem;
     }
-    .main-header-tr h3 { / Author /
+    .main-header-tr h3 { /* Author */
         font-family: 'Anton', sans-serif;
         font-size: 2.5rem;
         font-weight: 400;
-        color: var(--tr-accent-yellow); / Yellow Author /
+        color: var(--tr-accent-yellow); /* Yellow Author */
         margin-bottom: 0.75rem;
         line-height: 1.1;
     }
-    .main-header-tr h1 { / Title /
-        font-size: 3.5rem; / Very large title /
-        color: var(--tr-text-light); / White title /
+    .main-header-tr h1 { /* Title */
+        font-size: 3.5rem; /* Very large title */
+        color: var(--tr-text-light); /* White title */
         line-height: 1;
         margin-bottom: 1.5rem;
     }
-    .main-header-tr .subtitle { / Subtitle /
+    .main-header-tr .subtitle { /* Subtitle */
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 1rem;
@@ -103,11 +103,11 @@
       margin-top: 1rem;
     }
 
-    / Section styling /
+    /* Section styling */
     .section-tr {
       background-color: var(--tr-card-bg);
       color: var(--tr-text-dark);
-      padding: 2rem 2.25rem; / Slightly more padding /
+      padding: 2rem 2.25rem; /* Slightly more padding */
       margin-bottom: 2.5rem;
       border-radius: 4px;
       border: 1px solid var(--tr-border-light);
@@ -115,52 +115,52 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
     .section-tr:hover {
-        border-color: var(--tr-accent-yellow); / Yellow border on hover /
+        border-color: var(--tr-accent-yellow); /* Yellow border on hover */
         box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     .section-header-tr {
-      margin-bottom: 1.75rem; / Increased margin /
+      margin-bottom: 1.75rem; /* Increased margin */
       padding-bottom: 0.75rem;
-      border-bottom: 2px solid var(--tr-accent-red); / Red border /
+      border-bottom: 2px solid var(--tr-accent-red); /* Red border */
       display: flex;
       align-items: center;
     }
     .section-header-tr h2 {
-      font-size: 2rem; / Large section titles /
+      font-size: 2rem; /* Large section titles */
       margin-bottom: 0;
       line-height: 1.1;
-      font-weight: 400; / Anton /
+      font-weight: 400; /* Anton */
     }
     .section-header-tr i {
-      font-size: 1.5rem; / Larger icons /
+      font-size: 1.5rem; /* Larger icons */
       margin-right: 1rem;
-      color: var(--tr-accent-red); / Red icon /
+      color: var(--tr-accent-red); /* Red icon */
       opacity: 0.9;
       transition: transform 0.3s ease, color 0.3s ease;
     }
      .section-tr:hover .section-header-tr i {
         transform: scale(1.1);
-        color: var(--tr-accent-yellow); / Yellow icon on hover /
+        color: var(--tr-accent-yellow); /* Yellow icon on hover */
      }
 
-    / --- Quote Style --- /
+    /* --- Quote Style --- */
     .quote-tr {
-      background-color: var(--tr-accent-black); / Black background /
-      color: var(--tr-text-light); / White text /
+      background-color: var(--tr-accent-black); /* Black background */
+      color: var(--tr-text-light); /* White text */
       border: none;
-      border-left: 5px solid var(--tr-accent-yellow); / Yellow left border /
-      padding: 1.5rem 1.75rem; / Slightly more padding /
-      margin: 2rem 0; / Increased margin /
+      border-left: 5px solid var(--tr-accent-yellow); /* Yellow left border */
+      padding: 1.5rem 1.75rem; /* Slightly more padding */
+      margin: 2rem 0; /* Increased margin */
       border-radius: 0 4px 4px 0;
-      font-size: 1.1rem; / Larger quote /
+      font-size: 1.1rem; /* Larger quote */
       font-style: italic;
-      font-weight: 700; / Bold quote text /
+      font-weight: 700; /* Bold quote text */
       transition: background-color 0.3s ease, border-left-color 0.3s ease;
     }
      .quote-tr:hover {
-        background-color: #222; / Slightly lighter black /
-        border-left-color: var(--tr-accent-red); / Red border on hover /
+        background-color: #222; /* Slightly lighter black */
+        border-left-color: var(--tr-accent-red); /* Red border on hover */
     }
     .quote-tr p {
          margin-bottom: 0.75rem;
@@ -169,22 +169,22 @@
       margin-top: 1rem;
       font-style: normal;
       text-align: right;
-      font-weight: 400; / Regular weight footer /
+      font-weight: 400; /* Regular weight footer */
       font-size: 0.9rem;
       opacity: 0.85;
-      color: var(--tr-accent-yellow); / Yellow footer /
+      color: var(--tr-accent-yellow); /* Yellow footer */
     }
-    / --- End Quote Style --- /
+    /* --- End Quote Style --- */
 
     .principles-grid-tr {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); / Wider cards /
-      gap: 2rem; / Increased gap /
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
+      gap: 2rem; /* Increased gap */
     }
     .principle-card-tr {
       background-color: var(--tr-card-bg);
       border: 1px solid var(--tr-border-light);
-      border-bottom: 4px solid var(--tr-accent-yellow); / Yellow bottom border /
+      border-bottom: 4px solid var(--tr-accent-yellow); /* Yellow bottom border */
       border-radius: 4px;
       padding: 1.75rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -195,12 +195,12 @@
     .principle-card-tr:hover {
       transform: translateY(-4px);
       box-shadow: 0 5px 12px rgba(0,0,0,0.09);
-      border-bottom-color: var(--tr-accent-red); / Red border on hover /
+      border-bottom-color: var(--tr-accent-red); /* Red border on hover */
     }
     .principle-icon-tr {
         font-size: 1.75rem;
         margin-bottom: 1rem;
-        color: var(--tr-accent-red); / Red icon /
+        color: var(--tr-accent-red); /* Red icon */
         height: 30px;
         transition: color 0.25s ease;
     }
@@ -208,8 +208,8 @@
          color: var(--tr-accent-yellow);
      }
     .principle-title-tr {
-      font-family: 'Anton', sans-serif; / Bold font /
-      font-size: 1.5rem; / Slightly larger title /
+      font-family: 'Anton', sans-serif; /* Bold font */
+      font-size: 1.5rem; /* Slightly larger title */
       font-weight: 400;
       color: var(--tr-text-dark);
       margin-bottom: 0.75rem;
@@ -217,61 +217,61 @@
       letter-spacing: 0.5px;
     }
     .principle-summary-tr {
-      font-size: 1rem; / Larger summary /
+      font-size: 1rem; /* Larger summary */
       color: var(--tr-text-dark);
-      line-height: 1.8; / Increased line height /
+      line-height: 1.8; /* Increased line height */
       flex-grow: 1;
     }
      .principle-summary-tr strong {
-        font-weight: 900; / Black weight /
-        color: var(--tr-accent-red); / Red emphasis /
+        font-weight: 900; /* Black weight */
+        color: var(--tr-accent-red); /* Red emphasis */
      }
-     .principle-summary-tr p { margin-bottom: 0.75rem; } / Space paragraphs /
+     .principle-summary-tr p { margin-bottom: 0.75rem; } /* Space paragraphs */
      .principle-summary-tr ul {
-         list-style: none; / Remove default bullets /
+         list-style: none; /* Remove default bullets */
          padding-left: 0;
-         margin-top: 1rem; / Space before list /
+         margin-top: 1rem; /* Space before list */
      }
       .principle-summary-tr li {
           position: relative;
-          padding-left: 1.75rem; / More space for icon /
-          margin-bottom: 0.75rem; / More space between items /
-          line-height: 1.6; / Adjust list line height /
+          padding-left: 1.75rem; /* More space for icon */
+          margin-bottom: 0.75rem; /* More space between items */
+          line-height: 1.6; /* Adjust list line height */
       }
       .principle-summary-tr li::before {
-          content: '\f058'; / Font Awesome check circle /
+          content: '\f058'; /* Font Awesome check circle */
           font-family: 'Font Awesome 6 Free';
           font-weight: 900;
-          color: var(--tr-accent-yellow); / Yellow check /
+          color: var(--tr-accent-yellow); /* Yellow check */
           position: absolute;
           left: 0;
-          top: 5px; / Adjust vertical position /
-          font-size: 1em; / Larger check /
+          top: 5px; /* Adjust vertical position */
+          font-size: 1em; /* Larger check */
       }
 
 
     .conclusion-highlight-tr {
         background: linear-gradient(45deg, var(--tr-accent-red), var(--tr-hover-red));
         color: var(--tr-text-light);
-        padding: 2.5rem; / Increased padding /
+        padding: 2.5rem; /* Increased padding */
         margin-top: 1.5rem;
         text-align: center;
         border-radius: 4px;
-        border: 3px solid var(--tr-accent-yellow); / Yellow border /
+        border: 3px solid var(--tr-accent-yellow); /* Yellow border */
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .conclusion-highlight-tr h3 { / Custom conclusion heading /
+    .conclusion-highlight-tr h3 { /* Custom conclusion heading */
          color: var(--tr-accent-yellow);
-         font-size: 2.5rem; / Larger conclusion title /
+         font-size: 2.5rem; /* Larger conclusion title */
          margin-bottom: 1rem;
     }
     .conclusion-highlight-tr p {
-        font-size: 1.15rem; / Slightly larger conclusion text /
+        font-size: 1.15rem; /* Slightly larger conclusion text */
         line-height: 1.8;
         font-weight: 500;
     }
     .conclusion-highlight-tr strong {
-        font-weight: 900; / Black weight /
+        font-weight: 900; /* Black weight */
         color: var(--tr-text-light);
     }
 
@@ -296,7 +296,7 @@
         <h3>Anthony Robbins</h3>
         <h1>Awaken The Giant Within</h1>
         <div class="subtitle">Take Immediate Control of Your Mental, Emotional, Physical and Financial Destiny</div>
-        <img src="https://m.media-amazon.com/images/I/71Jj1ONRa9L._AC_UF1000,1000_QL80_.jpg" alt="Awaken the Giant Within Book Cover" class="book-cover-tr">
+        <img src="input_file_0.png" alt="Awaken the Giant Within Book Cover" class="book-cover-tr">
       </div>
     </div>
 
@@ -306,7 +306,7 @@
         <i class="fas fa-bolt"></i> <!-- Icon for power/energy -->
         <h2>Unleash Your Personal Power Through Decision</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"Awaken the Giant Within" is a comprehensive blueprint for achieving peak performance and creating massive, immediate change in your life. Tony Robbins argues that personal power lies dormant within everyone, waiting to be awakened. The key is understanding that your destiny is shaped by your decisions, not your conditions. You possess the power to change anything in your life instantly by making a true, committed decision.</p>
+      <p class="mb-4 text-base leading-relaxed">"Awaken the Giant Within" is a comprehensive blueprint for achieving peak performance and creating massive, immediate change in your life. Tony Robbins argues that personal power lies dormant within everyone, waiting to be awakened. The key is understanding that your destiny is shaped by your decisions, not your conditions. You possess the power to change anything in your life *instantly* by making a true, committed decision.</p>
       <p class="mb-4 text-base leading-relaxed">Central to this is mastering your state – the sum total of your mental and emotional experience at any moment. Your state dictates your actions and results. Robbins provides tools to consciously control your state through managing the "Triad": your physiology (how you use your body), your focus (what you pay attention to), and your language/beliefs (the words you use and the meanings you assign).</p>
       <p class="text-base leading-relaxed">He stresses that emotions are action signals, designed to guide you. Instead of suppressing negative emotions, learn to understand their message and use them as a call to action. Consistent, conscious conditioning of your thoughts, emotions, and behaviors is essential for creating lasting change and achieving your ultimate potential.</p>
 
