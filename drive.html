@@ -12,28 +12,28 @@
   <style>
     :root {
       /* Drive Cover Inspired Color Scheme */
-      --drive-bg: #F9F9F9; /* Very light grey page background */
+      --drive-bg: #F9F9F9;
       --drive-card-bg: #FFFFFF;
-      --drive-text-dark: #222222; /* Near black */
+      --drive-text-dark: #222222;
       --drive-text-light: #FFFFFF;
-      --drive-accent-red: #E63946; /* Vibrant Red */
-      --drive-accent-grey: #A0A0A0; /* Medium Grey */
+      --drive-accent-red: #E63946;
+      --drive-accent-grey: #A0A0A0;
       --drive-border-light: #EEEEEE;
       --drive-border-medium: #DCDCDC;
-      --drive-hover-red: #C1303A; /* Darker red */
+      --drive-hover-red: #C1303A;
     }
 
     body {
-      font-family: 'Poppins', sans-serif; /* Modern Sans-Serif */
+      font-family: 'Poppins', sans-serif;
       color: var(--drive-text-dark);
       line-height: 1.7;
       background-color: var(--drive-bg);
       font-size: 16px;
     }
     h1, h2, h3, h4 {
-      font-family: 'Poppins', sans-serif; /* Use Poppins for headings too, lean into sans-serif */
+      font-family: 'Poppins', sans-serif;
       color: var(--drive-text-dark);
-      font-weight: 700; /* Bold */
+      font-weight: 700;
     }
      h2 { font-size: 1.75rem; letter-spacing: 0.5px;}
      h3 { font-size: 1.4rem; font-weight: 600; color: var(--drive-accent-red); }
@@ -45,7 +45,7 @@
       padding: 2.5rem 1.5rem;
     }
     .main-header-drive {
-      background-color: var(--drive-card-bg); /* White header */
+      background-color: var(--drive-card-bg);
       color: var(--drive-text-dark);
       padding: 2.5rem 2rem;
       margin-bottom: 2.5rem;
@@ -67,12 +67,12 @@
         position: absolute;
         top: 0; left: 0; right: 0;
     }
-    .main-header-drive h3.author { /* Author */
-        font-family: 'Lora', serif; /* Serif for author */
+    .main-header-drive h3.author {
+        font-family: 'Lora', serif;
         font-size: 1.75rem;
         font-weight: 600;
         color: var(--drive-text-dark);
-        margin-top: 1.5rem; /* Space below banner */
+        margin-top: 1.5rem;
         margin-bottom: 0.25rem;
     }
      .author-sub {
@@ -82,18 +82,16 @@
         color: var(--drive-accent-grey);
         margin-bottom: 1.5rem;
      }
-    .main-header-drive h1.title { /* Title "DRIVE" */
+    .main-header-drive h1.title {
         font-family: 'Poppins', sans-serif;
-        font-size: 4.5rem; /* Large, Bold Title */
-        font-weight: 800; /* Extra Bold */
-        color: var(--drive-accent-red); /* Red Title */
+        font-size: 4.5rem;
+        font-weight: 800;
+        color: var(--drive-accent-red);
         line-height: 1;
         margin-bottom: 0.75rem;
-        letter-spacing: -2px; /* Tighten spacing */
-         /* Simple slant effect */
-         /* transform: skewX(-5deg); */
+        letter-spacing: -2px;
     }
-    .main-header-drive h2.subtitle { /* Subtitle */
+    .main-header-drive h2.subtitle {
         font-family: 'Lora', serif;
         color: var(--drive-text-dark);
         font-size: 1.1rem;
@@ -122,7 +120,7 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
     .section-drive:hover {
-        border-color: var(--drive-accent-red); /* Red border on hover */
+        border-color: var(--drive-accent-red);
         box-shadow: 0 3px 8px rgba(0,0,0,0.06);
     }
 
@@ -141,7 +139,7 @@
     .section-header-drive i {
       font-size: 1.3rem;
       margin-right: 0.85rem;
-      color: var(--drive-accent-red); /* Red icon */
+      color: var(--drive-accent-red);
       opacity: 0.8;
       transition: transform 0.3s ease;
     }
@@ -151,9 +149,9 @@
 
     /* --- Quote Style --- */
     .quote-drive {
-      background-color: #FFEBEB; /* Very light red */
-      border: 1px solid #FFDCDC; /* Light red border */
-      border-left: 4px solid var(--drive-accent-red); /* Red left border */
+      background-color: #FFEBEB;
+      border: 1px solid #FFDCDC;
+      border-left: 4px solid var(--drive-accent-red);
       padding: 1.25rem 1.5rem;
       margin: 1.75rem 0;
       color: var(--drive-text-dark);
@@ -166,7 +164,7 @@
      .quote-drive:hover {
         background-color: var(--drive-card-bg);
         border-color: var(--drive-border-medium);
-        border-left-color: var(--drive-text-dark); /* Dark border on hover */
+        border-left-color: var(--drive-text-dark);
     }
     .quote-drive p {
          margin-bottom: 0.5rem;
@@ -175,7 +173,7 @@
       margin-top: 0.75rem;
       font-style: normal;
       text-align: right;
-      font-weight: 600; /* Semi-bold footer */
+      font-weight: 600;
       font-size: 0.85rem;
       opacity: 0.9;
       color: var(--drive-text-dark);
@@ -186,17 +184,17 @@
      .element-card {
       background-color: var(--drive-card-bg);
       border: 1px solid var(--drive-border-light);
-      border-left: 5px solid var(--drive-accent-red); /* Red left border */
+      border-left: 5px solid var(--drive-accent-red);
       border-radius: 4px;
       padding: 1.75rem;
       box-shadow: 0 3px 6px rgba(0,0,0,0.06);
       transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-left-color 0.25s ease-in-out;
-      margin-bottom: 1.5rem; /* Space between elements */
+      margin-bottom: 1.5rem;
     }
      .element-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.09);
-      border-left-color: var(--drive-hover-red); /* Darker red border */
+      border-left-color: var(--drive-hover-red);
     }
     .element-header {
         display: flex;
@@ -214,13 +212,13 @@
       .element-card:hover .element-icon {
           color: var(--drive-hover-red);
       }
-     .element-title { /* Title for Autonomy, Mastery, Purpose */
+     .element-title {
         font-family: 'Poppins', sans-serif;
         font-size: 1.75rem;
         font-weight: 700;
         color: var(--drive-text-dark);
         line-height: 1.2;
-        text-transform: uppercase; /* Uppercase elements */
+        text-transform: uppercase;
      }
     .element-summary {
       font-size: 1rem;
@@ -270,8 +268,8 @@
         position: absolute; left: 0; top: 1px;
         font-size: 0.9em;
     }
-    .type-card.type-i li::before { content: '\f00c'; color: var(--drive-accent-red); } /* Check */
-    .type-card.type-x li::before { content: '\f00d'; color: var(--drive-accent-grey); } /* Times */
+    .type-card.type-i li::before { content: '\f00c'; color: var(--drive-accent-red); }
+    .type-card.type-x li::before { content: '\f00d'; color: var(--drive-accent-grey); }
 
 
     .conclusion-highlight-drive {
@@ -319,12 +317,12 @@
     <!-- The Old Model: Motivation 1.0 & 2.0 -->
     <div class="section-drive">
       <div class="section-header-drive">
-        <i class="fas fa-cogs"></i> <!-- Icon representing machinery/old way -->
+        <i class="fas fa-cogs"></i>
         <h2>The Outdated Operating System: Motivation 2.0</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">Pink argues that traditional business practices operate on an outdated motivation system, "Motivation 2.0," which relies heavily on **extrinsic motivators**: external rewards and punishments (carrots and sticks). This evolved from Motivation 1.0 (basic survival needs).</p>
-      <p class="mb-4 text-base leading-relaxed">While Motivation 2.0 worked reasonably well for routine, **algorithmic tasks** prevalent in the 20th century, extensive research shows it's often ineffective or even detrimental for **heuristic tasks** – those requiring creativity, problem-solving, and cognitive skill – which dominate the 21st-century economy.</p>
-      <p class="mb-4 text-base leading-relaxed">Pink highlights the **"Seven Deadly Flaws"** of extrinsic motivators when applied to complex work: they can extinguish intrinsic motivation, diminish performance, crush creativity, crowd out good behavior, encourage cheating and shortcuts, become addictive, and foster short-term thinking.</p>
+      <p class="mb-4 text-base leading-relaxed">Pink argues that traditional business practices operate on an outdated motivation system, "Motivation 2.0," which relies heavily on <strong>extrinsic motivators</strong>: external rewards and punishments (carrots and sticks). This evolved from Motivation 1.0 (basic survival needs).</p>
+      <p class="mb-4 text-base leading-relaxed">While Motivation 2.0 worked reasonably well for routine, <strong>algorithmic tasks</strong> prevalent in the 20th century, extensive research shows it's often ineffective or even detrimental for <strong>heuristic tasks</strong> – those requiring creativity, problem-solving, and cognitive skill – which dominate the 21st-century economy.</p>
+      <p class="mb-4 text-base leading-relaxed">Pink highlights the <strong>"Seven Deadly Flaws"</strong> of extrinsic motivators when applied to complex work: they can extinguish intrinsic motivation, diminish performance, crush creativity, crowd out good behavior, encourage cheating and shortcuts, become addictive, and foster short-term thinking.</p>
 
       <div class="quote-drive">
           <p>"The best use of money as a motivator is to pay people enough to take the issue of money off the table."</p>
@@ -335,10 +333,10 @@
     <!-- The New Model: Motivation 3.0 -->
     <div class="section-drive">
       <div class="section-header-drive">
-         <i class="fas fa-lightbulb"></i> <!-- Icon representing insight/new idea -->
+         <i class="fas fa-lightbulb"></i>
          <h2>Upgrading to Motivation 3.0: Intrinsic Drive</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">To thrive in the modern world, we need an upgraded operating system: **Motivation 3.0**. This model recognizes that humans have an innate drive to learn, create, and improve the world, fueled primarily by **intrinsic motivation**.</p>
+      <p class="mb-4 text-base leading-relaxed">To thrive in the modern world, we need an upgraded operating system: <strong>Motivation 3.0</strong>. This model recognizes that humans have an innate drive to learn, create, and improve the world, fueled primarily by <strong>intrinsic motivation</strong>.</p>
       <p class="mb-4 text-base leading-relaxed">When baseline rewards (like fair pay) are met, Motivation 3.0 suggests that deeper, more sustainable motivation comes from within. Pink identifies three essential elements that power this intrinsic drive.</p>
        <div class="quote-drive">
           <p>"Human beings have an innate inner drive to be autonomous, self-determined, and connected to one another. And when that drive is liberated, people achieve more and live richer lives."</p>
@@ -349,7 +347,7 @@
     <!-- The Three Elements Section -->
     <div class="section-drive">
       <div class="section-header-drive">
-         <i class="fas fa-universal-access"></i> <!-- Icon representing the core elements -->
+         <i class="fas fa-universal-access"></i>
          <h2>The Three Elements of Motivation 3.0</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Motivation 3.0 is powered by these innate psychological needs:</p>
@@ -357,16 +355,16 @@
       <!-- Element 1: Autonomy -->
        <div class="element-card">
            <div class="element-header">
-               <div class="element-icon"><i class="fas fa-user-astronaut"></i></div> <!-- Icon for self-direction -->
+               <div class="element-icon"><i class="fas fa-user-astronaut"></i></div>
                <h3 class="element-title">1. Autonomy</h3>
            </div>
            <div class="element-summary">
               <p>The desire to direct our own lives; to be self-governing. People are more motivated when they have control over their work. Pink identifies four key aspects of autonomy:</p>
               <ul>
-                  <li><strong>Task:</strong> Choice over *what* they do.</li>
-                  <li><strong>Time:</strong> Choice over *when* they do it (flexible schedules, ROWE).</li>
-                  <li><strong>Technique:</strong> Choice over *how* they do it (freedom in methods).</li>
-                  <li><strong>Team:</strong> Choice over *who* they do it with (ability to select collaborators).</li>
+                  <li><strong>Task:</strong> Choice over <strong>what</strong> they do.</li>
+                  <li><strong>Time:</strong> Choice over <strong>when</strong> they do it (flexible schedules, ROWE).</li>
+                  <li><strong>Technique:</strong> Choice over <strong>how</strong> they do it (freedom in methods).</li>
+                  <li><strong>Team:</strong> Choice over <strong>who</strong> they do it with (ability to select collaborators).</li>
               </ul>
               <p class="mt-4">Autonomy fosters engagement and responsibility, moving away from compliance towards genuine commitment.</p>
           </div>
@@ -375,7 +373,7 @@
        <!-- Element 2: Mastery -->
        <div class="element-card">
            <div class="element-header">
-               <div class="element-icon"><i class="fas fa-mountain"></i></div> <!-- Icon for challenge/improvement -->
+               <div class="element-icon"><i class="fas fa-mountain"></i></div>
                <h3 class="element-title">2. Mastery</h3>
            </div>
            <div class="element-summary">
@@ -392,7 +390,7 @@
        <!-- Element 3: Purpose -->
        <div class="element-card">
            <div class="element-header">
-               <div class="element-icon"><i class="fas fa-heart"></i></div> <!-- Icon for connection/meaning -->
+               <div class="element-icon"><i class="fas fa-heart"></i></div>
                <h3 class="element-title">3. Purpose</h3>
            </div>
            <div class="element-summary">
@@ -410,7 +408,7 @@
     <!-- Type I vs Type X Behavior Section -->
     <div class="section-drive">
       <div class="section-header-drive">
-         <i class="fas fa-balance-scale"></i> <!-- Icon for comparison -->
+         <i class="fas fa-balance-scale"></i>
          <h2>Type I vs. Type X Behavior</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">Pink categorizes individuals based on their primary motivational drivers:</p>
@@ -448,7 +446,7 @@
          <h2>The Type I Toolkit: Practical Strategies</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">Pink offers strategies for individuals and organizations to cultivate Motivation 3.0:</p>
-       <ul class="element-summary mt-4"> <!-- Reusing element summary style for list -->
+       <ul class="element-summary mt-4">
            <li><strong>For Individuals:</strong> Conduct an "Autonomy Audit" (assess control over task, time, technique, team); pursue deliberate practice for Mastery; reflect on your Purpose ("What's your sentence?"); use "Flow Tests" to identify intrinsically motivating activities.</li>
            <li><strong>For Organizations:</strong> Implement ROWE (Results-Only Work Environment); offer "FedEx Days" or "20% Time" for creative projects; use non-controlling praise and feedback; provide "now that" rewards (unexpected, after task completion) instead of "if-then" contingencies; frame work around purpose.</li>
        </ul>
@@ -474,7 +472,7 @@
     <!-- Conclusion Section -->
     <div class="section-drive">
        <div class="section-header-drive">
-          <i class="fas fa-bolt"></i> <!-- Icon for energy/drive -->
+          <i class="fas fa-bolt"></i>
           <h2>Unlocking Human Potential</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"Drive" fundamentally challenges traditional notions of motivation, presenting compelling evidence that intrinsic factors are far more powerful drivers of performance and satisfaction for complex, creative work than external rewards.</p>
@@ -489,7 +487,7 @@
        <p class="mt-1">Content for informational purposes only.</p>
     </div>
 
-  </div> <!-- End Container -->
+  </div>
 
 </body>
 </html>
