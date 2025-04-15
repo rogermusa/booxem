@@ -37,6 +37,16 @@
       font-weight: 800; /* Extra Bold */
       text-transform: uppercase; /* Uppercase headings */
     }
+    /* Define global emphasis style */
+    strong {
+        font-weight: 800; /* Match heading weight */
+        color: var(--yab-text-dark); /* Black emphasis */
+    }
+    /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--yab-secondary-text); /* Keep italics subtle */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -209,10 +219,8 @@
       color: var(--yab-secondary-text);
       line-height: 1.7;
     }
-     .principle-summary-yab strong {
-        font-weight: 800;
-        color: var(--yab-text-dark); /* Black emphasis */
-     }
+    /* Principle summary strong tags handled globally */
+
 
     .action-list {
         list-style: none;
@@ -245,6 +253,8 @@
           font-weight: 700; /* Bold action items */
           font-size: 1rem;
       }
+      /* Action list strong tags handled globally */
+
 
     .conclusion-highlight-yab {
         background-color: var(--yab-accent-yellow);
@@ -294,8 +304,8 @@
         <h2>Unlock Your Inner Badass</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">"You Are a Badass" is a refreshing, hilarious, and straightforward guide to help you identify and change the self-sabotaging beliefs and behaviors that stop you from getting what you want. Jen Sincero blends inspirational stories, sage advice, and practical exercises with a dose of humor and attitude.</p>
-      <p class="mb-4 text-base leading-relaxed">The core message is that **you already possess the greatness** needed to create a life you totally love. Your main obstacles are the limiting beliefs and fears you've internalized, often subconsciously, which Sincero calls the **"Big Snooze" (BS)**. The book aims to wake you up from this BS.</p>
-      <p class="text-base leading-relaxed">It encourages you to connect with the **"Source Energy"** (Universe, God, Higher Power – whatever term resonates) and understand that you are a powerful creator capable of shaping your reality through your thoughts, beliefs, and actions.</p>
+      <p class="mb-4 text-base leading-relaxed">The core message is that <strong>you already possess the greatness</strong> needed to create a life you totally love. Your main obstacles are the limiting beliefs and fears you've internalized, often subconsciously, which Sincero calls the <strong>"Big Snooze" (BS)</strong>. The book aims to wake you up from this BS.</p>
+      <p class="text-base leading-relaxed">It encourages you to connect with the <strong>"Source Energy"</strong> (Universe, God, Higher Power – whatever term resonates) and understand that you are a powerful creator capable of shaping your reality through your thoughts, beliefs, and actions.</p>
 
       <div class="quote-yab">
           <p>"You are a victim of the rules you live by."</p>
@@ -329,12 +339,12 @@
         <div class="principle-card-yab">
             <div class="principle-icon-yab"><i class="fas fa-crosshairs"></i></div>
             <div class="principle-title-yab">Get Clear on What You Want</div>
-            <p class="principle-summary-yab">Define your desires clearly and specifically. Vague wishes get vague results. Understand *why* you want it – connect emotion to your goals. Make a **decision** to go after it.</p>
+            <p class="principle-summary-yab">Define your desires clearly and specifically. Vague wishes get vague results. Understand <em>why</em> you want it – connect emotion to your goals. Make a <strong>decision</strong> to go after it.</p>
         </div>
          <div class="principle-card-yab">
             <div class="principle-icon-yab"><i class="fas fa-shoe-prints"></i></div>
             <div class="principle-title-yab">Take Action (Even Messy Action)</div>
-            <p class="principle-summary-yab">Don't wait for perfect conditions. Overcome fear and procrastination by taking **imperfect, decisive action** towards your goals. Learn and adjust as you go. Step outside your comfort zone.</p>
+            <p class="principle-summary-yab">Don't wait for perfect conditions. Overcome fear and procrastination by taking <strong>imperfect, decisive action</strong> towards your goals. Learn and adjust as you go. Step outside your comfort zone.</p>
         </div>
          <div class="principle-card-yab">
             <div class="principle-icon-yab"><i class="fas fa-dollar-sign"></i></div>
@@ -380,7 +390,7 @@
     <!-- Conclusion Section -->
     <div class="section-yab">
        <div class="section-header-yab">
-          <i class="fas fa-crown"></i> <!-- Crown for badass royalty -->
+          <i class="fas fa-crown"></i>
           <h2>Own Your Awesomeness</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"You Are a Badass" is a high-energy kick-in-the-pants to stop playing small and start creating the life you desire. It combines spiritual principles with practical advice and a no-nonsense attitude.</p>
