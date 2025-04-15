@@ -39,6 +39,14 @@
       text-transform: uppercase; /* Uppercase headings */
       letter-spacing: 0.5px;
     }
+    strong { /* Define global emphasis style */
+        font-weight: 700;
+        color: var(--mm-text-dark);
+    }
+    em { /* Define global italic emphasis style */
+        font-style: italic;
+        color: var(--mm-text-dark);
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -236,10 +244,7 @@
       line-height: 1.7;
        flex-grow: 1;
     }
-     .saver-summary strong {
-        font-weight: 700;
-        color: var(--mm-text-dark);
-    }
+     /* Saver summary strong tags already handled globally */
      .saver-summary ul {
          list-style: disc;
          margin-left: 1.25rem;
@@ -318,11 +323,11 @@
     <!-- Core Philosophy Section: Own Your Morning -->
     <div class="section-mm">
       <div class="section-header-mm">
-        <i class="fas fa-sun"></i> <!-- Icon for morning/sun -->
+        <i class="fas fa-sun"></i>
         <h2>Wake Up to Your Full Potential</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">"The Miracle Morning" proposes that how you start your day profoundly impacts every other area of your life. Hal Elrod argues that most people settle for mediocrity because they don't consciously design their mornings for success. By dedicating focused time each morning to personal development, you can overcome limitations, reduce stress, increase productivity, and achieve your goals faster than you thought possible.</p>
-      <p class="mb-4 text-base leading-relaxed">The book challenges the idea that you need *more* sleep, suggesting instead that you need *better quality* wakeful time. It introduces a structured morning routine designed to elevate your mental, physical, emotional, and spiritual well-being before the demands of the day take over.</p>
+      <p class="mb-4 text-base leading-relaxed">The book challenges the idea that you need <em>more</em> sleep, suggesting instead that you need <em>better quality</em> wakeful time. It introduces a structured morning routine designed to elevate your mental, physical, emotional, and spiritual well-being before the demands of the day take over.</p>
       <p class="text-base leading-relaxed">Elrod shares his personal story of overcoming life-threatening adversity and how developing this morning ritual was key to his recovery and subsequent success, demonstrating its power regardless of current circumstances.</p>
 
       <div class="quote-mm">
@@ -334,7 +339,7 @@
     <!-- The Life S.A.V.E.R.S. Section -->
     <div class="section-mm">
       <div class="section-header-mm">
-         <i class="fas fa-bookmark"></i> <!-- Icon for the SAVERS acronym -->
+         <i class="fas fa-bookmark"></i>
          <h2>The Six Life S.A.V.E.R.S. Practices</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">The core of The Miracle Morning is a customizable routine built around six key practices, represented by the acronym S.A.V.E.R.S.:</p>
@@ -342,7 +347,7 @@
          <!-- Silence -->
          <div class="saver-card">
              <div class="saver-header">
-                 <div class="saver-icon"><i class="fas fa-pray"></i></div> <!-- Corrected: Icon added -->
+                 <div class="saver-icon"><i class="fas fa-pray"></i></div>
                  <h3 class="saver-title"><span>S</span>ilence</h3>
              </div>
              <div class="saver-summary">
@@ -421,11 +426,11 @@
      <!-- Customization & Implementation Section -->
     <div class="section-mm">
       <div class="section-header-mm">
-         <i class="fas fa-sliders-h"></i> <!-- Icon for customization -->
+         <i class="fas fa-sliders-h"></i>
          <h2>Customizing Your Miracle Morning</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">The Miracle Morning is flexible. You can adjust the duration of each SAVERS practice (e.g., 10 minutes each for a 60-minute routine) or change the order to suit your preferences. </p>
-      <p class="text-base leading-relaxed">For those short on time, Elrod introduces the **6-Minute Miracle Morning:**
+      <p class="text-base leading-relaxed">For those short on time, Elrod introduces the <strong>6-Minute Miracle Morning:</strong>
         <ul>
             <li>Minute 1: Silence</li>
             <li>Minute 2: Affirmations</li>
@@ -441,7 +446,7 @@
     <!-- Benefits Section -->
     <div class="section-mm">
       <div class="section-header-mm">
-         <i class="fas fa-chart-line"></i> <!-- Icon for growth/benefits -->
+         <i class="fas fa-chart-line"></i>
          <h2>Potential Benefits</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">Consistently practicing The Miracle Morning can lead to numerous benefits, including:</p>
@@ -475,7 +480,7 @@
     <!-- Conclusion Section -->
     <div class="section-mm">
        <div class="section-header-mm">
-          <i class="fas fa-trophy"></i> <!-- Icon for achievement/transformation -->
+          <i class="fas fa-trophy"></i>
           <h2>Transform Your Life, One Morning at a Time</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"The Miracle Morning" provides a simple, actionable, and customizable framework for taking control of your personal development and, consequently, your entire life. By intentionally starting each day with the six Life S.A.V.E.R.S. practices, you invest in becoming the person capable of creating the success you desire.</p>
