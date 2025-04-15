@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       /* Unfu*k Yourself Inspired Color Scheme */
@@ -24,9 +24,9 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif; /* Clean Sans-serif */
-      color: var(--uy-text-dark);
-      line-height: 1.7;
+      font-family: 'Poppins', sans-serif; /* Modern sans-serif */
+      color: var(--uy-secondary-text);
+      line-height: 1.75;
       background-color: var(--uy-bg);
       font-size: 16px;
     }
@@ -36,6 +36,15 @@
       font-weight: 600; /* Bold */
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+     /* Define global emphasis style */
+    strong {
+        font-weight: 700;
+        color: var(--uy-text-dark); /* Default dark emphasis */
+    }
+    em {
+        font-style: italic;
+        color: var(--uy-text-dark);
     }
     .container {
       max-width: 1000px;
@@ -72,9 +81,10 @@
      /* Style the asterisk slightly differently if desired */
      .title-asterisk {
          color: var(--uy-accent-yellow);
-         font-size: 0.7em; /* Smaller asterisk */
-         vertical-align: super; /* Align superscript */
+         font-size: 1.3em; /* Smaller asterisk */
+         vertical-align: sub; /* Align superscript */
          margin: 0 -0.1em; /* Adjust spacing */
+         padding: 1em 0.1em 1em 0.1em;
      }
     .main-header-uy h2 { /* Subtitle */
         font-family: 'Montserrat', sans-serif; /* Subtitle uses Montserrat */
@@ -231,9 +241,7 @@
         opacity: 0.9;
         padding-left: calc(1.1em + 0.75rem); /* Indent summary */
      }
-      .assertion-item .assertion-summary strong {
-         font-weight: 700;
-      }
+      /* Assertion summary strong tags handled globally */
 
 
     .conclusion-highlight-uy {
@@ -282,12 +290,12 @@
     <!-- Core Philosophy Section: Your Inner Monologue -->
     <div class="section-uy">
       <div class="section-header-uy">
-        <i class="fas fa-comment-slash"></i> <!-- Icon representing silencing negative talk -->
+        <i class="fas fa-comment-slash"></i>
         <h2>Ending the Tyranny of Self-Talk</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">"Unfu*k Yourself" is a blunt, no-nonsense wake-up call. Gary John Bishop argues that the main obstacle holding people back isn't external circumstances, but their own negative, limiting internal monologue. We are constantly talking to ourselves, often reinforcing feelings of doubt, inadequacy, and helplessness.</p>
-      <p class="mb-4 text-base leading-relaxed">The book asserts that you are not your thoughts or feelings; you are your **actions**. You have become stuck because you are letting your thoughts dictate your reality, rather than taking decisive action despite them. Bishop emphasizes that you are already equipped with everything you need to change your life – you just need to get out of your own way.</p>
-      <p class="text-base leading-relaxed">It's about shifting from being a passive victim of your internal chatter to becoming an active agent in your life. This requires accepting **personal responsibility** and understanding that your willingness to act is the ultimate determinant of your success and happiness.</p>
+      <p class="mb-4 text-base leading-relaxed">The book asserts that you are not your thoughts or feelings; you are your <strong>actions</strong>. You have become stuck because you are letting your thoughts dictate your reality, rather than taking decisive action despite them. Bishop emphasizes that you are already equipped with everything you need to change your life – you just need to get out of your own way.</p>
+      <p class="text-base leading-relaxed">It's about shifting from being a passive victim of your internal chatter to becoming an active agent in your life. This requires accepting <strong>personal responsibility</strong> and understanding that your willingness to act is the ultimate determinant of your success and happiness.</p>
 
       <div class="quote-uy">
           <p>"This is a verbal slap from the universe to wake you up to your actual potential, to lift the fog, and get you moving."</p>
@@ -298,14 +306,14 @@
     <!-- The Assertions Section -->
     <div class="section-uy">
       <div class="section-header-uy">
-         <i class="fas fa-bolt"></i> <!-- Icon representing power/assertion -->
+         <i class="fas fa-bolt"></i>
          <h2>The Seven Life-Changing Assertions</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Bishop presents seven powerful assertions designed to disrupt negative thought patterns and empower action. These are not affirmations (wishing), but declarations of intent and reality:</p>
       <ul class="assertions-list">
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-hand-paper"></i> I Am Willing</div>
-             <p class="assertion-summary">Acknowledge your role in your current situation and declare your **willingness** to do what it takes to change, even if it's uncomfortable or uncertain. It's the essential first step.</p>
+             <p class="assertion-summary">Acknowledge your role in your current situation and declare your <strong>willingness</strong> to do what it takes to change, even if it's uncomfortable or uncertain. It's the essential first step.</p>
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-trophy"></i> I Am Wired to Win</div>
@@ -313,7 +321,7 @@
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-check-double"></i> I Got This</div>
-             <p class="assertion-summary">Embrace **radical responsibility**. Accept that you are capable of handling whatever life throws at you. Stop blaming external factors and take ownership of your responses and actions.</p>
+             <p class="assertion-summary">Embrace <strong>radical responsibility</strong>. Accept that you are capable of handling whatever life throws at you. Stop blaming external factors and take <strong>ownership</strong> of your responses and actions.</p>
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-question"></i> I Embrace the Uncertainty</div>
@@ -321,15 +329,15 @@
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-running"></i> I Am Not My Thoughts; I Am What I Do</div>
-             <p class="assertion-summary">Disidentify from your fleeting thoughts and feelings. Understand that your **actions define you**, not your internal chatter. Focus on consistent, purposeful action, regardless of your mood or doubts.</p>
+             <p class="assertion-summary">Disidentify from your fleeting thoughts and feelings. Understand that your <strong>actions define you</strong>, not your internal chatter. Focus on consistent, purposeful action, regardless of your mood or doubts.</p>
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-dumbbell"></i> I Am Relentless</div>
-             <p class="assertion-summary">Commit to **persistent action** towards your goals. Expect setbacks and obstacles, but refuse to let them derail you permanently. Develop resilience and keep moving forward.</p>
+             <p class="assertion-summary">Commit to <strong>persistent action</strong> towards your goals. Expect setbacks and obstacles, but refuse to let them derail you permanently. Develop resilience and keep moving forward.</p>
          </li>
          <li class="assertion-item">
              <div class="assertion-title"><i class="fas fa-infinity"></i> I Expect Nothing and Accept Everything</div>
-             <p class="assertion-summary">Let go of rigid expectations about how life *should* be. Accept reality as it is without judgment or resistance. This frees up energy currently wasted on fighting reality, allowing you to act effectively within it.</p>
+             <p class="assertion-summary">Let go of rigid expectations about how life <em>should</em> be. Accept reality as it is without judgment or resistance. This frees up energy currently wasted on fighting reality, allowing you to act effectively within it.</p>
          </li>
       </ul>
     </div>
@@ -354,11 +362,11 @@
     <!-- Conclusion Section -->
     <div class="section-uy">
        <div class="section-header-uy">
-          <i class="fas fa-play-circle"></i> <!-- Icon for starting/action -->
+          <i class="fas fa-play-circle"></i>
           <h2>Your Life Is Waiting For You To Act</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"Unfu*k Yourself" is less a self-help book and more a verbal manifesto for personal responsibility and action. It cuts through excuses and self-pity with direct, actionable advice.</p>
-      <p class="text-base leading-relaxed">Bishop's core message is that change doesn't come from feeling better or thinking differently first; it comes from *doing* differently. By adopting the seven assertions and committing to relentless action, you can interrupt the cycle of negative self-talk and create the life you claim you want.</p>
+      <p class="text-base leading-relaxed">Bishop's core message is that change doesn't come from feeling better or thinking differently first; it comes from <em>doing</em> differently. By adopting the seven assertions and committing to relentless action, you can interrupt the cycle of negative self-talk and create the life you claim you want.</p>
        <div class="conclusion-highlight-uy">
            <p>Stop analyzing, stop complaining, stop waiting. Decide what you want and <strong>GO DO IT</strong>. Your potential is waiting for your action.</p>
        </div>
