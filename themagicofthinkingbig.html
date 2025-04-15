@@ -36,6 +36,14 @@
       color: var(--motb-accent-blue); /* Blue headings */
       font-weight: 700;
     }
+    strong { /* Global strong styling */
+        font-weight: 700;
+        color: var(--motb-accent-blue); /* Default blue emphasis */
+    }
+     em { /* Global italic styling */
+        font-style: italic;
+        color: var(--motb-text-dark); /* Keep italics readable */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -259,10 +267,7 @@
       line-height: 1.8; /* Increased line height */
        opacity: 0.9;
     }
-     .principle-summary-motb strong {
-        font-weight: 700;
-        color: var(--motb-accent-blue);
-     }
+     /* Strong tags inside summary handled by global strong style */
       .principle-summary-motb p + p {
          margin-top: 0.75rem; /* Space between paragraphs within summary */
       }
@@ -322,8 +327,8 @@
         <i class="fas fa-brain"></i>
         <h2>Success Starts with Belief: Your Mental Thermostat</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"The Magic of Thinking Big" presents a compelling, straightforward philosophy: the level of success you achieve in any area of life – career, income, relationships, happiness – is directly determined by the **size of your thinking**. Dr. Schwartz argues that inherent talent or intelligence are less important than the cultivated ability to think and believe in possibilities.</p>
-      <p class="mb-4 text-base leading-relaxed">He introduces the powerful analogy of belief as a **mental thermostat**. If you set it low by focusing on doubts, limitations, and reasons why you *can't*, you'll achieve correspondingly low results. Conversely, if you set it high by cultivating strong belief in your capacity to succeed, focusing on possibilities, and silencing disbelief, your mind actively works to find ways to achieve those higher aims. Success isn't magic in the supernatural sense, but the natural result of applying big, positive, goal-oriented thinking.</p>
+      <p class="mb-4 text-base leading-relaxed">"The Magic of Thinking Big" presents a compelling, straightforward philosophy: the level of success you achieve in any area of life – career, income, relationships, happiness – is directly determined by the <strong>size of your thinking</strong>. Dr. Schwartz argues that inherent talent or intelligence are less important than the cultivated ability to think and believe in possibilities.</p>
+      <p class="mb-4 text-base leading-relaxed">He introduces the powerful analogy of belief as a <strong>mental thermostat</strong>. If you set it low by focusing on doubts, limitations, and reasons why you <em>can't</em>, you'll achieve correspondingly low results. Conversely, if you set it high by cultivating strong belief in your capacity to succeed, focusing on possibilities, and silencing disbelief, your mind actively works to find ways to achieve those higher aims. Success isn't magic in the supernatural sense, but the natural result of applying big, positive, goal-oriented thinking.</p>
       <p class="text-base leading-relaxed">The book provides a practical toolkit filled with techniques and mindset shifts designed to help you recalibrate that thermostat upwards. It focuses on overcoming the common mental roadblocks – fear, excuses, negativity – that keep people trapped in mediocrity.</p>
 
       <div class="quote-motb">
@@ -339,7 +344,7 @@
     <!-- Key Principles Section -->
     <div class="section-motb">
       <div class="section-header-motb">
-         <i class="fas fa-lightbulb"></i> <!-- Icon for ideas/principles -->
+         <i class="fas fa-lightbulb"></i>
          <h2>Practical Strategies for Thinking BIG</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Schwartz outlines numerous actionable strategies, grouped here by core themes, to develop the habit of thinking big:</p>
@@ -348,7 +353,7 @@
             <div class="principle-icon-motb"><i class="fas fa-check-circle"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">Believe You Can Succeed and You Will</h3>
-                <p class="principle-summary-motb">Think success, not failure. Remind yourself frequently that you are better than you think you are. Cultivate a deep-seated belief by focusing on reasons you *can* succeed, visualizing positive outcomes, and acting confidently. Belief attracts the "how-to-do-it" power.</p>
+                <p class="principle-summary-motb">Think success, not failure. Remind yourself frequently that you are better than you think you are. Cultivate a deep-seated belief by focusing on reasons you <em>can</em> succeed, visualizing positive outcomes, and acting confidently. Belief attracts the <em>how-to-do-it</em> power.</p>
             </div>
          </li>
          <li class="principle-item">
@@ -369,21 +374,21 @@
             <div class="principle-icon-motb"><i class="fas fa-expand-arrows-alt"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">How to Think Big</h3>
-                <p class="principle-summary-motb">Upgrade your vocabulary – use big, bright, positive words (e.g., "victory," "hope," "happiness"). Stretch your vision – focus on possibilities and potential, not just current limitations. Add value to things, people, and yourself by seeing their positive potential. Ask BIG questions like "What's the biggest version of success I can imagine?"</p>
+                <p class="principle-summary-motb">Upgrade your vocabulary – use big, bright, positive words (e.g., "victory," "hope," "happiness"). Stretch your vision – focus on possibilities and potential, not just current limitations. Add value to things, people, and yourself by seeing their positive potential. Ask BIG questions like <em>"What's the biggest version of success I can imagine?"</em></p>
             </div>
          </li>
          <li class="principle-item">
             <div class="principle-icon-motb"><i class="fas fa-paint-brush"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">How to Think and Dream Creatively</h3>
-                <p class="principle-summary-motb">Eliminate "impossible," "won't work," "can't be done" from your thinking. Be open to new ideas from any source. Ask "How can I improve?" and "How can I do more?". Practice asking and listening. Associate with people who stimulate new ideas.</p>
+                <p class="principle-summary-motb">Eliminate "impossible," "won't work," "can't be done" from your thinking. Be open to new ideas from any source. Ask <em>"How can I improve?"</em> and <em>"How can I do more?"</em>. Practice asking and listening. Associate with people who stimulate new ideas.</p>
             </div>
          </li>
           <li class="principle-item">
             <div class="principle-icon-motb"><i class="fas fa-street-view"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">You Are What You Think You Are</h3>
-                <p class="principle-summary-motb">Your appearance talks – look important, sharp, and successful to feel important. Think your work is vital and adds value. Give yourself a daily pep talk, concentrating on your assets and visualizing yourself as successful. Ask, "Does this action reflect the way I want people to see me?"</p>
+                <p class="principle-summary-motb">Your appearance talks – look important, sharp, and successful to feel important. Think your work is vital and adds value. Give yourself a daily pep talk, concentrating on your assets and visualizing yourself as successful. Ask, <em>"Does this action reflect the way I want people to see me?"</em></p>
             </div>
          </li>
          <li class="principle-item">
@@ -418,7 +423,7 @@
             <div class="principle-icon-motb"><i class="fas fa-recycle"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">How to Turn Defeat into Victory</h3>
-                <p class="principle-summary-motb">Recognize that setbacks are inevitable detours, not dead ends. Salvage something from every failure – learn the lesson. Objectively analyze *why* you failed, don't just blame luck. Blend persistence with experimentation; try new approaches. Remember there's always a positive angle if you look for it.</p>
+                <p class="principle-summary-motb">Recognize that setbacks are inevitable detours, not dead ends. Salvage something from every failure – learn the lesson. Objectively analyze <em>why</em> you failed, don't just blame luck. Blend persistence with experimentation; try new approaches. Remember there's always a positive angle if you look for it.</p>
             </div>
          </li>
          <li class="principle-item">
@@ -432,7 +437,7 @@
             <div class="principle-icon-motb"><i class="fas fa-crown"></i></div>
             <div class="principle-content">
                 <h3 class="principle-title-motb">How to Think Like a Leader</h3>
-                <p class="principle-summary-motb">Develop empathy: trade minds with those you wish to influence. Ask, "What would I do/think in their shoes?" Show understanding and think positively toward people. Be human, admit imperfections, and focus on progress. Take time out to confer with yourself and tap your supreme thinking power.</p>
+                <p class="principle-summary-motb">Develop empathy: trade minds with those you wish to influence. Ask, <em>"What would I do/think in their shoes?"</em> Show understanding and think positively toward people. Be human, admit imperfections, and focus on progress. Take time out to confer with yourself and tap your supreme thinking power.</p>
             </div>
          </li>
       </ul>
@@ -460,7 +465,7 @@
           <i class="fas fa-magic"></i>
           <h2>Unleashing the Magic Within</h2>
        </div>
-      <p class="mb-4 text-base leading-relaxed">"The Magic of Thinking Big" remains a perennial bestseller because its core message is simple, powerful, and universally applicable. It provides a practical roadmap for breaking free from self-imposed limitations and achieving extraordinary results by fundamentally changing the *way* you think.</p>
+      <p class="mb-4 text-base leading-relaxed">"The Magic of Thinking Big" remains a perennial bestseller because its core message is simple, powerful, and universally applicable. It provides a practical roadmap for breaking free from self-imposed limitations and achieving extraordinary results by fundamentally changing the <em>way</em> you think.</p>
       <p class="text-base leading-relaxed">Schwartz demonstrates that success isn't reserved for the intellectually gifted or lucky few; it's the natural outcome of cultivating big beliefs, positive attitudes, resilience in the face of setbacks, and the unwavering habit of taking action. It’s about consciously directing your mental energy towards your highest aspirations.</p>
        <div class="conclusion-highlight-motb">
            <p>Master your thoughts, master your life. Start today. Believe it's possible. Eliminate excuses. Take action. <strong>Think BIG, and the results will follow.</strong></p>
