@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Miracle Morning Summary - Hal Elrod</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Miracle Morning Inspired Color Scheme */
+      --mm-bg: #F0F7FF; /* Very light blue page background */
+      --mm-card-bg: #FFFFFF;
+      --mm-text-dark: #1F2937; /* Dark blue/grey */
+      --mm-text-title-blue: #2563EB; /* Bright Blue from sky */
+      --mm-accent-yellow: #FBBF24; /* Sunrise Yellow */
+      --mm-accent-light-blue: #BFDBFE; /* Lighter sky blue */
+      --mm-text-light: #FFFFFF;
+      --mm-border-light: #E5E7EB;
+      --mm-border-medium: #D1D5DB;
+      --mm-hover-yellow: #F59E0B; /* Darker yellow */
+      --mm-text-secondary: #4B5563; /* Medium Grey */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif; /* Clear Sans-serif */
+      color: var(--mm-text-secondary);
+      line-height: 1.7;
+      background-color: var(--mm-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif; /* Bold, condensed Sans-serif */
+      color: var(--mm-text-title-blue); /* Bright Blue */
+      font-weight: 600; /* Semi-bold Oswald */
+      text-transform: uppercase; /* Uppercase headings */
+      letter-spacing: 0.5px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-mm {
+      background-color: var(--mm-text-title-blue); /* Blue Header BG */
+      color: var(--mm-text-light);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      border-bottom: 5px solid var(--mm-accent-yellow); /* Yellow bottom border */
+    }
+    .main-header-mm h3 { /* Author */
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700; /* Bold */
+        color: var(--mm-text-light);
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .main-header-mm .title-the { /* "the" */
+        font-family: 'Inter', sans-serif; /* Simple sans-serif */
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--mm-accent-light-blue);
+        display: block;
+        margin-bottom: -0.5rem; /* Adjust spacing */
+    }
+    .main-header-mm h1 { /* Title */
+        font-family: 'Oswald', sans-serif;
+        font-size: 3.5rem; /* Large title */
+        font-weight: 700; /* Bold */
+        color: var(--mm-text-light); /* White title */
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    }
+    .main-header-mm h2 { /* Subtitle */
+        font-family: 'Inter', sans-serif;
+        color: var(--mm-text-light);
+        font-size: 1rem;
+        font-weight: 500; /* Medium weight */
+        opacity: 0.95;
+        margin-bottom: 0.25rem;
+        text-transform: none; /* Normal case */
+        letter-spacing: normal;
+    }
+     .main-header-mm .subtitle-highlight {
+         color: var(--mm-accent-yellow); /* Yellow highlight */
+         font-weight: 700;
+     }
+    .book-cover-mm {
+      max-width: 160px;
+      height: auto;
+      border-radius: 4px;
+      border: 2px solid var(--mm-text-light);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-top: 2rem;
+    }
+
+    /* Section styling */
+    .section-mm {
+      background-color: var(--mm-card-bg);
+      color: var(--mm-text-secondary);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--mm-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-mm:hover {
+        border-color: var(--mm-accent-light-blue);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    }
+
+    .section-header-mm {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--mm-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-mm h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .section-header-mm i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--mm-text-title-blue); /* Blue icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+     .section-mm:hover .section-header-mm i {
+        transform: rotate(-3deg) scale(1.05);
+        color: var(--mm-accent-yellow); /* Yellow icon on hover */
+     }
+
+    /* --- Quote Style --- */
+    .quote-mm {
+      background-color: #E0F2FE; /* Light sky blue bg */
+      border: 1px solid var(--mm-accent-light-blue);
+      border-left: 4px solid var(--mm-accent-yellow); /* Yellow left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--mm-text-dark); /* Darker text */
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-mm:hover {
+        background-color: var(--mm-card-bg);
+        border-color: var(--mm-border-medium);
+        border-left-color: var(--mm-text-title-blue); /* Blue border on hover */
+    }
+    .quote-mm p {
+         margin-bottom: 0.5rem;
+         font-style: italic;
+     }
+    .quote-mm footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.9;
+      color: var(--mm-text-title-blue); /* Blue footer */
+    }
+    /* --- End Quote Style --- */
+
+    .savers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+    .saver-card {
+      background-color: var(--mm-card-bg);
+      border: 1px solid var(--mm-border-light);
+      border-bottom: 4px solid var(--mm-accent-yellow); /* Yellow bottom border */
+      border-radius: 6px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+    .saver-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      border-bottom-color: var(--mm-hover-yellow); /* Darker yellow */
+    }
+    .saver-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+     .saver-icon {
+        font-size: 1.75rem;
+        color: var(--mm-text-title-blue);
+        margin-right: 1rem;
+        width: 35px; /* Fixed width */
+        text-align: center;
+        transition: color 0.25s ease, transform 0.25s ease;
+     }
+      .saver-card:hover .saver-icon {
+          color: var(--mm-accent-yellow);
+          transform: scale(1.1);
+      }
+     .saver-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--mm-text-dark);
+        line-height: 1.1;
+        text-transform: uppercase;
+     }
+      .saver-title span { /* The letter */
+          color: var(--mm-accent-yellow);
+          font-weight: 700;
+      }
+    .saver-summary {
+      font-size: 0.95rem;
+      color: var(--mm-text-secondary);
+      line-height: 1.7;
+       flex-grow: 1;
+    }
+     .saver-summary strong {
+        font-weight: 700;
+        color: var(--mm-text-dark);
+    }
+     .saver-summary ul {
+         list-style: disc;
+         margin-left: 1.25rem;
+         margin-top: 0.75rem;
+         padding-left: 0.25rem;
+     }
+
+
+    .benefits-list {
+        columns: 2; /* Two columns for benefits */
+        column-gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+     .benefits-list li {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        break-inside: avoid-column; /* Prevent items breaking across columns */
+     }
+      .benefits-list li i {
+          color: var(--mm-accent-yellow);
+          margin-right: 0.75rem;
+          font-size: 1rem;
+          width: 18px;
+          text-align: center;
+      }
+
+
+    .conclusion-highlight-mm {
+        background: linear-gradient(to right, var(--mm-accent-light-blue), var(--mm-text-title-blue)); /* Blue gradient */
+        color: var(--mm-text-light);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 6px;
+        border: 1px solid var(--mm-text-title-blue);
+    }
+    .conclusion-highlight-mm p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        font-weight: 500; /* Medium weight */
+    }
+    .conclusion-highlight-mm strong {
+        font-weight: 700;
+        color: var(--mm-accent-yellow); /* Yellow emphasis */
+    }
+
+    .footer-mm {
+        text-align: center;
+        color: var(--mm-text-secondary);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-mm">
+        <h3>HAL ELROD</h3>
+        <span class="title-the">the</span>
+        <h1>MIRACLE MORNING</h1>
+        <h2>The Not-So-Obvious Secret Guaranteed to Transform Your Life</h2>
+        <h2 class="subtitle-highlight">(Before 8AM)</h2>
+        <img src="https://m.media-amazon.com/images/I/61R1UgGxaLL._SL1000_.jpg" alt="The Miracle Morning Book Cover" class="book-cover-mm">
+    </div>
+
+    <!-- Core Philosophy Section: Own Your Morning -->
+    <div class="section-mm">
+      <div class="section-header-mm">
+        <i class="fas fa-sun"></i> <!-- Icon for morning/sun -->
+        <h2>Wake Up to Your Full Potential</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Miracle Morning" proposes that how you start your day profoundly impacts every other area of your life. Hal Elrod argues that most people settle for mediocrity because they don't consciously design their mornings for success. By dedicating focused time each morning to personal development, you can overcome limitations, reduce stress, increase productivity, and achieve your goals faster than you thought possible.</p>
+      <p class="mb-4 text-base leading-relaxed">The book challenges the idea that you need *more* sleep, suggesting instead that you need *better quality* wakeful time. It introduces a structured morning routine designed to elevate your mental, physical, emotional, and spiritual well-being before the demands of the day take over.</p>
+      <p class="text-base leading-relaxed">Elrod shares his personal story of overcoming life-threatening adversity and how developing this morning ritual was key to his recovery and subsequent success, demonstrating its power regardless of current circumstances.</p>
+
+      <div class="quote-mm">
+          <p>"How you wake up each day and your morning routine (or lack thereof) dramatically affects your levels of success in every single area of your life."</p>
+          <footer>— Hal Elrod</footer>
+      </div>
+    </div>
+
+    <!-- The Life S.A.V.E.R.S. Section -->
+    <div class="section-mm">
+      <div class="section-header-mm">
+         <i class="fas fa-bookmark"></i> <!-- Icon for the SAVERS acronym -->
+         <h2>The Six Life S.A.V.E.R.S. Practices</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">The core of The Miracle Morning is a customizable routine built around six key practices, represented by the acronym S.A.V.E.R.S.:</p>
+      <div class="savers-grid">
+         <!-- Silence -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-pray"></i></div> <!-- Corrected: Icon added -->
+                 <h3 class="saver-title"><span>S</span>ilence</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Start your day with purposeful silence. This isn't just absence of noise, but a time for calm and presence. Practices include:
+                    <ul>
+                        <li>Meditation</li>
+                        <li>Prayer</li>
+                        <li>Deep Breathing</li>
+                        <li>Reflection / Gratitude</li>
+                    </ul>
+                This reduces stress and increases self-awareness.
+                </p>
+            </div>
+         </div>
+         <!-- Affirmations -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-bullhorn"></i></div>
+                 <h3 class="saver-title"><span>A</span>ffirmations</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Consciously design and repeat positive affirmations aligned with what you want to achieve and who you need to be to achieve it. Effective affirmations should be:
+                    <ul>
+                        <li>Personal (Use "I am...")</li>
+                        <li>Present Tense</li>
+                        <li>Positive</li>
+                        <li>Specific</li>
+                    </ul>
+                This reprograms your subconscious mind for success.
+                </p>
+            </div>
+         </div>
+         <!-- Visualization -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-eye"></i></div>
+                 <h3 class="saver-title"><span>V</span>isualization</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Mentally rehearse achieving your goals. Imagine the process and the feeling of success vividly. See yourself performing at your best and overcoming obstacles. This creates a mental blueprint for your desired outcomes and increases motivation.</p>
+            </div>
+         </div>
+          <!-- Exercise -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-running"></i></div>
+                 <h3 class="saver-title"><span>E</span>xercise</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Engage in physical activity first thing in the morning, even if it's just for a few minutes. This boosts energy, improves mental clarity, enhances health, and supports emotional well-being. Examples include jumping jacks, yoga, a walk, or a full workout.</p>
+            </div>
+         </div>
+         <!-- Reading -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-book-reader"></i></div>
+                 <h3 class="saver-title"><span>R</span>eading</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Dedicate time to reading personal development books or other materials that provide knowledge and inspiration. Learning from experts and acquiring new ideas is crucial for growth. Aim for at least 10 pages or 10 minutes daily.</p>
+            </div>
+         </div>
+         <!-- Scribing -->
+         <div class="saver-card">
+             <div class="saver-header">
+                 <div class="saver-icon"><i class="fas fa-pencil-alt"></i></div>
+                 <h3 class="saver-title"><span>S</span>cribing</h3>
+             </div>
+             <div class="saver-summary">
+                <p>Write down your thoughts, feelings, goals, gratitudes, lessons learned, or plans for the day (journaling). This provides clarity, captures ideas, allows for reflection, and reinforces commitments. It helps process emotions and track progress.</p>
+            </div>
+         </div>
+      </div>
+    </div>
+
+     <!-- Customization & Implementation Section -->
+    <div class="section-mm">
+      <div class="section-header-mm">
+         <i class="fas fa-sliders-h"></i> <!-- Icon for customization -->
+         <h2>Customizing Your Miracle Morning</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">The Miracle Morning is flexible. You can adjust the duration of each SAVERS practice (e.g., 10 minutes each for a 60-minute routine) or change the order to suit your preferences. </p>
+      <p class="text-base leading-relaxed">For those short on time, Elrod introduces the **6-Minute Miracle Morning:**
+        <ul>
+            <li>Minute 1: Silence</li>
+            <li>Minute 2: Affirmations</li>
+            <li>Minute 3: Visualization</li>
+            <li>Minute 4: Scribing (Write one thing you're grateful for)</li>
+            <li>Minute 5: Reading (Read one page)</li>
+            <li>Minute 6: Exercise (Move your body for 60 seconds)</li>
+        </ul>
+        This allows anyone to start experiencing the benefits immediately, making it easier to build the habit.
+       </p>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="section-mm">
+      <div class="section-header-mm">
+         <i class="fas fa-chart-line"></i> <!-- Icon for growth/benefits -->
+         <h2>Potential Benefits</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Consistently practicing The Miracle Morning can lead to numerous benefits, including:</p>
+      <ul class="benefits-list">
+          <li><i class="fas fa-check"></i> Increased Energy & Motivation</li>
+          <li><i class="fas fa-check"></i> Reduced Stress & Anxiety</li>
+          <li><i class="fas fa-check"></i> Greater Clarity & Focus</li>
+          <li><i class="fas fa-check"></i> Improved Productivity</li>
+          <li><i class="fas fa-check"></i> Enhanced Health & Well-being</li>
+          <li><i class="fas fa-check"></i> Accelerated Personal Growth</li>
+          <li><i class="fas fa-check"></i> Stronger Sense of Purpose</li>
+          <li><i class="fas fa-check"></i> Achieving Goals Faster</li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-mm">
+      <div class="section-header-mm">
+         <i class="fas fa-quote-left"></i>
+         <h2>Motivational Insights - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-mm"><p>"Your level of success will rarely exceed your level of personal development because success is something you attract by the person you become."</p><footer>— Hal Elrod</footer></blockquote>
+          <blockquote class="quote-mm"><p>"Where you are is a result of who you were, but where you go depends entirely on who you choose to be."</p><footer>— Hal Elrod</footer></blockquote>
+          <blockquote class="quote-mm"><p>"Love the life you have while you create the life of your dreams."</p><footer>— Hal Elrod</footer></blockquote>
+           <blockquote class="quote-mm"><p>"The moment you accept total responsibility for everything in your life is the moment you claim the power to change anything in your life."</p><footer>— Hal Elrod</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-mm">
+       <div class="section-header-mm">
+          <i class="fas fa-trophy"></i> <!-- Icon for achievement/transformation -->
+          <h2>Transform Your Life, One Morning at a Time</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Miracle Morning" provides a simple, actionable, and customizable framework for taking control of your personal development and, consequently, your entire life. By intentionally starting each day with the six Life S.A.V.E.R.S. practices, you invest in becoming the person capable of creating the success you desire.</p>
+      <p class="text-base leading-relaxed">It's a call to stop hitting snooze on your potential and to start each day with purpose, energy, and focus. The promise is that consistent effort, even starting small, compounds over time to create extraordinary results.</p>
+       <div class="conclusion-highlight-mm">
+           <p>Own your morning, elevate your life. Start tomorrow with your Miracle Morning and unlock your <strong>full potential</strong> before the rest of the world wakes up.</p>
+       </div>
+    </div>
+
+    <div class="footer-mm">
+       <p>© 2024 Summary of "The Miracle Morning" by Hal Elrod.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
