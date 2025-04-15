@@ -35,6 +35,15 @@
       color: var(--tagr-text-dark);
       font-weight: 700;
     }
+    /* Global emphasis styles */
+    strong {
+        font-weight: 700;
+        color: var(--tagr-accent-blue); /* Default blue emphasis */
+    }
+    em {
+        font-style: italic;
+        color: var(--tagr-text-dark); /* Keep italics readable */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -223,8 +232,8 @@
       align-items: flex-start; /* Align items top */
     }
     .step-card-tagr:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+      transform: translateX(4px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
       border-color: var(--tagr-accent-gold-light);
     }
     .step-number-container {
@@ -265,10 +274,7 @@
       line-height: 1.7;
        opacity: 0.9;
     }
-     .step-summary strong {
-        font-weight: 700;
-        color: var(--tagr-accent-blue); /* Use blue for emphasis */
-     }
+     /* Step summary strong tags handled globally */
      .step-summary ul {
          list-style: disc;
          margin-left: 1.25rem;
@@ -372,8 +378,8 @@
         <i class="fas fa-lightbulb"></i>
         <h2>Thoughts Are Things: The Philosophy of Achievement</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"Think and Grow Rich" presents a philosophy of success based on decades of research into the lives of America's most successful individuals, commissioned by Andrew Carnegie. Napoleon Hill distills their habits and mindsets into actionable principles, arguing that **riches begin with a state of mind**. What the mind can conceive and believe, it can achieve.</p>
-      <p class="mb-4 text-base leading-relaxed">The core idea is that a **Burning Desire**, crystallized into a definite major purpose and backed by unwavering faith and persistence, can transmute thoughts into their physical equivalent – whether that be financial wealth, career success, or personal achievement. It emphasizes the power of the subconscious mind and the need to direct it purposefully.</p>
+      <p class="mb-4 text-base leading-relaxed">"Think and Grow Rich" presents a philosophy of success based on decades of research into the lives of America's most successful individuals, commissioned by Andrew Carnegie. Napoleon Hill distills their habits and mindsets into actionable principles, arguing that <strong>riches begin with a state of mind</strong>. What the mind can conceive and believe, it can achieve.</p>
+      <p class="mb-4 text-base leading-relaxed">The core idea is that a <strong>Burning Desire</strong>, crystallized into a definite major purpose and backed by unwavering faith and persistence, can transmute thoughts into their physical equivalent – whether that be financial wealth, career success, or personal achievement. It emphasizes the power of the subconscious mind and the need to direct it purposefully.</p>
       <p class="text-base leading-relaxed">Hill asserts that success is not accidental but follows definite laws that anyone can learn and apply. It requires mastering one's thoughts, emotions (especially fear), and actions through self-discipline and collaboration.</p>
 
       <div class="quote-tagr">
@@ -402,7 +408,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Desire: The Starting Point</div>
-                <p class="step-summary">Develop a white-hot, **burning desire** for a specific goal (riches, achievement). It must be definite, not a vague wish. Fixate on exactly what you want, determine what you'll give in return, set a date, create a plan, write it down, and read it twice daily.</p>
+                <p class="step-summary">Develop a white-hot, <strong>burning desire</strong> for a specific goal (riches, achievement). It must be definite, not a vague wish. Fixate on exactly what you want, determine what you'll give in return, set a date, create a plan, write it down, and read it twice daily.</p>
             </div>
          </div>
          <!-- Step 2 -->
@@ -413,7 +419,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Faith: Visualizing and Believing</div>
-                <p class="step-summary">Cultivate unwavering **faith** in your ability to achieve your desire. Faith is a state of mind induced by autosuggestion and affirmation, acting as the "chemist" of the mind that connects with Infinite Intelligence and gives power to your thoughts.</p>
+                <p class="step-summary">Cultivate unwavering <strong>faith</strong> in your ability to achieve your desire. Faith is a state of mind induced by autosuggestion and affirmation, acting as the "chemist" of the mind that connects with Infinite Intelligence and gives power to your thoughts.</p>
             </div>
          </div>
          <!-- Step 3 -->
@@ -424,7 +430,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Autosuggestion: Influencing the Subconscious</div>
-                <p class="step-summary">Use **autosuggestion** (self-suggestion) to deliberately feed your subconscious mind with thoughts of faith, desire, and your definite purpose. Repeat your written statement of desire aloud, visualizing its attainment with emotion.</p>
+                <p class="step-summary">Use <strong>autosuggestion</strong> (self-suggestion) to deliberately feed your subconscious mind with thoughts of faith, desire, and your definite purpose. Repeat your written statement of desire aloud, visualizing its attainment with emotion.</p>
             </div>
          </div>
           <!-- Step 4 -->
@@ -435,7 +441,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Specialized Knowledge: Personal Experiences or Observations</div>
-                <p class="step-summary">Acquire **specialized knowledge** relevant to your purpose. General knowledge is not enough. Learn continually through experience, education, and association with knowledgeable people (Master Mind). Knowledge is only potential power; it becomes power when organized into definite plans of action.</p>
+                <p class="step-summary">Acquire <strong>specialized knowledge</strong> relevant to your purpose. General knowledge is not enough. Learn continually through experience, education, and association with knowledgeable people (Master Mind). Knowledge is only potential power; it becomes power when organized into definite plans of action.</p>
             </div>
          </div>
          <!-- Step 5 -->
@@ -446,7 +452,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Imagination: The Workshop of the Mind</div>
-                <p class="step-summary">Utilize both **synthetic imagination** (rearranging old concepts) and **creative imagination** (receiving new ideas via hunches/inspiration) to create plans for achieving your desire. Imagination transforms desire into tangible form.</p>
+                <p class="step-summary">Utilize both <strong>synthetic imagination</strong> (rearranging old concepts) and <strong>creative imagination</strong> (receiving new ideas via hunches/inspiration) to create plans for achieving your desire. Imagination transforms desire into tangible form.</p>
             </div>
          </div>
          <!-- Step 6 -->
@@ -457,7 +463,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Organized Planning: Crystallizing Desire into Action</div>
-                <p class="step-summary">Transform desire into action through practical, **organized plans**. Ally yourself with a Master Mind group. Ensure your plans are sound and provide reciprocal benefit. Persistently execute your plans, replacing failed plans immediately with new ones.</p>
+                <p class="step-summary">Transform desire into action through practical, <strong>organized plans</strong>. Ally yourself with a Master Mind group. Ensure your plans are sound and provide reciprocal benefit. Persistently execute your plans, replacing failed plans immediately with new ones.</p>
             </div>
          </div>
          <!-- Step 7 -->
@@ -468,7 +474,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Decision: The Mastery of Procrastination</div>
-                <p class="step-summary">Cultivate **decisiveness**. Successful people make decisions quickly and change them slowly (if ever). Avoid procrastination and being swayed by the opinions of others. Know what you want and stand firm.</p>
+                <p class="step-summary">Cultivate <strong>decisiveness</strong>. Successful people make decisions quickly and change them slowly (if ever). Avoid procrastination and being swayed by the opinions of others. Know what you want and stand firm.</p>
             </div>
          </div>
          <!-- Step 8 -->
@@ -479,7 +485,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Persistence: Sustained Effort</div>
-                <p class="step-summary">Develop **persistence** – the sustained effort necessary to induce faith. Persistence, based on willpower, overcomes failure and obstacles. It's fueled by desire, self-reliance, definite plans, accurate knowledge, cooperation, habit, and willpower.</p>
+                <p class="step-summary">Develop <strong>persistence</strong> – the sustained effort necessary to induce faith. Persistence, based on willpower, overcomes failure and obstacles. It's fueled by desire, self-reliance, definite plans, accurate knowledge, cooperation, habit, and willpower.</p>
             </div>
          </div>
          <!-- Step 9 -->
@@ -490,7 +496,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">Power of the Master Mind: The Driving Force</div>
-                <p class="step-summary">Harness the power generated through a **Master Mind** alliance – the coordination of knowledge and effort between two or more people working towards a definite purpose in a spirit of harmony. This creates a "third mind" greater than the sum of its parts.</p>
+                <p class="step-summary">Harness the power generated through a <strong>Master Mind</strong> alliance – the coordination of knowledge and effort between two or more people working towards a definite purpose in a spirit of harmony. This creates a "third mind" greater than the sum of its parts.</p>
             </div>
          </div>
          <!-- Step 10 -->
@@ -501,7 +507,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">The Mystery of Sex Transmutation: Channeling Energy</div>
-                <p class="step-summary">Learn to **transmute** the powerful energy of sex drive from physical expression into creative, constructive channels aligned with your purpose. This potent energy, when redirected, fuels imagination, courage, willpower, persistence, and creativity.</p>
+                <p class="step-summary">Learn to <strong>transmute</strong> the powerful energy of sex drive from physical expression into creative, constructive channels aligned with your purpose. This potent energy, when redirected, fuels imagination, courage, willpower, persistence, and creativity.</p>
             </div>
          </div>
          <!-- Step 11 -->
@@ -512,7 +518,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">The Subconscious Mind: The Connecting Link</div>
-                <p class="step-summary">Understand that the **subconscious mind** is the intermediary that translates thought impulses (fed by faith and autosuggestion) into their physical equivalent and connects with Infinite Intelligence. Voluntarily influence it with positive emotions.</p>
+                <p class="step-summary">Understand that the <strong>subconscious mind</strong> is the intermediary that translates thought impulses (fed by faith and autosuggestion) into their physical equivalent and connects with Infinite Intelligence. Voluntarily influence it with positive emotions.</p>
             </div>
          </div>
           <!-- Step 12 -->
@@ -523,7 +529,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">The Brain: Broadcasting and Receiving Station</div>
-                <p class="step-summary">View the **brain** as both a broadcasting station, sending out vibrations of thought, and a receiving station, picking up thoughts broadcast by others. The subconscious mind is the sending apparatus; creative imagination is the receiving set.</p>
+                <p class="step-summary">View the <strong>brain</strong> as both a broadcasting station, sending out vibrations of thought, and a receiving station, picking up thoughts broadcast by others. The subconscious mind is the sending apparatus; creative imagination is the receiving set.</p>
             </div>
          </div>
          <!-- Step 13 -->
@@ -534,7 +540,7 @@
             </div>
             <div class="step-content">
                 <div class="step-title">The Sixth Sense: The Door to Infinite Intelligence</div>
-                <p class="step-summary">Develop the **Sixth Sense** – the faculty of creative imagination through which the mind connects with Infinite Intelligence, receiving warnings of danger and flashes of inspiration (hunches). It's the apex of the philosophy, mastered only after mastering the other twelve principles.</p>
+                <p class="step-summary">Develop the <strong>Sixth Sense</strong> – the faculty of creative imagination through which the mind connects with Infinite Intelligence, receiving warnings of danger and flashes of inspiration (hunches). It's the apex of the philosophy, mastered only after mastering the other twelve principles.</p>
             </div>
          </div>
       </div>
