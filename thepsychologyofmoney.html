@@ -38,6 +38,16 @@
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
+     /* Define global emphasis style */
+    strong {
+        font-weight: 700;
+        color: var(--pom-text-title-green); /* Sage Green emphasis */
+    }
+     /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--pom-secondary-text); /* Use secondary text for italics */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -234,10 +244,8 @@
       line-height: 1.7;
        flex-grow: 1; /* Allow summary to fill space */
     }
-     .lesson-summary strong {
-        font-weight: 700;
-        color: var(--pom-text-dark);
-     }
+    /* Lesson summary strong tags handled globally */
+
 
     .conclusion-highlight-pom {
         background-color: var(--pom-card-bg);
@@ -290,11 +298,11 @@
     <!-- Core Philosophy Section: Behavior Over Brains -->
     <div class="section-pom">
       <div class="section-header-pom">
-        <i class="fas fa-user-cog"></i> <!-- User + Cog for behavior/psychology -->
+        <i class="fas fa-user-cog"></i>
         <h2>Behavior is the Real Driver of Financial Success</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"The Psychology of Money" argues that financial success is less about complex formulas, intelligence, or intricate strategies, and more about **how you behave**. It explores the deeply ingrained psychological factors, biases, and quirky human behaviors that influence our relationship with money.</p>
-      <p class="mb-4 text-base leading-relaxed">Housel contends that while we often treat finance like a math-based field (like physics), it's actually closer to psychology, driven by emotions like fear, greed, pride, envy, and optimism. Understanding these **soft skills** is far more crucial than mastering technical financial knowledge.</p>
+      <p class="mb-4 text-base leading-relaxed">"The Psychology of Money" argues that financial success is less about complex formulas, intelligence, or intricate strategies, and more about <strong>how you behave</strong>. It explores the deeply ingrained psychological factors, biases, and quirky human behaviors that influence our relationship with money.</p>
+      <p class="mb-4 text-base leading-relaxed">Housel contends that while we often treat finance like a math-based field (like physics), it's actually closer to psychology, driven by emotions like fear, greed, pride, envy, and optimism. Understanding these <strong>soft skills</strong> is far more crucial than mastering technical financial knowledge.</p>
       <p class="text-base leading-relaxed">The book presents timeless lessons through engaging stories and examples, emphasizing that managing money effectively requires humility, patience, discipline, and a long-term perspective, acknowledging the powerful roles of luck, risk, and surprise.</p>
 
       <div class="quote-pom">
@@ -306,7 +314,7 @@
     <!-- Key Lessons Section -->
     <div class="section-pom">
       <div class="section-header-pom">
-         <i class="fas fa-book-reader"></i> <!-- Icon for learning/lessons -->
+         <i class="fas fa-book-reader"></i>
          <h2>Timeless Lessons on Wealth, Greed, and Happiness</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Housel distills complex ideas into memorable chapters, each focusing on a specific aspect of money psychology:</p>
@@ -327,67 +335,67 @@
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-flag"></i></div>
             <div class="lesson-title">Never Enough</div>
-            <p class="lesson-summary">Beware the moving goalposts of wealth and the danger of social comparison. Define **"enough"** for yourself – enough income, enough savings, enough stuff. Pushing for more without purpose leads to risk and potential ruin.</p>
+            <p class="lesson-summary">Beware the moving goalposts of wealth and the danger of social comparison. Define <strong>"enough"</strong> for yourself – enough income, enough savings, enough stuff. Pushing for more without purpose leads to risk and potential ruin.</p>
         </div>
          <!-- Lesson 4 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-chart-line"></i></div>
             <div class="lesson-title">Confounding Compounding</div>
-            <p class="lesson-summary">Good investing isn't necessarily about earning the highest returns. It's about earning pretty good returns you can stick with and repeat for the **longest period of time**. Time and consistency are the magic ingredients; start early and stay invested.</p>
+            <p class="lesson-summary">Good investing isn't necessarily about earning the highest returns. It's about earning pretty good returns you can stick with and repeat for the <strong>longest period of time</strong>. Time and consistency are the magic ingredients; start early and stay invested.</p>
         </div>
          <!-- Lesson 5 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-shield-alt"></i></div>
             <div class="lesson-title">Getting Wealthy vs. Staying Wealthy</div>
-            <p class="lesson-summary">Getting wealthy might require risk-taking and optimism. Staying wealthy requires the opposite: **humility, frugality, and paranoia** about losing what you've gained. Survival is key.</p>
+            <p class="lesson-summary">Getting wealthy might require risk-taking and optimism. Staying wealthy requires the opposite: <strong>humility, frugality, and paranoia</strong> about losing what you've gained. Survival is key.</p>
         </div>
          <!-- Lesson 6 -->
          <div class="lesson-card">
-            <div class="lesson-icon"><i class="fas fa-long-arrow-alt-up"></i></div> <!-- Tail arrow -->
+            <div class="lesson-icon"><i class="fas fa-long-arrow-alt-up"></i></div>
             <div class="lesson-title">Tails, You Win</div>
-            <p class="lesson-summary">Most outcomes are driven by **extreme events** (tails). Many things fail, a few work spectacularly well. This applies to investments, careers, etc. Don't fixate on every small loss; focus on the potential for large wins and enduring the journey.</p>
+            <p class="lesson-summary">Most outcomes are driven by <strong>extreme events</strong> (tails). Many things fail, a few work spectacularly well. This applies to investments, careers, etc. Don't fixate on every small loss; focus on the potential for large wins and enduring the journey.</p>
         </div>
          <!-- Lesson 7 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-clock"></i></div>
             <div class="lesson-title">Freedom</div>
-            <p class="lesson-summary">The highest form of wealth is the ability to control your own time – to wake up and say, "I can do whatever I want today." Use money to gain **autonomy and independence**, which correlates strongly with happiness.</p>
+            <p class="lesson-summary">The highest form of wealth is the ability to control your own time – to wake up and say, "I can do whatever I want today." Use money to gain <strong>autonomy and independence</strong>, which correlates strongly with happiness.</p>
         </div>
          <!-- Lesson 8 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-car"></i></div>
             <div class="lesson-title">Man in the Car Paradox</div>
-            <p class="lesson-summary">When you see someone driving an expensive car, you rarely think, "Wow, that driver is cool." Instead, you imagine yourself in the car. People desire wealth often for the **respect and admiration** they think it brings, but these are rarely achieved through possessions.</p>
+            <p class="lesson-summary">When you see someone driving an expensive car, you rarely think, "Wow, that driver is cool." Instead, you imagine yourself in the car. People desire wealth often for the <strong>respect and admiration</strong> they think it brings, but these are rarely achieved through possessions.</p>
         </div>
          <!-- Lesson 9 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-eye-slash"></i></div>
             <div class="lesson-title">Wealth is What You Don't See</div>
-            <p class="lesson-summary">Spending money to show people how much money you have is the fastest way to have less money. True wealth is the **unspent assets** – the financial flexibility and options that money provides, which are often invisible.</p>
+            <p class="lesson-summary">Spending money to show people how much money you have is the fastest way to have less money. True wealth is the <strong>unspent assets</strong> – the financial flexibility and options that money provides, which are often invisible.</p>
         </div>
          <!-- Lesson 10 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-piggy-bank"></i></div>
             <div class="lesson-title">Save Money</div>
-            <p class="lesson-summary">Building wealth depends less on your income or investment returns, and more on your **savings rate**. Saving is the gap between your ego and your income. Save consistently, regardless of income level.</p>
+            <p class="lesson-summary">Building wealth depends less on your income or investment returns, and more on your <strong>savings rate</strong>. Saving is the gap between your ego and your income. Save consistently, regardless of income level.</p>
         </div>
          <!-- Lesson 11 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-thumbs-up"></i></div>
             <div class="lesson-title">Reasonable > Rational</div>
-            <p class="lesson-summary">Strive to be **"pretty reasonable"** rather than coldly rational. Aim for financial strategies you can stick with long-term, even if they aren't perfectly optimal on paper. Behavior trumps spreadsheets.</p>
+            <p class="lesson-summary">Strive to be <strong>"pretty reasonable"</strong> rather than coldly rational. Aim for financial strategies you can stick with long-term, even if they aren't perfectly optimal on paper. Behavior trumps spreadsheets.</p>
         </div>
          <!-- Lesson 12 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-exclamation-triangle"></i></div>
             <div class="lesson-title">Surprise!</div>
-            <p class="lesson-summary">History is a record of surprising events, not a reliable map of the future. Expect the unexpected; **black swan events** happen. Plan for things not going according to plan.</p>
+            <p class="lesson-summary">History is a record of surprising events, not a reliable map of the future. Expect the unexpected; <strong>black swan events</strong> happen. Plan for things not going according to plan.</p>
         </div>
         <!-- Lesson 13 -->
         <div class="lesson-card">
-            <div class="lesson-icon"><i class="fas fa-shield-virus"></i></div> <!-- Margin of safety -->
+            <div class="lesson-icon"><i class="fas fa-shield-virus"></i></div>
             <div class="lesson-title">Room for Error</div>
-            <p class="lesson-summary">The most important part of any plan is planning on the plan not going according to plan. Build a **margin of safety** into your finances (savings, diversification, conservative assumptions). This increases endurance and lets compounding work.</p>
+            <p class="lesson-summary">The most important part of any plan is planning on the plan not going according to plan. Build a <strong>margin of safety</strong> into your finances (savings, diversification, conservative assumptions). This increases endurance and lets compounding work.</p>
         </div>
          <!-- Lesson 14 -->
          <div class="lesson-card">
@@ -399,19 +407,19 @@
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-dollar-sign"></i></div>
             <div class="lesson-title">Nothing's Free</div>
-            <p class="lesson-summary">Everything has a price, but not all prices appear on labels. The price of successful investing includes volatility, fear, doubt, uncertainty, and regret. View these as **fees**, not fines – the cost of admission for potentially good long-term returns.</p>
+            <p class="lesson-summary">Everything has a price, but not all prices appear on labels. The price of successful investing includes volatility, fear, doubt, uncertainty, and regret. View these as <strong>fees</strong>, not fines – the cost of admission for potentially good long-term returns.</p>
         </div>
           <!-- Lesson 16 -->
          <div class="lesson-card">
             <div class="lesson-icon"><i class="fas fa-users"></i></div>
             <div class="lesson-title">You & Me</div>
-            <p class="lesson-summary">Beware taking financial cues from people playing a **different game** with different time horizons, goals, and risk tolerances. Identify your own game and stick to it.</p>
+            <p class="lesson-summary">Beware taking financial cues from people playing a <strong>different game</strong> with different time horizons, goals, and risk tolerances. Identify your own game and stick to it.</p>
         </div>
          <!-- Lesson 17 -->
          <div class="lesson-card">
-            <div class="lesson-icon"><i class="fas fa-sad-tear"></i></div> <!-- Pessimism -->
+            <div class="lesson-icon"><i class="fas fa-sad-tear"></i></div>
             <div class="lesson-title">The Seduction of Pessimism</div>
-            <p class="lesson-summary">Pessimism sounds smarter and more plausible than optimism, and bad news spreads faster. However, **optimism** (believing the odds are in your favor over time) is the more rational long-term stance for investors and innovators.</p>
+            <p class="lesson-summary">Pessimism sounds smarter and more plausible than optimism, and bad news spreads faster. However, <strong>optimism</strong> (believing the odds are in your favor over time) is the more rational long-term stance for investors and innovators.</p>
         </div>
       </div>
     </div>
@@ -436,13 +444,13 @@
     <!-- Conclusion Section -->
     <div class="section-pom">
        <div class="section-header-pom">
-          <i class="fas fa-check-double"></i> <!-- Icon for conclusions -->
+          <i class="fas fa-check-double"></i>
           <h2>Behavior, Humility, and Time</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"The Psychology of Money" offers a refreshing perspective on personal finance, shifting the focus from complex calculations to enduring human behaviors. It argues that our relationship with money is deeply intertwined with our egos, biases, and life experiences.</p>
-      <p class="text-base leading-relaxed">The key takeaways emphasize the importance of **behavioral discipline, humility** (acknowledging luck, risk, and our own limitations), a **long-term orientation** (letting compounding work), defining **"enough,"** and prioritizing **freedom and control** over status symbols. Ultimately, mastering money is about mastering ourselves.</p>
+      <p class="text-base leading-relaxed">The key takeaways emphasize the importance of <strong>behavioral discipline, humility</strong> (acknowledging luck, risk, and our own limitations), a <strong>long-term orientation</strong> (letting compounding work), defining <strong>"enough,"</strong> and prioritizing <strong>freedom and control</strong> over status symbols. Ultimately, mastering money is about mastering ourselves.</p>
        <div class="conclusion-highlight-pom">
-           <p>Manage your behavior, cultivate patience, save consistently, allow room for error, and understand that true wealth often lies in what isn't seen. These timeless principles are the foundation of **lasting financial well-being and happiness.**</p>
+           <p>Manage your behavior, cultivate patience, save consistently, allow room for error, and understand that true wealth often lies in what isn't seen. These timeless principles are the foundation of <strong>lasting financial well-being and happiness.</strong></p>
        </div>
     </div>
 
