@@ -36,6 +36,14 @@
       color: var(--alch-text-title); /* Burnt Orange/Red */
       font-weight: 700;
     }
+    strong { /* Standard strong tag styling */
+        font-weight: 700;
+        color: var(--alch-text-title); /* Use title color for emphasis */
+    }
+    em { /* Standard italic tag styling */
+        font-style: italic;
+        color: var(--alch-text-dark); /* Default text color, maybe slightly darker */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -219,10 +227,7 @@
       line-height: 1.7;
        opacity: 0.85;
     }
-     .theme-summary strong {
-        font-weight: 700;
-        color: var(--alch-text-title); /* Red emphasis */
-    }
+     /* Theme summary strong tags already styled globally */
 
     .conclusion-highlight-alch {
         background: linear-gradient(to bottom right, var(--alch-accent-yellow), var(--alch-accent-orange));
@@ -239,10 +244,7 @@
         line-height: 1.8;
         font-weight: 500;
     }
-    .conclusion-highlight-alch strong {
-        font-weight: 700;
-        color: var(--alch-text-title);
-    }
+    /* Conclusion strong tags already styled globally */
 
     .footer-alch {
         text-align: center;
@@ -269,12 +271,12 @@
     <!-- Core Philosophy/Plot Section -->
     <div class="section-alch">
       <div class="section-header-alch">
-        <i class="fas fa-compass"></i> <!-- Icon for journey/direction -->
+        <i class="fas fa-compass"></i>
         <h2>The Shepherd's Journey and the Personal Legend</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">"The Alchemist" tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found. He is guided by recurring dreams, omens, and encounters with wise figures, including Melchizedek (the King of Salem) and the Alchemist himself.</p>
-      <p class="mb-4 text-base leading-relaxed">The core philosophy revolves around the concept of the **Personal Legend** – one's unique destiny or calling in life. It's what you have always wanted to accomplish. Everyone, when they are young, knows what their Personal Legend is. However, as time passes, a mysterious force tries to convince them it's impossible to realize it.</p>
-      <p class="text-base leading-relaxed">The novel posits that when you truly want something, **"all the universe conspires in helping you to achieve it."** This requires listening to your heart, understanding the Language of the World (through omens and intuition), overcoming fear, and persevering through trials. The journey itself transforms the seeker.</p>
+      <p class="mb-4 text-base leading-relaxed">The core philosophy revolves around the concept of the <strong>Personal Legend</strong> – one's unique destiny or calling in life. It's what you have always wanted to accomplish. Everyone, when they are young, knows what their Personal Legend is. However, as time passes, a mysterious force tries to convince them it's impossible to realize it.</p>
+      <p class="text-base leading-relaxed">The novel posits that when you truly want something, <strong>"all the universe conspires in helping you to achieve it."</strong> This requires listening to your heart, understanding the Language of the World (through omens and intuition), overcoming fear, and persevering through trials. The journey itself transforms the seeker.</p>
 
       <div class="quote-alch">
           <p>"It's the possibility of having a dream come true that makes life interesting."</p>
@@ -285,7 +287,7 @@
     <!-- Key Themes Section -->
     <div class="section-alch">
       <div class="section-header-alch">
-         <i class="fas fa-wind"></i> <!-- Icon for omens/universe -->
+         <i class="fas fa-wind"></i>
          <h2>Key Themes of the Journey</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Coelho weaves several profound themes into Santiago's quest:</p>
@@ -352,7 +354,7 @@
     <!-- Conclusion Section -->
     <div class="section-alch">
        <div class="section-header-alch">
-          <i class="fas fa-map-marked-alt"></i> <!-- Icon for map/treasure -->
+          <i class="fas fa-map-marked-alt"></i>
           <h2>The Treasure Found Within the Journey</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"The Alchemist" is an inspiring fable about the importance of following our dreams and the transformative power of the journey itself. It suggests that the universe supports those who bravely pursue their Personal Legend, guiding them through omens and intuition.</p>
