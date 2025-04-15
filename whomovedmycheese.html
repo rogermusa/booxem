@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who Moved My Cheese? Summary - Spencer Johnson</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Who Moved My Cheese? Inspired Color Scheme */
+      --wmmc-bg: #F8F9FA; /* Very light grey/off-white */
+      --wmmc-card-bg: #FFFFFF;
+      --wmmc-text-dark: #212529; /* Near black */
+      --wmmc-text-blue: #0D6EFD; /* Primary Blue from title */
+      --wmmc-accent-yellow: #FFC107; /* Cheese Yellow */
+      --wmmc-accent-red: #DC3545; /* Red for banners/accents */
+      --wmmc-text-light: #FFFFFF;
+      --wmmc-border-light: #E9ECEF;
+      --wmmc-border-medium: #DEE2E6;
+      --wmmc-secondary-text: #6C757D; /* Medium Grey */
+      --wmmc-hover-blue: #0B5ED7; /* Darker blue */
+      --wmmc-hover-yellow: #FFDA63; /* Lighter yellow for hover */
+      --wmmc-gold-seal: #D4AF37; /* Gold for seal */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif; /* Modern Sans-serif */
+      color: var(--wmmc-secondary-text);
+      line-height: 1.75;
+      background-color: var(--wmmc-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'PT Serif', serif; /* Classic Serif for Headings */
+      color: var(--wmmc-text-blue); /* Blue Headings */
+      font-weight: 700; /* Bold */
+    }
+    strong { /* Define global emphasis style */
+        font-weight: 700;
+        color: var(--wmmc-text-dark); /* Default dark emphasis */
+    }
+    em { /* Define global italic emphasis style */
+        font-style: italic;
+        color: var(--wmmc-secondary-text);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-wmmc {
+      background-color: var(--wmmc-card-bg); /* White header */
+      color: var(--wmmc-text-dark);
+      padding: 0; /* No padding, use internal elements */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid var(--wmmc-border-medium);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      overflow: hidden;
+      position: relative;
+    }
+    .header-top-banner {
+        background-color: var(--wmmc-accent-red);
+        color: var(--wmmc-text-light);
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .header-content {
+        padding: 2rem 1.5rem 1rem 1.5rem; /* Padding inside header */
+    }
+     .header-subtitle-banner {
+        background-color: #FFF8DC; /* Cream/Parchment */
+        border: 1px solid var(--wmmc-border-medium);
+        color: var(--wmmc-accent-red);
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0.5rem auto;
+        display: inline-block;
+        border-radius: 3px;
+        max-width: 90%;
+     }
+    .main-header-wmmc h1 { /* Title */
+        font-size: 3rem; /* Large title */
+        font-weight: 700;
+        color: var(--wmmc-text-blue); /* Blue title */
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        position: relative; /* For cheese icon */
+    }
+     .cheese-icon-title { /* Position cheese in 'o' */
+        position: absolute;
+        font-size: 1.5rem; /* Size of cheese icon */
+        color: var(--wmmc-accent-yellow);
+        /* Precise adjustments needed based on font */
+        top: 0.8em; /* Adjust vertical position */
+        left: calc(50% + 2.35em); /* Adjust horizontal centering */
+        transform: rotate(-70deg);
+     }
+    .main-header-wmmc h3 { /* Author */
+        font-family: 'PT Serif', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--wmmc-accent-red); /* Red author */
+        margin-top: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+     .main-header-wmmc .author-secondary {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: var(--wmmc-secondary-text);
+        margin-bottom: 1.5rem;
+     }
+    .gold-seal-wmmc { /* Gold Seal Element */
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: var(--wmmc-gold-seal);
+        color: var(--wmmc-text-dark);
+        padding: 0.7rem 0.9rem;
+        border-radius: 50%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1;
+        transform: rotate(-10deg);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+        border: 2px solid #B8860B; /* Darker gold border */
+    }
+     .gold-seal-wmmc span { display: block; }
+    .book-cover-wmmc {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--wmmc-border-light);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    /* Section styling */
+    .section-wmmc {
+      background-color: var(--wmmc-card-bg);
+      color: var(--wmmc-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--wmmc-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-wmmc:hover {
+        border-color: var(--wmmc-text-blue); /* Blue border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-wmmc {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--wmmc-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-wmmc h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-wmmc i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--wmmc-text-blue); /* Blue icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-wmmc:hover .section-header-wmmc i {
+        transform: scale(1.1);
+     }
+
+    /* --- Quote Style --- */
+    .quote-wmmc {
+      background-color: #FFF8DC; /* Light yellow/cream */
+      border: 1px solid var(--wmmc-border-medium);
+      border-left: 4px solid var(--wmmc-accent-yellow); /* Yellow border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--wmmc-text-dark);
+      border-radius: 0 3px 3px 0;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600; /* Semi-bold quote */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      text-align: center;
+    }
+     .quote-wmmc:hover {
+        background-color: var(--wmmc-card-bg);
+        border-left-color: var(--wmmc-hover-blue); /* Blue border */
+        border-color: var(--wmmc-border-medium);
+    }
+    .quote-wmmc p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-wmmc footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: center;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--wmmc-secondary-text);
+    }
+    /* --- End Quote Style --- */
+
+    .characters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min width for 4 cards */
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .character-card {
+      background-color: var(--wmmc-bg); /* Light bg for cards */
+      border: 1px solid var(--wmmc-border-light);
+      border-radius: 4px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      text-align: center;
+    }
+    .character-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+      border-color: var(--wmmc-border-medium);
+    }
+    .character-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--wmmc-text-blue); /* Blue icon */
+    }
+    .character-name {
+      font-family: 'PT Serif', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--wmmc-text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .character-description {
+      font-size: 0.9rem;
+      color: var(--wmmc-secondary-text);
+      line-height: 1.6;
+    }
+    /* Specific colors for character icons if desired */
+    .character-card.sniff .character-icon { color: var(--wmmc-accent-yellow); }
+    .character-card.scurry .character-icon { color: var(--wmmc-accent-red); }
+
+
+    .lessons-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+    .lesson-item {
+        background-color: var(--wmmc-bg);
+        border: 1px solid var(--wmmc-border-light);
+        border-left: 4px solid var(--wmmc-accent-yellow); /* Yellow accent */
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease, border-left-color 0.2s ease;
+        font-weight: 600; /* Bold lesson text */
+        font-size: 1rem;
+        color: var(--wmmc-text-dark);
+    }
+     .lesson-item:hover {
+         background-color: var(--wmmc-card-bg);
+         border-left-color: var(--wmmc-text-blue); /* Blue accent on hover */
+     }
+     .lesson-item i { /* Icon before lesson */
+         margin-right: 0.75rem;
+         color: var(--wmmc-text-blue);
+         opacity: 0.8;
+     }
+
+
+    .conclusion-highlight-wmmc {
+        background: linear-gradient(to right, var(--wmmc-accent-yellow), var(--wmmc-hover-yellow)); /* Yellow gradient */
+        color: var(--wmmc-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--wmmc-accent-yellow);
+    }
+    .conclusion-highlight-wmmc p {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        font-weight: 600; /* Semi-bold */
+    }
+    .conclusion-highlight-wmmc strong {
+        font-weight: 700;
+        color: var(--wmmc-text-blue); /* Blue emphasis */
+    }
+
+    .footer-wmmc {
+        text-align: center;
+        color: var(--wmmc-secondary-text);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-wmmc">
+      <div class="header-top-banner">#1 Bestseller</div>
+      <div class="header-content">
+        <div class="header-subtitle-banner">An A-Mazing Way to Deal with Change in Your Work and in Your Life</div>
+        <h1>
+            Who Mo <i class="fas fa-cheese cheese-icon-title"></i>&nbsped<br>My Cheese?
+        </h1>
+        <h3>Spencer Johnson, M.D.</h3>
+        <div class="author-secondary">Foreword by Kenneth Blanchard, Ph.D.<br>coauthors of The One Minute Manager</div>
+        <img src="https://m.media-amazon.com/images/I/81oXnrkgJbL._UF894,1000_QL80_.jpg" alt="Who Moved My Cheese? Book Cover" class="book-cover-wmmc">
+      </div>
+       <!-- Gold Seal is difficult to replicate exactly without images/complex CSS, positioned absolutely if added -->
+      <!-- <div class="gold-seal-wmmc"><span>A GEM</span><span>SMALL AND</span><span>VALUABLE</span></div> -->
+    </div>
+
+    <!-- Core Philosophy Section: The Parable -->
+    <div class="section-wmmc">
+      <div class="section-header-wmmc">
+        <i class="fas fa-book-open"></i>
+        <h2>The Story: Navigating the Maze of Change</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"Who Moved My Cheese?" is a simple parable that reveals profound truths about dealing with change. It features four characters living in a Maze: two mice, <strong>Sniff</strong> and <strong>Scurry</strong>, and two "Littlepeople," <strong>Hem</strong> and <strong>Haw</strong>. All are searching for **Cheese**, which represents whatever we desire in life – a good job, a loving relationship, money, health, peace of mind, etc. The **Maze** represents where we look for what we want – our workplace, community, or life itself.</p>
+      <p class="mb-4 text-base leading-relaxed">Initially, all four characters find a large supply of Cheese at "Cheese Station C." The mice, being simple creatures, notice the supply dwindling and are prepared when it eventually runs out. The Littlepeople, Hem and Haw, become complacent and are shocked and angered when the Cheese disappears.</p>
+      <p class="text-base leading-relaxed">The story follows their different reactions to this unexpected change, highlighting common human responses to adversity and offering lessons on how to adapt successfully.</p>
+
+      <div class="quote-wmmc">
+          <p>"Life is no straight and easy corridor along which we travel free and unhampered, but a maze of passages, through which we must seek our way, lost and confused, now and again checked in a blind alley."</p>
+          <footer>— Spencer Johnson (inspired by A. J. Cronin)</footer>
+      </div>
+    </div>
+
+    <!-- The Characters Section -->
+    <div class="section-wmmc">
+      <div class="section-header-wmmc">
+         <i class="fas fa-users"></i>
+         <h2>The Four Characters & Their Reactions to Change</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Each character represents a different approach to change:</p>
+      <div class="characters-grid">
+         <div class="character-card sniff">
+            <div class="character-icon"><i class="fas fa-search-location"></i></div>
+            <div class="character-name">Sniff</div>
+            <p class="character-description">Anticipates change early by sniffing out trends and noticing small shifts.</p>
+         </div>
+         <div class="character-card scurry">
+            <div class="character-icon"><i class="fas fa-running"></i></div>
+            <div class="character-name">Scurry</div>
+            <p class="character-description">Doesn't overanalyze; quickly scurries into action when change happens.</p>
+         </div>
+         <div class="character-card">
+            <div class="character-icon"><i class="fas fa-stop-circle"></i></div>
+            <div class="character-name">Hem</div>
+            <p class="character-description">Denies and resists change, fearing it will lead to something worse. Becomes paralyzed by fear and inaction.</p>
+         </div>
+         <div class="character-card">
+            <div class="character-icon"><i class="fas fa-hiking"></i></div>
+            <div class="character-name">Haw</div>
+            <p class="character-description">Initially resists like Hem, but eventually learns to adapt when he realizes change can lead to something better. Learns to laugh at his fears and moves forward.</p>
+         </div>
+      </div>
+      <p class="mt-6 text-base leading-relaxed">The mice represent the simple, instinctive parts of us that adapt quickly, while the Littlepeople represent the complex, emotional, and analytical parts that can overthink and resist change.</p>
+    </div>
+
+     <!-- Key Lessons Section: Handwriting on the Wall -->
+    <div class="section-wmmc">
+      <div class="section-header-wmmc">
+         <i class="fas fa-pencil-alt"></i>
+         <h2>The Handwriting on the Wall: Lessons Learned</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">As Haw overcomes his fear and ventures into the Maze, he writes key insights on the wall – timeless lessons for navigating change:</p>
+      <ul class="lessons-list">
+          <li><i class="fas fa-exchange-alt"></i> <span><strong>Change Happens:</strong> They keep moving the Cheese.</span></li>
+          <li><i class="fas fa-eye"></i> <span><strong>Anticipate Change:</strong> Get ready for the Cheese to move.</span></li>
+          <li><i class="fas fa-glasses"></i> <span><strong>Monitor Change:</strong> Smell the Cheese often so you know when it is getting old.</span></li>
+          <li><i class="fas fa-fighter-jet"></i> <span><strong>Adapt to Change Quickly:</strong> The quicker you let go of old Cheese, the sooner you can enjoy new Cheese.</span></li>
+          <li><i class="fas fa-map-signs"></i> <span><strong>Change:</strong> Move with the Cheese.</span></li>
+          <li><i class="fas fa-hiking"></i> <span><strong>Enjoy Change!</strong> Savor the adventure and enjoy the taste of new Cheese!</span></li>
+          <li><i class="fas fa-redo-alt"></i> <span><strong>Be Ready to Change Quickly and Enjoy It Again:</strong> They keep moving the Cheese.</span></li>
+      </ul>
+       <div class="quote-wmmc">
+          <p>"What would you do if you weren't afraid?"</p>
+          <footer>— Spencer Johnson</footer>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-wmmc">
+      <div class="section-header-wmmc">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Quotes on Adapting to Change</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-wmmc"><p>"Movement in a new direction helps you find New Cheese."</p><footer>— Spencer Johnson</footer></blockquote>
+          <blockquote class="quote-wmmc"><p>"When you stop being afraid, you feel good!"</p><footer>— Spencer Johnson</footer></blockquote>
+          <blockquote class="quote-wmmc"><p>"Imagining yourself enjoying New Cheese even before you find it leads you to it."</p><footer>— Spencer Johnson</footer></blockquote>
+           <blockquote class="quote-wmmc"><p>"The fear you let build up in your mind is worse than the situation that actually exists."</p><footer>— Spencer Johnson</footer></blockquote>
+           <blockquote class="quote-wmmc"><p>"Noticing small changes early helps you adapt to the bigger changes that are to come."</p><footer>— Spencer Johnson</footer></blockquote>
+           <blockquote class="quote-wmmc"><p>"Old beliefs do not lead you to New Cheese."</p><footer>— Spencer Johnson</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-wmmc">
+       <div class="section-header-wmmc">
+          <i class="fas fa-cheese"></i>
+          <h2>Finding Your New Cheese</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Who Moved My Cheese?" offers a simple yet powerful allegory for accepting and adapting to the inevitable changes in work and life. It encourages readers to identify which character they most resemble and to adopt the more adaptive behaviors of Sniff, Scurry, and eventually, Haw.</p>
+      <p class="text-base leading-relaxed">The key message is to anticipate change, let go of the past quickly, overcome fear by taking action, and embrace the potential benefits that change can bring. By moving with the "Cheese," we open ourselves up to new opportunities and ultimately find greater success and happiness.</p>
+       <div class="conclusion-highlight-wmmc">
+           <p>Don't get stuck lamenting the loss of old Cheese. Ask yourself, <strong>"What would I do if I weren't afraid?"</strong> and venture out into the Maze to find something better.</p>
+       </div>
+    </div>
+
+    <div class="footer-wmmc">
+       <p>© 2024 Summary of "Who Moved My Cheese?" by Spencer Johnson, M.D.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the parable.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
