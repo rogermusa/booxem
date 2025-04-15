@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Happiness Summary - Dalai Lama & Howard Cutler</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Art of Happiness Inspired Color Scheme */
+      --aoh-bg: #FBF7F0; /* Light parchment/cream */
+      --aoh-card-bg: #FFFFFF;
+      --aoh-text-dark: #402E32; /* Warm Dark Brown/Black */
+      --aoh-text-title-gold: #BFA16E; /* Muted Gold */
+      --aoh-accent-red: #A02C2C; /* Deep Red/Maroon */
+      --aoh-accent-black: #1A1A1A; /* Black for contrast */
+      --aoh-text-light: #FDFBF5; /* Creamy White */
+      --aoh-border-light: #EAE2D9;
+      --aoh-border-medium: #DCD0C0;
+      --aoh-hover-gold: #D4AF37; /* Brighter Gold */
+      --aoh-secondary-text: #6B5B5A; /* Softer brown */
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--aoh-text-dark);
+      line-height: 1.75;
+      background-color: var(--aoh-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif; /* Elegant Serif */
+      color: var(--aoh-text-dark); /* Dark text for headings */
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+     /* Define global emphasis style */
+    strong {
+        font-weight: 700;
+        color: var(--aoh-accent-red); /* Red emphasis */
+    }
+    /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--aoh-secondary-text); /* Use secondary text color */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-aoh {
+      background-color: var(--aoh-accent-black); /* Black header BG */
+      color: var(--aoh-text-light);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
+      border-bottom: 5px solid var(--aoh-text-title-gold); /* Gold bottom border */
+    }
+     .main-header-aoh .anniversary-note {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--aoh-accent-gold);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+     }
+    .main-header-aoh h1 { /* Title */
+        font-family: 'Playfair Display', serif;
+        font-size: 3.25rem; /* Large title */
+        font-weight: 400; /* Regular weight */
+        color: var(--aoh-text-title-gold); /* Gold title */
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+    }
+    .main-header-aoh h2 { /* Subtitle */
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--aoh-text-light); /* Light subtitle */
+        font-size: 1.4rem;
+        font-weight: 400; /* Regular italic */
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+    }
+    .main-header-aoh .authors { /* Authors */
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600; /* Semi-bold */
+        color: var(--aoh-accent-gold);
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+     .main-header-aoh .author-separator {
+         display: block;
+         font-size: 0.9rem;
+         font-weight: 400;
+         color: var(--aoh-text-light);
+         opacity: 0.7;
+         margin: 0.1rem 0;
+     }
+    .book-cover-aoh {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--aoh-border-medium);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    /* Section styling */
+    .section-aoh {
+      background-color: var(--aoh-card-bg);
+      color: var(--aoh-text-dark);
+      padding: 2rem 2.25rem; /* Increased padding */
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--aoh-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-aoh:hover {
+        border-color: var(--aoh-border-medium);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-aoh {
+      margin-bottom: 1.75rem; /* Increased margin */
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--aoh-border-light);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-aoh h2 {
+      font-size: 1.85rem; /* Slightly larger */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--aoh-text-title); /* Deep Brown */
+    }
+    .section-header-aoh i {
+      font-size: 1.4rem; /* Slightly larger */
+      margin-right: 0.85rem;
+      color: var(--aoh-text-title); /* Brown icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-aoh:hover .section-header-aoh i {
+        transform: scale(1.1) rotate(3deg);
+     }
+
+    /* --- Quote Style --- */
+    .quote-aoh {
+      background-color: var(--aoh-bg); /* Cream background */
+      border: 1px solid var(--aoh-border-light);
+      border-left: 4px solid var(--aoh-text-title-gold); /* Gold left border */
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0; /* Increased margin */
+      color: var(--aoh-secondary-text); /* Softer brown text */
+      border-radius: 0 3px 3px 0;
+      font-size: 1.05rem; /* Slightly larger quote */
+      font-style: italic;
+      font-weight: 400; /* Regular italic */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-aoh:hover {
+        background-color: var(--aoh-card-bg);
+        border-color: var(--aoh-border-medium);
+        border-left-color: var(--aoh-accent-red); /* Red border */
+        color: var(--aoh-text-dark);
+    }
+    .quote-aoh p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-aoh footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--aoh-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .themes-grid-aoh {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .theme-card-aoh {
+      background-color: var(--aoh-card-bg);
+      border: 1px solid var(--aoh-border-light);
+      border-radius: 4px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      border-top: 3px solid var(--aoh-text-title-gold); /* Gold top border */
+    }
+    .theme-card-aoh:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      border-color: var(--aoh-border-medium);
+      border-top-color: var(--aoh-accent-red); /* Red border */
+    }
+    .theme-icon-aoh {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--aoh-text-title); /* Brown icon */
+        height: 30px;
+        transition: color 0.25s ease;
+    }
+     .theme-card-aoh:hover .theme-icon-aoh {
+         color: var(--aoh-accent-red);
+     }
+    .theme-title-aoh {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; /* Increased size */
+      font-weight: 700;
+      color: var(--aoh-text-dark);
+      margin-bottom: 0.75rem;
+    }
+    .theme-summary-aoh {
+      font-size: 1rem; /* Slightly larger summary */
+      color: var(--aoh-secondary-text);
+      line-height: 1.8; /* Increased line height */
+      opacity: 0.9;
+      flex-grow: 1; /* Allow summary to fill space */
+    }
+     /* Theme summary strong tags handled globally */
+
+    .conclusion-highlight-aoh {
+        background: var(--aoh-text-title); /* Deep brown background */
+        color: var(--aoh-text-dark); /* Light text */
+        padding: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid var(--aoh-text-title-gold); /* Gold border */
+    }
+    .conclusion-highlight-aoh p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 400; /* Regular weight */
+    }
+    .conclusion-highlight-aoh strong {
+        font-weight: 700;
+        color: var(--aoh-text-title-gold); /* Gold emphasis */
+    }
+
+    .footer-aoh {
+        text-align: center;
+        color: var(--aoh-secondary-text);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-aoh">
+        <div class="anniversary-note">10th Anniversary Edition</div>
+        <h1>The Art of Happiness</h1>
+        <h2>A Handbook for Living</h2>
+        <div class="authors">
+            His Holiness the Dalai Lama
+            <span class="author-separator">and</span>
+            Howard C. Cutler, M.D.
+        </div>
+        <img src="https://m.media-amazon.com/images/I/616Bq1CxGzL.jpg" alt="The Art of Happiness Book Cover" class="book-cover-aoh">
+    </div>
+
+    <!-- Core Philosophy Section: Happiness as a Skill -->
+    <div class="section-aoh">
+      <div class="section-header-aoh">
+        <i class="fas fa-smile"></i>
+        <h2>The Purpose of Life: Achieving Happiness</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Art of Happiness" is based on a series of interviews conducted by psychiatrist Howard Cutler with His Holiness the Dalai Lama. It explores the fundamental human desire for happiness and argues that happiness is not merely a byproduct of favorable external circumstances, but the very <strong>purpose of life</strong> itself.</p>
+      <p class="mb-4 text-base leading-relaxed">The Dalai Lama posits that true, lasting happiness stems primarily from our <strong>internal state of mind</strong>, not from external factors like wealth, status, or pleasure. He suggests that happiness is a skill that can be cultivated through systematic mental training, involving both the reduction of negative states (like anger, hatred, fear) and the cultivation of positive ones (like compassion, patience, contentment).</p>
+      <p class="text-base leading-relaxed">The book blends ancient Buddhist wisdom with modern Western psychological insights, offering a practical framework for achieving greater peace, satisfaction, and joy through understanding and transforming the mind.</p>
+
+      <div class="quote-aoh">
+          <p>"I believe that the very purpose of life is to be happy. From the very core of our being, we desire contentment... Therefore, it is important to discover what will bring about the greatest degree of happiness."</p>
+          <footer>— The Dalai Lama</footer>
+      </div>
+    </div>
+
+    <!-- Key Themes Section -->
+    <div class="section-aoh">
+      <div class="section-header-aoh">
+         <i class="fas fa-seedling"></i>
+         <h2>Cultivating Inner Peace: Key Themes</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">The conversations explore several core themes crucial for cultivating happiness:</p>
+      <div class="themes-grid-aoh">
+         <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-hand-holding-heart"></i></div>
+            <div class="theme-title-aoh">The Role of Compassion</div>
+            <p class="theme-summary-aoh">Developing genuine <strong>compassion</strong> and warm-heartedness towards others is presented as a primary source of happiness. It reduces self-centeredness, fear, and insecurity, fostering connection and inner strength.</p>
+        </div>
+        <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-brain"></i></div>
+            <div class="theme-title-aoh">Training the Mind</div>
+            <p class="theme-summary-aoh">Our state of mind determines our experience. Through practices like meditation and analytical thinking, we can **train the mind** to weaken negative thought patterns and strengthen positive qualities like patience and tolerance.</p>
+        </div>
+        <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-heart-broken"></i></div>
+            <div class="theme-title-aoh">Dealing with Suffering</div>
+            <p class="theme-summary-aoh">Suffering is an inevitable part of life. Happiness involves developing the inner resources to cope with suffering effectively, primarily by changing our **perspective** and cultivating mental resilience.</p>
+        </div>
+        <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-fire-extinguisher"></i></div> <!-- Changed icon -->
+            <div class="theme-title-aoh">Overcoming Negative Emotions</div>
+            <p class="theme-summary-aoh">Destructive emotions like anger, hatred, fear, and anxiety are major obstacles to happiness. Techniques like **developing patience**, understanding the causes of these emotions, and applying antidotes (like compassion for anger) are key.</p>
+        </div>
+         <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-users"></i></div>
+            <div class="theme-title-aoh">The Importance of Connection</div>
+            <p class="theme-summary-aoh">Humans are social creatures. Basic **human affection** and connection with others are fundamental to our well-being and happiness. Cultivating empathy strengthens these bonds.</p>
+        </div>
+         <div class="theme-card-aoh">
+            <div class="theme-icon-aoh"><i class="fas fa-balance-scale"></i></div> <!-- Using scale for comparison -->
+            <div class="theme-title-aoh">Shifting Perspective & Comparison</div>
+            <p class="theme-summary-aoh">Our happiness is often undermined by comparing ourselves to others. Learning to **shift perspective**, appreciate what we have, and focus on inner development rather than external markers can reduce suffering.</p>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-aoh">
+      <div class="section-header-aoh">
+         <i class="fas fa-quote-left"></i>
+         <h2>Wisdom on Happiness and Compassion - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-aoh"><p>"Happiness is determined more by one's state of mind than by external events."</p><footer>— The Dalai Lama</footer></blockquote>
+          <blockquote class="quote-aoh"><p>"If you want others to be happy, practice compassion. If you want to be happy, practice compassion."</p><footer>— The Dalai Lama</footer></blockquote>
+          <blockquote class="quote-aoh"><p>"We can never obtain peace in the outer world until we make peace with ourselves."</p><footer>— The Dalai Lama</footer></blockquote>
+           <blockquote class="quote-aoh"><p>"The key to transforming our hearts and minds is to have an understanding of how our thoughts and emotions work."</p><footer>— The Dalai Lama</footer></blockquote>
+           <blockquote class="quote-aoh"><p>"Remember that sometimes not getting what you want is a wonderful stroke of luck."</p><footer>— The Dalai Lama</footer></blockquote>
+           <blockquote class="quote-aoh"><p>"The ultimate source of happiness is not money and power, but warm-heartedness."</p><footer>— The Dalai Lama</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-aoh">
+       <div class="section-header-aoh">
+          <i class="fas fa-hand-peace"></i> <!-- Icon for peace -->
+          <h2>A Practical Path to Inner Contentment</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Art of Happiness" provides a clear, accessible, and deeply practical guide to cultivating lasting happiness from within. It demystifies the concept, presenting it not as an elusive goal dependent on external fortune, but as an achievable state resulting from conscious mental and emotional training.</p>
+      <p class="text-base leading-relaxed">By integrating the Dalai Lama's wisdom on compassion, perspective, and managing destructive emotions with Cutler's psychological framing, the book offers readers tangible strategies to transform their minds and, consequently, their experience of life, leading towards greater peace, resilience, and genuine joy.</p>
+       <div class="conclusion-highlight-aoh">
+           <p>True happiness is an inside job. Cultivate compassion, train your mind, shift your perspective, and connect with others. <strong>This is the art of living a happy life.</strong></p>
+       </div>
+    </div>
+
+    <div class="footer-aoh">
+       <p>© 2024 Summary of "The Art of Happiness" by His Holiness the Dalai Lama and Howard C. Cutler, M.D.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the 10th Anniversary Edition.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
