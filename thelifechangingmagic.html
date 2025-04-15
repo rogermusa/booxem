@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Life-Changing Magic of Tidying Up Summary - Marie Kondo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* KonMari Inspired Color Scheme */
+      --km-bg: #F7FCFC; /* Very light, airy blue-white */
+      --km-card-bg: #FFFFFF;
+      --km-text-dark: #5A5A5A; /* Soft dark grey */
+      --km-text-title: #E63946; /* Bright Red */
+      --km-accent-teal: #A8DADC; /* Light Aqua/Teal */
+      --km-accent-grey: #BDBDBD; /* Neutral Grey */
+      --km-text-light: #FFFFFF;
+      --km-border-light: #EFF6F6;
+      --km-border-medium: #DDE8E8;
+      --km-hover-red: #C0303C; /* Darker red */
+      --km-hover-teal: #8AC5C6; /* Darker teal */
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif; /* Clean, rounded sans-serif */
+      color: var(--km-text-dark);
+      line-height: 1.75;
+      background-color: var(--km-bg);
+      font-size: 16px;
+      font-weight: 500; /* Slightly bolder body */
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Quicksand', sans-serif;
+      color: var(--km-text-title); /* Red headings */
+      font-weight: 700; /* Bold */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-km {
+      background-color: var(--km-accent-teal); /* Teal Header BG */
+      color: var(--km-text-dark);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+       border: 1px solid var(--km-border-medium);
+    }
+     .main-header-km::before { /* Subtle texture attempt */
+        content: '';
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0));
+        border-radius: 7px;
+        pointer-events: none;
+     }
+    .main-header-km h3 { /* Author */
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--km-text-dark);
+        margin-bottom: 0.75rem;
+        opacity: 0.9;
+    }
+    .main-header-km h1 { /* Title */
+        font-size: 2.5rem; /* Adjusted size */
+        font-weight: 700;
+        color: var(--km-text-title); /* Red title */
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    .main-header-km h2 { /* Subtitle */
+        font-size: 1rem;
+        font-weight: 500; /* Medium weight */
+        color: var(--km-text-dark);
+        opacity: 0.8;
+        margin-bottom: 1.5rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .book-cover-km {
+      max-width: 150px;
+      height: auto;
+      border-radius: 4px;
+      border: 2px solid var(--km-card-bg); /* White border */
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-km {
+      background-color: var(--km-card-bg);
+      color: var(--km-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--km-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-km:hover {
+        border-color: var(--km-accent-teal); /* Teal border */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    }
+
+    .section-header-km {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--km-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-km h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-km i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--km-text-title); /* Red icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-km:hover .section-header-km i {
+        transform: rotate(5deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-km {
+      background-color: #FDFBF5; /* Reuse light cream */
+      border: 1px dashed var(--km-accent-grey); /* Dashed grey border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--km-text-dark);
+      border-radius: 4px;
+      font-size: 1rem;
+      font-style: normal; /* Not italic */
+      font-weight: 600; /* Semi-bold */
+      text-align: center;
+      transition: border-color 0.3s ease;
+    }
+     .quote-km:hover {
+        border-color: var(--km-accent-teal); /* Teal border on hover */
+    }
+    .quote-km p {
+         margin-bottom: 0.5rem;
+     }
+     .quote-km i { /* Icon within quote */
+         color: var(--km-text-title);
+         margin-right: 0.5rem;
+         opacity: 0.8;
+     }
+    .quote-km footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: center;
+      font-weight: 500; /* Medium weight */
+      font-size: 0.85rem;
+      opacity: 0.8;
+      color: var(--km-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .principles-list li {
+        background-color: var(--km-bg);
+        border: 1px solid var(--km-border-light);
+        border-left: 4px solid var(--km-accent-teal); /* Teal left border */
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .principles-list li:hover {
+         background-color: var(--km-card-bg);
+         border-left-color: var(--km-text-title); /* Red border on hover */
+         border-color: var(--km-border-medium);
+     }
+     .principle-title {
+         font-weight: 700;
+         font-size: 1.1rem;
+         color: var(--km-text-title); /* Red title */
+         display: flex;
+         align-items: center;
+         margin-bottom: 0.5rem;
+     }
+      .principle-title i {
+          margin-right: 0.75rem;
+          color: var(--km-accent-teal);
+          font-size: 1.2em;
+          width: 25px;
+          text-align: center;
+          transition: color 0.2s ease;
+      }
+       .principles-list li:hover .principle-title i {
+           color: var(--km-text-title);
+       }
+     .principle-description {
+         font-size: 0.95rem;
+         line-height: 1.7;
+         padding-left: 2.75rem; /* Indent description */
+     }
+      .principle-description strong {
+          font-weight: 700;
+          color: var(--km-text-dark);
+      }
+      .principle-description ul {
+          list-style: disc;
+          margin-left: 1.25rem;
+          margin-top: 0.5rem;
+          padding-left: 0.5rem;
+      }
+      .principle-description li {
+          background: none; border: none; padding: 0.2rem 0; margin: 0;
+      }
+
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .impact-card {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: var(--km-bg);
+        border-radius: 6px;
+        border: 1px solid var(--km-border-light);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+     .impact-card:hover {
+         transform: scale(1.03);
+         box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+     }
+     .impact-icon {
+        font-size: 2rem;
+        color: var(--km-accent-teal);
+        margin-bottom: 0.75rem;
+     }
+     .impact-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--km-text-title);
+        margin-bottom: 0.5rem;
+     }
+      .impact-description {
+         font-size: 0.9rem;
+         color: var(--km-secondary-text);
+         line-height: 1.6;
+      }
+
+
+    .conclusion-highlight-km {
+        background-color: var(--km-accent-teal); /* Teal background */
+        color: var(--km-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 8px; /* More rounded */
+    }
+    .conclusion-highlight-km p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-km strong {
+        font-weight: 700;
+        color: var(--km-text-title); /* Red emphasis */
+    }
+
+    .footer-km {
+        text-align: center;
+        color: var(--km-accent-grey);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-km">
+        <h3>Marie Kondo</h3>
+        <h1>the life-changing magic of tidying up</h1>
+        <h2>The Japanese Art of Decluttering and Organizing</h2>
+        <img src="https://m.media-amazon.com/images/I/81X13ae1QkL.jpg" alt="The Life-Changing Magic of Tidying Up Book Cover" class="book-cover-km">
+    </div>
+
+    <!-- Core Philosophy Section: The KonMari Method -->
+    <div class="section-km">
+      <div class="section-header-km">
+        <i class="fas fa-magic"></i>
+        <h2>The KonMari Method: More Than Just Tidying</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Marie Kondo presents a revolutionary approach to decluttering and organizing, known as the **KonMari Method**. It's not just about cleaning rooms; it's a transformative process designed to help you keep only those things that truly bring you joy, leading to a calmer mind and a more inspired life.</p>
+      <p class="mb-4 text-base leading-relaxed">The core principle is to handle every single item you own, ask yourself if it **"sparks joy,"** and discard anything that doesn't. This process is done by category, not location, in one large decluttering event ("tidying festival"), rather than little by little.</p>
+      <p class="text-base leading-relaxed">Kondo emphasizes that tidying is not just a physical act but a dialogue with oneself. By confronting your possessions, you confront your past, your fears, and your aspirations, ultimately discovering what you truly value and want to carry into your future.</p>
+
+      <div class="quote-km">
+          <p><i class="fas fa-heart"></i>The best way to choose what to keep and what to throw away is to take each item in one's hand and ask: 'Does this spark joy?' If it does, keep it. If not, dispose of it.</p>
+          <footer>— Marie Kondo</footer>
+      </div>
+    </div>
+
+    <!-- Key Principles Section -->
+    <div class="section-km">
+      <div class="section-header-km">
+         <i class="fas fa-list-check"></i>
+         <h2>Core Principles of the KonMari Method</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">The method follows several key rules for effective and lasting tidiness:</p>
+      <ul class="principles-list">
+          <li>
+             <div class="principle-title"><i class="fas fa-calendar-check"></i>Rule 1: Commit Yourself to Tidying Up</div>
+             <p class="principle-description">Tidying is a special event, not a daily chore. Approach it with intention and commitment to complete the process fully.</p>
+          </li>
+          <li>
+             <div class="principle-title"><i class="fas fa-bullseye"></i>Rule 2: Imagine Your Ideal Lifestyle</div>
+             <p class="principle-description">Visualize the life you want to live in your tidy space. This provides motivation and helps clarify your criteria for what sparks joy.</p>
+          </li>
+           <li>
+             <div class="principle-title"><i class="fas fa-trash-alt"></i>Rule 3: Finish Discarding First</div>
+             <p class="principle-description">Complete the process of deciding what to keep and discard for *all* items before deciding where to store things. Resist the urge to organize prematurely.</p>
+          </li>
+           <li>
+             <div class="principle-title"><i class="fas fa-stream"></i>Rule 4: Tidy by Category, Not by Location</div>
+             <p class="principle-description">Gather *everything* from one category (e.g., all clothes) from *everywhere* in the house into one pile before deciding what sparks joy. This reveals the true volume and prevents shuffling clutter. The correct order is crucial:
+                 <ul>
+                    <li><strong>Clothes</strong></li>
+                    <li><strong>Books</strong></li>
+                    <li><strong>Papers</strong> (Discard almost everything)</li>
+                    <li><strong>Komono</strong> (Miscellany - kitchen, bath, garage, etc.)</li>
+                    <li><strong>Sentimental Items</strong> (Tackle last, when your 'spark joy' sensitivity is honed)</li>
+                 </ul>
+             </p>
+          </li>
+           <li>
+             <div class="principle-title"><i class="fas fa-heart"></i>Rule 5: Ask Yourself If It Sparks Joy</div>
+             <p class="principle-description">The ultimate criterion for keeping an item. Hold each object and notice the feeling it evokes. Trust your intuition. If it doesn't spark joy, thank it for its service and let it go.</p>
+          </li>
+           <li>
+             <div class="principle-title"><i class="fas fa-home"></i>Rule 6: Designate a Place for Everything</div>
+             <p class="principle-description">Once discarding is complete, every item you keep must have a designated home. Store things simply, accessibly, and ideally vertically to maximize space and visibility (especially clothing).</p>
+          </li>
+      </ul>
+       <div class="quote-km">
+          <p><i class="fas fa-comment-dots"></i>Tidying is the act of confronting yourself; cleaning is the act of confronting nature.</p>
+          <footer>— Marie Kondo</footer>
+      </div>
+    </div>
+
+     <!-- The Life-Changing Magic Section -->
+    <div class="section-km">
+      <div class="section-header-km">
+         <i class="fas fa-wand-magic-sparkles"></i>
+         <h2>Beyond Tidiness: The Real Magic</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Kondo argues that the KonMari Method does more than just create a tidy home; it leads to profound life changes:</p>
+      <div class="impact-grid">
+          <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-brain"></i></div>
+              <h4 class="impact-title">Increased Clarity & Decision-Making</h4>
+              <p class="impact-description">Honing your ability to recognize what sparks joy improves your overall decision-making skills in all areas of life.</p>
+          </div>
+          <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-pastafarianism"></i></div> <!-- Changed icon to be more abstract -->
+              <h4 class="impact-title">Discovering What You Value</h4>
+              <p class="impact-description">The process forces you to confront your relationship with possessions and reveals what is truly important to you.</p>
+          </div>
+          <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <h4 class="impact-title">Gratitude & Respect for Belongings</h4>
+              <p class="impact-description">Learning to thank items before discarding fosters appreciation and encourages better care for the things you keep.</p>
+          </div>
+          <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-leaf"></i></div>
+              <h4 class="impact-title">Reduced Clutter & Stress</h4>
+              <p class="impact-description">Living only with items you love creates a calmer, more supportive environment, reducing mental and physical clutter.</p>
+          </div>
+           <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-user"></i></div>
+              <h4 class="impact-title">Increased Self-Confidence</h4>
+              <p class="impact-description">Successfully transforming your space builds confidence in your ability to create change in other areas of your life.</p>
+          </div>
+            <div class="impact-card">
+              <div class="impact-icon"><i class="fas fa-history"></i></div>
+              <h4 class="impact-title">Letting Go of the Past</h4>
+              <p class="impact-description">Discarding items tied to past identities or negative experiences frees you to embrace your present and future self.</p>
+          </div>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-km">
+      <div class="section-header-km">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key KonMari Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-km"><p>Keep only those things that speak to your heart. Then take the plunge and discard all the rest.</p><footer>— Marie Kondo</footer></blockquote>
+          <blockquote class="quote-km"><p>The space in which we live should be for the person we are becoming now, not the person we were in the past.</p><footer>— Marie Kondo</footer></blockquote>
+          <blockquote class="quote-km"><p>Life truly begins after you put your house in order.</p><footer>— Marie Kondo</footer></blockquote>
+           <blockquote class="quote-km"><p>To truly cherish the things that are important to you, you must first discard those that have outlived their purpose.</p><footer>— Marie Kondo</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-km">
+       <div class="section-header-km">
+          <i class="fas fa-home"></i>
+          <h2>Creating a Joyful Home and Life</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Life-Changing Magic of Tidying Up" offers a clear, actionable, and surprisingly spiritual approach to decluttering. The KonMari Method encourages a conscious relationship with our possessions, guiding us to surround ourselves only with things that bring us joy.</p>
+      <p class="text-base leading-relaxed">By following the category-based approach and the "spark joy" criterion, this method promises not just a permanently tidy home, but a clearer mind, a deeper understanding of oneself, and the confidence to create a life aligned with what truly matters.</p>
+       <div class="conclusion-highlight-km">
+           <p>Tidy your space, transform your life. Choose joy, and let the magic unfold. <strong>Keep only what you love.</strong></p>
+       </div>
+    </div>
+
+    <div class="footer-km">
+       <p>© 2024 Summary of "The Life-Changing Magic of Tidying Up" by Marie Kondo.</p>
+       <p class="mt-1">Content for informational purposes only. KonMari™ is a trademark of Marie Kondo.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
