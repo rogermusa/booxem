@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booxem - Visual Book Summaries</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wood-color: #9b7653;
+            --wood-dark: #76593d;
+            --shelf-height: 320px;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f5f2;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Bookshelf styling */
+        .shelf {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+        .shelf::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to bottom, var(--wood-color), var(--wood-dark));
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        .book {
+            transform: perspective(600px) rotateY(0deg);
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .book:hover {
+            transform: perspective(600px) rotateY(-10deg) translateY(-5px);
+            box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+        .book-cover {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        .book-spine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(to right, var(--wood-dark), var(--wood-color));
+        }
+        .book-title {
+            font-weight: bold;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            line-height: 1.2;
+            max-height: 2.4em;
+            overflow: hidden;
+        }
+        .book-author {
+            font-size: 0.75rem;
+            color: #666;
+            line-height: 1.2;
+        }
+        .category-title {
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+            background-color: #f8f5f2;
+            z-index: 10;
+        }
+        .category-line {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .category-line::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1px;
+            background-color: #ccc;
+            z-index: 1;
+        }
+        /* Header styling */
+        .header-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #6b5b95, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .search-bar {
+            border-bottom: 2px solid #6b5b95;
+        }
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, #6b5b95 0%, #ff6b6b 100%);
+        }
+        /* Books data for placeholder backgrounds */
+        [data-book="alchemist"] .book-cover {
+            background-color: #edd9af;
+            background-image: linear-gradient(to bottom, #f4e7d3, #edd9af);
+        }
+        [data-book="atomic-habits"] .book-cover {
+            background-color: #2f2f2f;
+            background-image: linear-gradient(to bottom, #3f3f3f, #2f2f2f);
+        }
+        [data-book="thinking-fast-slow"] .book-cover {
+            background-color: #f5f5f5;
+            background-image: linear-gradient(to bottom, #ffffff, #f5f5f5);
+        }
+        [data-book="four-agreements"] .book-cover {
+            background-color: #a7a7a7;
+            background-image: linear-gradient(to bottom, #c7c7c7, #a7a7a7);
+        }
+        [data-book="7-habits"] .book-cover {
+            background-color: #2c3e50;
+            background-image: linear-gradient(to bottom, #3c4e60, #2c3e50);
+        }
+        [data-book="daily-stoic"] .book-cover {
+            background-color: #8e8e8e;
+            background-image: linear-gradient(to bottom, #9e9e9e, #8e8e8e);
+        }
+        [data-book="subtle-art"] .book-cover {
+            background-color: #ff6b6b;
+            background-image: linear-gradient(to bottom, #ff8b8b, #ff6b6b);
+        }
+        [data-book="girl-wash-face"] .book-cover {
+            background-color: #f7e279;
+            background-image: linear-gradient(to bottom, #f7e279, #e7d269);
+        }
+        [data-book="badass"] .book-cover {
+            background-color: #ffe066;
+            background-image: linear-gradient(to bottom, #ffe066, #ffd046);
+        }
+        [data-book="12-rules"] .book-cover {
+            background-color: #4a6fa5;
+            background-image: linear-gradient(to bottom, #5a7fb5, #4a6fa5);
+        }
+        [data-book="48-laws"] .book-cover {
+            background-color: #1f1f1f;
+            background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
+        }
+        [data-book="mans-search"] .book-cover {
+            background-color: #b8c6db;
+            background-image: linear-gradient(to bottom, #c8d6eb, #b8c6db);
+        }
+        [data-book="daring-greatly"] .book-cover {
+            background-color: #6f42c1;
+            background-image: linear-gradient(to bottom, #7f52d1, #6f42c1);
+        }
+        [data-book="big-magic"] .book-cover {
+            background-color: #ff70a6;
+            background-image: linear-gradient(to bottom, #ff80b6, #ff70a6);
+        }
+        [data-book="quiet"] .book-cover {
+            background-color: #74b9ff;
+            background-image: linear-gradient(to bottom, #84c9ff, #74b9ff);
+        }
+        [data-book="magic-thinking"] .book-cover {
+            background-color: #20bf6b;
+            background-image: linear-gradient(to bottom, #30cf7b, #20bf6b);
+        }
+        [data-book="win-friends"] .book-cover {
+            background-color: #f0932b;
+            background-image: linear-gradient(to bottom, #f0a33b, #f0932b);
+        }
+        [data-book="love-languages"] .book-cover {
+            background-color: #eb4d4b;
+            background-image: linear-gradient(to bottom, #eb5d5b, #eb4d4b);
+        }
+        [data-book="deep-work"] .book-cover {
+            background-color: #3867d6;
+            background-image: linear-gradient(to bottom, #4877e6, #3867d6);
+        }
+        [data-book="getting-things"] .book-cover {
+            background-color: #4b7bec;
+            background-image: linear-gradient(to bottom, #5b8bfc, #4b7bec);
+        }
+        [data-book="cheese"] .book-cover {
+            background-color: #fed330;
+            background-image: linear-gradient(to bottom, #fee340, #fed330);
+        }
+        [data-book="rich-dad"] .book-cover {
+            background-color: #fa8231;
+            background-image: linear-gradient(to bottom, #fa9241, #fa8231);
+        }
+        [data-book="think-grow"] .book-cover {
+            background-color: #fc5c65;
+            background-image: linear-gradient(to bottom, #fc6c75, #fc5c65);
+        }
+        [data-book="4-hour"] .book-cover {
+            background-color: #45aaf2;
+            background-image: linear-gradient(to bottom, #55baff, #45aaf2);
+        }
+        [data-book="outliers"] .book-cover {
+            background-color: #a55eea;
+            background-image: linear-gradient(to bottom, #b56efa, #a55eea);
+        }
+        [data-book="positive-thinking"] .book-cover {
+            background-color: #fd9644;
+            background-image: linear-gradient(to bottom, #fda654, #fd9644);
+        }
+        [data-book="secret"] .book-cover {
+            background-color: #26de81;
+            background-image: linear-gradient(to bottom, #36ee91, #26de81);
+        }
+        [data-book="meditations"] .book-cover {
+            background-color: #778ca3;
+            background-image: linear-gradient(to bottom, #879cb3, #778ca3);
+        }
+        [data-book="letters-stoic"] .book-cover {
+            background-color: #4b6584;
+            background-image: linear-gradient(to bottom, #5b7594, #4b6584);
+        }
+        [data-book="power-now"] .book-cover {
+            background-color: #786fa6;
+            background-image: linear-gradient(to bottom, #887fb6, #786fa6);
+        }
+        [data-book="tidying"] .book-cover {
+            background-color: #f19066;
+            background-image: linear-gradient(to bottom, #f1a076, #f19066);
+        }
+        [data-book="courage-disliked"] .book-cover {
+            background-color: #574b90;
+            background-image: linear-gradient(to bottom, #675ba0, #574b90);
+        }
+        [data-book="stop-worrying"] .book-cover {
+            background-color: #3dc1d3;
+            background-image: linear-gradient(to bottom, #4dd1e3, #3dc1d3);
+        }
+        .book-cover-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        .book-cover-author {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        @media (max-width: 640px) {
+            .shelf {
+                margin-bottom: 20px;
+            }
+            .book-cover {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 mb-8">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center">
+                <span class="header-logo">Booxem</span>
+                <span class="ml-2 text-gray-500 italic text-sm mt-4">Visual book summaries</span>
+            </div>
+            <div class="w-full sm:w-auto mt-4 sm:mt-0 flex items-center">
+                <div class="relative w-full sm:w-64 mr-4">
+                    <input type="text" class="search-bar bg-transparent w-full py-2 pl-3 pr-10 text-gray-700 focus:outline-none" placeholder="Search books...">
+                    <div class="absolute right-0 top-0 mt-2 mr-3 text-gray-600">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition duration-300">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </header>
+<!-- Hero Section -->
+<section class="hero text-white py-16 px-6 mb-12">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Self-Improvement Books Visually</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">Booxem summarizes the best self-help books with beautiful visuals to help you absorb key concepts quickly.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="bg-white text-purple-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                Explore Library
+            </button>
+            <button class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-purple-700 transition duration-300">
+                How It Works
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Main Content -->
+<main class="container mx-auto px-6 mb-12">
+    <!-- Popular Books Section -->
+    <section class="mb-16">
+        <div class="category-line">
+            <h2 class="category-title text-2xl font-bold">Popular Books</h2>
+        </div>
+<div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/atomic-habits" class="book" data-book="atomic-habits">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Atomic Habits</div>
+                <div class="book-cover-author">James Clear</div>
+            </div>
+            <div class="book-title">Atomic Habits</div>
+            <div class="book-author">James Clear</div>
+        </a>
+        
+        <a href="/summary/subtle-art" class="book" data-book="subtle-art">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Subtle Art of Not Giving a F*ck</div>
+                <div class="book-cover-author">Mark Manson</div>
+            </div>
+            <div class="book-title">The Subtle Art of Not Giving a F*ck</div>
+            <div class="book-author">Mark Manson</div>
+        </a>
+        
+        <a href="/summary/alchemist" class="book" data-book="alchemist">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Alchemist</div>
+                <div class="book-cover-author">Paulo Coelho</div>
+            </div>
+            <div class="book-title">The Alchemist</div>
+            <div class="book-author">Paulo Coelho</div>
+        </a>
+        
+        <a href="/summary/thinking-fast-slow" class="book" data-book="thinking-fast-slow">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Thinking Fast and Slow</div>
+                <div class="book-cover-author">Daniel Kahneman</div>
+            </div>
+            <div class="book-title">Thinking Fast and Slow</div>
+            <div class="book-author">Daniel Kahneman</div>
+        </a>
+        
+        <a href="/summary/badass" class="book" data-book="badass">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">You Are a Badass</div>
+                <div class="book-cover-author">Jen Sincero</div>
+            </div>
+            <div class="book-title">You Are a Badass</div>
+            <div class="book-author">Jen Sincero</div>
+        </a>
+        
+        <a href="/summary/12-rules" class="book" data-book="12-rules">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">12 Rules for Life</div>
+                <div class="book-cover-author">Jordan Peterson</div>
+            </div>
+            <div class="book-title">12 Rules for Life</div>
+            <div class="book-author">Jordan Peterson</div>
+        </a>
+    </div>
+</section>
+
+<!-- Personal Growth Section -->
+<section class="mb-16">
+    <div class="category-line">
+        <h2 class="category-title text-2xl font-bold">Personal Growth</h2>
+    </div>
+    
+    <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/four-agreements" class="book" data-book="four-agreements">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Four Agreements</div>
+                <div class="book-cover-author">Don Miguel Ruiz</div>
+            </div>
+            <div class="book-title">The Four Agreements</div>
+            <div class="book-author">Don Miguel Ruiz</div>
+        </a>
+        
+        <a href="/summary/7-habits" class="book" data-book="7-habits">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The 7 Habits of Highly Effective People</div>
+                <div class="book-cover-author">Stephen R. Covey</div>
+            </div>
+            <div class="book-title">The 7 Habits of Highly Effective People</div>
+            <div class="book-author">Stephen R. Covey</div>
+        </a>
+        
+        <a href="/summary/girl-wash-face" class="book" data-book="girl-wash-face">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Girl, Wash Your Face</div>
+                <div class="book-cover-author">Rachel Hollis</div>
+            </div>
+            <div class="book-title">Girl, Wash Your Face</div>
+            <div class="book-author">Rachel Hollis</div>
+        </a>
+        
+        <a href="/summary/daring-greatly" class="book" data-book="daring-greatly">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Daring Greatly</div>
+                <div class="book-cover-author">Brene Brown</div>
+            </div>
+            <div class="book-title">Daring Greatly</div>
+            <div class="book-author">Brene Brown</div>
+        </a>
+        
+        <a href="/summary/big-magic" class="book" data-book="big-magic">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Big Magic</div>
+                <div class="book-cover-author">Elizabeth Gilbert</div>
+            </div>
+            <div class="book-title">Big Magic</div>
+            <div class="book-author">Elizabeth Gilbert</div>
+        </a>
+        
+        <a href="/summary/courage-disliked" class="book" data-book="courage-disliked">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Courage to Be Disliked</div>
+                <div class="book-cover-author">Ichiro Kishimi & Fumitake Koga</div>
+            </div>
+            <div class="book-title">The Courage to Be Disliked</div>
+            <div class="book-author">Ichiro Kishimi & Fumitake Koga</div>
+        </a>
+    </div>
+</section>
+
+<!-- Philosophy & Wisdom Section -->
+<section class="mb-16">
+    <div class="category-line">
+        <h2 class="category-title text-2xl font-bold">Philosophy & Wisdom</h2>
+    </div>
+    
+    <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/daily-stoic" class="book" data-book="daily-stoic">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Daily Stoic</div>
+                <div class="book-cover-author">Ryan Holiday</div>
+            </div>
+            <div class="book-title">The Daily Stoic</div>
+            <div class="book-author">Ryan Holiday</div>
+        </a>
+        
+        <a href="/summary/48-laws" class="book" data-book="48-laws">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The 48 Laws of Power</div>
+                <div class="book-cover-author">Robert Greene</div>
+            </div>
+            <div class="book-title">The 48 Laws of Power</div>
+            <div class="book-author">Robert Greene</div>
+        </a>
+        
+        <a href="/summary/mans-search" class="book" data-book="mans-search">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Man's Search for Meaning</div>
+                <div class="book-cover-author">Viktor Frankl</div>
+            </div>
+            <div class="book-title">Man's Search for Meaning</div>
+            <div class="book-author">Viktor Frankl</div>
+        </a>
+        
+        <a href="/summary/meditations" class="book" data-book="meditations">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Meditations</div>
+                <div class="book-cover-author">Marcus Aurelius</div>
+            </div>
+            <div class="book-title">Meditations</div>
+            <div class="book-author">Marcus Aurelius</div>
+        </a>
+        
+        <a href="/summary/letters-stoic" class="book" data-book="letters-stoic">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Letters from a Stoic</div>
+                <div class="book-cover-author">Seneca</div>
+            </div>
+            <div class="book-title">Letters from a Stoic</div>
+            <div class="book-author">Seneca</div>
+        </a>
+        
+        <a href="/summary/power-now" class="book" data-book="power-now">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Power of Now</div>
+                <div class="book-cover-author">Eckhart Tolle</div>
+            </div>
+            <div class="book-title">The Power of Now</div>
+            <div class="book-author">Eckhart Tolle</div>
+        </a>
+    </div>
+</section>
+
+<!-- Success & Productivity Section -->
+<section class="mb-16">
+    <div class="category-line">
+        <h2 class="category-title text-2xl font-bold">Success & Productivity</h2>
+    </div>
+    
+    <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/deep-work" class="book" data-book="deep-work">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Deep Work</div>
+                <div class="book-cover-author">Cal Newport</div>
+            </div>
+            <div class="book-title">Deep Work</div>
+            <div class="book-author">Cal Newport</div>
+        </a>
+        
+        <a href="/summary/getting-things" class="book" data-book="getting-things">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Getting Things Done</div>
+                <div class="book-cover-author">David Allen</div>
+            </div>
+            <div class="book-title">Getting Things Done</div>
+            <div class="book-author">David Allen</div>
+        </a>
+        
+        <a href="/summary/rich-dad" class="book" data-book="rich-dad">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Rich Dad Poor Dad</div>
+                <div class="book-cover-author">Robert T. Kiyosaki</div>
+            </div>
+            <div class="book-title">Rich Dad Poor Dad</div>
+            <div class="book-author">Robert T. Kiyosaki</div>
+        </a>
+        
+        <a href="/summary/think-grow" class="book" data-book="think-grow">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Think and Grow Rich</div>
+                <div class="book-cover-author">Napoleon Hill</div>
+            </div>
+            <div class="book-title">Think and Grow Rich</div>
+            <div class="book-author">Napoleon Hill</div>
+        </a>
+        
+        <a href="/summary/4-hour" class="book" data-book="4-hour">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The 4-Hour Workweek</div>
+                <div class="book-cover-author">Tim Ferriss</div>
+            </div>
+            <div class="book-title">The 4-Hour Workweek</div>
+            <div class="book-author">Tim Ferriss</div>
+        </a>
+        
+        <a href="/summary/outliers" class="book" data-book="outliers">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Outliers</div>
+                <div class="book-cover-author">Malcolm Gladwell</div>
+            </div>
+            <div class="book-title">Outliers</div>
+            <div class="book-author">Malcolm Gladwell</div>
+        </a>
+    </div>
+</section>
+
+<!-- Mindset & Psychology Section -->
+<section class="mb-16">
+    <div class="category-line">
+        <h2 class="category-title text-2xl font-bold">Mindset & Psychology</h2>
+    </div>
+    
+    <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/quiet" class="book" data-book="quiet">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Quiet</div>
+                <div class="book-cover-author">Susan Cain</div>
+            </div>
+            <div class="book-title">Quiet</div>
+            <div class="book-author">Susan Cain</div>
+        </a>
+        
+        <a href="/summary/magic-thinking" class="book" data-book="magic-thinking">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Magic of Thinking Big</div>
+                <div class="book-cover-author">David Joseph Schwartz</div>
+            </div>
+            <div class="book-title">The Magic of Thinking Big</div>
+            <div class="book-author">David Joseph Schwartz</div>
+        </a>
+        
+        <a href="/summary/win-friends" class="book" data-book="win-friends">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">How to Win Friends and Influence People</div>
+                <div class="book-cover-author">Dale Carnegie</div>
+            </div>
+            <div class="book-title">How to Win Friends and Influence People</div>
+            <div class="book-author">Dale Carnegie</div>
+        </a>
+        
+        <a href="/summary/love-languages" class="book" data-book="love-languages">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The 5 Love Languages</div>
+                <div class="book-cover-author">Gary Chapman</div>
+            </div>
+            <div class="book-title">The 5 Love Languages</div>
+            <div class="book-author">Gary Chapman</div>
+        </a>
+        
+        <a href="/summary/positive-thinking" class="book" data-book="positive-thinking">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Power Of Positive Thinking</div>
+                <div class="book-cover-author">Norman Vincent Peale</div>
+            </div>
+            <div class="book-title">The Power Of Positive Thinking</div>
+            <div class="book-author">Norman Vincent Peale</div>
+        </a>
+        
+        <a href="/summary/secret" class="book" data-book="secret">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Secret</div>
+                <div class="book-cover-author">Rhonda Byrne</div>
+            </div>
+            <div class="book-title">The Secret</div>
+            <div class="book-author">Rhonda Byrne</div>
+        </a>
+    </div>
+</section>
+
+<!-- Change & Adaptability Section -->
+<section class="mb-16">
+    <div class="category-line">
+        <h2 class="category-title text-2xl font-bold">Change & Adaptability</h2>
+    </div>
+    
+    <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="/summary/cheese" class="book" data-book="cheese">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">Who Moved My Cheese?</div>
+                <div class="book-cover-author">Spencer Johnson</div>
+            </div>
+            <div class="book-title">Who Moved My Cheese?</div>
+            <div class="book-author">Spencer Johnson</div>
+        </a>
+        
+        <a href="/summary/stop-worrying" class="book" data-book="stop-worrying">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">How to Stop Worrying and Start Living</div>
+                <div class="book-cover-author">Dale Carnegie</div>
+            </div>
+            <div class="book-title">How to Stop Worrying and Start Living</div>
+            <div class="book-author">Dale Carnegie</div>
+        </a>
+        
+        <a href="/summary/tidying" class="book" data-book="tidying">
+            <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-cover-title">The Life-Changing Magic of Tidying Up</div>
+                <div class="book-cover-author">Marie Kondo</div>
+            </div>
+            <div class="book-title">The Life-Changing Magic of Tidying Up</div>
+            <div class="book-author">Marie Kondo</div>
+        </a>
+    </div>
+</section>
