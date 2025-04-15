@@ -38,6 +38,15 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+    strong { /* Define emphasis style */
+        font-weight: 700;
+        color: var(--ctbd-text-title-red); /* Red emphasis */
+    }
+    em { /* Define italic emphasis style */
+        font-style: italic;
+        color: var(--ctbd-secondary-text); /* Subtler color for terms */
+    }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -231,10 +240,7 @@
       color: var(--ctbd-secondary-text); /* Softer text */
       line-height: 1.7;
     }
-     .principle-summary-ctbd strong {
-        font-weight: 700;
-        color: var(--ctbd-text-title-red); /* Red emphasis */
-     }
+     /* Principle summary strong tags already handled globally */
 
     .implications-list {
         list-style: none;
@@ -321,12 +327,12 @@
     <!-- Core Philosophy Section: Adlerian Psychology -->
     <div class="section-ctbd">
       <div class="section-header-ctbd">
-        <i class="fas fa-key"></i> <!-- Key for unlocking freedom -->
+        <i class="fas fa-key"></i>
         <h2>Adlerian Psychology: Freedom from the Past</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">"The Courage to Be Disliked" presents the psychological and philosophical ideas of Alfred Adler, a contemporary of Freud and Jung, through an engaging dialogue between a philosopher and a youth. It fundamentally challenges conventional thinking about happiness, freedom, and interpersonal relationships.</p>
-      <p class="mb-4 text-base leading-relaxed">A core tenet is the **rejection of etiology (the study of causation)**, particularly Freudian trauma theory. Adlerian psychology argues that past experiences, while influential, do not *determine* our present. We are not defined by trauma, but by the **meaning we assign** to past events. Instead, it embraces **teleology (the study of purpose)** – the idea that our behavior is driven by the goals we set for ourselves, consciously or unconsciously.</p>
-      <p class="text-base leading-relaxed">Unhappiness, anxiety, and other negative states are often unconsciously *chosen* by the individual to achieve certain goals (like avoiding responsibility, seeking attention, or justifying inaction). The power to change lies entirely in the present moment.</p>
+      <p class="mb-4 text-base leading-relaxed">A core tenet is the <strong>rejection of etiology</strong> (the study of causation), particularly Freudian trauma theory. Adlerian psychology argues that past experiences, while influential, do not <em>determine</em> our present. We are not defined by trauma, but by the <strong>meaning we assign</strong> to past events. Instead, it embraces <strong>teleology</strong> (the study of purpose) – the idea that our behavior is driven by the goals we set for ourselves, consciously or unconsciously.</p>
+      <p class="text-base leading-relaxed">Unhappiness, anxiety, and other negative states are often unconsciously <em>chosen</em> by the individual to achieve certain goals (like avoiding responsibility, seeking attention, or justifying inaction). The power to change lies entirely in the present moment.</p>
 
       <div class="quote-ctbd">
           <p>"No experience is in itself a cause of our success or failure. We do not suffer from the shock of our experiences—the so-called trauma—but instead we make out of them whatever suits our purposes."</p>
@@ -337,7 +343,7 @@
     <!-- Key Principles Section -->
     <div class="section-ctbd">
       <div class="section-header-ctbd">
-         <i class="fas fa-tasks"></i> <!-- Icon for tasks/principles -->
+         <i class="fas fa-tasks"></i>
          <h2>Key Principles for Living Freely</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Several interconnected principles form the foundation of Adlerian psychology as presented in the book:</p>
@@ -345,22 +351,22 @@
          <div class="principle-card-ctbd">
             <div class="principle-icon-ctbd"><i class="fas fa-users-slash"></i></div>
             <div class="principle-title-ctbd">Separation of Tasks</div>
-            <p class="principle-summary-ctbd">All interpersonal problems arise from confusing one's own tasks with those of others. Your task is what you directly control (your effort, choices, attitude). Others' tasks are their reactions, feelings, and judgments. **Do not intervene in others' tasks, and do not allow others to intervene in yours.** This creates true freedom from seeking approval.</p>
+            <p class="principle-summary-ctbd">All interpersonal problems arise from confusing one's own tasks with those of others. Your task is what you directly control (your effort, choices, attitude). Others' tasks are their reactions, feelings, and judgments. <strong>Do not intervene in others' tasks, and do not allow others to intervene in yours.</strong> This creates true freedom from seeking approval.</p>
         </div>
         <div class="principle-card-ctbd">
-            <div class="principle-icon-ctbd"><i class="fas fa-people-carry"></i></div> <!-- Icon for community -->
+            <div class="principle-icon-ctbd"><i class="fas fa-people-carry"></i></div>
             <div class="principle-title-ctbd">Community Feeling (Kōkenkan)</div>
-            <p class="principle-summary-ctbd">True happiness is found in **"Community Feeling"** – the sense of belonging and contribution to a larger whole (family, society, humanity). This involves seeing others as comrades, not competitors, and feeling "I am useful to someone." It requires self-acceptance and trust in others.</p>
+            <p class="principle-summary-ctbd">True happiness is found in <strong>Community Feeling</strong> – the sense of belonging and contribution to a larger whole (family, society, humanity). This involves seeing others as comrades, not competitors, and feeling "I am useful to someone." It requires self-acceptance and trust in others.</p>
         </div>
         <div class="principle-card-ctbd">
             <div class="principle-icon-ctbd"><i class="fas fa-check-circle"></i></div>
             <div class="principle-title-ctbd">Self-Acceptance</div>
-            <p class="principle-summary-ctbd">Focus on what you *can* change and accept what you *cannot*. **Self-acceptance** means acknowledging your "unable-to-do" aspects without judgment, and focusing your energy on developing what you can. It's about accepting your irreplaceable "60 percent" self and moving forward, distinct from positive thinking that ignores reality.</p>
+            <p class="principle-summary-ctbd">Focus on what you <em>can</em> change and accept what you <em>cannot</em>. <strong>Self-acceptance</strong> means acknowledging your "unable-to-do" aspects without judgment, and focusing your energy on developing what you can. It's about accepting your irreplaceable "60 percent" self and moving forward, distinct from positive thinking that ignores reality.</p>
         </div>
         <div class="principle-card-ctbd">
             <div class="principle-icon-ctbd"><i class="fas fa-hand-holding-heart"></i></div>
             <div class="principle-title-ctbd">Confidence in Others (Trust)</div>
-            <p class="principle-summary-ctbd">Unconditionally trusting others, seeing them as comrades rather than enemies, is essential for community feeling. This doesn't mean being naive about potential betrayal, but choosing to trust as *your* task, regardless of how *they* behave (their task). This builds deeper relationships.</p>
+            <p class="principle-summary-ctbd">Unconditionally trusting others, seeing them as comrades rather than enemies, is essential for community feeling. This doesn't mean being naive about potential betrayal, but choosing to trust as <em>your</em> task, regardless of how <em>they</em> behave (their task). This builds deeper relationships.</p>
         </div>
          <div class="principle-card-ctbd">
             <div class="principle-icon-ctbd"><i class="fas fa-walking"></i></div>
@@ -370,7 +376,7 @@
          <div class="principle-card-ctbd">
             <div class="principle-icon-ctbd"><i class="fas fa-star"></i></div>
             <div class="principle-title-ctbd">Focus on the Here and Now</div>
-            <p class="principle-summary-ctbd">Life is a series of moments. Focus intensely on the **"here and now,"** like dancing, without being bound by past interpretations or future anxieties. Life is not a line towards a destination, but a continuous series of present moments to be lived fully.</p>
+            <p class="principle-summary-ctbd">Life is a series of moments. Focus intensely on the <strong>here and now</strong>, like dancing, without being bound by past interpretations or future anxieties. Life is not a line towards a destination, but a continuous series of present moments to be lived fully.</p>
         </div>
       </div>
     </div>
@@ -378,7 +384,7 @@
      <!-- Implications for Life Section -->
     <div class="section-ctbd">
       <div class="section-header-ctbd">
-         <i class="fas fa-leaf"></i> <!-- Icon representing growth/change -->
+         <i class="fas fa-leaf"></i>
          <h2>Implications for Freedom and Happiness</h2>
       </div>
       <p class="mb-4 text-base leading-relaxed">Applying these principles leads to profound shifts in perspective:</p>
@@ -391,7 +397,7 @@
               </div>
           </li>
           <li>
-              <i class="fas fa-heart-broken"></i> <!-- Changed icon -->
+              <i class="fas fa-heart-broken"></i>
               <div>
                   <span class="implication-title">Rejection of Recognition Seeking:</span>
                   <span class="description">Living to satisfy others' expectations is enslavement. True freedom means living according to your own principles, even if it invites dislike.</span>
@@ -438,13 +444,13 @@
     <!-- Conclusion Section -->
     <div class="section-ctbd">
        <div class="section-header-ctbd">
-          <i class="fas fa-award"></i> <!-- Icon for courage/achievement -->
+          <i class="fas fa-award"></i>
           <h2>The Courage to Choose Freedom</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"The Courage to Be Disliked" offers a liberating and actionable philosophy for achieving happiness and freedom. It argues that our lives are not predetermined by past events or external circumstances, but are shaped by the goals we choose and the meaning we create.</p>
       <p class="text-base leading-relaxed">By embracing the separation of tasks, cultivating community feeling, accepting ourselves, and focusing on contribution in the present moment, we can break free from the chains of interpersonal conflict and the quest for external validation. This requires courage – specifically, the courage to live authentically and be disliked by those who disapprove of our choices.</p>
        <div class="conclusion-highlight-ctbd">
-           <p>Happiness is not something to be attained in the future; it is a state of being, accessible right now through **contribution, connection, and the courage to live freely.**</p>
+           <p>Happiness is not something to be attained in the future; it is a state of being, accessible right now through <strong>contribution, connection, and the courage to live freely.</strong></p>
        </div>
     </div>
 
