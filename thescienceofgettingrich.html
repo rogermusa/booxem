@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Science of Getting Rich Summary - Wallace D. Wattles</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Science of Getting Rich Cover Color Scheme */
+      --sogr-bg: #FDFBF5; /* Light Cream/Off-white */
+      --sogr-card-bg: #FFFFFF;
+      --sogr-text-dark: #000000; /* Black */
+      --sogr-text-light: #FFFFFF;
+      --sogr-accent-red: #A11D21; /* Deep Red */
+      --sogr-accent-gold: #B18D40; /* Muted Gold */
+      --sogr-accent-yellow-bg: #FFF8DC; /* Light Yellow Background for subtitle area */
+      --sogr-border-light: #EDEAE0;
+      --sogr-border-medium: #DED8C8;
+      --sogr-hover-gold: #CFAF6E; /* Lighter Gold for hover */
+      --sogr-secondary-text: #333333;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif; /* Clean Sans-serif for body */
+      color: var(--sogr-secondary-text);
+      line-height: 1.75;
+      background-color: var(--sogr-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Times New Roman', Times, serif; /* Classic Serif for Headings */
+      color: var(--sogr-text-dark); /* Black headings */
+      font-weight: bold; /* Times is bold by default */
+    }
+     /* Define global emphasis style */
+    strong {
+        font-weight: bold; /* Ensure strong is bold */
+        color: var(--sogr-accent-red); /* Red emphasis */
+    }
+     /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--sogr-secondary-text); /* Keep italics subtle */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-sogr {
+      background-color: var(--sogr-card-bg); /* White background */
+      color: var(--sogr-text-dark);
+      padding: 0; /* Use internal elements */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 0; /* Sharp corners like book */
+      border: 1px solid var(--sogr-text-dark); /* Black border */
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      overflow: hidden; /* Contain banners */
+    }
+    .header-top-banner {
+        background-color: var(--sogr-accent-red);
+        color: var(--sogr-text-light);
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: sans-serif; /* Simple sans-serif for banner */
+    }
+    .header-content {
+        padding: 2rem 1.5rem;
+    }
+     .title-the {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 0.25rem;
+        display: block;
+     }
+      .title-of {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 0.25rem 0;
+        display: block;
+      }
+       .gold-divider {
+         height: 1px;
+         width: 60px;
+         background-color: var(--sogr-accent-gold);
+         margin: 0.1rem auto; /* Tight spacing */
+       }
+    .main-header-sogr h1 { /* Title lines */
+        font-size: 3rem; /* Large title */
+        line-height: 1.1;
+        margin-bottom: 0.25rem;
+        letter-spacing: 1px;
+    }
+    .subtitle-banner {
+        background-color: var(--sogr-accent-yellow-bg);
+        color: var(--sogr-accent-red);
+        padding: 1rem 1.5rem;
+        margin-top: 1.5rem;
+        border-top: 1px solid var(--sogr-border-medium);
+        border-bottom: 1px solid var(--sogr-border-medium);
+    }
+    .subtitle-banner h2 { /* Subtitle text */
+        font-family: sans-serif; /* Match cover */
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.4;
+        color: inherit;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+     .author-section {
+         padding: 1.5rem;
+     }
+      .author-section h3 { /* Author */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+        font-weight: normal; /* Regular weight */
+        color: var(--sogr-text-dark);
+        margin: 0;
+        letter-spacing: 1px;
+      }
+    .book-cover-sogr {
+      max-width: 160px;
+      height: auto;
+      border-radius: 0;
+      border: 1px solid var(--sogr-text-dark);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+     .coins-image { /* Coins below author */
+         height: 25px;
+         width: auto;
+         display: block;
+         margin: 0.5rem auto 0 auto;
+     }
+
+
+    /* Section styling */
+    .section-sogr {
+      background-color: var(--sogr-card-bg);
+      color: var(--sogr-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--sogr-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-sogr:hover {
+        border-color: var(--sogr-accent-gold); /* Gold border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-sogr {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--sogr-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-sogr h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700; /* Bold */
+      color: var(--sogr-text-dark);
+    }
+    .section-header-sogr i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--sogr-accent-red); /* Red icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-sogr:hover .section-header-sogr i {
+        transform: rotate(3deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-sogr {
+      background-color: var(--sogr-bg); /* Cream background */
+      border: 1px solid var(--sogr-border-light);
+      border-left: 4px solid var(--sogr-accent-gold); /* Gold left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      color: var(--sogr-text-dark);
+      border-radius: 0 3px 3px 0;
+      font-size: 1rem;
+      font-style: normal; /* Not italic for this style */
+      font-weight: 400; /* Regular weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-sogr:hover {
+        background-color: #FFF;
+        border-left-color: var(--sogr-accent-red); /* Red border on hover */
+        border-color: var(--sogr-border-medium);
+    }
+    .quote-sogr p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-sogr footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      color: var(--sogr-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-list-sogr {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .principle-item-sogr {
+      background-color: var(--sogr-card-bg);
+      border: 1px solid var(--sogr-border-light);
+      border-radius: 4px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      align-items: flex-start;
+    }
+     .principle-item-sogr:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+      border-color: var(--sogr-border-medium);
+     }
+     .principle-icon-sogr {
+        flex-shrink: 0;
+        margin-right: 1.25rem;
+        font-size: 1.5rem; /* Adjust icon size */
+        color: var(--sogr-accent-gold); /* Gold icon */
+        opacity: 0.9;
+        padding-top: 0.2rem; /* Align icon */
+        width: 30px; /* Ensure consistent spacing */
+        text-align: center;
+        transition: color 0.25s ease;
+     }
+      .principle-item-sogr:hover .principle-icon-sogr {
+          color: var(--sogr-accent-red); /* Red icon */
+      }
+     .principle-content-sogr {
+         flex-grow: 1;
+     }
+    .principle-title-sogr {
+      font-family: 'Times New Roman', Times, serif; /* Serif Title */
+      font-size: 1.3rem; /* Slightly larger title */
+      font-weight: bold;
+      color: var(--sogr-text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .principle-summary-sogr {
+      font-size: 0.95rem;
+      color: var(--sogr-secondary-text);
+      line-height: 1.7;
+    }
+     /* Strong/em tags handled globally */
+     .principle-summary-sogr ul {
+         list-style: disc;
+         margin-left: 1.25rem;
+         margin-top: 0.5rem;
+     }
+
+
+    .conclusion-highlight-sogr {
+        background-color: var(--sogr-accent-gold); /* Gold background */
+        color: var(--sogr-text-dark); /* Dark text */
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--sogr-hover-gold);
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+    }
+    .conclusion-highlight-sogr p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 400; /* Regular weight */
+    }
+    .conclusion-highlight-sogr strong {
+        font-weight: 700; /* Bold */
+        color: var(--sogr-accent-red); /* Red emphasis */
+    }
+
+    .footer-sogr {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-sogr">
+      <div class="header-top-banner">As Featured In The Bestselling Book THE SECRET</div>
+      <div class="header-content">
+        <span class="title-the">The</span>
+        <h1>SCIENCE</h1>
+        <div class="gold-divider"></div>
+        <span class="title-of">of</span>
+        <div class="gold-divider"></div>
+        <h1>GETTING</h1>
+        <h1>RICH</h1>
+        <img src="https://m.media-amazon.com/images/I/71BOsj+kscL._SL1500_.jpg" alt="The Science of Getting Rich Book Cover" class="book-cover-sogr">
+      </div>
+      <div class="subtitle-banner">
+        <h2>The Proven Mental Program to a Life of Wealth</h2>
+      </div>
+       <div class="author-section">
+            <h3>WALLACE D. WATTLES</h3>
+             <!-- Placeholder for coin image, replace src if needed -->
+            <img src="https://img.icons8.com/plasticine/100/000000/stack-of-coins.png" alt="Coins icon" class="coins-image"/>
+       </div>
+    </div>
+
+    <!-- Core Philosophy Section: The Thinking Stuff -->
+    <div class="section-sogr">
+      <div class="section-header-sogr">
+        <i class="fas fa-atom"></i>
+        <h2>The Foundation: The Thinking Substance</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Science of Getting Rich," a cornerstone of New Thought literature, posits that there is a **Thinking Substance** (or Formless Stuff) from which all things are made and which permeates all space. This Substance is intelligent, alive, and responds to thought.</p>
+      <p class="mb-4 text-base leading-relaxed">The central premise is that **thought**, impressed upon this Formless Substance, creates the form or reality imagined. Therefore, by thinking in a specific way – a "Certain Way" – individuals can cause the creation of riches (defined broadly as having enough to live fully and express potential).</p>
+      <p class="text-base leading-relaxed">Wattles argues that getting rich is an exact science, like algebra or arithmetic. There are specific laws governing the process of acquiring riches, and if these laws are followed precisely, anyone can become wealthy. It's not about environment, talent (beyond basic ability), or saving pennies, but about thinking and acting according to these universal principles.</p>
+
+      <div class="quote-sogr">
+          <p>"Thought is the only power which can produce tangible riches from the Formless Substance. The stuff from which all things are made is a substance which thinks, and a thought of form in this substance produces the form."</p>
+          <footer>— Wallace D. Wattles</footer>
+      </div>
+    </div>
+
+    <!-- Key Principles Section -->
+    <div class="section-sogr">
+      <div class="section-header-sogr">
+         <i class="fas fa-seedling"></i>
+         <h2>Principles of the Science of Getting Rich</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Wattles outlines several fundamental principles for creating wealth:</p>
+      <ul class="principles-list-sogr">
+         <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-infinity"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">The Right To Be Rich</div>
+                <p class="principle-summary-sogr">It is a natural right and necessity to desire riches, as wealth allows for the fullest expression of one's potential – developing body, mind, and soul. Poverty is not virtuous.</p>
+            </div>
+         </li>
+         <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-brain"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Think in the Certain Way</div>
+                <p class="principle-summary-sogr">Hold a clear, detailed mental image of what you desire. Maintain **unwavering faith** that this desire is already on its way to you. Eliminate doubt and fear. Focus thought only on abundance and creation, never on lack or competition.</p>
+            </div>
+         </li>
+          <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-hand-holding-heart"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Gratitude</div>
+                <p class="principle-summary-sogr">Cultivate a constant attitude of **gratitude**. Be genuinely thankful for the blessings you already have. Gratitude connects you to the Formless Substance and keeps your mind focused on the positive, attracting more good.</p>
+            </div>
+         </li>
+         <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-bullseye"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Form a Clear Mental Image</div>
+                <p class="principle-summary-sogr">You must have a **clear and definite** picture of what you want to create or acquire. Vague desires produce vague results. Make your mental image precise and hold it continuously.</p>
+            </div>
+         </li>
+         <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-compass"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Faith and Purpose</div>
+                <p class="principle-summary-sogr">Combine your clear image with unshakeable **faith** that it is being realized, and a steadfast **purpose** to attain it. This combination impresses your thought upon the Formless Substance.</p>
+            </div>
+         </li>
+         <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-running"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Act in the Certain Way</div>
+                <p class="principle-summary-sogr">Thought must be combined with action. Act **now**, efficiently, and successfully on the tasks of your present environment. Each day, do all that you can do that day. Act with the feeling of already being successful and prosperous. Importantly, act on the **creative plane**, not the competitive one – focus on creating value, not beating others.</p>
+            </div>
+         </li>
+           <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-arrow-up"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">Increase Life</div>
+                <p class="principle-summary-sogr">Your core motive should be to **increase life** – for yourself and others. Give every person more in use value than you take from them in cash value. Convey the impression of advancement and growth in all interactions.</p>
+            </div>
+         </li>
+           <li class="principle-item-sogr">
+             <div class="principle-icon-sogr"><i class="fas fa-hand-sparkles"></i></div>
+             <div class="principle-content-sogr">
+                <div class="principle-title-sogr">The Impressing Will</div>
+                <p class="principle-summary-sogr">Use your will only upon **yourself** – to maintain your faith, purpose, gratitude, and action in the Certain Way. Do *not* try to use willpower to coerce others or manipulate external circumstances directly; impress your thought on the Formless Substance instead.</p>
+            </div>
+         </li>
+      </ul>
+       <div class="quote-sogr">
+          <p>"Do all the work you can do, every day, but do it in an efficient manner. Put the power of success, and the purpose to get rich, into everything that you do."</p>
+          <footer>— Wallace D. Wattles</footer>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-sogr">
+      <div class="section-header-sogr">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Quotes on Wealth Creation</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-sogr"><p>"Man can form things in his thought, and, by impressing his thought upon Formless Substance, can cause the thing he thinks about to be created."</p><footer>— Wallace D. Wattles</footer></blockquote>
+          <blockquote class="quote-sogr"><p>"Give every man more in use value than you take from him in cash value; then you are adding to the life of the world by every business transaction."</p><footer>— Wallace D. Wattles</footer></blockquote>
+          <blockquote class="quote-sogr"><p>"By thought, the thing you want is brought to you; by action you receive it."</p><footer>— Wallace D. Wattles</footer></blockquote>
+           <blockquote class="quote-sogr"><p>"Get rich by creation, not by competition!"</p><footer>— Wallace D. Wattles</footer></blockquote>
+           <blockquote class="quote-sogr"><p>"The grateful mind is constantly fixed upon the best. Therefore it tends to become the best. It takes the form or character of the best, and will receive the best."</p><footer>— Wallace D. Wattles</footer></blockquote>
+           <blockquote class="quote-sogr"><p>"There is a thinking stuff from which all things are made... A thought, in this substance, produces the thing that is imaged by the thought."</p><footer>— Wallace D. Wattles</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-sogr">
+       <div class="section-header-sogr">
+          <i class="fas fa-check-circle"></i>
+          <h2>Mastering the Science</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Science of Getting Rich" offers a concise, powerful formula for achieving wealth based on metaphysical principles and purposeful action. It emphasizes the creative power of thought directed by faith and gratitude, combined with efficient, value-adding action in the present moment.</p>
+      <p class="text-base leading-relaxed">While written over a century ago, its core message – that mindset, belief, and aligned action are the keys to attracting abundance – continues to resonate and served as a major inspiration for later works like "The Secret." It encourages readers to take control of their mental faculty and act decisively to create the prosperous life they desire.</p>
+       <div class="conclusion-highlight-sogr">
+           <p>Think clearly, act purposefully, maintain faith, practice gratitude, and give more in value than you receive. This is the <strong>Certain Way</strong> that leads to riches.</p>
+       </div>
+    </div>
+
+    <div class="footer-sogr">
+       <p>© 2024 Summary of "The Science of Getting Rich" by Wallace D. Wattles.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the original text (1910).</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
