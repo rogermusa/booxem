@@ -40,6 +40,14 @@
       text-transform: uppercase; /* Uppercase Headings */
       letter-spacing: 0.5px;
     }
+    strong { /* Standard strong tag styling */
+        font-weight: 700;
+        color: var(--rdpd-accent-purple-dark); /* Dark Purple emphasis */
+    }
+    em { /* Standard italic tag styling */
+        font-style: italic;
+        color: var(--rdpd-text-dark); /* Or choose another color if needed */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -258,6 +266,7 @@
            opacity: 0.9;
            padding-left: calc(30px + 1rem); /* Indent summary past icon */
        }
+       /* Overwrite global strong style within lesson summary if needed */
        .lesson-item .lesson-summary strong {
            font-weight: 700;
            color: var(--rdpd-accent-purple-dark);
@@ -351,11 +360,11 @@
     <!-- Core Philosophy Section: Two Dads, Two Mindsets -->
     <div class="section-rdpd">
       <div class="section-header-rdpd">
-        <i class="fas fa-user-friends"></i> <!-- Icon for two people -->
+        <i class="fas fa-user-friends"></i>
         <h2>Two Dads, Two Contrasting Philosophies</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"Rich Dad Poor Dad" is based on Kiyosaki's upbringing with two influential father figures: his own highly educated but financially struggling father ("Poor Dad") and his best friend's entrepreneurial father who became a mentor ("Rich Dad"). The book contrasts their starkly different perspectives on money, work, and wealth creation.</p>
-      <p class="mb-4 text-base leading-relaxed">**Poor Dad** represented the traditional path: get a good education, find a secure job, work hard for money, and rely on pensions or savings. **Rich Dad** represented the path of financial independence: focus on acquiring assets, understand how money works, make money work for you, and develop financial intelligence.</p>
+      <p class="mb-4 text-base leading-relaxed">"Rich Dad Poor Dad" is based on Kiyosaki's upbringing with two influential father figures: his own highly educated but financially struggling father (<strong>Poor Dad</strong>) and his best friend's entrepreneurial father who became a mentor (<strong>Rich Dad</strong>). The book contrasts their starkly different perspectives on money, work, and wealth creation.</p>
+      <p class="mb-4 text-base leading-relaxed"><strong>Poor Dad</strong> represented the traditional path: get a good education, find a secure job, work hard for money, and rely on pensions or savings. <strong>Rich Dad</strong> represented the path of financial independence: focus on acquiring assets, understand how money works, make money work for you, and develop financial intelligence.</p>
       <p class="text-base leading-relaxed">Kiyosaki argues that the traditional education system fails to teach crucial financial literacy, leaving many trapped in the "Rat Race" – working endlessly for income without building real wealth. The book advocates for adopting the mindset and strategies of the "Rich Dad."</p>
 
       <div class="quote-rdpd">
@@ -367,7 +376,7 @@
     <!-- Key Lessons Section -->
     <div class="section-rdpd">
       <div class="section-header-rdpd">
-         <i class="fas fa-graduation-cap"></i> <!-- Icon for lessons -->
+         <i class="fas fa-graduation-cap"></i>
          <h2>Six Core Lessons from Rich Dad</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Kiyosaki distills Rich Dad's teachings into six main lessons, challenging conventional financial wisdom:</p>
@@ -423,7 +432,7 @@
                  <h3 class="lesson-title">Lesson 5: The Rich Invent Money</h3>
              </div>
              <div class="lesson-summary">
-                <p>Develop your **financial intelligence** to see opportunities others miss, raise capital, and organize smart people. Wealth is often created through financial creativity, solving problems, and taking calculated risks.</p>
+                <p>Develop your <strong>financial intelligence</strong> to see opportunities others miss, raise capital, and organize smart people. Wealth is often created through financial creativity, solving problems, and taking calculated risks.</p>
             </div>
          </li>
          <!-- Lesson 6 -->
@@ -478,7 +487,7 @@
      <!-- Memorable Quotes Section -->
     <div class="section-rdpd">
       <div class="section-header-rdpd">
-         <i class="fas fa-comment-dollar"></i> <!-- Icon for money talk -->
+         <i class="fas fa-comment-dollar"></i>
          <h2>Rich Dad's Financial Wisdom - Quotes</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -494,7 +503,7 @@
     <!-- Conclusion Section -->
     <div class="section-rdpd">
        <div class="section-header-rdpd">
-          <i class="fas fa-route"></i> <!-- Icon for path/direction -->
+          <i class="fas fa-route"></i>
           <h2>Choosing Your Financial Path</h2>
        </div>
       <p class="mb-4 text-base leading-relaxed">"Rich Dad Poor Dad" fundamentally challenges conventional thinking about money, education, and work. It argues that financial freedom comes not from high income alone, but from building a strong asset base through financial education and an entrepreneurial mindset.</p>
