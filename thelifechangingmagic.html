@@ -38,6 +38,17 @@
       color: var(--km-text-title); /* Red headings */
       font-weight: 700; /* Bold */
     }
+     /* Define global emphasis style */
+    strong {
+        font-weight: 700;
+        color: var(--km-text-dark); /* Slightly darker emphasis */
+    }
+     /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--km-text-dark); /* Keep italic text readable */
+    }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -213,10 +224,7 @@
          line-height: 1.7;
          padding-left: 2.75rem; /* Indent description */
      }
-      .principle-description strong {
-          font-weight: 700;
-          color: var(--km-text-dark);
-      }
+      /* Principle description strong tags already handled globally */
       .principle-description ul {
           list-style: disc;
           margin-left: 1.25rem;
@@ -310,8 +318,8 @@
         <i class="fas fa-magic"></i>
         <h2>The KonMari Method: More Than Just Tidying</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">Marie Kondo presents a revolutionary approach to decluttering and organizing, known as the **KonMari Method**. It's not just about cleaning rooms; it's a transformative process designed to help you keep only those things that truly bring you joy, leading to a calmer mind and a more inspired life.</p>
-      <p class="mb-4 text-base leading-relaxed">The core principle is to handle every single item you own, ask yourself if it **"sparks joy,"** and discard anything that doesn't. This process is done by category, not location, in one large decluttering event ("tidying festival"), rather than little by little.</p>
+      <p class="mb-4 text-base leading-relaxed">Marie Kondo presents a revolutionary approach to decluttering and organizing, known as the <strong>KonMari Method</strong>. It's not just about cleaning rooms; it's a transformative process designed to help you keep only those things that truly bring you joy, leading to a calmer mind and a more inspired life.</p>
+      <p class="mb-4 text-base leading-relaxed">The core principle is to handle every single item you own, ask yourself if it <strong>"sparks joy,"</strong> and discard anything that doesn't. This process is done by category, not location, in one large decluttering event ("tidying festival"), rather than little by little.</p>
       <p class="text-base leading-relaxed">Kondo emphasizes that tidying is not just a physical act but a dialogue with oneself. By confronting your possessions, you confront your past, your fears, and your aspirations, ultimately discovering what you truly value and want to carry into your future.</p>
 
       <div class="quote-km">
@@ -338,11 +346,11 @@
           </li>
            <li>
              <div class="principle-title"><i class="fas fa-trash-alt"></i>Rule 3: Finish Discarding First</div>
-             <p class="principle-description">Complete the process of deciding what to keep and discard for *all* items before deciding where to store things. Resist the urge to organize prematurely.</p>
+             <p class="principle-description">Complete the process of deciding what to keep and discard for <em>all</em> items before deciding where to store things. Resist the urge to organize prematurely.</p>
           </li>
            <li>
              <div class="principle-title"><i class="fas fa-stream"></i>Rule 4: Tidy by Category, Not by Location</div>
-             <p class="principle-description">Gather *everything* from one category (e.g., all clothes) from *everywhere* in the house into one pile before deciding what sparks joy. This reveals the true volume and prevents shuffling clutter. The correct order is crucial:
+             <p class="principle-description">Gather <em>everything</em> from one category (e.g., all clothes) from <em>everywhere</em> in the house into one pile before deciding what sparks joy. This reveals the true volume and prevents shuffling clutter. The correct order is crucial:
                  <ul>
                     <li><strong>Clothes</strong></li>
                     <li><strong>Books</strong></li>
@@ -381,7 +389,7 @@
               <p class="impact-description">Honing your ability to recognize what sparks joy improves your overall decision-making skills in all areas of life.</p>
           </div>
           <div class="impact-card">
-              <div class="impact-icon"><i class="fas fa-pastafarianism"></i></div> <!-- Changed icon to be more abstract -->
+              <div class="impact-icon"><i class="fas fa-pastafarianism"></i></div>
               <h4 class="impact-title">Discovering What You Value</h4>
               <p class="impact-description">The process forces you to confront your relationship with possessions and reveals what is truly important to you.</p>
           </div>
