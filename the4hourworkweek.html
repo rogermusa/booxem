@@ -39,6 +39,14 @@
       font-weight: 900; /* Black weight for major headings */
       text-transform: uppercase; /* Uppercase like cover */
     }
+    strong { /* Standard strong tag styling */
+        font-weight: 700;
+        color: var(--4hww-text-title); /* Use title color for emphasis */
+    }
+    em { /* Standard italic tag styling */
+        font-style: italic;
+        color: var(--4hww-text-dark); /* Use default text color */
+    }
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -65,7 +73,7 @@
         letter-spacing: 0.5px;
     }
      .header-content-4hww {
-        padding: 2rem 1.5rem 0 1.5rem; /* Padding top/sides */
+        padding: 2rem 1.5rem 1rem 1.5rem; /* Adjusted padding */
     }
     .main-header-4hww h1 { /* Title */
         font-size: 2.75rem;
@@ -79,16 +87,16 @@
      }
       .palm-tree-icon { /* Simple representation */
          display: block;
-         font-size: 3rem;
+         font-size: 2.5rem; /* Reduced size slightly */
          color: var(--4hww-text-title);
-         margin: 1rem auto 0.5rem auto;
+         margin: 0.5rem auto 0.5rem auto; /* Adjusted margin */
          opacity: 0.8;
      }
      .header-bottom-banner-4hww {
         background-color: var(--4hww-text-title); /* Blue bottom banner */
         color: var(--4hww-text-yellow); /* Yellow text */
         padding: 1.5rem;
-        margin-top: 1.5rem; /* Space above banner */
+        /* Removed margin-top */
      }
       .header-bottom-banner-4hww h2 { /* Subtitle */
         font-size: 1.25rem;
@@ -105,8 +113,14 @@
         margin: 0;
         text-transform: uppercase;
     }
-    .book-cover-4hww { /* Hide default cover image, represented thematically */
-      display: none;
+    .book-cover-4hww {
+      max-width: 140px; /* Adjust size as needed */
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--4hww-border-medium);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      display: block; /* Make block to use margin auto */
+      margin: 1.5rem auto 1.5rem auto; /* Centered with vertical margin */
     }
 
     /* Section styling */
@@ -350,24 +364,25 @@
       <div class="header-content-4hww">
         <h1>THE <span class="title-accent-orange">4-HOUR</span><br>WORK WEEK</h1>
          <div class="palm-tree-icon">
-             <i class="fas fa-umbrella-beach"></i> <!-- Beach Umbrella as stand-in -->
+             <i class="fas fa-umbrella-beach"></i>
          </div>
+         <!-- Placeholder Image Added Here -->
+         <img src="https://m.media-amazon.com/images/I/71vO9Tbf4-L._SL1500_.jpg" alt="The 4-Hour Workweek Book Cover Placeholder" class="book-cover-4hww">
       </div>
       <div class="header-bottom-banner-4hww">
         <h2>Escape 9-5, Live Anywhere, and Join the New Rich</h2>
         <h3>Timothy Ferriss</h3>
-        <!-- Cover image is hidden via CSS -->
       </div>
     </div>
 
     <!-- Core Philosophy Section: Lifestyle Design & The New Rich -->
     <div class="section-4hww">
       <div class="section-header-4hww">
-        <i class="fas fa-map-marked-alt"></i> <!-- Icon for location/lifestyle -->
+        <i class="fas fa-map-marked-alt"></i>
         <h2>Redefining Wealth: The New Rich & Lifestyle Design</h2>
       </div>
-      <p class="mb-4 text-base leading-relaxed">"The 4-Hour Workweek" challenges the traditional "deferred life plan" (work 9-5 for decades, save, then retire). Instead, Ferriss introduces the concept of the **"New Rich" (NR)** – those who prioritize time and mobility, leveraging technology and automation to create income streams that support their desired lifestyle *now*, rather than waiting for retirement.</p>
-      <p class="mb-4 text-base leading-relaxed">The core idea is **Lifestyle Design**: consciously architecting your life to maximize freedom, experiences, and learning, funded by automated income. It's about trading absolute income for more valuable currencies: **time and mobility**. The goal isn't idleness, but having the freedom to choose *what* you work on, *when*, and *where*.</p>
+      <p class="mb-4 text-base leading-relaxed">"The 4-Hour Workweek" challenges the traditional "deferred life plan" (work 9-5 for decades, save, then retire). Instead, Ferriss introduces the concept of the <strong>"New Rich" (NR)</strong> – those who prioritize time and mobility, leveraging technology and automation to create income streams that support their desired lifestyle <em>now</em>, rather than waiting for retirement.</p>
+      <p class="mb-4 text-base leading-relaxed">The core idea is <strong>Lifestyle Design</strong>: consciously architecting your life to maximize freedom, experiences, and learning, funded by automated income. It's about trading absolute income for more valuable currencies: <strong>time and mobility</strong>. The goal isn't idleness, but having the freedom to choose <em>what</em> you work on, <em>when</em>, and <em>where</em>.</p>
       <p class="text-base leading-relaxed">Ferriss argues that conventional career paths often lead to wasted effort and postponed dreams. He presents a systematic approach, the DEAL framework, to escape the 9-5 grind and build a life of freedom and adventure.</p>
 
       <div class="quote-4hww">
@@ -379,7 +394,7 @@
     <!-- The DEAL Framework Section -->
     <div class="section-4hww">
       <div class="section-header-4hww">
-         <i class="fas fa-exchange-alt"></i> <!-- Icon for transformation/process -->
+         <i class="fas fa-exchange-alt"></i>
          <h2>The DEAL Framework: Definition, Elimination, Automation, Liberation</h2>
       </div>
       <p class="mb-6 text-base leading-relaxed">Ferriss outlines a four-step process (DEAL) to achieve the 4-hour workweek lifestyle:</p>
@@ -388,25 +403,25 @@
          <div class="deal-card" data-letter="D">
             <div class="deal-icon"><i class="fas fa-bullseye"></i></div>
             <h3 class="deal-title">Definition</h3>
-            <p class="deal-summary">Replace self-defeating assumptions with empowering ones. Define what you truly want and **what it actually costs** (Dreamlining). Confront and define your fears to realize most are unlikely or recoverable. Set specific, actionable goals with timelines, focusing on experiences and lifestyle, not just money.</p>
+            <p class="deal-summary">Replace self-defeating assumptions with empowering ones. Define what you truly want and <strong>what it actually costs</strong> (Dreamlining). Confront and define your fears to realize most are unlikely or recoverable. Set specific, actionable goals with timelines, focusing on experiences and lifestyle, not just money.</p>
          </div>
          <!-- Elimination -->
          <div class="deal-card" data-letter="E">
-            <div class="deal-icon"><i class="fas fa-cut"></i></div> <!-- Scissors for elimination -->
+            <div class="deal-icon"><i class="fas fa-cut"></i></div>
             <h3 class="deal-title">Elimination</h3>
-            <p class="deal-summary">Aggressively eliminate the unimportant to focus on the essential. Apply the **Pareto Principle (80/20 Rule)** to identify tasks yielding the most results. Use **Parkinson's Law** (work expands to fill time) by setting short deadlines. Cultivate selective ignorance (Low-Information Diet), batch tasks, learn to say "no," and manage interruptions effectively.</p>
+            <p class="deal-summary">Aggressively eliminate the unimportant to focus on the essential. Apply the <strong>Pareto Principle (80/20 Rule)</strong> to identify tasks yielding the most results. Use <strong>Parkinson's Law</strong> (work expands to fill time) by setting short deadlines. Cultivate selective ignorance (Low-Information Diet), batch tasks, learn to say "no," and manage interruptions effectively.</p>
          </div>
          <!-- Automation -->
          <div class="deal-card" data-letter="A">
             <div class="deal-icon"><i class="fas fa-cogs"></i></div>
             <h3 class="deal-title">Automation</h3>
-            <p class="deal-summary">Build systems that generate income with minimal ongoing time investment. This involves creating an automated business (**"muse"**) – typically selling a niche product or service. Learn to delegate tasks effectively, often using **virtual assistants (VAs)** for administrative, technical, or personal tasks. Automate processes to free your time.</p>
+            <p class="deal-summary">Build systems that generate income with minimal ongoing time investment. This involves creating an automated business (<strong>"muse"</strong>) – typically selling a niche product or service. Learn to delegate tasks effectively, often using <strong>virtual assistants (VAs)</strong> for administrative, technical, or personal tasks. Automate processes to free your time.</p>
          </div>
           <!-- Liberation -->
          <div class="deal-card" data-letter="L">
             <div class="deal-icon"><i class="fas fa-plane-departure"></i></div>
             <h3 class="deal-title">Liberation</h3>
-            <p class="deal-summary">Achieve mobility and freedom from the traditional office structure. This often involves **negotiating remote work** arrangements by demonstrating increased productivity. Engineer "escapes" like **mini-retirements** – extended periods of travel or pursuing passions, funded by your automated income. Design your life for maximum freedom of location and time.</p>
+            <p class="deal-summary">Achieve mobility and freedom from the traditional office structure. This often involves <strong>negotiating remote work</strong> arrangements by demonstrating increased productivity. Engineer "escapes" like <strong>mini-retirements</strong> – extended periods of travel or pursuing passions, funded by your automated income. Design your life for maximum freedom of location and time.</p>
          </div>
       </div>
     </div>
@@ -500,10 +515,10 @@
     <!-- Conclusion Section -->
     <div class="section-4hww">
        <div class="section-header-4hww">
-          <i class="fas fa-flag-checkered"></i> <!-- Icon for achieving goal/freedom -->
+          <i class="fas fa-flag-checkered"></i>
           <h2>Joining the New Rich</h2>
        </div>
-      <p class="mb-4 text-base leading-relaxed">"The 4-Hour Workweek" is not just about working less; it's a blueprint for redesigning your life to maximize freedom, fulfillment, and experiences *now*. It provides a radical, actionable alternative to the traditional path of deferred gratification.</p>
+      <p class="mb-4 text-base leading-relaxed">"The 4-Hour Workweek" is not just about working less; it's a blueprint for redesigning your life to maximize freedom, fulfillment, and experiences <em>now</em>. It provides a radical, actionable alternative to the traditional path of deferred gratification.</p>
       <p class="text-base leading-relaxed">By applying the DEAL framework – defining your ideal lifestyle, eliminating ruthlessly, automating income and tasks, and liberating yourself geographically and temporally – Ferriss argues that anyone can escape the 9-5 trap and join the ranks of the New Rich.</p>
        <div class="conclusion-highlight-4hww">
            <p>Stop waiting for retirement. Define your dreams, eliminate the noise, build automated systems, and claim your freedom. It's time to design your life and truly start <strong>living</strong>.</p>
