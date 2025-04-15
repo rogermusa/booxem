@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grit Summary - Angela Duckworth</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Grit Cover Color Scheme */
+      --grit-bg: #F8F8F8; /* Light Grey page background */
+      --grit-card-bg: #FFFFFF;
+      --grit-text-dark: #222222; /* Near Black */
+      --grit-text-light: #FFFFFF; /* Added for clarity */
+      --grit-text-title-red: #D83C50; /* Red/Pink from "GRIT" */
+      --grit-accent-grey: #808080; /* Medium Grey */
+      --grit-accent-light-grey: #F0F0F0; /* Very light grey for subtle backgrounds */
+      --grit-border-light: #EAEAEA;
+      --grit-border-medium: #D0D0D0;
+      --grit-hover-red: #B02E40; /* Darker red for hover */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif; /* Clean sans-serif */
+      color: var(--grit-text-dark);
+      line-height: 1.7;
+      background-color: var(--grit-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Inter', sans-serif; /* Consistent sans-serif */
+      color: var(--grit-text-dark); /* Default dark */
+      font-weight: 700; /* Bold */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-grit {
+      background-color: var(--grit-card-bg); /* White header */
+      color: var(--grit-text-dark);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid var(--grit-border-medium);
+      border-top: 3px solid var(--grit-accent-grey); /* Grey top border */
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .main-header-grit h3 { /* Author */
+        font-size: 1.2rem;
+        font-weight: 500; /* Medium weight */
+        color: var(--grit-text-dark);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .main-header-grit h1 { /* "GRIT" Title */
+        font-size: 4.5rem; /* Large, bold GRIT */
+        font-weight: 900; /* Extra bold */
+        color: var(--grit-text-title-red); /* Red title */
+        line-height: 1;
+        margin-bottom: 0.75rem;
+        letter-spacing: -1px; /* Tighten spacing */
+    }
+    .main-header-grit h2 { /* Subtitle */
+        font-size: 1.1rem;
+        font-weight: 700; /* Bold subtitle */
+        color: var(--grit-text-dark);
+        opacity: 0.9;
+        margin-bottom: 2rem;
+    }
+    .book-cover-grit {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--grit-border-medium);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-grit {
+      background-color: var(--grit-card-bg);
+      color: var(--grit-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--grit-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-grit:hover {
+        border-color: var(--grit-accent-grey); /* Grey border on hover */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-grit {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--grit-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-grit h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--grit-text-dark); /* Keep headers dark */
+    }
+    .section-header-grit i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--grit-text-title-red); /* Red icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+     .section-grit:hover .section-header-grit i {
+        transform: rotate(5deg) scale(1.05);
+        color: var(--grit-hover-red); /* Darker red icon */
+     }
+
+    /* --- Quote Style --- */
+    .quote-grit {
+      background-color: var(--grit-accent-light-grey); /* Very light grey bg */
+      border: 1px solid var(--grit-border-light);
+      border-left: 4px solid var(--grit-accent-grey); /* Grey left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--grit-text-dark);
+      border-radius: 0 2px 2px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-grit:hover {
+        background-color: var(--grit-card-bg);
+        border-color: var(--grit-border-medium);
+        border-left-color: var(--grit-text-title-red); /* Red border on hover */
+    }
+    .quote-grit p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-grit footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600; /* Semi-bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--grit-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .components-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .component-card {
+      background-color: var(--grit-card-bg);
+      border: 1px solid var(--grit-border-light);
+      border-bottom: 4px solid var(--grit-accent-grey); /* Grey bottom border */
+      border-radius: 4px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+    }
+    .component-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+      border-bottom-color: var(--grit-text-title-red); /* Red border on hover */
+    }
+    .component-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+        color: var(--grit-accent-grey);
+        height: 30px;
+    }
+     .component-card:hover .component-icon {
+         color: var(--grit-text-title-red);
+     }
+    .component-title {
+      font-size: 1.3rem;
+      font-weight: 800; /* Extra bold title */
+      color: var(--grit-text-dark);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .component-summary {
+      font-size: 0.95rem;
+      color: var(--grit-text-dark);
+      line-height: 1.7;
+       opacity: 0.9;
+    }
+     .component-summary strong {
+        font-weight: 700;
+        color: var(--grit-text-title-red); /* Red emphasis */
+     }
+
+    .factors-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .factors-list li {
+        background-color: var(--grit-accent-light-grey);
+        border: 1px solid var(--grit-border-light);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start; /* Align top */
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .factors-list li:hover {
+         background-color: var(--grit-card-bg);
+         border-color: var(--grit-border-medium);
+     }
+     .factors-list li i {
+         color: var(--grit-text-title-red);
+         margin-right: 1.25rem;
+         font-size: 1.3rem;
+         width: 25px;
+         text-align: center;
+         flex-shrink: 0;
+         margin-top: 0.15rem; /* Align icon slightly */
+     }
+      .factors-list li div .factor-title {
+          font-weight: 700;
+          font-size: 1.1rem;
+          color: var(--grit-text-dark);
+          display: block;
+          margin-bottom: 0.25rem;
+      }
+       .factors-list li div .factor-description {
+           font-weight: 400;
+           font-size: 0.95rem;
+           opacity: 0.85;
+           line-height: 1.6;
+       }
+
+    .conclusion-highlight-grit {
+        background-color: var(--grit-text-dark); /* Dark background */
+        color: var(--grit-text-light); /* Light text */
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--grit-text-dark);
+    }
+    .conclusion-highlight-grit p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+    .conclusion-highlight-grit strong {
+        font-weight: 700;
+        /* UPDATED: Use light text color for better contrast on dark background */
+        color: var(--grit-text-light);
+    }
+
+    .footer-grit {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Helper for formula */
+    .formula { font-family: monospace; font-weight: 700; color: var(--grit-accent-grey); }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-grit">
+        <h3>Angela Duckworth</h3>
+        <h1>GRIT</h1>
+        <h2>The Power of Passion and Perseverance</h2>
+        <img src="https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg" alt="Grit Book Cover" class="book-cover-grit">
+    </div>
+
+    <!-- Core Philosophy Section: What is Grit? -->
+    <div class="section-grit">
+      <div class="section-header-grit">
+        <i class="fas fa-gem"></i> <!-- Icon representing value/strength -->
+        <h2>What is Grit? Beyond Talent</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Angela Duckworth defines **Grit** as a unique combination of **passion** and **perseverance** applied towards long-term goals. Through extensive research across diverse fields (military training, spelling bees, sales), she found that grit is a more significant predictor of high achievement than talent or IQ.</p>
+      <p class="mb-4 text-base leading-relaxed">While talent might determine how quickly skills improve, grit determines the dedication and resilience needed to stick with something long enough to master it and achieve success. Duckworth argues that our culture often overemphasizes innate talent and underestimates the power of sustained effort.</p>
+      <p class="text-base leading-relaxed">She proposes that effort counts twice in the journey to achievement: <br> <span class="formula">Talent x Effort = Skill</span> <br> <span class="formula">Skill x Effort = Achievement</span> <br> Therefore, consistent, focused effort is paramount.</p>
+
+      <div class="quote-grit">
+          <p>"Grit is passion and perseverance for very long-term goals. Grit is having stamina. Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality."</p>
+          <footer>— Angela Duckworth</footer>
+      </div>
+    </div>
+
+    <!-- Components of Grit Section -->
+    <div class="section-grit">
+      <div class="section-header-grit">
+         <i class="fas fa-puzzle-piece"></i> <!-- Icon representing components -->
+         <h2>The Two Components of Grit</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Grit isn't just hard work; it's composed of two essential elements:</p>
+      <div class="components-grid">
+         <div class="component-card">
+            <div class="component-icon"><i class="fas fa-heart"></i></div>
+            <div class="component-title">Passion</div>
+            <p class="component-summary">This isn't fleeting enthusiasm, but a deep, enduring **interest** in and **commitment** to a specific domain or goal. It involves loving what you do and finding it meaningful. Gritty people don't just tolerate their work; they are deeply fascinated and engaged by it over the long haul.</p>
+        </div>
+        <div class="component-card">
+            <div class="component-icon"><i class="fas fa-running"></i></div>
+            <div class="component-title">Perseverance</div>
+            <p class="component-summary">This is the resilience aspect: the ability to **stick with goals** despite setbacks, failures, adversity, and plateaus in progress. It's about finishing what you start, working diligently day after day, and overcoming obstacles with determination.</p>
+        </div>
+      </div>
+       <div class="quote-grit">
+          <p>"Enthusiasm is common. Endurance is rare."</p>
+          <footer>— Angela Duckworth</footer>
+      </div>
+    </div>
+
+     <!-- Growing Grit Section -->
+    <div class="section-grit">
+      <div class="section-header-grit">
+         <i class="fas fa-seedling"></i> <!-- Icon representing growth -->
+         <h2>Growing Grit from the Inside Out</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Duckworth argues that grit isn't a fixed trait; it can be cultivated. She identifies four key psychological assets that gritty individuals tend to possess and develop:</p>
+      <ul class="factors-list">
+          <li>
+              <i class="fas fa-compass"></i>
+              <div>
+                  <span class="factor-title">1. Interest:</span>
+                  <span class="factor-description">Passion begins with intrinsically enjoying what you do. Discovering and deepening interests is crucial. This often involves exploration followed by development.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-dumbbell"></i>
+              <div>
+                  <span class="factor-title">2. Practice:</span>
+                  <span class="factor-description">Grit requires commitment to continuous improvement through **deliberate practice** – focusing on specific weaknesses, seeking feedback, and pushing beyond comfort zones. It's about quality of effort, not just quantity.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-bullseye"></i>
+              <div>
+                  <span class="factor-title">3. Purpose:</span>
+                  <span class="factor-description">Believing that your work matters and contributes to the well-being of others provides profound motivation. Purpose connects your passion to something larger than yourself, fueling long-term perseverance.</span>
+              </div>
+          </li>
+          <li>
+              <i class="fas fa-lightbulb"></i>
+              <div>
+                  <span class="factor-title">4. Hope:</span>
+                  <span class="factor-description">This isn't wishful thinking, but the expectation that your own efforts can improve your future. It's closely linked to a **growth mindset** – the belief that abilities can be developed – enabling resilience in the face of challenges.</span>
+              </div>
+          </li>
+      </ul>
+      <p class="mt-6 text-base leading-relaxed">Additionally, Duckworth discusses "Growing Grit from the Outside In," highlighting the importance of supportive environments, challenging parenting styles (wise parenting combining warmth and demandingness), extracurricular activities, mentors, and belonging to gritty cultures.</p>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-grit">
+      <div class="section-header-grit">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Insights on Grit & Achievement</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-grit"><p>"Our potential is one thing. What we do with it is quite another."</p><footer>— Angela Duckworth</footer></blockquote>
+          <blockquote class="quote-grit"><p>"...grit grows as we figure out our life philosophy, learn to dust ourselves off after rejection and disappointment, and learn to tell the difference between low-level goals that should be abandoned quickly and higher-level goals that demand more tenacity."</p><footer>— Angela Duckworth</footer></blockquote>
+          <blockquote class="quote-grit"><p>"To be gritty is to keep putting one foot in front of the other. To be gritty is to hold fast to an interesting and purposeful goal. To be gritty is to invest, day after week after year, in challenging practice. To be gritty is to fall down seven times, and rise eight."</p><footer>— Angela Duckworth</footer></blockquote>
+           <blockquote class="quote-grit"><p>"Without effort, your talent is nothing more than your unmet potential. Without effort, your skill is nothing more than what you could have done but didn't."</p><footer>— Angela Duckworth</footer></blockquote>
+           <blockquote class="quote-grit"><p>"I learned that passion and perseverance were related, but not the same thing."</p><footer>— Angela Duckworth</footer></blockquote>
+           <blockquote class="quote-grit"><p>"Grit is about working on something you care about so much that you’re willing to stay loyal to it...not just falling in love—staying in love."</p><footer>— Angela Duckworth</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-grit">
+       <div class="section-header-grit">
+          <i class="fas fa-medal"></i> <!-- Icon for achievement -->
+          <h2>The Decisive Power of Grit</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Grit" provides compelling evidence that passion and perseverance are critical ingredients for outstanding achievement, often outweighing innate talent. It shifts the focus from what we're born with to what we can cultivate through dedication and resilience.</p>
+      <p class="text-base leading-relaxed">By understanding the components of grit – interest, deliberate practice, purpose, and hope – and recognizing the influence of our environment, we can intentionally develop our own grit and help foster it in others. It's a hopeful message: our capacity for long-term achievement is not fixed.</p>
+       <div class="conclusion-highlight-grit">
+           <p>Success doesn't just come from talent; it comes from showing up, working hard, and sticking with it, especially when things get tough. Cultivate your <strong>Passion</strong>. Practice your <strong>Perseverance</strong>. That's the power of <strong>Grit</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-grit">
+       <p>© 2024 Summary of "Grit: The Power of Passion and Perseverance" by Angela Duckworth.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the research and insights presented by the author.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
