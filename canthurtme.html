@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can't Hurt Me Summary - David Goggins</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Can't Hurt Me Inspired Color Scheme */
+      --chm-bg: #F0F0F0; /* Light grey page background */
+      --chm-card-bg: #FFFFFF;
+      --chm-bg-dark: #1A1A1A; /* Very dark grey/off-black */
+      --chm-accent-gold: #C19A6B; /* Muted Gold/Ochre */
+      --chm-text-dark: #222222;
+      --chm-text-light: #F5F5F5; /* Slightly off-white */
+      --chm-border-light: #E0E0E0;
+      --chm-border-medium: #C8C8C8;
+      --chm-hover-gold: #A47F53; /* Darker gold */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif; /* Strong, readable sans-serif */
+      color: var(--chm-text-dark);
+      line-height: 1.7;
+      background-color: var(--chm-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif; /* Bold, condensed sans-serif for impact */
+      color: var(--chm-text-dark);
+      font-weight: 700; /* Bold Oswald */
+      text-transform: uppercase;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-chm {
+      background-color: var(--chm-bg-dark); /* Dark Header BG */
+      color: var(--chm-text-light);
+      padding: 3rem 2rem 2rem 2rem; /* More top padding */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .main-header-chm h3 { /* Author */
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.75rem; /* Larger author */
+        font-weight: 700;
+        color: var(--chm-accent-gold); /* Gold author */
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+     .main-header-chm .subtitle {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--chm-text-light);
+        opacity: 0.9;
+        margin: 0 auto 1.5rem auto;
+        max-width: 400px;
+     }
+    .main-header-chm .title-block { /* CAN'T HURT ME */
+        font-family: 'Oswald', sans-serif;
+        font-size: 4.5rem; /* Very large title */
+        font-weight: 700;
+        color: var(--chm-accent-gold); /* Gold title */
+        line-height: 1;
+        margin-bottom: 1rem;
+        display: block; /* Ensure line breaks */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .main-header-chm .title-block span { display: block; margin: 0.2rem 0; }
+
+    .book-cover-chm {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 2px solid var(--chm-accent-gold); /* Gold border */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    /* Section styling */
+    .section-chm {
+      background-color: var(--chm-card-bg);
+      color: var(--chm-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--chm-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-chm:hover {
+        border-color: var(--chm-border-medium);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    }
+
+    .section-header-chm {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--chm-accent-gold); /* Gold border */
+      display: flex;
+      align-items: center;
+    }
+    .section-header-chm h2 {
+      font-size: 1.85rem; /* Larger section titles */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--chm-text-dark); /* Dark text for section header */
+    }
+    .section-header-chm i {
+      font-size: 1.4rem; /* Larger icon */
+      margin-right: 1rem;
+      color: var(--chm-text-dark); /* Dark icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+     .section-chm:hover .section-header-chm i {
+        transform: scale(1.1);
+        color: var(--chm-accent-gold); /* Gold icon on hover */
+     }
+
+    /* --- Quote Style --- */
+    .quote-chm {
+      background-color: var(--chm-bg-dark); /* Dark background */
+      border: 1px solid #333;
+      border-left: 5px solid var(--chm-accent-gold); /* Gold left border */
+      padding: 1.5rem;
+      margin: 2rem 0; /* More margin */
+      color: var(--chm-text-light); /* Light text */
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 500; /* Medium weight */
+      font-style: italic;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-chm:hover {
+        background-color: #2a2a2a; /* Slightly lighter dark */
+        border-left-color: var(--chm-text-light); /* White border */
+        border-color: #444;
+    }
+    .quote-chm p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-chm footer {
+      margin-top: 1rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.9rem;
+      opacity: 0.9;
+      color: var(--chm-text-light);
+    }
+    /* --- End Quote Style --- */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+    .tool-card {
+      background-color: var(--chm-card-bg);
+      border: 1px solid var(--chm-border-medium); /* Stronger border */
+      border-radius: 4px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      border-color: var(--chm-accent-gold); /* Gold border on hover */
+    }
+    .tool-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--chm-accent-gold); /* Gold icon */
+        height: 35px;
+        transition: color 0.25s ease;
+    }
+     .tool-card:hover .tool-icon {
+         color: var(--chm-text-dark); /* Dark icon on hover */
+     }
+    .tool-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--chm-text-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .tool-summary {
+      font-size: 0.95rem;
+      color: var(--chm-text-dark);
+      line-height: 1.7;
+       opacity: 0.9;
+       flex-grow: 1;
+    }
+     .tool-summary strong {
+        font-weight: 700;
+        color: var(--chm-accent-gold); /* Gold emphasis */
+     }
+
+    .challenges-section ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .challenges-section li {
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed var(--chm-border-light);
+        display: flex;
+        align-items: center;
+    }
+     .challenges-section li:last-child {
+        border-bottom: none;
+     }
+     .challenges-section li i {
+         color: var(--chm-accent-gold);
+         margin-right: 1rem;
+         width: 20px;
+     }
+     .challenges-section li span {
+         font-weight: 500;
+         font-size: 1rem;
+     }
+
+    .conclusion-highlight-chm {
+        background: linear-gradient(to right, var(--chm-accent-gold), var(--chm-hover-gold));
+        color: var(--chm-text-dark);
+        padding: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--chm-hover-gold);
+    }
+    .conclusion-highlight-chm p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-chm strong {
+        font-weight: 700; /* Oswald is bold already */
+        font-family: 'Oswald', sans-serif;
+        color: var(--chm-text-light); /* White text on gold */
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .footer-chm {
+        text-align: center;
+        color: #666; /* Slightly darker footer text */
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-chm">
+        <h3>David Goggins</h3>
+        <div class="title-block">
+            <span>Can't</span>
+            <span>Hurt</span>
+            <span>Me</span>
+        </div>
+        <div class="subtitle">Master Your Mind and Defy the Odds</div>
+        <img src="https://m.media-amazon.com/images/I/710oCZaYYUL.jpg" alt="Can't Hurt Me Book Cover" class="book-cover-chm">
+    </div>
+
+    <!-- Core Philosophy Section: Embracing Discomfort -->
+    <div class="section-chm">
+      <div class="section-header-chm">
+        <i class="fas fa-skull-crossbones"></i> <!-- Icon representing hardship/defiance -->
+        <h2>Embrace Suffering & Callous Your Mind</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"Can't Hurt Me" is David Goggins' raw and unfiltered story of transformation, detailing how he overcame a childhood filled with poverty, prejudice, and abuse to become a U.S. Armed Forces icon (Navy SEAL, Army Ranger, Air Force Tactical Air Controller) and one of the world's top endurance athletes. The core message is brutally simple: **stop making excuses, face your pain, and push past your perceived limitations**.</p>
+      <p class="mb-4 text-base leading-relaxed">Goggins argues that most people live at only **40% of their true capability** (The 40% Rule). We instinctively seek comfort and avoid suffering, causing us to quit long before we reach our potential. To defy the odds, you must **callous your mind** by intentionally and repeatedly putting yourself in uncomfortable situations, building mental toughness and resilience brick by painful brick.</p>
+      <p class="text-base leading-relaxed">He emphasizes radical self-accountability, confronting your flaws and insecurities head-on (using the Accountability Mirror), and finding fuel in adversity rather than letting it break you. It's about mastering your inner dialogue and proving to yourself, again and again, that you are capable of far more than you think.</p>
+
+      <div class="quote-chm">
+          <p>"You are in danger of living a life so comfortable and soft, that you will die without ever realizing your true potential."</p>
+          <footer>— David Goggins</footer>
+      </div>
+    </div>
+
+    <!-- Key Tools & Concepts Section -->
+    <div class="section-chm">
+      <div class="section-header-chm">
+         <i class="fas fa-tools"></i> <!-- Icon for tools/strategies -->
+         <h2>Goggins' Mental Toolkit</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Throughout his journey, Goggins developed several mental tools to build resilience and push boundaries:</p>
+      <div class="tools-grid">
+         <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="tool-title">The Accountability Mirror</h3>
+            <p class="tool-summary">Brutally honest self-assessment. Write down your goals, insecurities, and failings on sticky notes and post them on a mirror. Confront your reality daily. Stop lying to yourself and take ownership.</p>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-cookie-bite"></i></div>
+            <h3 class="tool-title">The Cookie Jar</h3>
+            <p class="tool-summary">A mental inventory of past accomplishments and overcome obstacles. When facing extreme difficulty, "reach into the cookie jar" and remind yourself of times you triumphed over adversity to fuel your persistence.</p>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-percentage"></i></div>
+            <h3 class="tool-title">The 40% Rule</h3>
+            <p class="tool-summary">The belief that when your mind tells you you're done, you're really only at 40% of your capacity. Recognize this signal as the *start* of the real effort, not the end. Push through that initial quitting point.</p>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-running"></i></div>
+            <h3 class="tool-title">Taking Souls</h3>
+            <p class="tool-summary">A competitive mindset focused on outworking and mentally dominating anyone trying to hold you back or compete against you. It's about showing up with overwhelming effort and breaking their will through your sheer tenacity.</p>
+        </div>
+         <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="tool-title">Callousing the Mind</h3>
+            <p class="tool-summary">Like callousing hands through hard work, build mental toughness by consistently choosing difficult tasks and enduring discomfort. This makes future challenges seem less daunting.</p>
+        </div>
+         <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-file-alt"></i></div>
+            <h3 class="tool-title">After Action Reports (AARs)</h3>
+            <p class="tool-summary">Objectively analyzing your failures and successes. Write down what went right, what went wrong, and how you can improve next time. Remove emotion and focus on learning.</p>
+        </div>
+      </div>
+        <div class="quote-chm">
+          <p>"Motivation is crap. Motivation comes and goes. When you're driven, whatever is in front of you will get destroyed."</p>
+          <footer>— David Goggins</footer>
+      </div>
+    </div>
+
+     <!-- The Challenges Section -->
+    <div class="section-chm challenges-section">
+      <div class="section-header-chm">
+         <i class="fas fa-flag-checkered"></i> <!-- Icon for challenges/goals -->
+         <h2>Facing Your Own Challenges</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">The book is structured around Goggins' life story, with each chapter concluding with a "Challenge" for the reader, designed to implement the concepts discussed. These challenges encourage readers to:</p>
+      <ul>
+          <li><i class="fas fa-clipboard-list"></i> <span>Inventory your current situation and limiting beliefs.</span></li>
+          <li><i class="fas fa-user-edit"></i> <span>Take ownership and use the Accountability Mirror.</span></li>
+          <li><i class="fas fa-bed"></i> <span>Step outside your comfort zone regularly.</span></li>
+          <li><i class="fas fa-medal"></i> <span>Choose challenging goals and visualize success.</span></li>
+          <li><i class="fas fa-pastafarianism"></i> <span>Build your Cookie Jar of past victories.</span></li>
+          <li><i class="fas fa-user-shield"></i> <span>Remove the "Governor" on your mind (push past limits).</span></li>
+          <li><i class="fas fa-calendar-alt"></i> <span>Compartmentalize and schedule your pain/effort.</span></li>
+          <li><i class="fas fa-book-reader"></i> <span>Continuously learn and analyze failures (AARs).</span></li>
+          <li><i class="fas fa-award"></i> <span>Sustain uncommon effort over the long haul.</span></li>
+      </ul>
+      <p class="mt-4 text-base leading-relaxed">These challenges transform the book from a memoir into an interactive guide for building mental fortitude.</p>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-chm">
+      <div class="section-header-chm">
+         <i class="fas fa-quote-left"></i>
+         <h2>Goggins' Raw Truths - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-chm"><p>"Don't stop when you're tired. Stop when you're done."</p><footer>— David Goggins</footer></blockquote>
+          <blockquote class="quote-chm"><p>"The most important conversations you’ll ever have are the ones you’ll have with yourself."</p><footer>— David Goggins</footer></blockquote>
+          <blockquote class="quote-chm"><p>"We live in a world where mediocrity is often rewarded. Be uncommon amongst uncommon people."</p><footer>— David Goggins</footer></blockquote>
+           <blockquote class="quote-chm"><p>"Pain unlocks a secret doorway in the mind, one that leads to peak performance, and beautiful silence."</p><footer>— David Goggins</footer></blockquote>
+           <blockquote class="quote-chm"><p>"Life is one big head game. You have to learn how to play the game."</p><footer>— David Goggins</footer></blockquote>
+            <blockquote class="quote-chm"><p>"Be willing to get uncomfortable. Be willing to face rejection. Be willing to step into the storm."</p><footer>— David Goggins</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-chm">
+       <div class="section-header-chm">
+          <i class="fas fa-dumbbell"></i> <!-- Icon representing strength/resilience -->
+          <h2>Master Your Mind, Defy Your Odds</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Can't Hurt Me" is more than a memoir; it's a raw, intense operating manual for the human mind under extreme pressure. It's a testament to the power of mental discipline, self-accountability, and the relentless pursuit of pushing one's limits.</p>
+      <p class="text-base leading-relaxed">Goggins' story demonstrates that greatness is not born, but forged through embracing discomfort, confronting demons, and developing an unbreakable will. His tools and philosophy challenge readers to stop seeking the easy way out and instead find power in adversity.</p>
+       <div class="conclusion-highlight-chm">
+           <p>Your perceived limitations are self-imposed. Face your truth, callous your mind, do the work others won't, and discover the extraordinary potential that lies beyond pain. <strong>Stay Hard.</strong></p>
+       </div>
+    </div>
+
+    <div class="footer-chm">
+       <p>© 2024 Summary of "Can't Hurt Me" by David Goggins.</p>
+       <p class="mt-1">Content for informational purposes only. Reflects the intense philosophy of the author.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
