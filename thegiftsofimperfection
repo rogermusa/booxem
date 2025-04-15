@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifts of Imperfection Summary - Brené Brown</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Gifts of Imperfection Inspired Color Scheme */
+      --goi-bg: #F8FAFC; /* Very light blue/grey */
+      --goi-card-bg: #FFFFFF;
+      --goi-text-dark: #383838; /* Charcoal grey */
+      --goi-text-title-red: #A02C2C; /* Deep Red */
+      --goi-accent-gold: #C09A2E; /* Muted Gold */
+      --goi-accent-blue: #C0D4E0; /* Soft sky blue */
+      --goi-banner-red: #802323; /* Darker red for banner */
+      --goi-text-light: #FFFFFF;
+      --goi-border-light: #E8ECEF;
+      --goi-border-medium: #D8DDE1;
+      --goi-secondary-text: #555555;
+      --goi-hover-red: var(--goi-banner-red);
+    }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif; /* Soft Sans-serif */
+      color: var(--goi-secondary-text);
+      line-height: 1.75;
+      background-color: var(--goi-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif; /* Elegant Serif */
+      color: var(--goi-text-title-red); /* Deep Red */
+      font-weight: 600; /* Semi-bold Lora */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-goi {
+      background-color: var(--goi-card-bg); /* White background */
+      color: var(--goi-text-dark);
+      padding: 0; /* Use internal elements for padding */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid var(--goi-border-medium);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      overflow: hidden; /* Contain banner */
+    }
+    .header-content-goi {
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+        background: linear-gradient(to bottom, var(--goi-accent-blue), var(--goi-card-bg) 70%); /* Subtle blue gradient */
+    }
+    .header-bottom-banner {
+        background-color: var(--goi-banner-red);
+        color: var(--goi-text-light);
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .main-header-goi h3 { /* Author */
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--goi-accent-gold); /* Gold author */
+        margin-bottom: 1.5rem; /* Space below author */
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+    .main-header-goi .title-small { /* "THE GIFTS OF" */
+        font-family: 'Lora', serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--goi-text-title-red);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.1rem;
+        opacity: 0.9;
+    }
+    .main-header-goi h1 { /* "Imperfection" */
+        font-family: 'Lora', serif;
+        font-size: 3rem; /* Large title */
+        font-weight: 500; /* Medium weight */
+        color: var(--goi-text-dark); /* Dark main title */
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px; /* Slightly tighter */
+    }
+    .main-header-goi h2 { /* Subtitle */
+        font-family: 'Nunito Sans', sans-serif;
+        color: var(--goi-secondary-text);
+        font-size: 1.1rem; /* Slightly larger subtitle */
+        font-weight: 400; /* Regular weight */
+        margin-bottom: 2rem;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+    }
+    .book-cover-goi {
+      max-width: 150px;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--goi-border-medium);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    /* Section styling */
+    .section-goi {
+      background-color: var(--goi-card-bg);
+      color: var(--goi-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--goi-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-goi:hover {
+        border-color: var(--goi-accent-blue); /* Blue border on hover */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    }
+
+    .section-header-goi {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--goi-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-goi h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .section-header-goi i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--goi-text-title-red); /* Red icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-goi:hover .section-header-goi i {
+        transform: rotate(-3deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-goi {
+      background-color: #FEFBF5; /* Very light beige */
+      border: 1px solid var(--goi-border-light);
+      border-left: 4px solid var(--goi-accent-gold); /* Gold left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--goi-secondary-text);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-goi:hover {
+        background-color: var(--goi-card-bg);
+        border-color: var(--goi-border-medium);
+        border-left-color: var(--goi-text-title-red); /* Red border on hover */
+    }
+    .quote-goi p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-goi footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.9;
+      color: var(--goi-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .guideposts-list {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column */
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .guidepost-card {
+      background-color: var(--goi-card-bg);
+      border: 1px solid var(--goi-border-light);
+      border-radius: 4px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      display: flex;
+      align-items: flex-start;
+    }
+    .guidepost-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+      border-color: var(--goi-accent-gold);
+    }
+    .guidepost-icon-container {
+        flex-shrink: 0;
+        margin-right: 1.5rem;
+        text-align: center;
+        padding-top: 0.25rem;
+    }
+    .guidepost-icon {
+        font-size: 1.75rem;
+        color: var(--goi-text-title-red);
+        opacity: 0.7;
+        transition: color 0.25s ease, transform 0.25s ease;
+    }
+     .guidepost-card:hover .guidepost-icon {
+         color: var(--goi-accent-gold);
+         transform: scale(1.1);
+     }
+    .guidepost-content {
+        flex-grow: 1;
+    }
+    .guidepost-title {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--goi-text-dark);
+      margin-bottom: 0.75rem;
+    }
+     .guidepost-cultivate, .guidepost-letgo {
+         display: block; /* Stack them */
+         margin-bottom: 0.5rem;
+         font-size: 0.95rem;
+     }
+     .guidepost-cultivate strong {
+         color: var(--goi-text-title-red); /* Red for Cultivate */
+         font-weight: 700;
+     }
+      .guidepost-letgo strong {
+         color: var(--goi-secondary-text); /* Grey for Let Go */
+         font-weight: 700;
+         text-decoration: line-through; /* Strikethrough */
+         text-decoration-thickness: 1px;
+         text-decoration-color: var(--goi-border-medium);
+     }
+
+
+    .conclusion-highlight-goi {
+        background-color: var(--goi-accent-blue); /* Soft blue background */
+        color: var(--goi-text-dark);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 6px;
+        border: 1px solid #ADC4D1; /* Darker blue border */
+    }
+    .conclusion-highlight-goi p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .conclusion-highlight-goi strong {
+        font-weight: 700;
+        color: var(--goi-text-title-red); /* Red emphasis */
+    }
+
+    .footer-goi {
+        text-align: center;
+        color: var(--goi-secondary-text);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-goi">
+      <div class="header-content-goi">
+        <h3>Brené Brown, Ph.D., L.M.S.W.</h3>
+        <div class="title-small">The Gifts Of</div>
+        <h1>Imperfection</h1>
+        <h2>Let Go of Who You Think You're Supposed to Be and Embrace Who You Are</h2>
+        <img src="https://m.media-amazon.com/images/I/71I4yv9v+LL._AC_UF1000,1000_QL80_.jpg" alt="The Gifts of Imperfection Book Cover" class="book-cover-goi">
+      </div>
+      <div class="header-bottom-banner">
+        Your Guide to a Wholehearted Life
+      </div>
+    </div>
+
+    <!-- Core Philosophy Section: Wholehearted Living -->
+    <div class="section-goi">
+      <div class="section-header-goi">
+        <i class="fas fa-heart-circle-check"></i> <!-- Updated icon -->
+        <h2>Living a Wholehearted Life</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Gifts of Imperfection" explores the journey toward Wholehearted Living – engaging with the world from a place of inherent worthiness. Brené Brown defines this as cultivating the courage, compassion, and connection needed to wake up in the morning thinking, "No matter what gets done and how much is left undone, I am enough."</p>
+      <p class="mb-4 text-base leading-relaxed">It requires moving away from a scarcity mindset (feeling "never enough" – never good enough, perfect enough, successful enough) fueled by shame and fear. Instead, we embrace vulnerability and imperfection not as weaknesses, but as the birthplace of connection, growth, and beauty.</p>
+      <p class="text-base leading-relaxed">The book is structured around 10 Guideposts for Wholehearted Living, each encouraging us to *cultivate* a positive practice while *letting go* of a corresponding detrimental pattern.</p>
+
+      <div class="quote-goi">
+          <p>"Wholehearted living is not a one-time choice. It is a process. In fact, I believe it’s the journey of a lifetime."</p>
+          <footer>— Brené Brown</footer>
+      </div>
+    </div>
+
+    <!-- The 10 Guideposts Section -->
+    <div class="section-goi">
+      <div class="section-header-goi">
+         <i class="fas fa-map-signs"></i> <!-- Icon for guideposts -->
+         <h2>The 10 Guideposts to Wholehearted Living</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">These guideposts provide practical pathways to embrace imperfection and live authentically:</p>
+      <div class="guideposts-list">
+         <!-- Guidepost 1 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-mask"></i></div> <!-- Mask for authenticity -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #1</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Authenticity:</strong> Letting Go of What People Think</span>
+             </div>
+         </div>
+         <!-- Guidepost 2 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-hand-holding-heart"></i></div>
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #2</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Self-Compassion:</strong> Letting Go of Perfectionism</span>
+             </div>
+         </div>
+         <!-- Guidepost 3 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-dharmachakra"></i></div> <!-- Shield/Heart for resilience -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #3</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating a Resilient Spirit:</strong> Letting Go of Numbing and Powerlessness</span>
+             </div>
+         </div>
+         <!-- Guidepost 4 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-leaf"></i></div> <!-- Leaf for growth/gratitude -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #4</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Gratitude and Joy:</strong> Letting Go of Scarcity and Fear of the Dark</span>
+             </div>
+         </div>
+         <!-- Guidepost 5 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-compass"></i></div> <!-- Compass for intuition -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #5</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Intuition and Trusting Faith:</strong> Letting Go of the Need for Certainty</span>
+             </div>
+         </div>
+         <!-- Guidepost 6 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-paint-brush"></i></div> <!-- Brush for creativity -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #6</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Creativity:</strong> Letting Go of Comparison</span>
+             </div>
+         </div>
+         <!-- Guidepost 7 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-puzzle-piece"></i></div> <!-- Puzzle piece for play -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #7</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Play and Rest:</strong> Letting Go of Exhaustion as a Status Symbol and Productivity as Self-Worth</span>
+             </div>
+         </div>
+         <!-- Guidepost 8 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-coffee"></i></div> <!-- Coffee for calm/stillness -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #8</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Calm and Stillness:</strong> Letting Go of Anxiety as a Lifestyle</span>
+             </div>
+         </div>
+         <!-- Guidepost 9 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-briefcase"></i></div> <!-- Briefcase for work -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #9</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Meaningful Work:</strong> Letting Go of Self-Doubt and "Supposed To"</span>
+             </div>
+         </div>
+         <!-- Guidepost 10 -->
+         <div class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-music"></i></div> <!-- Music for laughter/song/dance -->
+             <div class="guidepost-content">
+                <h4 class="guidepost-title">Guidepost #10</h4>
+                <span class="guidepost-cultivate"><strong>Cultivating Laughter, Song, and Dance:</strong> Letting Go of Being Cool and "Always in Control"</span>
+             </div>
+         </div>
+      </div>
+    </div>
+
+     <!-- Core Concepts Section -->
+    <div class="section-goi">
+      <div class="section-header-goi">
+         <i class="fas fa-dharmachakra"></i> <!-- Wheel icon for concepts -->
+         <h2>Foundational Concepts</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Underpinning the guideposts are key concepts from Brené Brown's research:</p>
+      <ul class="guideposts-list"> <!-- Reusing list style -->
+          <li class="guidepost-card"> <!-- Reusing card style slightly -->
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-map-signs"></i></div>
+             <div class="guidepost-content">
+                <h4 class="guidepost-title" style="font-size: 1.2rem;">Courage, Compassion, Connection</h4>
+                <p class="text-sm">The essential elements of wholeheartedness. Courage to be imperfect, compassion for self and others, and connection resulting from authenticity.</p>
+             </div>
+          </li>
+          <li class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-comment-slash"></i></div>
+             <div class="guidepost-content">
+                <h4 class="guidepost-title" style="font-size: 1.2rem;">Shame & Scarcity</h4>
+                <p class="text-sm">Understanding how the fear of disconnection (shame) and the feeling of never being enough (scarcity) drive perfectionism, comparison, and disengagement.</p>
+             </div>
+          </li>
+          <li class="guidepost-card">
+             <div class="guidepost-icon-container"><i class="guidepost-icon fas fa-heart-crack"></i></div>
+             <div class="guidepost-content">
+                <h4 class="guidepost-title" style="font-size: 1.2rem;">Vulnerability</h4>
+                <p class="text-sm">Recognizing vulnerability not as weakness, but as the foundation for courage, connection, and authentic living. Embracing it is essential for wholeheartedness.</p>
+             </div>
+          </li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-goi">
+      <div class="section-header-goi">
+         <i class="fas fa-quote-left"></i>
+         <h2>Insights on Wholehearted Living - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-goi"><p>"Authenticity is the daily practice of letting go of who we think we're supposed to be and embracing who we are."</p><footer>— Brené Brown</footer></blockquote>
+          <blockquote class="quote-goi"><p>"Worthiness doesn't have prerequisites."</p><footer>— Brené Brown</footer></blockquote>
+          <blockquote class="quote-goi"><p>"Understanding the difference between healthy striving and perfectionism is critical to laying down the shield and picking up your life."</p><footer>— Brené Brown</footer></blockquote>
+           <blockquote class="quote-goi"><p>"Joy comes to us in ordinary moments. We risk missing out when we get too busy chasing down the extraordinary."</p><footer>— Brené Brown</footer></blockquote>
+           <blockquote class="quote-goi"><p>"Spirituality is recognizing and celebrating that we are all inextricably connected to each other by a power greater than all of us..."</p><footer>— Brené Brown</footer></blockquote>
+           <blockquote class="quote-goi"><p>"Courage is... telling our story, not being immune to criticism."</p><footer>— Brené Brown</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-goi">
+       <div class="section-header-goi">
+          <i class="fas fa-gift"></i> <!-- Icon for gifts -->
+          <h2>Embracing Your Imperfect Story</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Gifts of Imperfection" is an invitation to live a more authentic, courageous, and connected life by embracing vulnerability and letting go of the need for perfection. It provides a practical and compassionate guide based on solid research.</p>
+      <p class="text-base leading-relaxed">By actively cultivating the practices outlined in the 10 Guideposts – from authenticity and self-compassion to joy and meaningful work – we can overcome the barriers of shame and scarcity and step into a life defined by worthiness and wholehearted engagement.</p>
+       <div class="conclusion-highlight-goi">
+           <p>Your imperfections are not inadequacies; they are reminders that we're all in this together. Embrace your story, cultivate the C's (Courage, Compassion, Connection), and live a <strong>brave and wholehearted life</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-goi">
+       <p>© 2024 Summary of "The Gifts of Imperfection" by Brené Brown.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
