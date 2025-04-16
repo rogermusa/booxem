@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Four Tendencies Summary - Gretchen Rubin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Four Tendencies Cover Color Scheme */
+      --ft-bg: #EBF8FF; /* Light sky blue */
+      --ft-card-bg: #FFFFFF;
+      --ft-text-dark: #0A3D62; /* Dark Blue */
+      --ft-text-light: #FFFFFF;
+      --ft-accent-yellow: #FFEB3B; /* Bright Yellow */
+      --ft-accent-red: #F44336; /* Red */
+      --ft-accent-green: #4CAF50; /* Green */
+      --ft-accent-blue: #2196F3; /* Brighter Blue */
+      --ft-secondary-text: #4B5563; /* Medium Grey */
+      --ft-border-light: #E0F2F7;
+      --ft-border-medium: #B3E0F2;
+      --ft-hover-yellow: #FBC02D; /* Darker Yellow */
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif; /* Modern Sans-serif */
+      color: var(--ft-secondary-text);
+      line-height: 1.75;
+      background-color: var(--ft-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--ft-text-dark); /* Dark Blue Headings */
+      font-weight: 700; /* Bold */
+    }
+     /* Define global emphasis style */
+    strong {
+        font-weight: 700;
+        color: var(--ft-text-dark); /* Default dark emphasis */
+    }
+     /* Define global italic emphasis style */
+    em {
+        font-style: italic;
+        color: var(--ft-secondary-text); /* Keep italics subtle */
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-ft {
+      background-color: var(--ft-accent-blue); /* Blue background */
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2); /* Blue glow */
+      position: relative;
+      overflow: hidden; /* Contain pseudo elements */
+    }
+      /* Concentric Rings Effect */
+      .main-header-ft::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 120%; height: 120%; /* Larger than container */
+        min-width: 500px; min-height: 500px; /* Ensure size */
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 15px solid transparent; /* Base for gradient */
+        background:
+            radial-gradient(circle at center, transparent 60%, var(--ft-accent-yellow) 60.5%, var(--ft-accent-yellow) 70%, transparent 70.5%),
+            radial-gradient(circle at center, transparent 70%, var(--ft-accent-green) 70.5%, var(--ft-accent-green) 80%, transparent 80.5%),
+            radial-gradient(circle at center, transparent 80%, var(--ft-accent-red) 80.5%, var(--ft-accent-red) 90%, transparent 90.5%),
+            radial-gradient(circle at center, transparent 90%, var(--ft-text-dark) 90.5%, var(--ft-text-dark) 100%, transparent 100.5%);
+        opacity: 0.7; /* Adjust opacity */
+        z-index: 0;
+      }
+
+      .header-content-ft {
+         position: relative; z-index: 1; /* Keep content above rings */
+         background-color: var(--ft-accent-yellow); /* Yellow central circle */
+         border-radius: 50%;
+         width: 70%; max-width: 400px; /* Responsive circle size */
+         padding: 3rem 1rem; /* Padding inside yellow circle */
+         margin: 0 auto;
+         box-shadow: 0 0 15px rgba(0,0,0,0.1);
+         border: 5px solid var(--ft-card-bg); /* White border */
+      }
+
+    .main-header-ft h3 { /* Author */
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--ft-text-dark);
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .main-header-ft h1 { /* Title */
+        font-size: 2.5rem; /* Adjusted size */
+        font-weight: 800; /* Extra Bold */
+        color: var(--ft-text-dark);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .main-header-ft .subtitle { /* Subtitle */
+        color: var(--ft-text-dark);
+        font-size: 0.9rem;
+        font-weight: 500;
+        opacity: 0.9;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+    .book-cover-ft {
+      max-width: 140px; /* Smaller cover inside */
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--ft-border-medium);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin: 2rem auto 0 auto; /* Center below */
+    }
+     .nyt-bestseller-seal {
+        background-color: var(--ft-text-dark);
+        color: var(--ft-text-light);
+        padding: 0.5rem 0.75rem;
+        border-radius: 50%;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        top: 4rem; /* Adjust position */
+        right: 15%; /* Adjust position */
+        border: 2px solid var(--ft-accent-red);
+        line-height: 1.1;
+        text-align: center;
+         z-index: 2; /* Above rings */
+     }
+      .nyt-bestseller-seal span { display: block; }
+
+    /* Section styling */
+    .section-ft {
+      background-color: var(--ft-card-bg);
+      color: var(--ft-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--ft-border-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-ft:hover {
+        border-color: var(--ft-accent-blue); /* Blue border */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    }
+
+    .section-header-ft {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--ft-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-ft h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-ft i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--ft-text-dark); /* Dark icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-ft:hover .section-header-ft i {
+        transform: scale(1.1);
+     }
+
+    /* --- Quote Style --- */
+    .quote-ft {
+      background-color: var(--ft-bg); /* Page background color */
+      border: 1px dashed var(--ft-border-medium); /* Dashed border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--ft-text-dark);
+      border-radius: 4px;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 500; /* Medium weight */
+      text-align: center;
+      transition: border-color 0.3s ease;
+    }
+     .quote-ft:hover {
+        border-color: var(--ft-accent-blue); /* Blue border on hover */
+    }
+    .quote-ft p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-ft footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: center;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.9rem;
+      opacity: 0.9;
+      color: var(--ft-secondary-text);
+    }
+    /* --- End Quote Style --- */
+
+    .tendencies-grid-ft {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+    .tendency-card-ft {
+      background-color: var(--ft-card-bg);
+      border: 1px solid var(--ft-border-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      text-align: left; /* Align text left */
+    }
+     /* Distinct border colors per tendency */
+     .tendency-card-ft.upholder { border-bottom: 5px solid var(--ft-accent-blue); }
+     .tendency-card-ft.questioner { border-bottom: 5px solid var(--ft-accent-yellow); }
+     .tendency-card-ft.obliger { border-bottom: 5px solid var(--ft-accent-red); }
+     .tendency-card-ft.rebel { border-bottom: 5px solid var(--ft-accent-green); } /* Green for Rebel */
+
+    .tendency-card-ft:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+    .tendency-icon {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        height: 30px;
+    }
+     .tendency-card-ft.upholder .tendency-icon { color: var(--ft-accent-blue); }
+     .tendency-card-ft.questioner .tendency-icon { color: var(--ft-accent-yellow); }
+     .tendency-card-ft.obliger .tendency-icon { color: var(--ft-accent-red); }
+     .tendency-card-ft.rebel .tendency-icon { color: var(--ft-accent-green); }
+
+    .tendency-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800; /* Extra bold title */
+      color: var(--ft-text-dark);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tendency-motto {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: var(--ft-secondary-text);
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+    .tendency-summary {
+      font-size: 0.95rem;
+      color: var(--ft-secondary-text);
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+    /* Summary strong tags handled globally */
+     .tendency-summary ul {
+         list-style: disc;
+         margin-left: 1.25rem;
+         margin-top: 0.75rem;
+         padding-left: 0.5rem;
+     }
+     .tendency-summary li { padding: 0.1rem 0; }
+
+
+    .implications-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+     .implications-list li {
+        background-color: var(--ft-bg);
+        border: 1px solid var(--ft-border-light);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease;
+    }
+     .implications-list li:hover {
+         background-color: var(--ft-card-bg);
+     }
+     .implications-list li i {
+         color: var(--ft-text-dark); /* Dark icons */
+         margin-right: 1rem;
+         font-size: 1.2rem;
+         width: 25px;
+         text-align: center;
+     }
+      .implications-list li span {
+          font-weight: 600;
+          font-size: 1rem;
+      }
+
+
+    .conclusion-highlight-ft {
+        background: linear-gradient(to right, var(--ft-accent-blue), var(--ft-accent-green)); /* Blue-green gradient */
+        color: var(--ft-text-light);
+        padding: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 6px;
+    }
+    .conclusion-highlight-ft p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500; /* Medium weight */
+    }
+    .conclusion-highlight-ft strong {
+        font-weight: 700;
+        color: var(--ft-accent-yellow); /* Yellow emphasis */
+    }
+
+    .footer-ft {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-ft">
+      <div class="nyt-bestseller-seal"><span>New York</span><span>Times</span><span>Bestseller</span></div>
+      <div class="header-content-ft">
+        <h1>The Four Tendencies</h1>
+        <div class="subtitle">The Indispensable Personality Profiles That Reveal How to Make Your Life Better (and Other People's Lives Better, Too)</div>
+        <h3>GRETCHEN RUBIN</h3>
+      </div>
+       <img src="https://m.media-amazon.com/images/I/81wXiDNt3dL.jpg" alt="The Four Tendencies Book Cover" class="book-cover-ft">
+    </div>
+
+    <!-- Core Concept Section: Inner & Outer Expectations -->
+    <div class="section-ft">
+      <div class="section-header-ft">
+        <i class="fas fa-question-circle"></i>
+        <h2>The Crucial Question: How Do You Respond to Expectations?</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Gretchen Rubin's "The Four Tendencies" framework offers a powerful lens for understanding personality based on one simple question: How do you respond to expectations? Specifically, it examines how we respond to <strong>Outer Expectations</strong> (those imposed by others, like work deadlines or requests) and <strong>Inner Expectations</strong> (those we impose on ourselves, like keeping a resolution or pursuing a personal goal).</p>
+      <p class="mb-4 text-base leading-relaxed">Based on the answer to this question, Rubin identifies four distinct personality profiles: <strong>Upholders, Questioners, Obligers,</strong> and <strong>Rebels</strong>. She argues that understanding your own Tendency—and the Tendencies of those around you—is crucial for improving self-awareness, building better habits, reducing conflict, and working more effectively with others.</p>
+      <p class="text-base leading-relaxed">This framework isn't about judging which Tendency is "best," but about recognizing inherent patterns to harness strengths, mitigate weaknesses, and tailor strategies for success and happiness.</p>
+
+      <div class="quote-ft">
+          <p>"When we understand our Tendency, and the Tendencies of the people around us, we can build habits and lives that work better for us."</p>
+          <footer>— Gretchen Rubin</footer>
+      </div>
+    </div>
+
+    <!-- The Four Tendencies Explained -->
+    <div class="section-ft">
+      <div class="section-header-ft">
+         <i class="fas fa-users"></i>
+         <h2>Meet the Four Tendencies</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Here's a breakdown of each Tendency:</p>
+      <div class="tendencies-grid-ft">
+         <div class="tendency-card-ft upholder">
+            <div class="tendency-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="tendency-title">Upholder</div>
+            <div class="tendency-motto">"Discipline is my freedom."</div>
+            <p class="tendency-summary">Readily meets both <strong>outer and inner</strong> expectations. Values self-direction and follow-through. Reliable, self-motivated, thrives on schedules and clarity. Can sometimes struggle with unexpected changes or feel burdened by expectations.
+               <ul>
+                   <li><strong>Strength:</strong> Dependable, disciplined, meets goals.</li>
+                   <li><strong>Weakness:</strong> Can seem rigid, struggles with ambiguity or rule-breaking.</li>
+               </ul>
+            </p>
+        </div>
+        <div class="tendency-card-ft questioner">
+            <div class="tendency-icon"><i class="fas fa-search"></i></div>
+            <div class="tendency-title">Questioner</div>
+            <div class="tendency-motto">"I'll comply—if you convince me why."</div>
+            <p class="tendency-summary">Questions all expectations; meets an expectation only if it makes sense and meets their internal standards. Needs **reasons, justification, and logic**. Resists anything arbitrary or inefficient. Values data and efficiency. Can suffer from analysis paralysis.
+                <ul>
+                   <li><strong>Strength:</strong> Thorough, reasonable, data-driven.</li>
+                   <li><strong>Weakness:</strong> Can drain others with questions, resist sensible rules without justification.</li>
+               </ul>
+            </p>
+        </div>
+        <div class="tendency-card-ft obliger">
+            <div class="tendency-icon"><i class="fas fa-handshake"></i></div>
+            <div class="tendency-title">Obliger</div>
+            <div class="tendency-motto">"You can count on me, and I'm counting on you to count on me."</div>
+            <p class="tendency-summary">Readily meets <strong>outer expectations</strong> but struggles to meet inner expectations. Needs external accountability (deadlines, teams, coaches, late fees) to follow through on personal goals. Great team players, responsive, responsible. Prone to burnout, exploitation, and "Obliger-rebellion" if pushed too far. (Largest group).
+                 <ul>
+                   <li><strong>Strength:</strong> Responsible, responsive, excellent team members.</li>
+                   <li><strong>Weakness:</strong> Struggles with self-care/goals without oversight, susceptible to exploitation.</li>
+               </ul>
+            </p>
+        </div>
+         <div class="tendency-card-ft rebel">
+            <div class="tendency-icon"><i class="fas fa-fist-raised"></i></div>
+            <div class="tendency-title">Rebel</div>
+             <div class="tendency-motto">"You can't make me, and neither can I."</div>
+            <p class="tendency-summary">Resists **both outer and inner** expectations. Values freedom, choice, authenticity, and doing things their own way. Motivated by identity and spontaneity. Resists control, schedules, and being told what to do (even by themselves). Can be unconventional and inspiring.
+                <ul>
+                   <li><strong>Strength:</strong> Authentic, independent, thinks outside the box.</li>
+                   <li><strong>Weakness:</strong> Can be frustrating to work with, struggles with routine tasks or fulfilling obligations.</li>
+               </ul>
+            </p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Understanding & Applying the Framework -->
+    <div class="section-ft">
+      <div class="section-header-ft">
+         <i class="fas fa-puzzle-piece"></i>
+         <h2>Understanding and Applying Your Tendency</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Knowing your Tendency provides powerful self-awareness. It helps explain why certain strategies work for you while others fail. Key applications include:</p>
+      <ul class="implications-list">
+          <li>
+              <i class="fas fa-clipboard-check"></i>
+              <span><strong>Habit Formation:</strong> Tailor strategies to your Tendency (e.g., Obligers need accountability, Questioners need justification, Rebels need choice and identity alignment, Upholders need clear goals and schedules).</span>
+          </li>
+          <li>
+              <i class="fas fa-briefcase"></i>
+              <span><strong>Work Relationships:</strong> Understand colleagues' Tendencies to communicate more effectively, reduce conflict, and manage teams better.</span>
+          </li>
+          <li>
+              <i class="fas fa-heart"></i>
+              <span><strong>Personal Relationships:</strong> Improve understanding and reduce friction with partners, family, and friends by recognizing their Tendency and yours.</span>
+          </li>
+           <li>
+              <i class="fas fa-dumbbell"></i>
+              <span><strong>Health & Well-being:</strong> Structure health goals (diet, exercise) in ways that align with how you naturally respond to expectations.</span>
+          </li>
+            <li>
+              <i class="fas fa-comments"></i>
+              <span><strong>Communication:</strong> Frame requests and provide information in ways that resonate with each Tendency (e.g., provide reasons for Questioners, offer choices for Rebels).</span>
+          </li>
+      </ul>
+        <div class="quote-ft">
+          <p>"Understanding the Four Tendencies has allowed me to create the circumstances in which I work most easily, live most happily, and engage most deeply with others."</p>
+          <footer>— Gretchen Rubin</footer>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-ft">
+      <div class="section-header-ft">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Insights on Personality & Expectations</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-ft"><p>"There’s no magic, one-size-fits-all approach to changing your habits or your life. You must know yourself."</p><footer>— Gretchen Rubin</footer></blockquote>
+          <blockquote class="quote-ft"><p>"To change, we must know ourselves."</p><footer>— Gretchen Rubin</footer></blockquote>
+          <blockquote class="quote-ft"><p>"Obligers need outer accountability—even for inner expectations."</p><footer>— Gretchen Rubin</footer></blockquote>
+           <blockquote class="quote-ft"><p>"Questioners resist anything arbitrary, ineffective, or irrational."</p><footer>— Gretchen Rubin</footer></blockquote>
+           <blockquote class="quote-ft"><p>"Rebels resist all expectations, outer and inner alike. They do what they want to do, in their own way, in their own time."</p><footer>— Gretchen Rubin</footer></blockquote>
+           <blockquote class="quote-ft"><p>"Upholders want to know what should be done—including what they expect from themselves."</p><footer>— Gretchen Rubin</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-ft">
+       <div class="section-header-ft">
+          <i class="fas fa-key"></i>
+          <h2>The Key to Self-Understanding and Better Action</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Four Tendencies" provides a simple yet profoundly useful framework for understanding ourselves and others. By identifying how we respond to inner and outer expectations, we unlock crucial insights into our motivations, strengths, and weaknesses.</p>
+      <p class="text-base leading-relaxed">This self-knowledge allows us to tailor strategies for habit change, improve communication, reduce conflict in relationships, and ultimately design lives that are more effective, harmonious, and aligned with our true nature. It's a practical tool for making life better, for ourselves and those around us.</p>
+       <div class="conclusion-highlight-ft">
+           <p>Understand your Tendency. Leverage its strengths. Mitigate its weaknesses. Use this knowledge to build a life that truly works <strong>for you</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-ft">
+       <p>© 2024 Summary of "The Four Tendencies" by Gretchen Rubin.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
