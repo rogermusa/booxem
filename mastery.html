@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastery Summary - Robert Greene</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Mastery Cover Color Scheme */
+      --mastery-bg: #F1F1F1; /* Light grey page background */
+      --mastery-card-bg: #FFFFFF;
+      --mastery-text-light: #FDFDFD; /* Off-white */
+      --mastery-text-dark: #000000; /* Black */
+      --mastery-accent-gold: #BFAF67; /* Ochre/Gold from cover */
+      --mastery-accent-red: #A60000; /* Deep Red */
+      --mastery-border-light: #E0E0E0;
+      --mastery-border-medium: #C8C8C8;
+      --mastery-hover-gold: #A49454; /* Darker Gold */
+      --mastery-secondary-text: #333333; /* Dark grey text */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif; /* Clean Sans-serif */
+      color: var(--mastery-secondary-text);
+      line-height: 1.75;
+      background-color: var(--mastery-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Roboto Slab', serif; /* Slab Serif for headings */
+      color: var(--mastery-text-dark); /* Black headings */
+      font-weight: 700; /* Bold */
+    }
+    strong { /* Global emphasis */
+        font-weight: 700;
+        color: var(--mastery-accent-red); /* Red emphasis */
+    }
+    em { /* Global italics */
+        font-style: italic;
+        color: var(--mastery-secondary-text);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-mastery {
+      background-color: var(--mastery-text-dark); /* Black Header BG */
+      color: var(--mastery-text-light);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 0; /* Sharp corners */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative; /* Needed for absolute positioned seal */
+    }
+     .main-header-mastery .author-tagline {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+        letter-spacing: 0.5px;
+     }
+    .main-header-mastery h3 { /* Author */
+        font-family: 'Inter', sans-serif; /* Sans-serif Author */
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--mastery-accent-red); /* Red author */
+        margin-bottom: 1rem; /* Space below author */
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    /* UPDATED: Horizontal Title Styling */
+    .main-header-mastery h1.title-mastery {
+        font-family: 'Roboto Slab', serif; /* Matching other headings */
+        font-size: 4.5rem; /* Large title */
+        font-weight: 700;
+        color: var(--mastery-accent-gold); /* Gold title */
+        line-height: 1.1;
+        margin-bottom: 1.5rem; /* Space below title */
+        letter-spacing: 4px; /* Adjust spacing */
+        text-transform: uppercase;
+    }
+    /* Removed vertical title styles */
+
+    .book-cover-mastery {
+      max-width: 160px;
+      height: auto;
+      border-radius: 2px;
+      border: 1px solid var(--mastery-border-medium);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-top: 1rem; /* Space above cover */
+    }
+     .bestseller-seal {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background-color: var(--mastery-accent-gold);
+        color: var(--mastery-text-dark);
+        padding: 0.7rem;
+        border-radius: 50%;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1;
+        border: 2px solid var(--mastery-text-dark);
+        width: 90px; height: 90px;
+        display: flex; align-items: center; justify-content: center;
+        flex-direction: column;
+    }
+     .bestseller-seal span { display: block; }
+     .bestseller-seal .nyt { font-size: 0.6rem; margin-top: 2px; }
+
+    /* Section styling */
+    .section-mastery {
+      background-color: var(--mastery-card-bg);
+      color: var(--mastery-secondary-text);
+      padding: 2rem 2.25rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--mastery-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-mastery:hover {
+        border-color: var(--mastery-accent-gold); /* Gold border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-mastery {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--mastery-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-mastery h2 {
+      font-size: 1.85rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-mastery i {
+      font-size: 1.4rem;
+      margin-right: 0.85rem;
+      color: var(--mastery-accent-red); /* Red icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-mastery:hover .section-header-mastery i {
+        transform: rotate(3deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-mastery {
+      background-color: var(--mastery-text-dark); /* Black background */
+      color: var(--mastery-text-light); /* White text */
+      border: 1px solid #222;
+      border-left: 5px solid var(--mastery-accent-gold); /* Gold left border */
+      padding: 1.5rem 2rem; /* Increased padding */
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400; /* Regular italic */
+      transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    }
+     .quote-mastery:hover {
+        background-color: #2A2A2A; /* Slightly lighter black */
+        border-left-color: var(--mastery-accent-red); /* Red border */
+    }
+    .quote-mastery p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-mastery footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.9rem;
+      opacity: 0.85;
+      color: var(--mastery-text-light);
+    }
+    /* --- End Quote Style --- */
+
+    .phases-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .phase-item {
+        background-color: var(--mastery-card-bg);
+        border: 1px solid var(--mastery-border-light);
+        border-left: 4px solid var(--mastery-accent-red); /* Red left border */
+        padding: 1.5rem 1.75rem;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+    }
+     .phase-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+        border-left-color: var(--mastery-accent-gold); /* Gold border on hover */
+     }
+     .phase-title {
+         font-family: 'Roboto Slab', serif;
+         font-weight: 700;
+         font-size: 1.4rem;
+         color: var(--mastery-text-dark);
+         display: flex;
+         align-items: center;
+         margin-bottom: 0.75rem;
+     }
+      .phase-title i {
+          margin-right: 1rem;
+          color: var(--mastery-accent-red);
+          font-size: 1.3em;
+          width: 25px;
+          text-align: center;
+          transition: color 0.25s ease;
+      }
+      .phase-item:hover .phase-title i {
+          color: var(--mastery-accent-gold);
+      }
+     .phase-description {
+         font-size: 1rem; /* Increased size */
+         line-height: 1.8;
+         color: var(--mastery-secondary-text);
+     }
+      /* Phase description strong/em tags handled globally */
+      .phase-description ul {
+          list-style: disc;
+          margin-left: 1.5rem; /* Indent sub-points */
+          margin-top: 0.75rem;
+          padding-left: 0.5rem;
+      }
+       .phase-description li { padding: 0.3rem 0; }
+
+    /* Concepts Grid */
+    .concepts-grid-mastery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    .concept-card-mastery {
+        background-color: #FAF9F6; /* Off-white/light cream */
+        border: 1px solid var(--mastery-border-light);
+        padding: 1.5rem;
+        border-radius: 4px;
+        text-align: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+     .concept-card-mastery:hover {
+         background-color: var(--mastery-card-bg);
+         border-color: var(--mastery-border-medium);
+     }
+     .concept-card-mastery i {
+         font-size: 1.75rem;
+         color: var(--mastery-accent-gold); /* Gold icon */
+         margin-bottom: 0.75rem;
+     }
+      .concept-card-mastery h4 { /* Concept Title */
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
+          font-size: 1.05rem;
+          color: var(--mastery-text-dark);
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+      }
+
+
+    .conclusion-highlight-mastery {
+        background-color: var(--mastery-accent-gold); /* Gold background */
+        color: var(--mastery-text-dark); /* Black text */
+        padding: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--mastery-hover-gold);
+    }
+    .conclusion-highlight-mastery p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-weight: 500; /* Medium weight */
+    }
+    .conclusion-highlight-mastery strong {
+        font-weight: 700;
+        color: var(--mastery-accent-red); /* Red emphasis on gold */
+    }
+
+    .footer-mastery {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+     .disclaimer {
+         font-size: 0.75rem; font-style: italic; opacity: 0.8;
+     }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-mastery">
+        <div class="author-tagline">Bestselling author of THE 48 LAWS OF POWER</div>
+        <h3>ROBERT GREENE</h3>
+        <!-- UPDATED: Horizontal Title -->
+        <h1 class="title-mastery">MASTERY</h1>
+        <img src="https://m.media-amazon.com/images/I/61M2Zzw9FyL._SL1500_.jpg" alt="Mastery Book Cover" class="book-cover-mastery">
+        <div class="bestseller-seal">
+            <span>THE #1</span>
+            <span class="nyt">NEW YORK TIMES</span>
+            <span>BESTSELLER</span>
+        </div>
+    </div>
+
+    <!-- Core Philosophy Section: The Path to Mastery -->
+    <div class="section-mastery">
+      <div class="section-header-mastery">
+        <i class="fas fa-user-graduate"></i>
+        <h2>Unlocking Your Highest Potential</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">In "Mastery," Robert Greene synthesizes the lives of historical masters—from Da Vinci to Mozart to Faraday—to reveal a universal path to achieving the highest levels of skill, creativity, and power in any field. He argues that mastery is not a mystical gift but the result of a specific, learnable process accessible to anyone willing to commit the time and effort.</p>
+      <p class="mb-4 text-base leading-relaxed">The core idea is that each of us possesses a unique inclination or calling, what Greene terms our <strong>Life's Task</strong>. Discovering and pursuing this deep-seated interest with intense focus through a rigorous apprenticeship is the foundation of mastery. This process involves years of dedicated practice, learning from mentors, developing intuition, and eventually reaching a state of high-level creativity and insight.</p>
+      <p class="text-base leading-relaxed">Greene demystifies the concept of genius, presenting mastery as the culmination of intense dedication, strategic learning, social intelligence, and the courage to push beyond conventional limits.</p>
+
+      <div class="quote-mastery">
+          <p>"Mastery is not a function of genius or talent. It is a function of time and intense focus applied to a particular field of knowledge."</p>
+          <footer>— Robert Greene</footer>
+      </div>
+    </div>
+
+    <!-- The Phases of Mastery Section -->
+    <div class="section-mastery">
+      <div class="section-header-mastery">
+         <i class="fas fa-shoe-prints"></i>
+         <h2>The Three Phases of the Mastery Journey</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Greene outlines three essential phases on the path to mastery:</p>
+      <ul class="phases-list">
+         <li class="phase-item">
+             <div class="phase-title"><i class="fas fa-search"></i>Phase 1: Discovering Your Calling (The Life's Task)</div>
+             <p class="phase-description">This initial phase involves reconnecting with your innate inclinations and curiosities, often present since childhood. It requires looking inward to find the subjects or activities that genuinely fascinate you, independent of external pressures or expectations. Recognizing your <strong>Life's Task</strong> provides the essential internal motivation for the long journey ahead.</p>
+         </li>
+         <li class="phase-item">
+             <div class="phase-title"><i class="fas fa-user-ninja"></i>Phase 2: The Apprenticeship</div>
+             <p class="phase-description">This is the longest and most crucial phase, typically lasting 5-10 years (the "10,000-hour rule" concept). It involves:
+                <ul>
+                   <li><strong>Deep Observation:</strong> Passively observing the rules and dynamics of your chosen field.</li>
+                   <li><strong>Skills Acquisition:</strong> Rigorous practice and learning the fundamentals (often through <strong>deliberate practice</strong>).</li>
+                   <li><strong>Experimentation:</strong> Applying knowledge and testing boundaries under guidance.</li>
+                </ul>
+               Finding the right <strong>mentor</strong> is invaluable during this stage, providing personalized feedback and accelerating learning. You must submit to the process, value learning above ego, and develop patience and resilience. <strong>Social intelligence</strong> is also critical for navigating relationships within the field.
+             </p>
+         </li>
+         <li class="phase-item">
+             <div class="phase-title"><i class="fas fa-lightbulb"></i>Phase 3: Creative-Active</div>
+             <p class="phase-description">Having absorbed the rules and developed intuition, the master now begins to bend and break them. This phase involves:
+                 <ul>
+                    <li>Seeing the whole picture and making novel connections.</li>
+                    <li>Developing a unique style or approach.</li>
+                    <li>Trusting <strong>intuition</strong> and the subconscious mind.</li>
+                    <li>Fusing the rational and intuitive (<strong>High-Level Intuition</strong>).</li>
+                 </ul>
+               Masters operate from a place of deep understanding and creative freedom, often achieving breakthroughs that redefine their field.
+             </p>
+         </li>
+      </ul>
+    </div>
+
+     <!-- Key Strategies & Concepts Section -->
+    <div class="section-mastery">
+      <div class="section-header-mastery">
+         <i class="fas fa-key"></i>
+         <h2>Essential Strategies for Attaining Mastery</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Greene emphasizes several key strategies and mindsets crucial for the journey:</p>
+      <div class="concepts-grid-mastery">
+          <div class="concept-card-mastery">
+              <i class="fas fa-book-reader"></i>
+              <h4>Value Learning Above All Else</h4>
+          </div>
+           <div class="concept-card-mastery">
+              <i class="fas fa-crosshairs"></i>
+              <h4>Trust the Process (Embrace Boredom & Repetition)</h4>
+          </div>
+           <div class="concept-card-mastery">
+              <i class="fas fa-user-graduate"></i>
+              <h4>Find the Ideal Mentor (or Anti-Mentor)</h4>
+          </div>
+           <div class="concept-card-mastery">
+              <i class="fas fa-users"></i>
+              <h4>Develop Social Intelligence</h4>
+          </div>
+           <div class="concept-card-mastery">
+              <i class="fas fa-brain"></i>
+              <h4>Awaken the Dimensional Mind (See Interconnections)</h4>
+          </div>
+           <div class="concept-card-mastery">
+              <i class="fas fa-infinity"></i>
+              <h4>Fuse the Intuitive and the Rational</h4>
+          </div>
+      </div>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-mastery">
+      <div class="section-header-mastery">
+         <i class="fas fa-quote-left"></i>
+         <h2>Insights on the Path to Mastery</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-mastery"><p>"The future belongs to those who learn more skills and combine them in creative ways."</p><footer>— Robert Greene</footer></blockquote>
+          <blockquote class="quote-mastery"><p>"You must understand the following: In order to master a field, you must love the subject and feel a profound connection to it. Your interest must transcend the field itself and border on the religious."</p><footer>— Robert Greene</footer></blockquote>
+          <blockquote class="quote-mastery"><p>"The time that leads to mastery is dependent on the intensity of our focus."</p><footer>— Robert Greene</footer></blockquote>
+           <blockquote class="quote-mastery"><p>"No one is really going to help you or give you direction. In fact, the odds are against you."</p><footer>— Robert Greene</footer></blockquote>
+           <blockquote class="quote-mastery"><p>"Become purpose-less, prepared for the surprising twists life will bring. Do not think yourself superior to the rules. Instead, submit to the apprenticeship. It is the ultimate shortcut."</p><footer>— Robert Greene</footer></blockquote>
+            <blockquote class="quote-mastery"><p>"Ultimately, the goal of the apprenticeship is not money, a good position, fame, or power. The goal is the transformation of your mind and character."</p><footer>— Robert Greene</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-mastery">
+       <div class="section-header-mastery">
+          <i class="fas fa-crown"></i>
+          <h2>Achieving Your Highest Form</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Mastery" provides a comprehensive and inspiring roadmap for achieving excellence in any field. It challenges the myth of innate genius and lays bare the rigorous, step-by-step process undertaken by historical masters.</p>
+      <p class="text-base leading-relaxed">By discovering your Life's Task, committing to a deep apprenticeship, developing social intelligence, and ultimately trusting your intuition, Greene argues that anyone can attain mastery. It is a long and demanding journey, but one that leads not only to skill and influence but also to profound self-understanding and fulfillment.</p>
+       <div class="conclusion-highlight-mastery">
+           <p>Find your calling. Embrace the apprenticeship. Trust the process. Unlock the power within you and achieve <strong>Mastery</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-mastery">
+       <p>© 2024 Summary of "Mastery" by Robert Greene.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
