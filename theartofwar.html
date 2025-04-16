@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of War Summary - Sun Tzu</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Art of War Cover Color Scheme */
+      --aow-bg: #F5F5F5; /* Light Grey Background */
+      --aow-card-bg: #FFFFFF;
+      --aow-text-dark: #1A1A1A; /* Black */
+      --aow-text-light: #F0F0F0; /* Off-white */
+      --aow-accent-red: #A62C2C; /* Deep Red */
+      --aow-accent-red-light: #D04A4A; /* Lighter Red */
+      --aow-border-light: #E0E0E0;
+      --aow-border-medium: #C8C8C8;
+      --aow-hover-red: var(--aow-accent-red-light);
+      --aow-secondary-text: #555555;
+    }
+
+    body {
+      font-family: 'EB Garamond', serif; /* Classic Serif */
+      color: var(--aow-text-dark);
+      line-height: 1.8; /* Slightly increased for readability */
+      background-color: var(--aow-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Noto Serif SC', serif; /* Chinese Serif feel */
+      color: var(--aow-text-dark);
+      font-weight: 600; /* Semi-bold */
+    }
+    strong { /* Global emphasis */
+        font-weight: 700;
+        color: var(--aow-accent-red); /* Red emphasis */
+    }
+    em { /* Global italics */
+        font-style: italic;
+        color: var(--aow-secondary-text);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-aow {
+      background-color: var(--aow-text-dark); /* Black Header BG */
+      color: var(--aow-text-light);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 4px;
+      border: 1px solid #333;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .main-header-aow h3 { /* Author */
+        font-family: 'Noto Serif SC', serif;
+        font-size: 2rem; /* Larger Author */
+        font-weight: 700;
+        color: var(--aow-text-light);
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+    .main-header-aow .title-the { /* "THE" */
+        font-family: 'Noto Serif SC', serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--aow-text-light);
+        text-transform: uppercase;
+        margin-bottom: 0.1rem;
+        display: block;
+    }
+    .main-header-aow h1 { /* Title */
+        font-family: 'Noto Serif SC', serif;
+        font-size: 3.25rem;
+        font-weight: 700;
+        color: var(--aow-text-light);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+     .title-separator { /* Red Symbol */
+        font-size: 1.5rem;
+        color: var(--aow-accent-red);
+        margin: 1rem auto;
+        position: relative;
+        display: inline-block; /* Allows text-shadow */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        /* Placeholder for symbol, ideally use SVG or specific character if available */
+        /* Using a simple divider for now */
+        width: 50px;
+        height: 2px;
+        background-color: var(--aow-accent-red);
+        margin-bottom: 1.5rem;
+     }
+     .main-header-aow .translator-note {
+         font-family: 'EB Garamond', serif;
+         font-size: 0.9rem;
+         color: var(--aow-text-light);
+         opacity: 0.7;
+         margin-top: 1rem;
+     }
+    .book-cover-aow {
+      max-width: 170px;
+      height: auto;
+      border-radius: 2px;
+      border: 1px solid var(--aow-border-medium);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin: 2rem auto 0 auto; /* Center */
+    }
+
+    /* Section styling */
+    .section-aow {
+      background-color: var(--aow-card-bg);
+      color: var(--aow-text-dark);
+      padding: 2rem 2.25rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--aow-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-aow:hover {
+        border-color: var(--aow-border-medium);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-aow {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--aow-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-aow h2 {
+      font-size: 1.85rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .section-header-aow i {
+      font-size: 1.4rem;
+      margin-right: 0.85rem;
+      color: var(--aow-accent-red); /* Red icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-aow:hover .section-header-aow i {
+        transform: scale(1.1);
+     }
+
+    /* --- Quote Style --- */
+    .quote-aow {
+      background-color: var(--aow-bg); /* Page background */
+      border: 1px solid var(--aow-border-light);
+      border-left: 4px solid var(--aow-accent-red); /* Red left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--aow-text-dark);
+      border-radius: 0 2px 2px 0;
+      font-size: 1.05rem; /* Slightly larger */
+      font-style: normal; /* Not italic */
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-aow:hover {
+        background-color: var(--aow-card-bg);
+        border-color: var(--aow-border-medium);
+        border-left-color: var(--aow-text-dark); /* Black border on hover */
+    }
+    .quote-aow p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-aow footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      color: var(--aow-secondary-text);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-grid-aow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    .principle-card-aow {
+      background-color: var(--aow-card-bg);
+      border: 1px solid var(--aow-border-light);
+      border-radius: 4px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    }
+    .principle-card-aow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      border-color: var(--aow-border-medium);
+    }
+    .principle-icon-aow {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: var(--aow-accent-red); /* Red icon */
+        height: 30px;
+    }
+    .principle-title-aow {
+      font-family: 'Noto Serif SC', serif; /* Match header style */
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--aow-text-dark);
+      margin-bottom: 0.75rem;
+    }
+    .principle-summary-aow {
+      font-size: 0.95rem;
+      color: var(--aow-secondary-text); /* Secondary text color */
+      line-height: 1.7;
+    }
+    /* Principle summary strong/em tags handled globally */
+
+
+    .conclusion-highlight-aow {
+        background-color: var(--aow-text-dark); /* Black background */
+        color: var(--aow-text-light); /* White text */
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid var(--aow-accent-red); /* Red border */
+    }
+    .conclusion-highlight-aow p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 400; /* Regular weight */
+    }
+    .conclusion-highlight-aow strong {
+        font-weight: 700;
+        color: var(--aow-accent-red); /* Red emphasis on black */
+    }
+
+    .footer-aow {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-aow">
+        <h1><span class="title-the">The</span> Art <span class="font-normal italic text-2xl">of</span> War</h1>
+        <div class="title-separator"></div>
+        <h3>Sun Tzu</h3>
+        <div class="translator-note">Translated by Thomas Cleary</div>
+        <img src="https://m.media-amazon.com/images/I/71jWgemHbML._AC_UF1000,1000_QL80_.jpg" alt="The Art of War Book Cover" class="book-cover-aow">
+    </div>
+
+    <!-- Core Philosophy Section: Strategy and Wisdom -->
+    <div class="section-aow">
+      <div class="section-header-aow">
+        <i class="fas fa-chess-king"></i>
+        <h2>Supreme Excellence: Winning Without Fighting</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"The Art of War," attributed to the ancient Chinese military strategist Sun Tzu, is a seminal work on military strategy and tactics that has profound implications far beyond the battlefield. Its core philosophy emphasizes that the ultimate goal is not simply to fight and conquer, but to achieve victory through **superior strategy, psychological insight, and adaptability**, ideally without resorting to direct conflict.</p>
+      <p class="mb-4 text-base leading-relaxed">Sun Tzu stresses the paramount importance of **planning, intelligence (knowing yourself and your enemy), deception, flexibility, and understanding the terrain (context)**. He argues that thorough preparation and astute maneuvering can break the enemy's resistance without a single battle.</p>
+      <p class="text-base leading-relaxed">The text explores the intricate relationship between the leader, the army (organization), the environment, and the opponent, offering timeless principles applicable to business competition, negotiation, leadership, and personal challenges.</p>
+
+      <div class="quote-aow">
+          <p>"The supreme art of war is to subdue the enemy without fighting."</p>
+          <footer>— Sun Tzu</footer>
+      </div>
+    </div>
+
+    <!-- Key Principles Section -->
+    <div class="section-aow">
+      <div class="section-header-aow">
+         <i class="fas fa-scroll"></i>
+         <h2>Key Principles of Strategy</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">"The Art of War" is structured into 13 chapters, each detailing crucial aspects of warfare and strategy. Key principles include:</p>
+      <div class="principles-grid-aow">
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-map"></i></div>
+            <div class="principle-title-aow">Laying Plans (Chapter 1)</div>
+            <p class="principle-summary-aow">War is a matter of vital importance; assess it carefully based on five fundamental factors: The Moral Law (unity of purpose), Heaven (timing/conditions), Earth (terrain), The Commander (leadership qualities), and Method and Discipline (organization).</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-fire"></i></div>
+            <div class="principle-title-aow">Waging War (Chapter 2)</div>
+            <p class="principle-summary-aow">Prolonged warfare drains resources and morale. Aim for swift, decisive victory. Understand the costs of conflict and leverage the enemy's resources when possible.</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-lightbulb"></i></div> <!-- Strategy icon -->
+            <div class="principle-title-aow">Attack by Stratagem (Chapter 3)</div>
+            <p class="principle-summary-aow">The best victory is to take the enemy whole; destroying them is secondary. Attack the enemy's strategy, then their alliances, then their army, and lastly, attack cities. Know when to fight and when not to fight.</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-shield-alt"></i></div>
+            <div class="principle-title-aow">Tactical Dispositions (Chapter 4)</div>
+            <p class="principle-summary-aow">First, make yourself invincible (defense), then wait for the enemy's vulnerability (offense). Security against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.</p>
+        </div>
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-bolt"></i></div>
+            <div class="principle-title-aow">Energy (Chapter 5)</div>
+            <p class="principle-summary-aow">Use direct (<em>cheng</em>) and indirect (<em>ch'i</em>) tactics in combination. Manage forces through organization, clear signals, and creating momentum (potential energy) like a torrent or a drawn crossbow.</p>
+        </div>
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-crosshairs"></i></div>
+            <div class="principle-title-aow">Weak Points and Strong (Chapter 6)</div>
+            <p class="principle-summary-aow">He who can compel the enemy to come to him does so by offering an apparent advantage. Avoid the enemy's strengths and strike their weaknesses. Shape the battlefield; don't let the enemy shape you.</p>
+        </div>
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-route"></i></div>
+            <div class="principle-title-aow">Maneuvering (Chapter 7)</div>
+            <p class="principle-summary-aow">Maneuvering with an army is advantageous; with an undisciplined multitude, most dangerous. Understand the difficulties of maneuvering and turn deviation into directness, misfortune into gain. Use deception.</p>
+        </div>
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-random"></i></div>
+            <div class="principle-title-aow">Variation in Tactics (Chapter 8)</div>
+            <p class="principle-summary-aow">The wise general adapts to circumstances. Do not press a desperate foe. There are roads not to follow, armies not to attack, towns not to besiege, positions not to contest, commands of the sovereign not to be obeyed.</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-hiking"></i></div> <!-- Marching icon -->
+            <div class="principle-title-aow">The Army on the March (Chapter 9)</div>
+            <p class="principle-summary-aow">Understand how to encamp, observe signs of the enemy, and interpret various signals (dust clouds, movements, words) to gauge the enemy's intentions and situation.</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-mountain"></i></div>
+            <div class="principle-title-aow">Terrain (Chapter 10)</div>
+            <p class="principle-summary-aow">Analyze different types of ground (accessible, entangling, temporizing, narrow passes, precipitous heights, positions at great distance) and understand their strategic implications. Know your terrain.</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-water"></i></div> <!-- Nine situations icon -->
+            <div class="principle-title-aow">The Nine Situations (Chapter 11)</div>
+            <p class="principle-summary-aow">Recognize and adapt tactics based on nine varieties of ground or situations, from dispersive ground (home territory) to desperate ground (where fighting is the only option).</p>
+        </div>
+        <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-fire-alt"></i></div> <!-- Fire icon -->
+            <div class="principle-title-aow">The Attack by Fire (Chapter 12)</div>
+            <p class="principle-summary-aow">Understand the effective use of fire in warfare, including the types of targets, necessary conditions, and follow-up actions. Use it intelligently, not recklessly.</p>
+        </div>
+         <div class="principle-card-aow">
+            <div class="principle-icon-aow"><i class="fas fa-user-secret"></i></div>
+            <div class="principle-title-aow">The Use of Spies (Chapter 13)</div>
+            <p class="principle-summary-aow">Foreknowledge cannot be gotten from spirits or calculations, but only from men who know the enemy's situation. Emphasizes the critical importance of intelligence gathering through various types of spies.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-aow">
+      <div class="section-header-aow">
+         <i class="fas fa-quote-left"></i>
+         <h2>Timeless Strategic Wisdom - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-aow"><p>"Know thyself, know thy enemy. A thousand battles, a thousand victories."</p><footer>— Sun Tzu</footer></blockquote>
+          <blockquote class="quote-aow"><p>"Appear weak when you are strong, and strong when you are weak."</p><footer>— Sun Tzu</footer></blockquote>
+          <blockquote class="quote-aow"><p>"In the midst of chaos, there is also opportunity."</p><footer>— Sun Tzu</footer></blockquote>
+           <blockquote class="quote-aow"><p>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</p><footer>— Sun Tzu</footer></blockquote>
+           <blockquote class="quote-aow"><p>"The greatest victory is that which requires no battle."</p><footer>— Sun Tzu</footer></blockquote>
+           <blockquote class="quote-aow"><p>"Opportunities multiply as they are seized."</p><footer>— Sun Tzu</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-aow">
+       <div class="section-header-aow">
+          <i class="fas fa-chess-board"></i>
+          <h2>Enduring Relevance Beyond Warfare</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Art of War" remains influential over 2,500 years after its composition because its principles transcend military conflict. Its insights into strategy, leadership, psychology, and adaptability are widely applied in business, politics, sports, and personal development.</p>
+      <p class="text-base leading-relaxed">The book teaches the importance of preparation, knowing your strengths and weaknesses (and those of your 'opponent' or situation), flexibility, exploiting opportunities, and achieving objectives with efficiency and intelligence. It is a masterclass in strategic thinking.</p>
+       <div class="conclusion-highlight-aow">
+           <p>Master the art of strategy. Know when to act and when to wait. Understand yourself and your environment. Achieve victory through wisdom, not just force. <strong>This is the essence of The Art of War.</strong></p>
+       </div>
+    </div>
+
+    <div class="footer-aow">
+       <p>© 2024 Summary of "The Art of War" by Sun Tzu.</p>
+       <p class="mt-1">Content for informational purposes only. Based on ancient strategic principles.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
