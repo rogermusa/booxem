@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Bed Summary - Admiral William H. McRaven</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Make Your Bed Cover Color Scheme */
+      --myb-bg: #F4EFE3; /* Cream/Beige Background */
+      --myb-card-bg: #FFFFFF;
+      --myb-text-dark: #111827; /* Near Black for contrast */
+      --myb-text-light: #FFFFFF;
+      --myb-primary-blue: #003366; /* Deep Navy Blue */
+      --myb-accent-gold: #B8860B; /* Gold/Tan */
+      --myb-border-light: #E5E0D4;
+      --myb-border-medium: #D1C7B8;
+      --myb-hover-gold: #D4AF37; /* Brighter Gold */
+      --myb-accent-red: #B91C1C; /* For Bestseller Tag */
+    }
+
+    body {
+      font-family: 'Lato', sans-serif; /* Clean Sans-serif for body */
+      color: var(--myb-text-dark);
+      line-height: 1.7;
+      background-color: var(--myb-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Times New Roman', Times, serif; /* Classic Serif like cover */
+      color: var(--myb-primary-blue); /* Navy Blue */
+      font-weight: bold; /* Use browser bold */
+    }
+    strong { /* Define global emphasis style */
+        font-weight: bold;
+        color: var(--myb-text-dark); /* Dark emphasis */
+    }
+    em { /* Define global italic emphasis style */
+        font-style: italic;
+        color: var(--myb-text-dark);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-myb {
+      background-color: var(--myb-primary-blue); /* Navy Blue BG */
+      color: var(--myb-accent-gold); /* Gold text */
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 4px;
+      border: 2px solid var(--myb-accent-gold); /* Gold border */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+    }
+     /* Inner border simulation */
+     .main-header-myb::before {
+        content: '';
+        position: absolute;
+        top: 10px; left: 10px; right: 10px; bottom: 10px;
+        border: 1px solid var(--myb-accent-gold);
+        opacity: 0.7;
+        border-radius: 2px;
+        pointer-events: none;
+     }
+    .main-header-myb .bestseller-tag {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--myb-accent-red); /* Red text */
+        background-color: var(--myb-text-light); /* White background */
+        padding: 0.2rem 0.6rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+        border-radius: 2px;
+    }
+    .main-header-myb .author-rank {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.25rem;
+        font-weight: normal; /* Normal weight */
+        color: var(--myb-accent-gold);
+        margin-bottom: 0.1rem;
+        border-top: 1px solid var(--myb-accent-gold);
+        border-bottom: 1px solid var(--myb-accent-gold);
+        display: inline-block;
+        padding: 0.1rem 0;
+        letter-spacing: 0.5px;
+    }
+    .main-header-myb h3 { /* Author Name */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: var(--myb-text-light); /* White name */
+        margin-bottom: 0.25rem;
+    }
+     .main-header-myb .author-service {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: var(--myb-accent-gold);
+        margin-bottom: 1.5rem;
+     }
+    .main-header-myb h1 { /* Title */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3rem; /* Adjusted size */
+        font-weight: bold;
+        color: var(--myb-accent-gold); /* Gold title */
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+        border-top: 1px solid var(--myb-accent-gold);
+        border-bottom: 1px solid var(--myb-accent-gold);
+        padding: 0.5rem 0;
+        max-width: 400px; /* Constrain width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-header-myb h2 { /* Subtitle */
+        font-family: 'Times New Roman', Times, serif;
+        color: var(--myb-text-light); /* White subtitle */
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 1rem auto 0 auto;
+        max-width: 500px;
+        line-height: 1.4;
+    }
+     .main-header-myb .subtitle-line2 {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-top: 0.25rem;
+     }
+    .book-cover-myb {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--myb-border-medium);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: block; /* Make block for margin auto */
+      margin: 2rem auto 0 auto; /* Center below */
+    }
+
+
+    /* Section styling */
+    .section-myb {
+      background-color: var(--myb-card-bg);
+      color: var(--myb-text-dark);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--myb-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-myb:hover {
+        border-color: var(--myb-primary-blue); /* Blue border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-myb {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--myb-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-myb h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    .section-header-myb i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--myb-primary-blue); /* Blue icon */
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+     .section-myb:hover .section-header-myb i {
+        transform: rotate(-3deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-myb {
+      background-color: #E9EFF5; /* Light blue-grey background */
+      border: 1px solid var(--myb-border-medium);
+      border-left: 4px solid var(--myb-primary-blue); /* Blue left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--myb-text-dark);
+      border-radius: 0 3px 3px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: normal; /* Normal italic */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-myb:hover {
+        background-color: var(--myb-card-bg);
+        border-left-color: var(--myb-hover-gold); /* Gold border */
+    }
+    .quote-myb p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-myb footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: bold;
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--myb-primary-blue); /* Blue footer */
+    }
+    /* --- End Quote Style --- */
+
+    .lessons-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .lesson-item {
+      background-color: var(--myb-card-bg);
+      border: 1px solid var(--myb-border-light);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+    }
+     .lesson-item:hover {
+         transform: scale(1.02); /* Slight grow on hover */
+         box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+     }
+      .lesson-number {
+         font-family: 'Times New Roman', Times, serif;
+         font-weight: bold;
+         font-size: 1.5rem;
+         color: var(--myb-accent-gold);
+         margin-right: 1.25rem;
+         line-height: 1.2;
+         width: 30px; /* Fixed width */
+         flex-shrink: 0;
+         text-align: right;
+      }
+     .lesson-content {
+         flex-grow: 1;
+     }
+    .lesson-title {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: var(--myb-text-dark);
+      margin-bottom: 0.5rem;
+    }
+     .lesson-summary {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--myb-text-dark);
+        opacity: 0.9;
+     }
+     /* Lesson summary strong/em tags handled globally */
+
+
+    .conclusion-highlight-myb {
+        background-color: var(--myb-primary-blue); /* Navy background */
+        color: var(--myb-text-light); /* White text */
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid var(--myb-accent-gold); /* Gold border */
+    }
+    .conclusion-highlight-myb p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: normal; /* Normal weight forLato */
+    }
+    .conclusion-highlight-myb strong {
+        font-weight: bold;
+        color: var(--myb-accent-gold); /* Gold emphasis */
+    }
+
+    .footer-myb {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-myb">
+      <div class="bestseller-tag">#1 New York Times Bestseller</div>
+      <div class="author-rank">Admiral</div>
+      <h3>William H. McRaven</h3>
+      <div class="author-service">(U.S. Navy Retired)</div>
+      <h1>Make Your Bed</h1>
+      <h2>Little Things That Can Change Your Life...</h2>
+      <h2 class="subtitle-line2">...And Maybe the World</h2>
+      <img src="https://m.media-amazon.com/images/I/713oSHhIrHL.jpg" alt="Make Your Bed Book Cover" class="book-cover-myb">
+    </div>
+
+    <!-- Core Philosophy Section: Lessons from SEAL Training -->
+    <div class="section-myb">
+      <div class="section-header-myb">
+        <i class="fas fa-anchor"></i>
+        <h2>Life Lessons from Navy SEAL Training</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">"Make Your Bed" expands on the viral commencement speech Admiral William H. McRaven gave at the University of Texas at Austin. Drawing on his thirty-seven years as a Navy SEAL, he shares ten simple yet profound principles learned during the rigorous SEAL training that helped him overcome challenges not only in his military career but throughout his life.</p>
+      <p class="mb-4 text-base leading-relaxed">The core philosophy is that seemingly small, everyday disciplines and attitudes can have a ripple effect, building the character, resilience, and perspective needed to tackle life's larger obstacles and ultimately make a positive impact on the world.</p>
+      <p class="text-base leading-relaxed">Each chapter focuses on a single lesson, illustrated with compelling anecdotes from McRaven's training and operational experiences, demonstrating how these principles apply universally to achieving personal goals and contributing to a better world.</p>
+
+      <div class="quote-myb">
+          <p>"If you want to change the world, start off by making your bed."</p>
+          <footer>— Admiral William H. McRaven</footer>
+      </div>
+    </div>
+
+    <!-- The 10 Lessons Section -->
+    <div class="section-myb">
+      <div class="section-header-myb">
+         <i class="fas fa-list-ol"></i>
+         <h2>The 10 Principles to Change Your Life (and Maybe the World)</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">McRaven outlines ten core lessons learned from the challenges of SEAL training:</p>
+      <ul class="lessons-list">
+         <!-- Lesson 1 -->
+         <li class="lesson-item">
+             <div class="lesson-number">1.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Start Your Day with a Task Completed.</h3>
+                <p class="lesson-summary">Making your bed properly each morning provides a small sense of pride and encourages you to do another task, and another. It reinforces that little things matter and sets a positive tone for the day.</p>
+             </div>
+         </li>
+         <!-- Lesson 2 -->
+          <li class="lesson-item">
+             <div class="lesson-number">2.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">You Can't Go It Alone.</h3>
+                <p class="lesson-summary">Find someone to help you paddle. Teamwork, support, and relying on others are crucial for navigating difficult times. You need people in your life you can depend on.</p>
+             </div>
+         </li>
+          <!-- Lesson 3 -->
+          <li class="lesson-item">
+             <div class="lesson-number">3.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Only the Size of Your Heart Matters.</h3>
+                <p class="lesson-summary">Measure people by the size of their heart, not the size of their flippers (or physical attributes). Determination, grit, and spirit are more important than innate advantages.</p>
+             </div>
+         </li>
+         <!-- Lesson 4 -->
+          <li class="lesson-item">
+             <div class="lesson-number">4.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Life's Not Fair—Drive On!</h3>
+                <p class="lesson-summary">Getting over being a "sugar cookie" (punished unfairly for minor infractions) is essential. Sometimes you fail despite your best efforts. Stop complaining, learn from it, and keep moving forward.</p>
+             </div>
+         </li>
+          <!-- Lesson 5 -->
+          <li class="lesson-item">
+             <div class="lesson-number">5.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Failure Can Make You Stronger.</h3>
+                <p class="lesson-summary">Don't be afraid of the "circus" (extra training for failing). Failure is inevitable and provides valuable lessons. Embrace it as an opportunity to learn, adapt, and grow stronger.</p>
+             </div>
+         </li>
+          <!-- Lesson 6 -->
+          <li class="lesson-item">
+             <div class="lesson-number">6.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">You Must Dare Greatly.</h3>
+                <p class="lesson-summary">Slide down the obstacle headfirst. Taking calculated risks and pushing your boundaries is necessary for significant achievement. Overcoming fear requires courage and action.</p>
+             </div>
+         </li>
+          <!-- Lesson 7 -->
+          <li class="lesson-item">
+             <div class="lesson-number">7.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Stand Up to the Bullies.</h3>
+                <p class="lesson-summary">Don't back down from the "sharks." Courage isn't absence of fear; it's acting despite it. Confront bullies and oppressive forces with strength and resolve.</p>
+             </div>
+         </li>
+          <!-- Lesson 8 -->
+          <li class="lesson-item">
+             <div class="lesson-number">8.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Rise to the Occasion.</h3>
+                <p class="lesson-summary">Be your very best in the darkest moments. Adversity reveals true character. Dig deep and perform when stakes are highest.</p>
+             </div>
+         </li>
+          <!-- Lesson 9 -->
+          <li class="lesson-item">
+             <div class="lesson-number">9.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Give People Hope.</h3>
+                <p class="lesson-summary">Start singing when you're up to your neck in mud. One person can lift the spirits of many. Hope is a powerful force multiplier in difficult times.</p>
+             </div>
+         </li>
+          <!-- Lesson 10 -->
+          <li class="lesson-item">
+             <div class="lesson-number">10.</div>
+             <div class="lesson-content">
+                <h3 class="lesson-title">Never, Ever Quit!</h3>
+                <p class="lesson-summary">Don't ring the bell. Perseverance and refusing to give up are fundamental to overcoming life's greatest challenges and achieving your goals.</p>
+             </div>
+         </li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-myb">
+      <div class="section-header-myb">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Quotes on Resilience & Character</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-myb"><p>"If you make your bed every morning you will have accomplished the first task of the day. It will give you a small sense of pride and it will encourage you to do another task and another and another."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+          <blockquote class="quote-myb"><p>"Hope is the most powerful force in the universe."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+          <blockquote class="quote-myb"><p>"Life is a struggle and the potential for failure is ever present, but those obstacles are what make us stronger."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+           <blockquote class="quote-myb"><p>"Without courage, others will define your path forward. Without courage, you are at the mercy of life's temptations. Without courage, men and women will be bullied."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+           <blockquote class="quote-myb"><p>"It is easy to blame someone else for your station in life than to accept responsibility for it."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+           <blockquote class="quote-myb"><p>"Remember... start each day with a task completed. Find someone to help you through life. Respect everyone. Know that life is not fair and that you will fail often. But if you take some risks, step up when times are toughest, face down the bullies, lift up the downtrodden, and never, ever give up... you can change the world."</p><footer>— Admiral William H. McRaven</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-myb">
+       <div class="section-header-myb">
+          <i class="fas fa-flag-usa"></i> <!-- Icon representing service/achievement -->
+          <h2>Changing the World, One Task at a Time</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Make Your Bed" offers simple, actionable wisdom forged in the crucible of elite military training. Admiral McRaven translates these demanding experiences into universal lessons applicable to everyday life.</p>
+      <p class="text-base leading-relaxed">The book emphasizes that discipline, teamwork, resilience, courage, and hope – cultivated through small, consistent actions – are the keys to overcoming adversity, achieving personal success, and making a meaningful difference in the world. It's a call to embrace challenges and live with purpose, starting with the first task of the day.</p>
+       <div class="conclusion-highlight-myb">
+           <p>Start small. Build discipline. Help others. Never quit. These simple acts, repeated daily, can transform your life – and perhaps, even <strong>change the world</strong>.</p>
+       </div>
+    </div>
+
+    <div class="footer-myb">
+       <p>© 2024 Summary of "Make Your Bed" by Admiral William H. McRaven.</p>
+       <p class="mt-1">Content for informational purposes only. Based on the principles presented by the author.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
