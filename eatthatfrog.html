@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eat That Frog! Summary - Brian Tracy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Eat That Frog Cover Color Scheme */
+      --etf-bg: #F8FBF8; /* Very Light Green/Grey */
+      --etf-card-bg: #FFFFFF;
+      --etf-text-dark: #0F172A; /* Dark Blue/Black */
+      --etf-text-light: #FFFFFF;
+      --etf-accent-green: #86BC25; /* Cover Green */
+      --etf-accent-red: #DC2626; /* Cover Red */
+      --etf-accent-orange: #F59E0B; /* Cover Orange/Gold */
+      --etf-dark-blue: #0F172A; /* Dark blue from top/bottom */
+      --etf-border-light: #E5E7EB;
+      --etf-border-medium: #D1D5DB;
+      --etf-hover-green: #65A30D; /* Darker Green */
+      --etf-hover-red: #B91C1C; /* Darker Red */
+      --etf-secondary-text: #4B5563; /* Medium Grey */
+    }
+
+    body {
+      font-family: 'Lato', sans-serif; /* Clear Sans-serif */
+      color: var(--etf-secondary-text);
+      line-height: 1.7;
+      background-color: var(--etf-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif; /* Bold Sans-serif */
+      color: var(--etf-text-dark); /* Dark Text */
+      font-weight: 600; /* Bold */
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    strong { /* Define global emphasis style */
+        font-weight: 700;
+        color: var(--etf-accent-red); /* Red emphasis */
+    }
+    em { /* Define global italic emphasis style */
+        font-style: italic;
+        color: var(--etf-secondary-text);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-etf {
+      background-color: var(--etf-card-bg);
+      color: var(--etf-text-dark);
+      padding: 0; /* No padding, use internal elements */
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid var(--etf-border-medium);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      overflow: hidden; /* Contain banners */
+    }
+    .header-top-banner {
+        background-color: var(--etf-dark-blue);
+        color: var(--etf-accent-orange);
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+     .header-mid-banner {
+        background-color: var(--etf-accent-green);
+        padding: 2rem 1.5rem;
+     }
+      .header-mid-banner h1 {
+         font-size: 4.5rem; /* Large Title */
+         font-weight: 700;
+         color: var(--etf-dark-blue);
+         line-height: 1;
+         margin: 0;
+      }
+     .header-tagline-banner {
+        background-color: var(--etf-card-bg);
+        padding: 1.5rem 1rem;
+        border-top: 1px solid var(--etf-border-light);
+        border-bottom: 1px solid var(--etf-border-light);
+     }
+      .header-tagline-banner h2 {
+         font-family: 'Oswald', sans-serif;
+         font-size: 1.2rem;
+         font-weight: 600;
+         color: var(--etf-text-dark);
+         line-height: 1.3;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+      }
+       .tagline-red { color: var(--etf-accent-red); }
+     .header-image-area { /* Area for placeholder */
+        padding: 1rem;
+        background-color: #f1f5f9; /* Light grey BG */
+        position: relative;
+     }
+      .edition-seal {
+         position: absolute;
+         bottom: 1.5rem;
+         right: 1.5rem;
+         background-color: var(--etf-accent-orange);
+         color: var(--etf-dark-blue);
+         padding: 0.8rem;
+         border-radius: 50%;
+         font-size: 0.7rem;
+         font-weight: 700;
+         text-align: center;
+         line-height: 1;
+         border: 3px solid var(--etf-text-dark);
+         transform: rotate(-10deg);
+         /* Starburst effect (complex, optional) */
+         clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+         width: 80px; height: 80px;
+         display: flex; align-items: center; justify-content: center; flex-direction: column;
+      }
+       .edition-seal span { display: block; }
+    .book-cover-etf {
+      max-width: 180px; /* Adjust size */
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--etf-border-medium);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      /* Frog image could be positioned absolutely over clock if desired */
+    }
+    .header-bottom-banner {
+        background-color: var(--etf-dark-blue);
+        color: var(--etf-accent-orange);
+        padding: 1rem;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Section styling */
+    .section-etf {
+      background-color: var(--etf-card-bg);
+      color: var(--etf-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--etf-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-etf:hover {
+        border-color: var(--etf-accent-green); /* Green border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-etf {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--etf-accent-green); /* Green border */
+      display: flex;
+      align-items: center;
+    }
+    .section-header-etf h2 {
+      font-size: 1.6rem; /* Slightly smaller */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700; /* Bold */
+      color: var(--etf-text-dark); /* Dark header text */
+    }
+    .section-header-etf i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--etf-accent-green); /* Green icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-etf:hover .section-header-etf i {
+        transform: rotate(-5deg) scale(1.05);
+     }
+
+    /* --- Quote Style --- */
+    .quote-etf {
+      background-color: #F1F8E9; /* Very light green */
+      border: 1px solid var(--etf-border-light);
+      border-left: 4px solid var(--etf-accent-green); /* Green left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--etf-text-dark);
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-etf:hover {
+        background-color: var(--etf-card-bg);
+        border-color: var(--etf-border-medium);
+        border-left-color: var(--etf-text-dark); /* Dark border on hover */
+    }
+    .quote-etf p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-etf footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--etf-secondary-text); /* Grey footer text */
+    }
+    /* --- End Quote Style --- */
+
+    .ways-list {
+      list-style: none; /* Remove default list style */
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .way-item {
+      background-color: var(--etf-card-bg);
+      border: 1px solid var(--etf-border-light);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem; /* Space between items */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      display: flex; /* Flex layout */
+      align-items: flex-start; /* Align items top */
+    }
+     .way-item:hover {
+      transform: translateX(3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+     .way-number {
+        flex-shrink: 0;
+        margin-right: 1rem;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--etf-accent-green); /* Green number */
+        background-color: #f0fdf4; /* Very light green background */
+        border-radius: 50%;
+        width: 36px; height: 36px;
+        display: inline-flex; align-items: center; justify-content: center;
+        border: 1px solid var(--etf-accent-green);
+     }
+    .way-content {
+        flex-grow: 1;
+    }
+    .way-title {
+      font-family: 'Lato', sans-serif; /* Sans-serif title for readability */
+      font-size: 1.1rem;
+      font-weight: 700; /* Bold */
+      color: var(--etf-text-dark);
+      margin-bottom: 0.4rem; /* Less space below title */
+    }
+    .way-summary {
+      font-size: 0.9rem; /* Slightly smaller summary */
+      color: var(--etf-secondary-text);
+      line-height: 1.6;
+    }
+     /* Summary strong tags handled globally */
+
+    .conclusion-highlight-etf {
+        background-color: var(--etf-accent-green); /* Green background */
+        color: var(--etf-text-dark); /* Dark text */
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 6px;
+        border: 2px solid var(--etf-dark-blue); /* Dark blue border */
+    }
+    .conclusion-highlight-etf p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 500; /* Medium weight */
+    }
+    .conclusion-highlight-etf strong {
+        font-weight: 700;
+        color: var(--etf-dark-blue); /* Dark blue emphasis */
+        text-transform: uppercase;
+    }
+
+    .footer-etf {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-etf">
+      <div class="header-top-banner">International Bestseller - More Than 3 Million Copies Sold!</div>
+      <div class="header-mid-banner">
+        <h1>Eat That Frog!</h1>
+      </div>
+      <div class="header-tagline-banner">
+        <h2>21 Great Ways to <span class="tagline-red">Stop Procrastinating</span><br>and Get More Done in Less Time</h2>
+      </div>
+      <div class="header-image-area">
+          <!-- Placeholder Image -->
+          <img src="https://m.media-amazon.com/images/I/81wkKgohO1L.jpg" alt="Eat That Frog! Book Cover Placeholder" class="book-cover-etf">
+          <div class="edition-seal"><span>Third</span><span>Edition</span></div>
+      </div>
+      <div class="header-bottom-banner">
+          Brian Tracy
+      </div>
+    </div>
+
+    <!-- Core Philosophy Section: Eat Your Biggest Frog First -->
+    <div class="section-etf">
+      <div class="section-header-etf">
+        <i class="fas fa-frog"></i>
+        <h2>The Power of Tackling Your Toughest Task</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Brian Tracy's "Eat That Frog!" provides a straightforward, actionable system for overcoming procrastination and boosting productivity. The central metaphor, inspired by a Mark Twain quote, is simple: If the first thing you do each morning is eat a live frog, you can go through the day knowing that's probably the worst thing that will happen to you. Your "frog" is your <strong>biggest, most important, and often most dreaded task</strong> – the one you are most likely to procrastinate on.</p>
+      <p class="mb-4 text-base leading-relaxed">Tracy argues that tackling this "frog" first thing in the morning, before anything else, is the key to high performance and personal satisfaction. Completing your most challenging task creates momentum, provides a sense of accomplishment, and frees up mental energy for the rest of the day.</p>
+      <p class="text-base leading-relaxed">The book isn't about doing *more* things, but about doing the *right* things efficiently. It focuses on clarity, prioritization, planning, and taking immediate action on high-value activities.</p>
+
+      <div class="quote-etf">
+          <p>"If you have to eat two frogs, eat the ugliest one first!"</p>
+          <footer>— Brian Tracy (Paraphrasing the core idea)</footer>
+      </div>
+      <div class="quote-etf">
+          <p>"Your ability to select your most important task at each moment, and then to get started on that task and to get it done both quickly and well, will probably have more of an impact on your success than any other quality or skill you can develop."</p>
+          <footer>— Brian Tracy</footer>
+      </div>
+    </div>
+
+    <!-- The 21 Ways Section -->
+    <div class="section-etf">
+      <div class="section-header-etf">
+         <i class="fas fa-list-check"></i>
+         <h2>21 Ways to Stop Procrastinating</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Tracy presents 21 practical techniques, or "ways," to help you identify and tackle your frogs:</p>
+      <ul class="ways-list">
+         <li class="way-item">
+            <div class="way-number">1</div>
+            <div class="way-content">
+                <h4 class="way-title">Set the Table</h4>
+                <p class="way-summary">Decide exactly what you want. Clarity is essential. Write down your goals and objectives before you begin.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">2</div>
+            <div class="way-content">
+                <h4 class="way-title">Plan Every Day in Advance</h4>
+                <p class="way-summary">Think on paper. Spend time planning your day, week, and month. Every minute spent planning saves ten minutes in execution.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">3</div>
+            <div class="way-content">
+                <h4 class="way-title">Apply the 80/20 Rule to Everything</h4>
+                <p class="way-summary">Focus your energy on the 20% of activities that yield 80% of the results. Identify and concentrate on these high-value tasks.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">4</div>
+            <div class="way-content">
+                <h4 class="way-title">Consider the Consequences</h4>
+                <p class="way-summary">Your most important tasks ("frogs") are those with the biggest potential consequences (positive or negative) for your life and work. Focus on these first.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">5</div>
+            <div class="way-content">
+                <h4 class="way-title">Practice the ABCDE Method Continually</h4>
+                <p class="way-summary">Prioritize your task list: A=Must Do (Frog!), B=Should Do, C=Nice to Do, D=Delegate, E=Eliminate. Always start with A-1.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">6</div>
+            <div class="way-content">
+                <h4 class="way-title">Focus on Key Result Areas</h4>
+                <p class="way-summary">Identify the critical results you must achieve in your job and focus on getting better in those areas.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">7</div>
+            <div class="way-content">
+                <h4 class="way-title">Obey the Law of Forced Efficiency</h4>
+                <p class="way-summary">There is never enough time to do everything, but there is always enough time to do the most important things. Focus relentlessly on the highest-value use of your time.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">8</div>
+            <div class="way-content">
+                <h4 class="way-title">Prepare Thoroughly Before You Begin</h4>
+                <p class="way-summary">Have everything you need at hand before starting your frog. Clear your workspace and mind.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">9</div>
+            <div class="way-content">
+                <h4 class="way-title">Do Your Homework</h4>
+                <p class="way-summary">Continuously upgrade your skills in your key result areas. The better you are, the faster you complete tasks.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">10</div>
+            <div class="way-content">
+                <h4 class="way-title">Leverage Your Special Talents</h4>
+                <p class="way-summary">Identify what you do exceptionally well (or could do well) and focus your energy there.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">11</div>
+            <div class="way-content">
+                <h4 class="way-title">Identify Your Key Constraints</h4>
+                <p class="way-summary">Determine the bottleneck (internal or external) that sets the speed at which you achieve your goals, and focus on alleviating it.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">12</div>
+            <div class="way-content">
+                <h4 class="way-title">Take It One Barrel at a Time</h4>
+                <p class="way-summary">Break large, complex tasks ("frogs") down into smaller, manageable steps. Focus on completing just the next step.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">13</div>
+            <div class="way-content">
+                <h4 class="way-title">Put the Pressure on Yourself</h4>
+                <p class="way-summary">Imagine you have to leave town for a month and must get all major tasks done. Create artificial deadlines and work with urgency.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">14</div>
+            <div class="way-content">
+                <h4 class="way-title">Maximize Your Personal Powers</h4>
+                <p class="way-summary">Identify your peak energy times and schedule your most important tasks ("frogs") for those periods. Protect your physical and mental energy.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">15</div>
+            <div class="way-content">
+                <h4 class="way-title">Motivate Yourself into Action</h4>
+                <p class="way-summary">Be your own cheerleader. Talk to yourself positively. Focus on the benefits of completing tasks, not the difficulty.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">16</div>
+            <div class="way-content">
+                <h4 class="way-title">Practice Creative Procrastination</h4>
+                <p class="way-summary">Since you must procrastinate on something, consciously choose to procrastinate on low-value tasks (the "tadpoles") rather than your high-value "frogs".</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">17</div>
+            <div class="way-content">
+                <h4 class="way-title">Do the Most Difficult Task First</h4>
+                <p class="way-summary">The core principle: Eat that frog! Tackle your biggest, ugliest task first thing in the morning.</p>
+            </div>
+         </li>
+         <li class="way-item">
+            <div class="way-number">18</div>
+            <div class="way-content">
+                <h4 class="way-title">Slice and Dice the Task</h4>
+                <p class="way-summary">Break overwhelming tasks into smaller pieces. Use techniques like the "Salami Slice" (do one thin slice) or "Swiss Cheese" (poke holes by working for short bursts).</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">19</div>
+            <div class="way-content">
+                <h4 class="way-title">Create Large Chunks of Time</h4>
+                <p class="way-summary">Schedule substantial blocks of uninterrupted time to work on your most important tasks.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">20</div>
+            <div class="way-content">
+                <h4 class="way-title">Develop a Sense of Urgency</h4>
+                <p class="way-summary">Cultivate a bias for action. Get into the habit of moving quickly on opportunities and important tasks.</p>
+            </div>
+         </li>
+          <li class="way-item">
+            <div class="way-number">21</div>
+            <div class="way-content">
+                <h4 class="way-title">Single Handle Every Task</h4>
+                <p class="way-summary">Once you start your most important task, work on it without distraction until it is 100% complete. Avoid multitasking.</p>
+            </div>
+         </li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-etf">
+      <div class="section-header-etf">
+         <i class="fas fa-quote-left"></i>
+         <h2>Key Quotes on Productivity</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-etf"><p>"One of the very worst uses of time is to do something very well that need not be done at all."</p><footer>— Brian Tracy</footer></blockquote>
+          <blockquote class="quote-etf"><p>"Continuous learning is the minimum requirement for success in any field."</p><footer>— Brian Tracy</footer></blockquote>
+          <blockquote class="quote-etf"><p>"The key to success is action."</p><footer>— Brian Tracy</footer></blockquote>
+           <blockquote class="quote-etf"><p>"There is never enough time to do everything, but there is always enough time to do the most important thing."</p><footer>— Brian Tracy</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-etf">
+       <div class="section-header-etf">
+          <i class="fas fa-check-square"></i>
+          <h2>Mastering Your Time and Your Life</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Eat That Frog!" offers a highly practical and results-oriented approach to overcoming procrastination and achieving peak productivity. By focusing on identifying and tackling your most important task first thing each day, you build momentum and ensure that you are consistently working on what truly matters.</p>
+      <p class="text-base leading-relaxed">The 21 methods provide a comprehensive toolkit for clarifying goals, prioritizing effectively, managing time, overcoming mental blocks, and taking consistent action. Implementing these strategies can significantly improve your focus, efficiency, and overall success.</p>
+       <div class="conclusion-highlight-etf">
+           <p>Identify your biggest, ugliest frog each day, and <strong>eat it first!</strong> Master this habit, and you'll master your productivity.</p>
+       </div>
+    </div>
+
+    <div class="footer-etf">
+       <p>© 2024 Summary of "Eat That Frog!" by Brian Tracy (Third Edition).</p>
+       <p class="mt-1">Content for informational purposes only. Based on the principles presented by the author.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
