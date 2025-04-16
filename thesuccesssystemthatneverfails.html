@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Success System That Never Fails Summary - W. Clement Stone</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Success System Inspired Color Scheme */
+      --ss-bg: #F8F9FA; /* Light Grey/White */
+      --ss-card-bg: #FFFFFF;
+      --ss-text-dark: #212529; /* Near Black */
+      --ss-text-light: #FFFFFF;
+      --ss-accent-teal: #20C997; /* Teal from cover */
+      --ss-accent-red: #DC3545; /* Red from cover */
+      --ss-accent-blue-dark: #0D6EFD; /* A contrasting blue */
+      --ss-border-light: #E9ECEF;
+      --ss-border-medium: #DEE2E6;
+      --ss-hover-red: #BB2D3B; /* Darker Red */
+      --ss-secondary-text: #6C757D; /* Medium Grey */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif; /* Clean Sans-serif */
+      color: var(--ss-secondary-text);
+      line-height: 1.75;
+      background-color: var(--ss-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lato', sans-serif; /* Bold Sans-serif */
+      color: var(--ss-text-dark);
+      font-weight: 900; /* Black weight for impact */
+      letter-spacing: 0.5px;
+    }
+    strong { /* Define global emphasis style */
+        font-weight: 700;
+        color: var(--ss-accent-red); /* Red emphasis */
+    }
+    em { /* Define global italic emphasis style */
+        font-style: italic;
+        color: var(--ss-secondary-text);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .main-header-ss {
+      background-color: var(--ss-card-bg); /* White header */
+      color: var(--ss-text-dark);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid var(--ss-border-medium);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    }
+    .main-header-ss .title-the { /* "THE" */
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.1rem;
+        display: block;
+    }
+    .main-header-ss h1 { /* "SUCCESS SYSTEM" */
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--ss-accent-teal); /* Teal */
+        line-height: 1.1;
+        margin-bottom: 0.25rem;
+        letter-spacing: 1px;
+    }
+     .main-header-ss .title-sub { /* "THAT NEVER" */
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.1rem;
+        display: block;
+     }
+      .main-header-ss .title-fails { /* "FAILS" */
+        font-size: 4rem; /* Large FAILS */
+        font-weight: 900;
+        color: var(--ss-accent-red); /* Red */
+        line-height: 1;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+     }
+    .main-header-ss h3 { /* Author */
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--ss-text-dark);
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .book-cover-ss {
+      max-width: 160px;
+      height: auto;
+      border-radius: 3px;
+      border: 1px solid var(--ss-border-light);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: block; /* Center */
+      margin: 1rem auto 0 auto;
+    }
+    /* Image area to match cover layout */
+    .image-bg {
+        background-color: #E0F2F7; /* Placeholder light blue/grey */
+        padding: 1rem 0 0 0; /* Padding top only */
+        margin-top: 1.5rem;
+        /* Simulate perspective/gradient if possible later */
+    }
+
+
+    /* Section styling */
+    .section-ss {
+      background-color: var(--ss-card-bg);
+      color: var(--ss-secondary-text);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--ss-border-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-ss:hover {
+        border-color: var(--ss-accent-teal); /* Teal border */
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-header-ss {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--ss-border-medium);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-ss h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700; /* Bold header */
+      color: var(--ss-text-dark); /* Darker header text */
+    }
+    .section-header-ss i {
+      font-size: 1.3rem;
+      margin-right: 0.85rem;
+      color: var(--ss-accent-red); /* Red icon */
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+     .section-ss:hover .section-header-ss i {
+        transform: scale(1.1);
+     }
+
+    /* --- Quote Style --- */
+    .quote-ss {
+      background-color: #F1F3F5; /* Light grey */
+      border: 1px solid var(--ss-border-light);
+      border-left: 4px solid var(--ss-accent-red); /* Red left border */
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      color: var(--ss-text-dark);
+      border-radius: 0 3px 3px 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 500; /* Medium weight */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+     .quote-ss:hover {
+        background-color: var(--ss-card-bg);
+        border-color: var(--ss-border-medium);
+        border-left-color: var(--ss-accent-teal); /* Teal border on hover */
+    }
+    .quote-ss p {
+         margin-bottom: 0.5rem;
+     }
+    .quote-ss footer {
+      margin-top: 0.75rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 700; /* Bold footer */
+      font-size: 0.85rem;
+      opacity: 0.85;
+      color: var(--ss-text-dark);
+    }
+    /* --- End Quote Style --- */
+
+    .principles-list-ss {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .principle-item-ss {
+      background-color: var(--ss-card-bg);
+      border: 1px solid var(--ss-border-light);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      align-items: flex-start;
+    }
+     .principle-item-ss:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+      border-color: var(--ss-border-medium);
+    }
+     .principle-icon-ss {
+        flex-shrink: 0;
+        margin-right: 1.5rem;
+        font-size: 1.75rem;
+        color: var(--ss-accent-teal); /* Teal icon */
+        opacity: 0.8;
+        padding-top: 0.1rem; /* Align icon */
+        width: 35px;
+        text-align: center;
+        transition: color 0.25s ease;
+     }
+      .principle-item-ss:hover .principle-icon-ss {
+          color: var(--ss-accent-red); /* Red icon on hover */
+      }
+     .principle-content-ss {
+         flex-grow: 1;
+     }
+    .principle-title-ss {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900; /* Black weight title */
+      color: var(--ss-text-dark);
+      margin-bottom: 0.6rem;
+    }
+    .principle-summary-ss {
+      font-size: 0.95rem;
+      color: var(--ss-secondary-text); /* Softer text */
+      line-height: 1.7;
+    }
+    /* Principle summary strong/em tags handled globally */
+      .principle-summary-ss p + p {
+         margin-top: 0.75rem;
+      }
+
+    .key-ideas-list {
+        columns: 2; /* Two columns for key ideas */
+        column-gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+     .key-ideas-list li {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        break-inside: avoid-column;
+    }
+     .key-ideas-list li i {
+         color: var(--ss-accent-red);
+         margin-right: 0.75rem;
+         width: 18px;
+         text-align: center;
+     }
+
+    .conclusion-highlight-ss {
+        background: linear-gradient(to right, var(--ss-accent-teal), #1aa07f); /* Teal gradient */
+        color: var(--ss-text-light);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--ss-accent-teal);
+    }
+    .conclusion-highlight-ss p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 500; /* Medium weight */
+    }
+    .conclusion-highlight-ss strong {
+        font-weight: 700;
+        color: var(--ss-accent-red); /* Red emphasis on teal */
+    }
+
+    .footer-ss {
+        text-align: center;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-ss">
+        <span class="title-the">The</span>
+        <h1>Success System</h1>
+        <span class="title-sub">That Never</span>
+        <span class="title-fails">FAILS</span>
+        <h3>William Clement Stone</h3>
+        <div class="image-bg">
+             <img src="https://m.media-amazon.com/images/I/61aQyk09FUL._AC_UF1000,1000_QL80_.jpg" alt="The Success System That Never Fails Book Cover" class="book-cover-ss">
+        </div>
+    </div>
+
+    <!-- Core Philosophy Section: PMA and Action -->
+    <div class="section-ss">
+      <div class="section-header-ss">
+        <i class="fas fa-lightbulb"></i>
+        <h2>Success is Achievable: PMA + Action</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">W. Clement Stone, a self-made millionaire and philanthropist heavily influenced by Napoleon Hill, presents his "Success System That Never Fails." The core philosophy is remarkably straightforward yet powerful: success in any endeavor is not a matter of luck or inherent talent, but the result of applying a specific, repeatable system grounded in a <strong>Positive Mental Attitude (PMA)</strong> combined with <strong>consistent action</strong> towards a <strong>Definite Major Purpose (DMP)</strong>.</p>
+      <p class="mb-4 text-base leading-relaxed">Stone argues that the starting point for all achievement is cultivating and maintaining PMA – an optimistic, confident, and resilient mindset that expects success and sees opportunity even in adversity. This positive mental state must then be directed towards a clearly defined goal (DMP) and fueled by inspiration to action.</p>
+      <p class="text-base leading-relaxed">The book emphasizes that this system is accessible to everyone, regardless of their background or current circumstances. It provides practical steps and motivational insights drawn from Stone's own extraordinary life and the principles he taught.</p>
+
+      <div class="quote-ss">
+          <p>"Whatever the mind can conceive and believe, the mind can achieve regardless of how many times you may have failed in the past or how lofty your aims and hopes may be."</p>
+          <footer>— W. Clement Stone</footer>
+      </div>
+    </div>
+
+    <!-- Key Components of the System Section -->
+    <div class="section-ss">
+      <div class="section-header-ss">
+         <i class="fas fa-cogs"></i>
+         <h2>Components of the Success System</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">Stone's system integrates several key elements, many echoing the work of Napoleon Hill:</p>
+      <ul class="principles-list-ss">
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-smile-beam"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Positive Mental Attitude (PMA)</div>
+                <p class="principle-summary-ss">The cornerstone of the system. PMA involves maintaining optimism, faith, enthusiasm, and courage. It's about consciously choosing positive thoughts and interpretations, especially when facing challenges. Regularly using affirmations like "Do it now!" helps cultivate PMA.</p>
+            </div>
+         </li>
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-bullseye"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Definite Major Purpose (DMP)</div>
+                <p class="principle-summary-ss">Having a clear, specific, written-down primary goal provides direction and focus for your energy and actions. Knowing exactly what you want is crucial for mobilizing your resources and maintaining motivation.</p>
+            </div>
+         </li>
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-plus-circle"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Going the Extra Mile</div>
+                <p class="principle-summary-ss">Consistently doing more than you are paid for or expected to do. This habit builds goodwill, increases your value, creates opportunities, and develops personal initiative and positive momentum.</p>
+            </div>
+         </li>
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-book-reader"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Applied Faith & Specialized Knowledge</div>
+                <p class="principle-summary-ss">Believing in your ability to achieve your DMP and acquiring the necessary specialized knowledge through learning and experience. Faith acts as a catalyst, while knowledge provides the tools.</p>
+            </div>
+         </li>
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-users"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Master Mind Alliance</div>
+                <p class="principle-summary-ss">Collaborating harmoniously with others who share similar goals or possess complementary skills. This creates synergy and provides support, knowledge, and accountability.</p>
+            </div>
+         </li>
+          <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-running"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Action Orientation ("Do It Now!")</div>
+                <p class="principle-summary-ss">Overcoming procrastination and inertia by taking immediate, consistent action towards your goals. Stone's famous motto, <em>"Do It Now!"</em>, encapsulates this principle.</p>
+            </div>
+         </li>
+         <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-bolt"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Controlled Enthusiasm</div>
+                <p class="principle-summary-ss">Generating genuine enthusiasm for your goals and plans. Enthusiasm is contagious and fuels persistence and inspires others.</p>
+            </div>
+         </li>
+          <li class="principle-item-ss">
+            <div class="principle-icon-ss"><i class="fas fa-balance-scale"></i></div>
+            <div class="principle-content-ss">
+                <div class="principle-title-ss">Accurate Thinking & Learning from Defeat</div>
+                <p class="principle-summary-ss">Separating facts from opinions, thinking logically, and, crucially, viewing temporary defeat not as failure but as an opportunity to learn, adjust plans, and strengthen resolve.</p>
+            </div>
+         </li>
+      </ul>
+    </div>
+
+     <!-- Key Ideas & Tactics Section -->
+    <div class="section-ss">
+      <div class="section-header-ss">
+         <i class="fas fa-key"></i>
+         <h2>Key Ideas for Implementation</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Stone provides practical advice for putting the system into action:</p>
+      <ul class="key-ideas-list">
+          <li><i class="fas fa-check"></i><span>Seek Inspiration: Actively look for motivation in books, talks, and successful people.</span></li>
+          <li><i class="fas fa-redo"></i><span>Use Repetition: Embed principles through repeated affirmations and actions.</span></li>
+          <li><i class="fas fa-comments"></i><span>Employ Autosuggestion: Consciously program your subconscious with positive beliefs.</span></li>
+          <li><i class="fas fa-user-plus"></i><span>Cultivate Personal Initiative: Be a self-starter; don't wait to be told what to do.</span></li>
+           <li><i class="fas fa-dollar-sign"></i><span>Share the Wealth: Believe in giving back and helping others succeed.</span></li>
+           <li><i class="fas fa-history"></i><span>Recognize Cycles: Understand that success often involves ups and downs; maintain PMA through cycles.</span></li>
+           <li><i class="fas fa-shield-alt"></i><span>Self-Discipline: Master your thoughts, emotions, and actions.</span></li>
+           <li><i class="fas fa-universal-access"></i><span>Universality: Believe the system works for anyone willing to apply it.</span></li>
+      </ul>
+    </div>
+
+
+     <!-- Memorable Quotes Section -->
+    <div class="section-ss">
+      <div class="section-header-ss">
+         <i class="fas fa-quote-left"></i>
+         <h2>Stone's Success Mantras - Quotes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <blockquote class="quote-ss"><p>"Aim for the moon. If you miss, you may hit a star."</p><footer>— W. Clement Stone</footer></blockquote>
+          <blockquote class="quote-ss"><p>"Success is achieved and maintained by those who try and keep trying with PMA."</p><footer>— W. Clement Stone</footer></blockquote>
+          <blockquote class="quote-ss"><p>"Thinking will not overcome fear but action will."</p><footer>— W. Clement Stone</footer></blockquote>
+           <blockquote class="quote-ss"><p>"Be careful the environment you choose for it will shape you; be careful the friends you choose for you will become like them."</p><footer>— W. Clement Stone</footer></blockquote>
+           <blockquote class="quote-ss"><p>"Have the courage to say no. Have the courage to face the truth. Do the right thing because it is right. These are the magic keys to living your life with integrity."</p><footer>— W. Clement Stone</footer></blockquote>
+            <blockquote class="quote-ss"><p>"Do it now!"</p><footer>— W. Clement Stone's famous motto</footer></blockquote>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-ss">
+       <div class="section-header-ss">
+          <i class="fas fa-check-double"></i>
+          <h2>A Blueprint for Achievement</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"The Success System That Never Fails" offers a timeless and optimistic blueprint for achieving success based on universal principles of mindset and action. W. Clement Stone passionately believed and demonstrated that anyone could achieve remarkable success by cultivating a Positive Mental Attitude, defining their purpose, and persistently taking action.</p>
+      <p class="text-base leading-relaxed">The book serves as a powerful motivator and practical guide, urging readers to take control of their thoughts, harness their inner power, and consistently apply the proven steps that lead from desire to accomplishment.</p>
+       <div class="conclusion-highlight-ss">
+           <p>Cultivate PMA, define your purpose, learn, plan, ally with others, and above all, <strong>take action NOW!</strong> This is the system that never fails.</p>
+       </div>
+    </div>
+
+    <div class="footer-ss">
+       <p>© 2024 Summary of "The Success System That Never Fails" by W. Clement Stone.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
