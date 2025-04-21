@@ -11,7 +11,7 @@
         :root {
             --wood-color: #9b7653;
             --wood-dark: #76593d;
-            --shelf-height: 320px;
+            --shelf-height: 380px; /* Increased height for taller books and text */
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -55,7 +55,7 @@
             z-index: 10;
         }
         .book-cover {
-            height: 220px;
+            height: 300px; /* Increased height for more rectangular shape */
             background-size: cover;
             background-position: center;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -193,7 +193,10 @@
                 margin-bottom: 20px;
             }
             .book-cover {
-                height: 180px;
+                height: 250px; /* Adjusted height for smaller screens */
+            }
+             :root {
+                --shelf-height: 320px; /* Adjusted shelf height for smaller screens */
             }
         }
     </style>
@@ -219,7 +222,7 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Hero Section -->
     <section class="hero text-white py-16 px-6 mb-12">
         <div class="container mx-auto text-center">
@@ -235,7 +238,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Main Content -->
     <main class="container mx-auto px-6 mb-12">
         <!-- Popular Books Section -->
@@ -243,7 +246,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Popular Books</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/atomic-habits" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81ANaVZk5LL.jpg');">
@@ -252,7 +255,7 @@
                     <div class="book-title">Atomic Habits</div>
                     <div class="book-author">James Clear</div>
                 </a>
-                
+
                 <a href="/summary/subtle-art" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg');">
                         <div class="book-spine"></div>
@@ -260,7 +263,7 @@
                     <div class="book-title">The Subtle Art of Not Giving a F*ck</div>
                     <div class="book-author">Mark Manson</div>
                 </a>
-                
+
                 <a href="/summary/alchemist" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://dynamic.indigoimages.ca/v1/books/books/0062315005/1.jpg');">
                         <div class="book-spine"></div>
@@ -268,7 +271,7 @@
                     <div class="book-title">The Alchemist</div>
                     <div class="book-author">Paulo Coelho</div>
                 </a>
-                
+
                 <a href="/summary/thinking-fast-slow" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61fdrEuPJwL.jpg');">
                         <div class="book-spine"></div>
@@ -276,7 +279,7 @@
                     <div class="book-title">Thinking Fast and Slow</div>
                     <div class="book-author">Daniel Kahneman</div>
                 </a>
-                
+
                 <a href="/summary/badass" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710GUve5H-L._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -284,7 +287,7 @@
                     <div class="book-title">You Are a Badass</div>
                     <div class="book-author">Jen Sincero</div>
                 </a>
-                
+
                 <a href="/summary/12-rules" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Dx-r7+GvL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -300,7 +303,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Personal Growth</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/four-agreements" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91rR9gMuOVL.jpg');">
@@ -309,7 +312,7 @@
                     <div class="book-title">The Four Agreements</div>
                     <div class="book-author">Don Miguel Ruiz</div>
                 </a>
-                
+
                 <a href="/summary/7-habits" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71rmHeQeuRL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -317,7 +320,7 @@
                     <div class="book-title">The 7 Habits of Highly Effective People</div>
                     <div class="book-author">Stephen R. Covey</div>
                 </a>
-                
+
                 <a href="/summary/girl-wash-face" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81eWNgy63xL.jpg');">
                         <div class="book-spine"></div>
@@ -325,7 +328,7 @@
                     <div class="book-title">Girl, Wash Your Face</div>
                     <div class="book-author">Rachel Hollis</div>
                 </a>
-                
+
                 <a href="/summary/daring-greatly" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81GOZ+-+yiL.jpg');">
                         <div class="book-spine"></div>
@@ -333,7 +336,7 @@
                     <div class="book-title">Daring Greatly</div>
                     <div class="book-author">Brene Brown</div>
                 </a>
-                
+
                 <a href="/summary/big-magic" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/814PoPnrBQL.jpg');">
                         <div class="book-spine"></div>
@@ -341,7 +344,7 @@
                     <div class="book-title">Big Magic</div>
                     <div class="book-author">Elizabeth Gilbert</div>
                 </a>
-                
+
                 <a href="/summary/courage-disliked" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710cYy40DUL.jpg');">
                         <div class="book-spine"></div>
@@ -357,7 +360,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Philosophy & Wisdom</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/daily-stoic" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/715WT6IGgLL._AC_UF1000,1000_QL80_.jpg');">
@@ -366,7 +369,7 @@
                     <div class="book-title">The Daily Stoic</div>
                     <div class="book-author">Ryan Holiday</div>
                 </a>
-                
+
                 <a href="/summary/48-laws" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61UZS3QA1UL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -374,7 +377,7 @@
                     <div class="book-title">The 48 Laws of Power</div>
                     <div class="book-author">Robert Greene</div>
                 </a>
-                
+
                 <a href="/summary/mans-search" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/5112lDRbMXL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -382,7 +385,7 @@
                     <div class="book-title">Man's Search for Meaning</div>
                     <div class="book-author">Viktor Frankl</div>
                 </a>
-                
+
                 <a href="/summary/meditations" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61a14ZQM+XL._SL1499_.jpg');">
                         <div class="book-spine"></div>
@@ -390,7 +393,7 @@
                     <div class="book-title">Meditations</div>
                     <div class="book-author">Marcus Aurelius</div>
                 </a>
-                
+
                 <a href="/summary/letters-stoic" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61ahwmdD6-L._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -398,7 +401,7 @@
                     <div class="book-title">Letters from a Stoic</div>
                     <div class="book-author">Seneca</div>
                 </a>
-                
+
                 <a href="/summary/power-now" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg');">
                         <div class="book-spine"></div>
@@ -414,7 +417,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Success & Productivity</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/deep-work" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91nujEwIpYL.jpg');">
@@ -423,7 +426,7 @@
                     <div class="book-title">Deep Work</div>
                     <div class="book-author">Cal Newport</div>
                 </a>
-                
+
                 <a href="/summary/getting-things" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Loe8brBXL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -431,7 +434,7 @@
                     <div class="book-title">Getting Things Done</div>
                     <div class="book-author">David Allen</div>
                 </a>
-                
+
                 <a href="/summary/rich-dad" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -439,7 +442,7 @@
                     <div class="book-title">Rich Dad Poor Dad</div>
                     <div class="book-author">Robert T. Kiyosaki</div>
                 </a>
-                
+
                 <a href="/summary/think-grow" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61IxJuRI39L.jpg');">
                         <div class="book-spine"></div>
@@ -447,7 +450,7 @@
                     <div class="book-title">Think and Grow Rich</div>
                     <div class="book-author">Napoleon Hill</div>
                 </a>
-                
+
                 <a href="/summary/4-hour" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vO9Tbf4-L.jpg');">
                         <div class="book-spine"></div>
@@ -455,7 +458,7 @@
                     <div class="book-title">The 4-Hour Workweek</div>
                     <div class="book-author">Tim Ferriss</div>
                 </a>
-                
+
                 <a href="/summary/outliers" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61aScQqJLlL.jpg');">
                         <div class="book-spine"></div>
@@ -471,7 +474,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Mindset & Psychology</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/quiet" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710KQAE6d5L._SL1500_.jpg');">
@@ -480,7 +483,7 @@
                     <div class="book-title">Quiet</div>
                     <div class="book-author">Susan Cain</div>
                 </a>
-                
+
                 <a href="/summary/magic-thinking" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71L917j-knL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -488,7 +491,7 @@
                     <div class="book-title">The Magic of Thinking Big</div>
                     <div class="book-author">David Joseph Schwartz</div>
                 </a>
-                
+
                 <a href="/summary/win-friends" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vK0WVQ4rL.jpg');">
                         <div class="book-spine"></div>
@@ -496,7 +499,7 @@
                     <div class="book-title">How to Win Friends and Influence People</div>
                     <div class="book-author">Dale Carnegie</div>
                 </a>
-                
+
                 <a href="/summary/love-languages" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81m1gW3w+EL.jpg');">
                         <div class="book-spine"></div>
@@ -504,7 +507,7 @@
                     <div class="book-title">The 5 Love Languages</div>
                     <div class="book-author">Gary Chapman</div>
                 </a>
-                
+
                 <a href="/summary/positive-thinking" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71-wmS8pBkL.jpg');">
                         <div class="book-spine"></div>
@@ -512,7 +515,7 @@
                     <div class="book-title">The Power Of Positive Thinking</div>
                     <div class="book-author">Norman Vincent Peale</div>
                 </a>
-                
+
                 <a href="/summary/secret" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71dTY3dvAuL.jpg');">
                         <div class="book-spine"></div>
@@ -528,7 +531,7 @@
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Recently Added</h2>
             </div>
-            
+
             <div class="shelf grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <a href="/summary/miracle-morning" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61S-xKd5dqL._AC_UF1000,1000_QL80_.jpg');">
@@ -537,7 +540,7 @@
                     <div class="book-title">The Miracle Morning</div>
                     <div class="book-author">Hal Elrod</div>
                 </a>
-                
+
                 <a href="/summary/grit" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -545,7 +548,7 @@
                     <div class="book-title">Grit: The Power of Passion and Perseverance</div>
                     <div class="book-author">Angela Duckworth</div>
                 </a>
-                
+
                 <a href="/summary/essentialism" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg');">
                         <div class="book-spine"></div>
@@ -553,7 +556,7 @@
                     <div class="book-title">Essentialism: The Disciplined Pursuit of Less</div>
                     <div class="book-author">Greg McKeown</div>
                 </a>
-                
+
                 <a href="/summary/drive" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/51km6RPOvYL.jpg');">
                         <div class="book-spine"></div>
@@ -561,7 +564,7 @@
                     <div class="book-title">Drive: The Surprising Truth About What Motivates Us</div>
                     <div class="book-author">Daniel H. Pink</div>
                 </a>
-                
+
                 <a href="/summary/unfuck-yourself" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81HuYGapupL.jpg');">
                         <div class="book-spine"></div>
@@ -569,7 +572,7 @@
                     <div class="book-title">Unfuck Yourself: Get Out of Your Head and Into Your Life</div>
                     <div class="book-author">Gary John Bishop</div>
                 </a>
-                
+
                 <a href="/summary/compound-effect" class="book">
                     <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/610QDSRlLYL._AC_UF1000,1000_QL80_.jpg');">
                         <div class="book-spine"></div>
@@ -618,7 +621,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Explore</h3>
                     <ul class="space-y-2">
@@ -628,7 +631,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Authors</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
@@ -638,7 +641,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Legal</h3>
                     <ul class="space-y-2">
@@ -649,13 +652,13 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2023 FastBoox. All rights reserved.</p>
+                <p>© 2023 FastBoox. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
     <!-- Add a light JavaScript for any interactivity -->
     <script>
         // Enhanced hover effect with slight rotation
@@ -665,7 +668,7 @@
                 const randomRotation = (Math.random() * 10 - 5) / 2;
                 this.style.transform = `perspective(600px) rotateY(-10deg) translateY(-10px) rotateZ(${randomRotation}deg)`;
             });
-            
+
             book.addEventListener('mouseleave', function() {
                 this.style.transform = 'perspective(600px) rotateY(0deg)';
             });
