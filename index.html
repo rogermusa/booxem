@@ -72,7 +72,6 @@
             margin-right: 20px; /* Add space between books */
             width: 220px; /* Explicit width for the book item */
             vertical-align: top; /* Align items to the top */
-            /* Removed display: inline-block; as flexbox is used */
         }
          .book:last-child {
              margin-right: 6px; /* Match right padding of shelf */
@@ -335,59 +334,13 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 mb-12">
-        <!-- Popular Books Section -->
+        <!-- Popular Books Section - 6 Books -->
         <section class="mb-16">
              <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Popular Books</h2>
             </div>
             <div class="shelf-container">
                 <div class="shelf">
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/atomichabits.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81ANaVZk5LL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Atomic Habits</div>
-                        <div class="book-author">James Clear</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thesubtleart.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Subtle Art of Not Giving a F*ck</div>
-                        <div class="book-author">Mark Manson</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thealchemist.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://dynamic.indigoimages.ca/v1/books/books/0062315005/1.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Alchemist</div>
-                        <div class="book-author">Paulo Coelho</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/thinking-fast-slow" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61fdrEuPJwL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Thinking Fast and Slow</div>
-                        <div class="book-author">Daniel Kahneman</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/youareabadass.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710GUve5H-L._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">You Are a Badass</div>
-                        <div class="book-author">Jen Sincero</div>
-                    </a>
-
-                    <!-- Link updated -->
                     <a href="https://rogermusa.github.io/booxem/12rulesforlife.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Dx-r7+GvL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
@@ -395,30 +348,54 @@
                         <div class="book-title">12 Rules for Life</div>
                         <div class="book-author">Jordan Peterson</div>
                     </a>
-                    <!-- Add more popular books here if needed -->
+                    <a href="https://rogermusa.github.io/booxem/thealchemist.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://dynamic.indigoimages.ca/v1/books/books/0062315005/1.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Alchemist</div>
+                        <div class="book-author">Paulo Coelho</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/atomichabits.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81ANaVZk5LL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Atomic Habits</div>
+                        <div class="book-author">James Clear</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thesubtleart.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Subtle Art of Not Giving a F*ck</div>
+                        <div class="book-author">Mark Manson</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thinkingfastandslow.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61fdrEuPJwL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Thinking, Fast and Slow</div>
+                        <div class="book-author">Daniel Kahneman</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/youareabadass.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710GUve5H-L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">You Are a Badass</div>
+                        <div class="book-author">Jen Sincero</div>
+                    </a>
                 </div>
                  <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
                  <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
             </div>
         </section>
 
-        <!-- Personal Growth Section -->
+        <!-- Personal Growth Section - 11 Books -->
         <section class="mb-16">
             <div class="category-line">
                 <h2 class="category-title text-2xl font-bold">Personal Growth</h2>
             </div>
              <div class="shelf-container">
                 <div class="shelf">
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thefouragreements.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91rR9gMuOVL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Four Agreements</div>
-                        <div class="book-author">Don Miguel Ruiz</div>
-                    </a>
-
-                    <!-- Link updated -->
                     <a href="https://rogermusa.github.io/booxem/7habits.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71rmHeQeuRL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
@@ -426,17 +403,27 @@
                         <div class="book-title">The 7 Habits of Highly Effective People</div>
                         <div class="book-author">Stephen R. Covey</div>
                     </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/girl-wash-face" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81eWNgy63xL.jpg');">
+                    <a href="https://rogermusa.github.io/booxem/theartistsway.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61e3NqM2RTL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">Girl, Wash Your Face</div>
-                        <div class="book-author">Rachel Hollis</div>
+                        <div class="book-title">The Artist's Way</div>
+                        <div class="book-author">Julia Cameron</div>
                     </a>
-
-                    <!-- Link updated -->
+                    <a href="https://rogermusa.github.io/booxem/awakenthegiantwithin.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81Yk1W7q5VL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Awaken the Giant Within</div>
+                        <div class="book-author">Tony Robbins</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thecouragetobedisliked.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710cYy40DUL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Courage to Be Disliked</div>
+                        <div class="book-author">Ichiro Kishimi & Fumitake Koga</div>
+                    </a>
                     <a href="https://rogermusa.github.io/booxem/daringgreatly.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81GOZ+-+yiL.jpg');">
                             <div class="book-spine"></div>
@@ -444,240 +431,34 @@
                         <div class="book-title">Daring Greatly</div>
                         <div class="book-author">Brene Brown</div>
                     </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/big-magic" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/814PoPnrBQL.jpg');">
+                    <a href="https://rogermusa.github.io/booxem/thefouragreements.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91rR9gMuOVL.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">Big Magic</div>
-                        <div class="book-author">Elizabeth Gilbert</div>
+                        <div class="book-title">The Four Agreements</div>
+                        <div class="book-author">Don Miguel Ruiz</div>
                     </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thecouragetobedisliked.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710cYy40DUL.jpg');">
+                     <a href="https://rogermusa.github.io/booxem/thefourtendencies.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/714k1bM1v7L._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">The Courage to Be Disliked</div>
-                        <div class="book-author">Ichiro Kishimi & Fumitake Koga</div>
+                        <div class="book-title">The Four Tendencies</div>
+                        <div class="book-author">Gretchen Rubin</div>
                     </a>
-                     <!-- Add more personal growth books here if needed -->
-                </div>
-                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
-                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
-             </div>
-        </section>
-
-        <!-- Philosophy & Wisdom Section -->
-        <section class="mb-16">
-            <div class="category-line">
-                <h2 class="category-title text-2xl font-bold">Philosophy & Wisdom</h2>
-            </div>
-             <div class="shelf-container">
-                <div class="shelf">
-                     <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/daily-stoic" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/715WT6IGgLL._AC_UF1000,1000_QL80_.jpg');">
+                    <a href="https://rogermusa.github.io/booxem/thelifechangingmagic.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71+Lw0cM1BL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">The Daily Stoic</div>
-                        <div class="book-author">Ryan Holiday</div>
+                        <div class="book-title">The Life-Changing Magic of Tidying Up</div>
+                        <div class="book-author">Marie Kondo</div>
                     </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/the48lawsofpower.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61UZS3QA1UL._AC_UF1000,1000_QL80_.jpg');">
+                     <a href="https://rogermusa.github.io/booxem/makeyourbed.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71V2L+gH+dL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">The 48 Laws of Power</div>
-                        <div class="book-author">Robert Greene</div>
+                        <div class="book-title">Make Your Bed</div>
+                        <div class="book-author">William H. McRaven</div>
                     </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/manssearchformeaning.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/5112lDRbMXL._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Man's Search for Meaning</div>
-                        <div class="book-author">Viktor Frankl</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/meditations" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61a14ZQM+XL._SL1499_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Meditations</div>
-                        <div class="book-author">Marcus Aurelius</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/letters-stoic" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61ahwmdD6-L._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Letters from a Stoic</div>
-                        <div class="book-author">Seneca</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thepowerofnow.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Power of Now</div>
-                        <div class="book-author">Eckhart Tolle</div>
-                    </a>
-                     <!-- Add more philosophy & wisdom books here if needed -->
-                </div>
-                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
-                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
-             </div>
-        </section>
-
-        <!-- Success & Productivity Section -->
-        <section class="mb-16">
-            <div class="category-line">
-                <h2 class="category-title text-2xl font-bold">Success & Productivity</h2>
-            </div>
-             <div class="shelf-container">
-                <div class="shelf">
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/deepwork.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91nujEwIpYL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Deep Work</div>
-                        <div class="book-author">Cal Newport</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/getting-things" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Loe8brBXL._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Getting Things Done</div>
-                        <div class="book-author">David Allen</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/richdadpoordad.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Rich Dad Poor Dad</div>
-                        <div class="book-author">Robert T. Kiyosaki</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thinkandgrowrich.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61IxJuRI39L.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Think and Grow Rich</div>
-                        <div class="book-author">Napoleon Hill</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/the4hourworkweek.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vO9Tbf4-L.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The 4-Hour Workweek</div>
-                        <div class="book-author">Tim Ferriss</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/outliers" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61aScQqJLlL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Outliers</div>
-                        <div class="book-author">Malcolm Gladwell</div>
-                    </a>
-                     <!-- Add more success & productivity books here if needed -->
-                </div>
-                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
-                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
-             </div>
-        </section>
-
-        <!-- Mindset & Psychology Section -->
-        <section class="mb-16">
-            <div class="category-line">
-                <h2 class="category-title text-2xl font-bold">Mindset & Psychology</h2>
-            </div>
-             <div class="shelf-container">
-                <div class="shelf">
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/quiet.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710KQAE6d5L._SL1500_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">Quiet</div>
-                        <div class="book-author">Susan Cain</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/themagicofthinkingbig.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71L917j-knL._AC_UF1000,1000_QL80_.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Magic of Thinking Big</div>
-                        <div class="book-author">David Joseph Schwartz</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/howtowinfriends.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vK0WVQ4rL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">How to Win Friends and Influence People</div>
-                        <div class="book-author">Dale Carnegie</div>
-                    </a>
-
-                    <!-- Link not found in provided list, keeping original -->
-                    <a href="/summary/love-languages" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81m1gW3w+EL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The 5 Love Languages</div>
-                        <div class="book-author">Gary Chapman</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thepowerofpositivethinking.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71-wmS8pBkL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Power Of Positive Thinking</div>
-                        <div class="book-author">Norman Vincent Peale</div>
-                    </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thesecret.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71dTY3dvAuL.jpg');">
-                            <div class="book-spine"></div>
-                        </div>
-                        <div class="book-title">The Secret</div>
-                        <div class="book-author">Rhonda Byrne</div>
-                    </a>
-                     <!-- Add more mindset & psychology books here if needed -->
-                </div>
-                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
-                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
-             </div>
-        </section>
-
-        <!-- Recently Added Section -->
-        <section class="mb-16">
-            <div class="category-line">
-                <h2 class="category-title text-2xl font-bold">Recently Added</h2>
-            </div>
-             <div class="shelf-container">
-                <div class="shelf">
-                    <!-- Link updated -->
                     <a href="https://rogermusa.github.io/booxem/themiraclemorning.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61S-xKd5dqL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
@@ -685,26 +466,109 @@
                         <div class="book-title">The Miracle Morning</div>
                         <div class="book-author">Hal Elrod</div>
                     </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/grit.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg');">
+                    <a href="https://rogermusa.github.io/booxem/thewayofthesuperiorman.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/51N0c-WzDVL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">Grit: The Power of Passion and Perseverance</div>
-                        <div class="book-author">Angela Duckworth</div>
+                        <div class="book-title">The Way of the Superior Man</div>
+                        <div class="book-author">David Deida</div>
                     </a>
+                 </div>
+                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
+                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
+             </div>
+        </section>
 
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/essentialism.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg');">
+        <!-- Philosophy & Wisdom Section - 7 Books -->
+        <section class="mb-16">
+            <div class="category-line">
+                <h2 class="category-title text-2xl font-bold">Philosophy & Wisdom</h2>
+            </div>
+             <div class="shelf-container">
+                <div class="shelf">
+                    <a href="https://rogermusa.github.io/booxem/theartofhappiness.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/817c9zTjGEL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">Essentialism: The Disciplined Pursuit of Less</div>
-                        <div class="book-author">Greg McKeown</div>
+                        <div class="book-title">The Art of Happiness</div>
+                        <div class="book-author">Dalai Lama XIV and Howard C. Cutler</div>
                     </a>
+                    <a href="https://rogermusa.github.io/booxem/theartofwar.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/819P7x93FwL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Art of War</div>
+                        <div class="book-author">Sun Tzu</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/beyondorder.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71xX0YlS9ZL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Beyond Order</div>
+                        <div class="book-author">Jordan Peterson</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/the48lawsofpower.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61UZS3QA1UL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The 48 Laws of Power</div>
+                        <div class="book-author">Robert Greene</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/manssearchformeaning.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/5112lDRbMXL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Man's Search for Meaning</div>
+                        <div class="book-author">Viktor Frankl</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/ontheshortnessoflife.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81jD+F33lYL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">On the Shortness of Life</div>
+                        <div class="book-author">Seneca</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thepowerofnow.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Power of Now</div>
+                        <div class="book-author">Eckhart Tolle</div>
+                    </a>
+                 </div>
+                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
+                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
+             </div>
+        </section>
 
-                    <!-- Link updated -->
+        <!-- Success & Productivity Section - 21 Books -->
+        <section class="mb-16">
+            <div class="category-line">
+                <h2 class="category-title text-2xl font-bold">Success & Productivity</h2>
+            </div>
+             <div class="shelf-container">
+                <div class="shelf">
+                    <a href="https://rogermusa.github.io/booxem/betterthanbefore.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91L9R-15xPL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Better Than Before</div>
+                        <div class="book-author">Gretchen Rubin</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thecompoundeffect.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/610QDSRlLYL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Compound Effect</div>
+                        <div class="book-author">Darren Hardy</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/deepwork.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91nujEwIpYL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Deep Work</div>
+                        <div class="book-author">Cal Newport</div>
+                    </a>
                     <a href="https://rogermusa.github.io/booxem/drive.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/51km6RPOvYL.jpg');">
                             <div class="book-spine"></div>
@@ -712,8 +576,236 @@
                         <div class="book-title">Drive: The Surprising Truth About What Motivates Us</div>
                         <div class="book-author">Daniel H. Pink</div>
                     </a>
+                    <a href="https://rogermusa.github.io/booxem/eatthatfrog.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71L3oV63+eL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Eat That Frog!</div>
+                        <div class="book-author">Brian Tracy</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/essentialism.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Essentialism: The Disciplined Pursuit of Less</div>
+                        <div class="book-author">Greg McKeown</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/mastery.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71r2uS9sNCL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Mastery</div>
+                        <div class="book-author">Robert Greene</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/theonething.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81hK8kowtqL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The ONE Thing</div>
+                        <div class="book-author">Gary Keller and Jay Papasan</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thepowerofhabit.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81wgcld4wxL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Power of Habit</div>
+                        <div class="book-author">Charles Duhigg</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/principleslifeandwork.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71Q9C-Vz+ZL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Principles: Life and Work</div>
+                        <div class="book-author">Ray Dalio</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thepsychologyofmoney.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71g2rkC3z-L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Psychology of Money</div>
+                        <div class="book-author">Morgan Housel</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/therichestmaninbabylon.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81lB+4vA7uL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Richest Man in Babylon</div>
+                        <div class="book-author">George S. Clason</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/richdadpoordad.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Rich Dad Poor Dad</div>
+                        <div class="book-author">Robert T. Kiyosaki</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thescienceofgettingrich.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71Y154gJ2AL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Science of Getting Rich</div>
+                        <div class="book-author">Wallace D. Wattles</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/the5secondrule.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71N3n827+RL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The 5 Second Rule</div>
+                        <div class="book-author">Mel Robbins</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/startwithwhy.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61t8G3k6V+L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Start with Why</div>
+                        <div class="book-author">Simon Sinek</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thesuccesssystemthatneverfails.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61b03t9P1fL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Success System That Never Fails</div>
+                        <div class="book-author">W. Clement Stone</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/the10Xrule.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91+MI1bWbOL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The 10X Rule</div>
+                        <div class="book-author">Grant Cardone</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thinkandgrowrich.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61IxJuRI39L.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Think and Grow Rich</div>
+                        <div class="book-author">Napoleon Hill</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/the4hourworkweek.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vO9Tbf4-L.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The 4-Hour Workweek</div>
+                        <div class="book-author">Tim Ferriss</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thetotalmoneymakeover.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81Xo60f8JHL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Total Money Makeover</div>
+                        <div class="book-author">Dave Ramsey</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/youareabadassatmakingmoney.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81mB7rT0v+L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">You Are a Badass at Making Money</div>
+                        <div class="book-author">Jen Sincero</div>
+                    </a>
+                 </div>
+                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
+                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
+             </div>
+        </section>
 
-                    <!-- Link updated (Corrected slug to match filename) -->
+        <!-- Mindset & Psychology Section - 16 Books -->
+        <section class="mb-16">
+            <div class="category-line">
+                <h2 class="category-title text-2xl font-bold">Mindset & Psychology</h2>
+            </div>
+             <div class="shelf-container">
+                <div class="shelf">
+                    <a href="https://rogermusa.github.io/booxem/thebodykeepsthescore.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71c0k+t57uL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Body Keeps the Score</div>
+                        <div class="book-author">Bessel van der Kolk</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/canthurtme.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/91Kq7e9g1BL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Can't Hurt Me</div>
+                        <div class="book-author">David Goggins</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/feelthefearanddoitanyway.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71aB6gYc73L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Feel the Fear and Do It Anyway</div>
+                        <div class="book-author">Susan Jeffers</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thegiftsofimperfection.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81e9n4k+6TL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Gifts of Imperfection</div>
+                        <div class="book-author">Brene Brown</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/grit.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Grit: The Power of Passion and Perseverance</div>
+                        <div class="book-author">Angela Duckworth</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/howtowinfriends.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71vK0WVQ4rL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">How to Win Friends and Influence People</div>
+                        <div class="book-author">Dale Carnegie</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thelawofattraction.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61L2C2+3Z7L._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Law of Attraction</div>
+                        <div class="book-author">Esther Hicks and Jerry Hicks</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/theletthemtheory.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71fN+H92IEL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The "Letting Go" Theory</div>
+                        <div class="book-author">David R. Hawkins</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/themagicofthinkingbig.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71L917j-knL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Magic of Thinking Big</div>
+                        <div class="book-author">David Joseph Schwartz</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/thepowerofpositivethinking.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71-wmS8pBkL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Power Of Positive Thinking</div>
+                        <div class="book-author">Norman Vincent Peale</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/quiet.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/710KQAE6d5L._SL1500_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Quiet</div>
+                        <div class="book-author">Susan Cain</div>
+                    </a>
+                     <a href="https://rogermusa.github.io/booxem/radicalacceptance.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81xW55oDqfL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">Radical Acceptance</div>
+                        <div class="book-author">Tara Brach</div>
+                    </a>
+                    <a href="https://rogermusa.github.io/booxem/thesecret.html" class="book">
+                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71dTY3dvAuL.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">The Secret</div>
+                        <div class="book-author">Rhonda Byrne</div>
+                    </a>
                     <a href="https://rogermusa.github.io/booxem/unfu*kyourself.html" class="book">
                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81HuYGapupL.jpg');">
                             <div class="book-spine"></div>
@@ -721,21 +813,45 @@
                         <div class="book-title">Unfuck Yourself: Get Out of Your Head and Into Your Life</div>
                         <div class="book-author">Gary John Bishop</div>
                     </a>
-
-                    <!-- Link updated -->
-                    <a href="https://rogermusa.github.io/booxem/thecompoundeffect.html" class="book">
-                        <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/610QDSRlLYL._AC_UF1000,1000_QL80_.jpg');">
+                     <a href="https://rogermusa.github.io/booxem/whomovedmycheese.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71D2S7g+QLL._AC_UF1000,1000_QL80_.jpg');">
                             <div class="book-spine"></div>
                         </div>
-                        <div class="book-title">The Compound Effect</div>
-                        <div class="book-author">Darren Hardy</div>
+                        <div class="book-title">Who Moved My Cheese?</div>
+                        <div class="book-author">Spencer Johnson</div>
                     </a>
-                     <!-- Add more recently added books here if needed -->
-                </div>
+                     <a href="https://rogermusa.github.io/booxem/youcanhealyourlife.html" class="book">
+                         <div class="book-cover book-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71y-p-p46zL._AC_UF1000,1000_QL80_.jpg');">
+                            <div class="book-spine"></div>
+                        </div>
+                        <div class="book-title">You Can Heal Your Life</div>
+                        <div class="book-author">Louise Hay</div>
+                    </a>
+                 </div>
                  <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
                  <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
              </div>
         </section>
+
+        <!-- Removed "Recently Added" section as books were distributed -->
+         <!-- The section below is now empty or removed -->
+         <!--
+         <section class="mb-16">
+            <div class="category-line">
+                <h2 class="category-title text-2xl font-bold">Recently Added</h2>
+            </div>
+             <div class="shelf-container">
+                <div class="shelf">
+                    -->
+                    <!-- All 61 books are now distributed among the other 5 categories -->
+                    <!--
+                </div>
+                 <div class="scroll-arrow left"><i class="fas fa-chevron-left"></i></div>
+                 <div class="scroll-arrow right"><i class="fas fa-chevron-right"></i></div>
+             </div>
+         </section>
+         -->
+
 
         <!-- Subscribe Section -->
         <section class="subscribe-form mx-auto max-w-4xl mb-16">
@@ -855,27 +971,31 @@
             const shelf = container.querySelector('.shelf');
             const leftArrow = container.querySelector('.scroll-arrow.left');
             const rightArrow = container.querySelector('.scroll-arrow.right');
-            const firstBook = shelf.querySelector('.book');
+            const firstBook = shelf.querySelector('.book'); // Get the first book to calculate width
 
-            if (!shelf || !leftArrow || !rightArrow || !firstBook) {
+            if (!shelf || !leftArrow || !rightArrow) {
                 // Skip if elements are missing
                 return;
             }
 
-            // Calculate scroll amount based on first book's width and margin
+             // Calculate scroll amount based on first book's width and margin, or fallback
             let scrollAmount = 0;
             if (firstBook) {
                  const bookWidth = firstBook.offsetWidth;
                  const bookMarginRight = parseInt(window.getComputedStyle(firstBook).marginRight);
                  scrollAmount = bookWidth + bookMarginRight; // Scroll by roughly one book width
             } else {
-                 // Fallback if no books are present
+                 // Fallback if no books are present in the shelf (shouldn't happen now)
                  scrollAmount = shelf.clientWidth * 0.8; // Scroll by 80% of the visible width
             }
 
 
-            // Initial arrow state
-            updateArrows(shelf, leftArrow, rightArrow);
+            // Initial arrow state (needs a slight delay to ensure shelf dimensions are calculated)
+             // Use requestAnimationFrame or a small timeout
+            requestAnimationFrame(() => {
+                 updateArrows(shelf, leftArrow, rightArrow);
+             });
+
 
             // Add event listeners
             leftArrow.addEventListener('click', () => {
@@ -899,9 +1019,10 @@
             // Update arrows on window resize (if book widths change)
             window.addEventListener('resize', () => {
                  // Recalculate scrollAmount on resize
-                 if (firstBook) {
-                    const currentBookWidth = firstBook.offsetWidth;
-                    const currentBookMarginRight = parseInt(window.getComputedStyle(firstBook).marginRight);
+                 const currentFirstBook = shelf.querySelector('.book');
+                 if (currentFirstBook) {
+                    const currentBookWidth = currentFirstBook.offsetWidth;
+                    const currentBookMarginRight = parseInt(window.getComputedStyle(currentFirstBook).marginRight);
                     scrollAmount = currentBookWidth + currentBookMarginRight;
                  } else {
                     scrollAmount = shelf.clientWidth * 0.8;
@@ -909,17 +1030,20 @@
                  updateArrows(shelf, leftArrow, rightArrow);
             });
 
-             // Check arrows after images/content potentially load
-             // This can help if initial scrollWidth/clientWidth is incorrect before content renders
+             // Check arrows after images/content potentially load and render
+             // Use a small timeout after load for more reliability
             window.addEventListener('load', () => {
-                if (firstBook) { // Recalculate after load if books are present
-                    const currentBookWidth = firstBook.offsetWidth;
-                    const currentBookMarginRight = parseInt(window.getComputedStyle(firstBook).marginRight);
-                    scrollAmount = currentBookWidth + currentBookMarginRight;
-                 } else {
-                    scrollAmount = shelf.clientWidth * 0.8;
-                 }
-                updateArrows(shelf, leftArrow, rightArrow);
+                 setTimeout(() => {
+                    const currentFirstBook = shelf.querySelector('.book');
+                    if (currentFirstBook) { // Recalculate after load if books are present
+                        const currentBookWidth = currentFirstBook.offsetWidth;
+                        const currentBookMarginRight = parseInt(window.getComputedStyle(currentFirstBook).marginRight);
+                        scrollAmount = currentBookWidth + currentBookMarginRight;
+                    } else {
+                        scrollAmount = shelf.clientWidth * 0.8;
+                    }
+                    updateArrows(shelf, leftArrow, rightArrow);
+                 }, 100); // Small delay
             });
         });
 
