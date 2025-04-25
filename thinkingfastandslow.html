@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thinking, Fast and Slow Summary - Daniel Kahneman</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Thinking, Fast and Slow Cover Theme */
+      --tfs-bg: #F8F5F0;         /* Off-white/Cream */
+      --tfs-card-bg: #FFFFFF;
+      --tfs-text-dark: #212121;   /* Very Dark Grey/Off-black */
+      --tfs-text-medium: #424242;
+      --tfs-text-light: #616161;
+      --tfs-text-on-dark: #F8F5F0; /* Cream text on dark bg */
+      --tfs-accent-yellow: #FFD700; /* Bright Yellow (like pencil) */
+      --tfs-accent-graphite: #5A5A5A; /* Graphite Grey */
+      --tfs-accent-pink: #E6A1B4;    /* Muted Pink (eraser - use sparingly) */
+      --tfs-border-light: #E0E0E0;
+      --tfs-border-medium: #BDBDBD;
+      --tfs-hover-yellow: #FBC02D; /* Darker Yellow */
+    }
+
+    body {
+      font-family: 'Lato', sans-serif; /* Clean Sans-serif for body */
+      color: var(--tfs-text-medium);
+      line-height: 1.8;
+      background-color: var(--tfs-bg);
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif; /* Serif for headings like cover */
+      color: var(--tfs-text-dark);
+      font-weight: 700;
+    }
+    strong { /* Emphasis */
+        font-weight: 700;
+        color: var(--tfs-text-dark);
+    }
+    em { /* Subtle emphasis */
+        font-style: italic;
+        color: var(--tfs-accent-graphite);
+    }
+    .container {
+      max-width: 1000px; /* Adjusted width */
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    /* --- Main Header --- */
+    .main-header-tfs {
+      background-color: var(--tfs-bg); /* Match page background */
+      padding: 3rem 1rem;
+      margin-bottom: 3.5rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--tfs-border-light);
+    }
+     /* Curved line mimicking cover */
+     .main-header-tfs::before {
+         content: '';
+         position: absolute;
+         top: 55%; /* Adjust vertical position */
+         left: 10%;
+         right: 10%;
+         height: 60px; /* Height of the curve area */
+         border: solid var(--tfs-accent-graphite);
+         border-color: var(--tfs-accent-graphite) transparent transparent transparent;
+         border-radius: 50%/30px; /* Creates the curve */
+         border-width: 1px;
+         opacity: 0.6;
+         z-index: 0;
+     }
+    .header-content-tfs {
+        position: relative; z-index: 1; /* Keep content above line */
+    }
+    .main-header-tfs h1 { /* Title */
+        font-size: 3rem; /* Large Title */
+        font-weight: 700;
+        color: var(--tfs-text-dark);
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px; /* Slight spacing like cover */
+    }
+     .main-header-tfs .title-separator {
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: var(--tfs-accent-yellow); /* Yellow separator */
+        margin: 1.5rem auto 1.5rem auto;
+        border-radius: 2px;
+    }
+    .main-header-tfs h3 { /* Author */
+        font-size: 1.75rem;
+        font-weight: 600; /* Slightly less bold than title */
+        color: var(--tfs-text-dark);
+        margin-bottom: 2rem;
+        letter-spacing: 2px; /* Wider spacing */
+        text-transform: uppercase;
+    }
+    .main-header-tfs .subtitle { /* Subtitle/Tagline */
+        color: var(--tfs-text-light);
+        font-size: 0.9rem;
+        font-weight: 400;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+     .main-header-tfs .nobel-winner {
+        font-size: 0.85rem;
+        color: var(--tfs-accent-graphite);
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+         margin-top: 1rem;
+     }
+      .pencil-icon { /* Simple representation */
+         display: block;
+         width: 150px;
+         height: 10px;
+         background: linear-gradient(to right, var(--tfs-accent-pink) 15%, var(--tfs-accent-yellow) 15% 90%, var(--tfs-accent-graphite) 90%);
+         margin: 2rem auto 0 auto;
+         border-radius: 5px;
+         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: relative; z-index: 1; /* Above curve */
+      }
+
+
+    /* --- Section Styling --- */
+    .section-tfs {
+      background-color: var(--tfs-card-bg);
+      color: var(--tfs-text-medium);
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      border-radius: 4px;
+      border: 1px solid var(--tfs-border-light);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+    }
+    .section-header-tfs {
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--tfs-border-light);
+      display: flex;
+      align-items: center;
+    }
+    .section-header-tfs h2 {
+      font-size: 1.75rem; /* Matches template */
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .section-header-tfs i {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      color: var(--tfs-accent-yellow); /* Yellow icons */
+      opacity: 0.9;
+    }
+
+    /* --- Two Systems Comparison --- */
+    .systems-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    .system-card {
+        border: 1px solid var(--tfs-border-light);
+        border-radius: 6px;
+        padding: 1.75rem;
+        background-color: var(--tfs-bg); /* Cream background for cards */
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .system-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.07);
+    }
+    .system-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--tfs-text-dark);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+     .system-card h3 i { /* Icons for systems */
+        margin-right: 0.75rem;
+        font-size: 1.3rem;
+     }
+     #system1-card h3 i { color: var(--tfs-accent-yellow); } /* Yellow for Fast */
+     #system2-card h3 i { color: var(--tfs-accent-graphite); } /* Graphite for Slow */
+
+    .system-card .description {
+        font-style: italic;
+        color: var(--tfs-text-light);
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+    .system-card ul {
+        list-style: none;
+        padding: 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+     .system-card li {
+         padding: 0.3rem 0 0.3rem 1.5rem; /* Indent list items */
+         position: relative;
+         border-left: 3px solid transparent; /* Space for colored border */
+         transition: border-color 0.2s ease;
+     }
+      .system-card li::before { /* Custom bullet point */
+         content: '▪';
+         position: absolute;
+         left: 0;
+         top: 0.3rem;
+         font-size: 0.8em;
+         color: var(--tfs-border-medium);
+      }
+      /* Color accent on hover */
+      #system1-card li:hover { border-left-color: var(--tfs-accent-yellow); }
+      #system1-card li:hover::before { color: var(--tfs-accent-yellow); }
+      #system2-card li:hover { border-left-color: var(--tfs-accent-graphite); }
+      #system2-card li:hover::before { color: var(--tfs-accent-graphite); }
+
+
+    /* --- Quote Style --- */
+    .quote-tfs {
+      background-color: var(--tfs-card-bg); /* White background */
+      border-left: 5px solid var(--tfs-accent-yellow); /* Yellow accent */
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      color: var(--tfs-text-dark);
+      border-radius: 0 4px 4px 0;
+      font-size: 1.1rem; /* Slightly larger quote */
+      font-style: italic;
+      font-family: 'Lora', serif; /* Serif for quotes */
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.05);
+    }
+    .quote-tfs p { margin-bottom: 0.75rem; }
+    .quote-tfs footer {
+      margin-top: 1rem;
+      font-style: normal;
+      text-align: right;
+      font-weight: 600;
+      font-size: 0.9rem;
+      opacity: 0.9;
+      color: var(--tfs-text-light);
+      font-family: 'Lato', sans-serif; /* Sans-serif footer */
+    }
+
+    /* --- Concepts List (Heuristics/Biases) --- */
+    .concepts-list-tfs {
+        list-style: none;
+        padding: 0;
+        margin-top: 1.5rem;
+        display: grid; /* Grid layout for concepts */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+     .concepts-list-tfs li {
+        background-color: var(--tfs-bg); /* Cream background */
+        border: 1px solid var(--tfs-border-light);
+        padding: 1.5rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+     .concepts-list-tfs li:hover {
+         border-color: var(--tfs-accent-yellow);
+         background-color: var(--tfs-card-bg);
+     }
+     .concepts-list-tfs li i {
+         color: var(--tfs-accent-graphite); /* Graphite icons */
+         margin-right: 1rem;
+         font-size: 1.3rem;
+         width: 25px;
+         text-align: center;
+         margin-top: 0.1em;
+     }
+      .concepts-list-tfs li strong { /* Concept Name */
+          font-weight: 700;
+          font-family: 'Lora', serif;
+          color: var(--tfs-text-dark);
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 1.1rem;
+      }
+      .concepts-list-tfs li span { /* Description */
+          font-size: 0.95rem;
+          line-height: 1.7;
+      }
+
+    /* --- Conclusion Highlight --- */
+    .conclusion-highlight-tfs {
+        background: var(--tfs-accent-yellow); /* Bright yellow background */
+        color: var(--tfs-text-dark); /* Dark text on yellow */
+        padding: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid var(--tfs-hover-yellow);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .conclusion-highlight-tfs p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 400; /* Regular weight */
+    }
+    .conclusion-highlight-tfs strong {
+        font-weight: 700;
+        color: var(--tfs-text-dark); /* Keep strong dark */
+    }
+
+    /* --- Footer --- */
+    .footer-tfs {
+        text-align: center;
+        color: var(--tfs-text-light);
+        font-size: 0.85rem;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--tfs-border-light);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .main-header-tfs h1 { font-size: 2.5rem; }
+        .main-header-tfs h3 { font-size: 1.5rem; }
+        .main-header-tfs::before { display: none; } /* Hide curve on small screens */
+        .systems-container { grid-template-columns: 1fr; } /* Stack systems */
+        .concepts-list-tfs { grid-template-columns: 1fr; } /* Stack concepts */
+         .section-tfs { padding: 1.5rem; }
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <div class="main-header-tfs">
+      <div class="header-content-tfs">
+        <div class="subtitle">The New York Times Bestseller</div>
+        <h1>Thinking, Fast and Slow</h1>
+        <div class="title-separator"></div>
+        <h3>Daniel Kahneman</h3>
+        <div class="nobel-winner">WINNER OF THE NOBEL PRIZE IN ECONOMICS</div>
+        <div class="pencil-icon"></div>
+      </div>
+    </div>
+
+    <!-- Core Concept: Two Systems -->
+    <div class="section-tfs">
+      <div class="section-header-tfs">
+        <i class="fas fa-brain"></i>
+        <h2>The Two Systems Governing Our Thought</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Daniel Kahneman's central thesis in "Thinking, Fast and Slow" revolves around a dichotomy of human thought processes, personified as two distinct "systems": <strong>System 1 (Fast Thinking)</strong> and <strong>System 2 (Slow Thinking)</strong>. These aren't physical brain regions, but rather metaphors for two ways our minds operate.</p>
+      <p class="mb-4 text-base leading-relaxed">Understanding these two systems, their characteristics, interactions, and inherent biases is crucial for grasping why we make the judgments and decisions we do—both rational and irrational.</p>
+
+      <div class="systems-container">
+        <div class="system-card" id="system1-card">
+            <h3><i class="fas fa-bolt"></i> System 1: Fast Thinking</h3>
+            <p class="description">Operates automatically and quickly, with little or no effort and no sense of voluntary control.</p>
+            <ul>
+                <li>Intuitive, Instinctive</li>
+                <li>Effortless, Automatic</li>
+                <li>Emotional, Associative</li>
+                <li>Handles familiar situations, pattern recognition</li>
+                <li>Prone to heuristics and biases</li>
+                <li>Generates impressions, feelings, intentions</li>
+                <li><em>Example: 2 + 2 = ?; detecting hostility in a voice; driving on an empty road.</em></li>
+            </ul>
+        </div>
+        <div class="system-card" id="system2-card">
+            <h3><i class="fas fa-cogs"></i> System 2: Slow Thinking</h3>
+            <p class="description">Allocates attention to the effortful mental activities that demand it, including complex computations.</p>
+             <ul>
+                <li>Deliberate, Logical</li>
+                <li>Effortful, Controlled</li>
+                <li>Analytical, Rule-based</li>
+                <li>Handles complex problems, reasoning</li>
+                <li>Can override System 1 impulses (but is often lazy)</li>
+                <li>Associated with subjective experience of agency, choice</li>
+                 <li><em>Example: 17 x 24 = ?; parking in a narrow space; comparing two products.</em></li>
+            </ul>
+        </div>
+      </div>
+        <p class="mt-6 text-base leading-relaxed">System 1 continuously generates suggestions for System 2: impressions, intuitions, intentions, and feelings. System 2 typically adopts these suggestions with little modification. However, when System 1 runs into difficulty, it calls on System 2 for more detailed processing. The interplay (and often, the laziness of System 2) leads to many cognitive biases.</p>
+    </div>
+
+
+    <!-- Heuristics and Biases Section -->
+    <div class="section-tfs">
+      <div class="section-header-tfs">
+         <i class="fas fa-random"></i>
+         <h2>Heuristics & Biases: Mental Shortcuts and Their Pitfalls</h2>
+      </div>
+      <p class="mb-6 text-base leading-relaxed">To operate efficiently, System 1 relies on heuristics—mental shortcuts or rules of thumb. While often useful, they can lead to systematic errors in judgment known as cognitive biases. Kahneman explores numerous examples:</p>
+       <ul class="concepts-list-tfs">
+           <li>
+               <i class="fas fa-anchor"></i>
+               <div>
+                   <strong>Anchoring Effect:</strong> Relying too heavily on the first piece of information offered (the "anchor") when making decisions. <span>(e.g., Initial price influencing negotiation).</span>
+               </div>
+           </li>
+            <li>
+               <i class="fas fa-eye"></i>
+               <div>
+                   <strong>Availability Heuristic:</strong> Overestimating the importance or likelihood of events that are more easily recalled in memory (often recent or dramatic). <span>(e.g., Fearing plane crashes more than car accidents).</span>
+               </div>
+           </li>
+            <li>
+               <i class="fas fa-users-cog"></i>
+               <div>
+                   <strong>Representativeness Heuristic:</strong> Judging the likelihood of something based on how well it seems to represent, or match, a particular prototype, often ignoring base rates. <span>(e.g., Stereotyping).</span>
+               </div>
+           </li>
+            <li>
+               <i class="fas fa-balance-scale-left"></i>
+               <div>
+                   <strong>Loss Aversion:</strong> The tendency to prefer avoiding losses to acquiring equivalent gains; losses loom larger than gains. <span>(e.g., Feeling more pain from losing $100 than pleasure from finding $100).</span>
+               </div>
+           </li>
+            <li>
+               <i class="fas fa-object-group"></i>
+               <div>
+                   <strong>Framing Effect:</strong> Drawing different conclusions from the same information, depending on how it is presented or "framed". <span>(e.g., "80% lean" vs. "20% fat").</span>
+               </div>
+           </li>
+            <li>
+               <i class="fas fa-chart-line"></i>
+               <div>
+                   <strong>Hindsight Bias:</strong> The tendency to see past events as having been more predictable than they actually were ("I knew it all along").</span>
+               </div>
+           </li>
+           <li>
+                <i class="fas fa-thumbs-up"></i>
+                <div>
+                    <strong>Confirmation Bias:</strong> The tendency to search for, interpret, favor, and recall information in a way that confirms one's pre-existing beliefs or hypotheses.</span>
+                </div>
+            </li>
+           <li>
+                <i class="fas fa-crosshairs"></i>
+                <div>
+                    <strong>Planning Fallacy:</strong> The tendency to underestimate the time, costs, and risks of future actions and overestimate the benefits.</span>
+                </div>
+            </li>
+       </ul>
+        <div class="quote-tfs">
+          <p>"The confidence people have in their beliefs is not a measure of the quality of evidence but of the coherence of the story the mind has managed to construct."</p>
+          <footer>— Daniel Kahneman</footer>
+       </div>
+    </div>
+
+    <!-- Overconfidence & Prospect Theory -->
+     <div class="section-tfs">
+      <div class="section-header-tfs">
+         <i class="fas fa-chart-pie"></i>
+         <h2>Overconfidence, Choices, and Prospect Theory</h2>
+      </div>
+      <p class="mb-4 text-base leading-relaxed">Kahneman highlights our pervasive <strong>overconfidence</strong>, often stemming from System 1's intuitive leaps and System 2's failure to check them. We tend to overestimate our knowledge and abilities and underestimate the role of chance.</p>
+       <p class="mb-4 text-base leading-relaxed">He also introduces <strong>Prospect Theory</strong> (developed with Amos Tversky), which describes how people choose between probabilistic alternatives involving risk, where the probabilities of outcomes are known. Key ideas include:</p>
+       <ul class="list-disc pl-5 mt-2 mb-4 text-base">
+            <li>Decisions are made based on potential gains and losses relative to a reference point, not absolute wealth.</li>
+            <li>People are generally risk-averse concerning gains but risk-seeking concerning losses (to avoid a certain loss).</li>
+            <li>Loss aversion plays a significant role.</li>
+       </ul>
+        <div class="quote-tfs">
+          <p>"We are prone to overestimate how much we understand about the world and to underestimate the role of chance in events."</p>
+          <footer>— Daniel Kahneman</footer>
+       </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section-tfs">
+       <div class="section-header-tfs">
+          <i class="fas fa-check-double"></i>
+          <h2>Conclusion: Recognizing Our Cognitive Illusions</h2>
+       </div>
+      <p class="mb-4 text-base leading-relaxed">"Thinking, Fast and Slow" provides a profound tour of the mind's workings, revealing the systematic ways our intuition can mislead us. While we cannot completely eliminate biases, understanding the mechanisms behind them—the interplay of System 1 and System 2, the reliance on heuristics—allows us to recognize potential errors in our own thinking and in others'.</p>
+      <p class="text-base leading-relaxed">The key takeaway is the importance of slowing down, engaging System 2 deliberately, questioning initial intuitions (especially in high-stakes situations), and seeking out objective data and diverse perspectives to improve judgment and decision-making.</p>
+       <div class="conclusion-highlight-tfs">
+           <p>By understanding how we think, we can learn to think better. Recognize the power and pitfalls of intuition, and know when to engage <strong>deliberate, effortful thought</strong> to overcome cognitive illusions.</p>
+       </div>
+    </div>
+
+    <div class="footer-tfs">
+       <p>© 2024 Summary of "Thinking, Fast and Slow" by Daniel Kahneman.</p>
+       <p class="mt-1">Content for informational purposes only.</p>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>
